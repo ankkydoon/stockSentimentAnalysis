@@ -120,6 +120,11 @@ stockSentimentAnalysis/
   - `sp500_companies` — name, ticker, sector, 200-word business summary
   - `sectors` — GICS sector definitions and event sensitivities
   - `fin_glossary` — ~400 financial terms (EPS, EBITDA, guidance, etc.)
+- **Replaced by:** `storage/supabase_store.py` — single Supabase client for all persistence:
+  - `articles` table — dedup across runs
+  - `signals` table — full audit trail with component scores
+  - `sp500_embeddings` table — pgvector for entity matching (replaces ChromaDB)
+  - `entity_sentiment_ts` table — 7-day EWMA time series per ticker
 
 ### Step 6: Agent 1 — News Ingestion
 - feedparser → newspaper3k for full article body
@@ -333,8 +338,10 @@ ProsusAI/finbert was trained on pre-2019 data. It may underperform on:
   ```
 - Compile with `MemorySaver` checkpointer
 
-### Step 21: ChromaDB seed (scripts/seed_sp500_profiles.py)
-- Wikipedia S&P 500 list → yfinance enrichment → ChromaDB upsert
+### Step 21: Supabase seed (scripts/seed_sp500_profiles.py)
+- Wikipedia S&P 500 list → yfinance enrichment
+- Embed each company summary with `all-MiniLM-L6-v2`
+- Upsert into Supabase `sp500_embeddings` table via REST API
 - Rate-limit: 1s sleep every 10 tickers
 
 ### Step 22: Entry point (main.py)
@@ -349,9 +356,17 @@ Flow:
 1. Parse args → build UserProfile
 2. Initialize GraphState, run graph.invoke()
 3. Handle interrupt for human review
-4. Print signal summary table
-5. Print investment plan allocation table
-6. If --backtest: print accuracy metrics vs S&P 500
+4. Write output JSON to `outputs/YYYY-MM-DD.json`
+5. Print signal summary table
+6. Print investment plan allocation table
+7. If --backtest: print accuracy metrics vs S&P 500
+
+### Step 23: GitHub Actions workflow (.github/workflows/pipeline.yml)
+- Trigger: `workflow_dispatch` (manual from dashboard) + `schedule: cron` (weekdays 9am ET)
+- Inputs: `ticker`, `mode` (full/quick/backtest)
+- Steps: checkout → install deps → run `main.py` → commit `outputs/` JSON back to repo
+- Secrets required: `HF_TOKEN`, `SUPABASE_URL`, `SUPABASE_KEY`
+- Startup validation: fail fast if any secret is missing
 
 ---
 
@@ -383,21 +398,26 @@ Flow:
 10. **Timezones** — yfinance = America/New_York; RSS may be UTC or local or missing. Normalise everything to UTC at ingestion; reject articles with no parseable timestamp
 11. **Mistral licence** — Mistral-7B-Instruct-v0.2 = Apache-2.0 ✅. Verify ProsusAI/finbert licence for any commercial use
 12. **Disclaimer required everywhere** — every signal, briefing, and dashboard tab must carry: *"Educational use only. Not investment advice."*
+13. **HF API cold start** — first Mistral call after inactivity takes 30-60s. Implement retry with exponential backoff (3 attempts max)
+14. **HF free tier vs PRO** — FinBERT works on free tier. Mistral-7B needs PRO ($9/mo) or pay-per-use serverless for reliable access
+15. **GHA run time** — 50 articles × HF API calls ≈ 20-40 min on free runners. Well within 6-hour limit but monitor
+16. **Supabase pgvector index** — must create `ivfflat` index on `sp500_embeddings` before first query or similarity search is full table scan
 
 ---
 
 ## Verification Steps
 
 1. `pip install -e .` — clean install
-2. `python -m spacy download en_core_web_lg`
-3. `ollama pull mistral` + verify with `ollama list`
-4. `python -m scripts.seed_sp500_profiles` — logs ~500 companies indexed
-5. `python main.py` — articles → entities → sentiment → events → signals
+2. Accept Mistral-7B license at `https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2`
+3. Enable pgvector in Supabase: `CREATE EXTENSION IF NOT EXISTS vector;`
+4. `python -m scripts.seed_sp500_profiles` — logs ~500 companies upserted to Supabase
+5. `python main.py` — articles → entities → sentiment → events → signals → briefing
 6. `python main.py --interactive --amount 10000 --risk moderate --horizon 12` — shows investment plan
 7. `python main.py --backtest` — shows directional accuracy vs benchmark
 8. Human interrupt test: set `HIGH_IMPACT_SEVERITY_THRESHOLD=0.1` → pauses for review
 9. Dedup test: run twice → second run logs 0 new articles
-10. Fine-tune: `python -m training.trainer` → compare base vs fine-tuned F1
+10. GHA test: trigger `workflow_dispatch` from dashboard → watch run → check `outputs/` JSON committed
+11. Fine-tune: `python -m training.trainer` → compare base vs fine-tuned F1
 
 ---
 
@@ -411,21 +431,22 @@ transformers>=4.40.0
 torch>=2.2.0
 spacy>=3.7.0
 sentence-transformers>=3.0.0
-chromadb>=0.5.0
+supabase>=2.4.0            # Supabase Python client
 feedparser>=6.0.0
 newspaper3k>=0.2.8
 lxml[html_clean]>=5.0.0
 datasketch>=1.6.0
 yfinance>=0.2.40
 pandas>=2.1.0
-ollama>=0.2.0
+huggingface-hub>=0.22.0    # HF Inference API calls
 pydantic>=2.7.0
 pydantic-settings>=2.2.0
-bitsandbytes>=0.43.0       # NF4 4-bit quantization for Mistral
-jinja2>=3.1.0             # briefing report templates
-datasets>=2.19.0          # for fine-tuning data
-scikit-learn>=1.4.0       # for metrics
-matplotlib>=3.8.0         # for backtest charts
+jinja2>=3.1.0              # briefing report templates
+datasets>=2.19.0           # for fine-tuning data
+scikit-learn>=1.4.0        # for metrics
+matplotlib>=3.8.0          # for backtest charts
+requests>=2.31.0           # HF API HTTP calls
+cloudscraper>=1.2.71       # newspaper3k fallback
 ```
 
 ---
@@ -434,13 +455,62 @@ matplotlib>=3.8.0         # for backtest charts
 
 | Decision | Choice | Reason |
 |---|---|---|
-| LLM backend | Ollama (local) | No API cost, privacy, offline capable |
-| Sentiment model | FinBERT + fine-tune | Domain-specific, attention weighting possible |
-| Vector DB | ChromaDB | Persistent, no external service needed |
-| Orchestration | LangGraph | Native interrupt/resume, state management |
-| Storage | SQLite | Lightweight, no infra, signals become backtest data |
-| LLM quantization | NF4 4-bit (bitsandbytes) | Fits Mistral-7B in 16GB VRAM (~4.5GB) |
-| Dashboard | GitHub Pages (HTML/JS) | No server, free hosting, shareable URL |
+| LLM backend | HuggingFace Inference API | No local GPU needed, runs on GHA free runners |
+| Sentiment model | ProsusAI/finbert via HF API | Domain-specific, free tier always warm |
+| Event detection | Mistral-7B-Instruct-v0.2 via HF API | Needs HF PRO ($9/mo) for reliability |
+| Vector DB | Supabase pgvector | Same service as relational DB, no extra infra |
+| Relational DB | Supabase (Postgres) | Managed, free 500MB, REST API from GHA |
+| Orchestration | LangGraph + GHA workflow_dispatch | Native interrupt/resume + cloud execution |
+| Dashboard | GitHub Pages (HTML/JS) | No server, free hosting, triggers GHA |
+| Briefing output | Jinja2 Markdown → `outputs/` in repo | Dashboard reads via GitHub Contents API |
+| Backtesting | yfinance | Free, reliable historical OHLCV |
+
+---
+
+## Infrastructure Setup (Before Writing Any Code)
+
+### 1. HuggingFace
+- Create account + generate token at `https://huggingface.co/settings/tokens`
+- Accept Mistral-7B license: `https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2`
+- Consider HF PRO ($9/mo) for reliable Mistral access
+
+### 2. Supabase
+- Create project at `https://supabase.com`
+- Enable pgvector: SQL editor → `CREATE EXTENSION IF NOT EXISTS vector;`
+- Create tables (run once):
+```sql
+CREATE TABLE signals (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  ticker TEXT, signal TEXT, confidence FLOAT,
+  score FLOAT, components JSONB, evidence_ids TEXT[],
+  generated_at TIMESTAMPTZ, horizon_days INT DEFAULT 5
+);
+
+CREATE TABLE articles (
+  id TEXT PRIMARY KEY, url TEXT, title TEXT,
+  source TEXT, published_at TIMESTAMPTZ, is_duplicate BOOL
+);
+
+CREATE TABLE sp500_embeddings (
+  ticker TEXT PRIMARY KEY, name TEXT, sector TEXT,
+  summary TEXT, embedding vector(384)
+);
+
+CREATE INDEX ON sp500_embeddings USING ivfflat (embedding vector_cosine_ops);
+CREATE INDEX ON signals (ticker, generated_at DESC);
+```
+
+### 3. GitHub Actions Secrets
+Add to repo Settings → Secrets → Actions:
+- `HF_TOKEN` — HuggingFace API token
+- `SUPABASE_URL` — from Supabase project settings
+- `SUPABASE_KEY` — service role key (not anon key)
+
+### 4. SEC EDGAR User-Agent
+Set in `.env`:
+```
+EDGAR_USER_AGENT="stockSentimentAnalysis/1.0 your@email.com"
+```
 
 ---
 
