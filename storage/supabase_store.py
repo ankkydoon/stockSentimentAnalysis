@@ -22,3 +22,40 @@ class SupabaseStore:
     def article_exists(self, article_id: str) -> bool:
         result = self.client.table("articles").select("id").eq("id", article_id).execute()
         return len(result.data) > 0
+
+    def upsert_signal(self, signal: InvestmentSignal) -> None:
+        import uuid
+        self.client.table("signals").upsert({
+            "id": str(uuid.uuid4()),
+            "ticker": signal.ticker,
+            "signal": signal.direction,
+            "confidence": signal.confidence,
+            "score": signal.score,
+            "components": {
+                "sentiment": signal.sentiment_component,
+                "event": signal.event_component,
+                "price": signal.price_component,
+            },
+            "evidence_ids": list(signal.evidence_ids),
+            "generated_at": signal.generated_at.isoformat(),
+            "horizon_days": signal.horizon_days,
+        }).execute()
+
+    def upsert_sentiment_ts(self, ticker: str, date: str, ewma_score: float, n_articles: int) -> None:
+        self.client.table("entity_sentiment_ts").upsert({
+            "ticker": ticker,
+            "date": date,
+            "ewma_score": ewma_score,
+            "n_articles": n_articles,
+        }).execute()
+
+    def get_sentiment_ewma(self, ticker: str) -> float:
+        result = (self.client.table("entity_sentiment_ts")
+                  .select("ewma_score")
+                  .eq("ticker", ticker)
+                  .order("date", desc=True)
+                  .limit(1)
+                  .execute())
+        if result.data:
+            return result.data[0]["ewma_score"]
+        return 0.0
