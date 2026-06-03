@@ -1,6 +1,6 @@
 import operator
-from typing import Annotated, Any
-from typing_extensions import TypedDict
+from typing import Annotated, Any, TypedDict
+
 from models.article import Article
 from models.entity import Entity
 from models.sentiment import SentimentScore
