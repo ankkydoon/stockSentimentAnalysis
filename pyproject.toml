@@ -7,7 +7,7 @@ name = "stock-sentiment"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
-    "langgraph>=0.2.0",
+    "langgraph>=1.0.0",
     "langchain-core>=0.3.0",
     "pydantic>=2.7.0",
     "pydantic-settings>=2.2.0",
@@ -17,7 +17,7 @@ dependencies = [
     "sentence-transformers>=3.0.0",
     "supabase>=2.4.0",
     "feedparser>=6.0.0",
-    "newspaper3k>=0.2.8",
+    "newspaper4k>=0.9.3",
     "lxml[html_clean]>=5.0.0",
     "datasketch>=1.6.0",
     "yfinance>=0.2.40",
@@ -44,6 +44,5 @@ packages = [
     "storage",
     "backtesting",
     "training",
-    "scripts",
     "reports",
 ]
