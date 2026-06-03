@@ -41,3 +41,21 @@ def test_get_sentiment_ewma_returns_zero_when_empty():
         store = SupabaseStore(url="https://x.supabase.co", key="key")
         result = store.get_sentiment_ewma("AAPL")
     assert result == 0.0
+
+def test_search_sp500_returns_ticker():
+    mock_client = MagicMock()
+    mock_client.rpc.return_value.execute.return_value = MagicMock(
+        data=[{"ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology", "similarity": 0.95}]
+    )
+    with patch("storage.supabase_store.create_client", return_value=mock_client):
+        store = SupabaseStore(url="https://x.supabase.co", key="key")
+        results = store.search_sp500([0.1] * 384, threshold=0.72)
+    assert results[0]["ticker"] == "AAPL"
+
+def test_search_sp500_returns_empty_on_no_match():
+    mock_client = MagicMock()
+    mock_client.rpc.return_value.execute.return_value = MagicMock(data=[])
+    with patch("storage.supabase_store.create_client", return_value=mock_client):
+        store = SupabaseStore(url="https://x.supabase.co", key="key")
+        results = store.search_sp500([0.1] * 384, threshold=0.72)
+    assert results == []

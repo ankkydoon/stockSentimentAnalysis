@@ -59,3 +59,20 @@ class SupabaseStore:
         if result.data:
             return result.data[0]["ewma_score"]
         return 0.0
+
+    def upsert_sp500_embedding(self, ticker: str, name: str, sector: str, summary: str, embedding: list[float]) -> None:
+        self.client.table("sp500_embeddings").upsert({
+            "ticker": ticker,
+            "name": name,
+            "sector": sector,
+            "summary": summary,
+            "embedding": embedding,
+        }).execute()
+
+    def search_sp500(self, embedding: list[float], threshold: float = 0.72, limit: int = 1) -> list[dict]:
+        result = self.client.rpc("match_sp500", {
+            "query_embedding": embedding,
+            "match_threshold": threshold,
+            "match_count": limit,
+        }).execute()
+        return result.data or []
