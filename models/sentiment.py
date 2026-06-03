@@ -1,11 +1,13 @@
-from pydantic import BaseModel, field_validator
-
+from typing import Literal
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 class SentimentScore(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     ticker: str
     score: float
-    label: str
-    n_sentences: int
+    label: Literal["positive", "negative", "neutral"]
+    n_sentences: int = Field(ge=0)
     window_ewma: float
 
     @field_validator("score", "window_ewma")

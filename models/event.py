@@ -1,6 +1,5 @@
 from enum import Enum
-from pydantic import BaseModel
-
+from pydantic import BaseModel, Field
 
 class EventCategory(str, Enum):
     EARNINGS_REPORT = "earnings_report"
@@ -12,11 +11,10 @@ class EventCategory(str, Enum):
     GUIDANCE_UPDATE = "guidance_update"
     MACRO_OTHER = "macro_other"
 
-
 class Event(BaseModel):
     article_id: str
     ticker: str | None = None
     category: EventCategory
-    severity: float
+    severity: float = Field(ge=0.0, le=1.0)
     summary: str = ""
     raw_llm_output: str = ""
