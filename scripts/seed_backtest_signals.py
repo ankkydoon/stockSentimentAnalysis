@@ -9,6 +9,7 @@ TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "JPM", "JNJ"
 DIRECTIONS = ["bullish", "bearish", "neutral"]
 
 def main() -> None:
+    random.seed(42)
     settings = get_settings()
     store = SupabaseStore(url=settings.supabase_url, key=settings.supabase_key.get_secret_value())
     base_date = datetime.now(timezone.utc) - timedelta(days=60)

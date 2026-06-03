@@ -1,3 +1,4 @@
+import uuid
 from supabase import create_client, Client
 from models.article import Article
 from models.signal import InvestmentSignal
@@ -24,9 +25,8 @@ class SupabaseStore:
         return len(result.data) > 0
 
     def upsert_signal(self, signal: InvestmentSignal) -> None:
-        import uuid
         self.client.table("signals").upsert({
-            "id": str(uuid.uuid4()),
+            "id": signal.id,
             "ticker": signal.ticker,
             "signal": signal.direction,
             "confidence": signal.confidence,
