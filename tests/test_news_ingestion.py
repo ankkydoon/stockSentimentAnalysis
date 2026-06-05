@@ -22,9 +22,10 @@ def test_deduplicate_keeps_different_articles():
     assert len(result) == 2
 
 
-def test_deduplicate_marks_duplicate_flag():
+def test_deduplicate_excludes_duplicate_from_result():
     a1 = make_article("https://ex.com/1")
     a2 = make_article("https://ex.com/1")
-    deduplicate([a1, a2], threshold=0.72)
-    # second article with same content should be marked duplicate
-    assert a1.is_duplicate is False
+    result = deduplicate([a1, a2], threshold=0.72)
+    # only the first article kept; second (same id) excluded
+    assert len(result) == 1
+    assert result[0].id == a1.id

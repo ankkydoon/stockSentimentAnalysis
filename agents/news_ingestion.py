@@ -21,14 +21,12 @@ def deduplicate(articles: list[Article], threshold: float = 0.72) -> list[Articl
         if article.id in seen_ids:
             continue
         m = _minhash(article.body or article.title)
-        try:
-            candidates = lsh.query(m)
-            if not candidates:
+        candidates = lsh.query(m)
+        if not candidates:
+            try:
                 lsh.insert(article.id, m)
-                seen_ids.add(article.id)
-                unique.append(article)
-        except Exception:
-            lsh.insert(article.id, m)
+            except ValueError:
+                pass  # duplicate key — already seen via different path
             seen_ids.add(article.id)
             unique.append(article)
     return unique

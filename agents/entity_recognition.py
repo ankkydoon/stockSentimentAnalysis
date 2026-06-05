@@ -1,4 +1,5 @@
 import re
+from functools import lru_cache
 from sentence_transformers import SentenceTransformer
 from models.entity import Entity
 from config.settings import get_settings
@@ -20,12 +21,18 @@ def has_financial_cue(text: str) -> bool:
     return any(cue in lower for cue in FINANCIAL_CUES)
 
 
-def resolve_entity(raw_text: str, article_text: str, model: SentenceTransformer,
-                   store: SupabaseStore) -> Entity:
+@lru_cache(maxsize=1)
+def _get_embedding_model() -> SentenceTransformer:
+    return SentenceTransformer(get_settings().embedding_model_id)
+
+
+def resolve_entity(raw_text: str, article_text: str, store: SupabaseStore) -> Entity:
     if not has_financial_cue(article_text):
         return Entity(raw_text=raw_text, linked=False)
+    model = _get_embedding_model()
     embedding = model.encode(raw_text).tolist()
-    results = store.search_sp500(embedding, threshold=0.72)
+    threshold = get_settings().entity_similarity_threshold
+    results = store.search_sp500(embedding, threshold=threshold)
     if results:
         best = results[0]
         return Entity(raw_text=raw_text, ticker=best["ticker"],
@@ -35,12 +42,12 @@ def resolve_entity(raw_text: str, article_text: str, model: SentenceTransformer,
 
 
 def entity_recognition_node(state: dict) -> dict:
-    import spacy
     settings = get_settings()
     store = SupabaseStore(url=settings.supabase_url,
                           key=settings.supabase_key.get_secret_value())
-    model = SentenceTransformer(settings.embedding_model_id)
+
     try:
+        import spacy
         nlp = spacy.load("en_core_web_sm")
     except Exception:
         nlp = None
@@ -55,8 +62,8 @@ def entity_recognition_node(state: dict) -> dict:
         if nlp:
             doc = nlp(article.body[:5000])
             for ent in doc.ents:
-                if ent.label_ in ("ORG", "PER"):
-                    resolved = resolve_entity(ent.text, article.body, model, store)
+                if ent.label_ == "ORG":  # PER excluded — person names don't match sp500
+                    resolved = resolve_entity(ent.text, article.body, store)
                     entities.append(resolved)
         article_entities[article.id] = entities
     return {"article_entities": article_entities}
