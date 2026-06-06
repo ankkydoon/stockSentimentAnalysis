@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Sentiment Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="header-left">
+        <h1 class="site-title">Stock Sentiment Dashboard</h1>
+        <p class="header-disclaimer">Educational use only. Not investment advice.</p>
+      </div>
+      <div class="header-right">
+        <span class="run-date" id="run-date"></span>
+        <a
+          class="btn-run-pipeline"
+          href="https://github.com/ankkydoon/stockSentimentAnalysis/actions/workflows/pipeline.yml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          &#9654; Run Pipeline
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div id="loading" class="loading-state" aria-live="polite">
+      <div class="spinner"></div>
+      <p>Loading latest pipeline output&hellip;</p>
+    </div>
+
+    <div id="error" class="error-state" aria-live="assertive" hidden>
+      <div class="error-icon">&#9888;</div>
+      <h2>Unable to load data</h2>
+      <p id="error-message">The pipeline may not have run yet, or the GitHub API is unreachable.</p>
+      <a
+        class="btn-run-pipeline"
+        href="https://github.com/ankkydoon/stockSentimentAnalysis/actions/workflows/pipeline.yml"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Run the pipeline to generate data
+      </a>
+    </div>
+
+    <div id="dashboard" hidden>
+      <!-- Signals section -->
+      <section class="card" id="signals-section">
+        <h2 class="section-title">
+          <span class="section-icon">&#128200;</span> Investment Signals
+        </h2>
+        <div class="table-wrapper">
+          <table class="data-table" id="signals-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Direction</th>
+                <th>Confidence</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="signals-body">
+            </tbody>
+          </table>
+          <p class="empty-msg" id="signals-empty" hidden>No signal data available.</p>
+        </div>
+      </section>
+
+      <!-- Events section -->
+      <section class="card" id="events-section">
+        <h2 class="section-title">
+          <span class="section-icon">&#128240;</span> Detected Events
+        </h2>
+        <div id="events-list" class="events-list"></div>
+        <p class="empty-msg" id="events-empty" hidden>No event data available.</p>
+      </section>
+
+      <!-- Investment Plan section -->
+      <section class="card" id="plan-section">
+        <h2 class="section-title">
+          <span class="section-icon">&#128181;</span> Investment Plan
+        </h2>
+        <div id="plan-content">
+          <p class="empty-msg" id="plan-empty" hidden>No investment plan available.</p>
+
+          <div id="plan-details" hidden>
+            <div class="plan-meta">
+              <div class="plan-meta-item">
+                <span class="meta-label">Total Amount</span>
+                <span class="meta-value" id="plan-total"></span>
+              </div>
+              <div class="plan-meta-item">
+                <span class="meta-label">Rebalance Trigger</span>
+                <span class="meta-value" id="plan-rebalance"></span>
+              </div>
+              <div class="plan-meta-item">
+                <span class="meta-label">Expected Return</span>
+                <span class="meta-value" id="plan-return"></span>
+              </div>
+            </div>
+
+            <div id="plan-risk" class="plan-risk"></div>
+
+            <div class="table-wrapper">
+              <table class="data-table" id="allocations-table">
+                <thead>
+                  <tr>
+                    <th>Ticker</th>
+                    <th>Amount</th>
+                    <th>%</th>
+                    <th>Rationale</th>
+                  </tr>
+                </thead>
+                <tbody id="allocations-body">
+                </tbody>
+              </table>
+            </div>
+
+            <p class="plan-disclaimer" id="plan-disclaimer"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-disclaimer">Educational use only. Not investment advice.</p>
+    <p class="last-updated" id="last-updated"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
