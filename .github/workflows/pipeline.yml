@@ -1,0 +1,158 @@
+# Educational use only. Not investment advice.
+#
+# Required secrets:
+#   HF_TOKEN      — HuggingFace API token
+#   SUPABASE_URL  — Supabase project URL
+#   SUPABASE_KEY  — Supabase service role key
+
+name: Financial News Sentiment Pipeline
+
+on:
+  schedule:
+    # Weekdays at 9am ET (14:00 UTC)
+    - cron: '0 14 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Pipeline mode'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - quick
+          - backtest
+      ticker:
+        description: 'Ticker symbol filter (optional)'
+        required: false
+        default: ''
+        type: string
+      amount:
+        description: 'Portfolio amount'
+        required: false
+        default: '10000'
+        type: string
+      risk:
+        description: 'Risk tolerance'
+        required: false
+        default: 'moderate'
+        type: choice
+        options:
+          - conservative
+          - moderate
+          - aggressive
+      horizon:
+        description: 'Investment horizon (months)'
+        required: false
+        default: '12'
+        type: string
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Validate required secrets
+        run: |
+          missing=()
+          if [ -z "$HF_TOKEN" ]; then
+            missing+=("HF_TOKEN")
+          fi
+          if [ -z "$SUPABASE_URL" ]; then
+            missing+=("SUPABASE_URL")
+          fi
+          if [ -z "$SUPABASE_KEY" ]; then
+            missing+=("SUPABASE_KEY")
+          fi
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "ERROR: The following required secrets are not set: ${missing[*]}"
+            echo "Please add them under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "All required secrets are present."
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+
+      - name: Prepare outputs directory
+        run: mkdir -p outputs
+
+      - name: Run pipeline
+        # All workflow_dispatch inputs are passed via env: so they are never
+        # interpolated directly into the shell command string, preventing
+        # command injection from user-supplied string inputs.
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          EDGAR_USER_AGENT: 'stockSentimentAnalysis/1.0 github-actions@users.noreply.github.com'
+          # choice inputs are safe to interpolate; string inputs use env: instead
+          INPUT_MODE: ${{ github.event.inputs.mode || 'full' }}
+          INPUT_RISK: ${{ github.event.inputs.risk || 'moderate' }}
+          INPUT_AMOUNT: ${{ github.event.inputs.amount || '10000' }}
+          INPUT_HORIZON: ${{ github.event.inputs.horizon || '12' }}
+          INPUT_TICKER: ${{ github.event.inputs.ticker || '' }}
+        run: |
+          # Resolve effective values — shell variables only, no further ${{ }} expansion
+          MODE="${INPUT_MODE}"
+          AMOUNT="${INPUT_AMOUNT}"
+          RISK="${INPUT_RISK}"
+          HORIZON="${INPUT_HORIZON}"
+
+          # Validate numeric/alphanumeric inputs to reduce injection surface
+          if ! [[ "$AMOUNT" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+            echo "ERROR: 'amount' must be a number, got: $AMOUNT"
+            exit 1
+          fi
+          if ! [[ "$HORIZON" =~ ^[0-9]+$ ]]; then
+            echo "ERROR: 'horizon' must be an integer, got: $HORIZON"
+            exit 1
+          fi
+
+          if [ "$MODE" = "backtest" ]; then
+            START=$(date -d '1 year ago' +%Y-%m-%d)
+            END=$(date +%Y-%m-%d)
+            python main.py --backtest --start "$START" --end "$END"
+          elif [ "$MODE" = "quick" ]; then
+            export MAX_ARTICLES_PER_RUN=10
+            python main.py --interactive \
+              --amount "$AMOUNT" \
+              --risk "$RISK" \
+              --horizon "$HORIZON"
+          else
+            python main.py --interactive \
+              --amount "$AMOUNT" \
+              --risk "$RISK" \
+              --horizon "$HORIZON"
+          fi
+
+      - name: Commit and push outputs
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outputs/
+          git diff --staged --quiet || git commit -m "chore: pipeline output $(date +%Y-%m-%d)"
+          git push
