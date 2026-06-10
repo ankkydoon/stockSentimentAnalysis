@@ -7,9 +7,18 @@ HF_LEGACY_URL = "https://api-inference.huggingface.co/models"
 
 
 def hf_chat(model_id: str, prompt: str, token: str, max_tokens: int = 150,
-            retries: int = 3, backoff_base: float = 2.0) -> str:
-    """Call HuggingFace chat completions endpoint. Returns the assistant reply text."""
-    url = f"{HF_ROUTER_URL}/{model_id}/v1/chat/completions"
+            retries: int = 3, backoff_base: float = 2.0,
+            provider: str = "novita") -> str:
+    """Call HuggingFace router chat completions endpoint. Returns the assistant reply text.
+
+    provider="hf-inference" uses HF's own servers (limited model support).
+    provider="novita"|"together"|"fireworks-ai" routes through third-party providers
+    that have broader Mistral/Llama support on the HF free tier.
+    """
+    if provider == "hf-inference":
+        url = f"{HF_ROUTER_URL}/{model_id}/v1/chat/completions"
+    else:
+        url = f"https://router.huggingface.co/{provider}/v1/chat/completions"
     payload = {
         "model": model_id,
         "messages": [{"role": "user", "content": prompt}],

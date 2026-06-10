@@ -58,6 +58,7 @@ def _call_mistral(article_text: str) -> tuple[dict | None, str | None]:
             max_tokens=150,
             retries=settings.hf_api_retries,
             backoff_base=settings.hf_api_backoff_base,
+            provider=settings.mistral_provider,
         )
     except Exception as exc:
         return None, f"HF API error: {exc}"
@@ -69,6 +70,7 @@ def _call_mistral(article_text: str) -> tuple[dict | None, str | None]:
                 prompt + "\nReturn valid JSON only:",
                 token=settings.hf_token.get_secret_value(),
                 max_tokens=150, retries=1, backoff_base=0.0,
+                provider=settings.mistral_provider,
             )
         except Exception as exc:
             return None, f"HF API repair error: {exc}"

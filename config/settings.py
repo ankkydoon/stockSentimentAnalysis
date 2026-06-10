@@ -18,6 +18,7 @@ class Settings(BaseSettings):
 
     finbert_model_id: str = "ProsusAI/finbert"
     mistral_model_id: str = "mistralai/Mistral-7B-Instruct-v0.3"
+    mistral_provider: str = "novita"
     embedding_model_id: str = "sentence-transformers/all-MiniLM-L6-v2"
 
     hf_api_retries: int = 3
