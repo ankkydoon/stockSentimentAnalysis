@@ -6,6 +6,7 @@ from models.signal import InvestmentSignal
 
 class SupabaseStore:
     def __init__(self, url: str, key: str):
+        url = (url or "").rstrip("/").split("/rest/")[0]  # normalise URL
         self._enabled = bool(url and key)
         self.client: Client | None = create_client(url, key) if self._enabled else None
 
