@@ -39,10 +39,15 @@ def sentiment_analysis_node(state: dict) -> dict:
     for ticker, sentences in ticker_sentences.items():
         if not sentences:
             continue
-        outputs = hf_post(api_url, {"inputs": sentences[:10]},
-                          token=settings.hf_token.get_secret_value(),
-                          retries=settings.hf_api_retries,
-                          backoff_base=settings.hf_api_backoff_base)
+        try:
+            outputs = hf_post(api_url, {"inputs": sentences[:10]},
+                              token=settings.hf_token.get_secret_value(),
+                              retries=settings.hf_api_retries,
+                              backoff_base=settings.hf_api_backoff_base)
+        except Exception as exc:
+            state.setdefault("error_log", [])
+            state["error_log"] = state.get("error_log", []) + [f"FinBERT API error for {ticker}: {exc}"]
+            continue
         if isinstance(outputs, list) and outputs:
             flat = outputs if isinstance(outputs[0], dict) else [i for sub in outputs for i in sub]
             score = aggregate_sentiment(flat)

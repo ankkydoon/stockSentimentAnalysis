@@ -52,16 +52,22 @@ def _call_mistral(article_text: str) -> dict | None:
     url = f"https://api-inference.huggingface.co/models/{settings.mistral_model_id}"
     prompt = FEW_SHOT + article_text[:1000] + '\nJSON:'
     payload = {"inputs": prompt, "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
-    raw = hf_post(url, payload, token=settings.hf_token.get_secret_value(),
-                  retries=settings.hf_api_retries, backoff_base=settings.hf_api_backoff_base)
+    try:
+        raw = hf_post(url, payload, token=settings.hf_token.get_secret_value(),
+                      retries=settings.hf_api_retries, backoff_base=settings.hf_api_backoff_base)
+    except Exception:
+        return None
     generated = raw[0].get("generated_text", "") if isinstance(raw, list) else ""
     result = parse_event_json(generated)
     if result is None:
-        repair_payload = {"inputs": prompt + "\nReturn valid JSON only:",
-                          "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
-        raw2 = hf_post(url, repair_payload, token=settings.hf_token.get_secret_value(),
-                       retries=1, backoff_base=0.0)
-        generated2 = raw2[0].get("generated_text", "") if isinstance(raw2, list) else ""
+        try:
+            repair_payload = {"inputs": prompt + "\nReturn valid JSON only:",
+                              "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
+            raw2 = hf_post(url, repair_payload, token=settings.hf_token.get_secret_value(),
+                           retries=1, backoff_base=0.0)
+            generated2 = raw2[0].get("generated_text", "") if isinstance(raw2, list) else ""
+        except Exception:
+            return None
         result = parse_event_json(generated2)
     return result
 
