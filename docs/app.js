@@ -7,6 +7,10 @@
 const GITHUB_CONTENTS_API =
   'https://api.github.com/repos/ankkydoon/stockSentimentAnalysis/contents/outputs';
 
+// Direct raw URL fallback — no rate limit, always works
+const RAW_BASE =
+  'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/outputs';
+
 // Allowlisted direction values that map to CSS class suffixes.
 const DIRECTION_CLASSES = new Set(['bullish', 'bearish', 'neutral']);
 
@@ -260,53 +264,50 @@ function showError(message) {
 // ── Fetch pipeline output ─────────────────────────────────────────────────────
 
 async function fetchLatestOutput() {
-  let dirListing;
+  // Try last 7 days of raw URLs first (no rate limit)
+  for (let i = 0; i < 7; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const url = `${RAW_BASE}/${dateStr}.json`;
+    try {
+      const res = await fetch(url);
+      if (res.ok) return res.json();
+    } catch (_) {}
+  }
 
+  // Fall back to GitHub Contents API
+  let dirListing;
   try {
     const dirRes = await fetch(GITHUB_CONTENTS_API, {
       headers: { Accept: 'application/vnd.github.v3+json' },
     });
-
     if (!dirRes.ok) {
       if (dirRes.status === 404) {
-        throw new Error('The outputs/ directory does not exist yet. Run the pipeline to generate data.');
+        throw new Error('No pipeline output found. Run the pipeline first.');
       }
       throw new Error(`GitHub API returned ${dirRes.status} ${dirRes.statusText}.`);
     }
-
     dirListing = await dirRes.json();
   } catch (err) {
     if (err.name === 'TypeError') {
-      // Network / CORS error — likely running as file:// or offline
-      throw new Error(
-        'Could not reach the GitHub API. ' +
-        'If you are viewing this locally (file://), open it via a web server or deploy to GitHub Pages.'
-      );
+      throw new Error('Could not reach GitHub. Check your internet connection.');
     }
     throw err;
   }
 
-  // Filter to JSON files and sort descending by name to find the most recent.
   const jsonFiles = (Array.isArray(dirListing) ? dirListing : [])
     .filter(f => f.type === 'file' && f.name.endsWith('.json'))
     .sort((a, b) => b.name.localeCompare(a.name));
 
   if (jsonFiles.length === 0) {
-    throw new Error('No pipeline output files found in outputs/. Run the pipeline first.');
+    throw new Error('No pipeline output files found. Run the pipeline first.');
   }
 
-  const latestFile = jsonFiles[0];
-  const downloadUrl = latestFile.download_url;
-
-  if (!downloadUrl) {
-    throw new Error(`Could not retrieve download URL for ${latestFile.name}.`);
-  }
-
-  const dataRes = await fetch(downloadUrl);
+  const dataRes = await fetch(jsonFiles[0].download_url);
   if (!dataRes.ok) {
-    throw new Error(`Failed to download ${latestFile.name}: ${dataRes.status} ${dataRes.statusText}.`);
+    throw new Error(`Failed to download ${jsonFiles[0].name}: ${dataRes.status}`);
   }
-
   return dataRes.json();
 }
 
