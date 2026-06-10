@@ -47,7 +47,8 @@ def parse_event_json(raw: str) -> dict | None:
     return None
 
 
-def _call_mistral(article_text: str) -> dict | None:
+def _call_mistral(article_text: str) -> tuple[dict | None, str | None]:
+    """Returns (parsed_result, error_message). error_message is None on success."""
     settings = get_settings()
     url = f"https://router.huggingface.co/hf-inference/models/{settings.mistral_model_id}"
     prompt = FEW_SHOT + article_text[:1000] + '\nJSON:'
@@ -55,8 +56,8 @@ def _call_mistral(article_text: str) -> dict | None:
     try:
         raw = hf_post(url, payload, token=settings.hf_token.get_secret_value(),
                       retries=settings.hf_api_retries, backoff_base=settings.hf_api_backoff_base)
-    except Exception:
-        return None
+    except Exception as exc:
+        return None, f"HF API error: {exc}"
     generated = raw[0].get("generated_text", "") if isinstance(raw, list) else ""
     result = parse_event_json(generated)
     if result is None:
@@ -66,15 +67,18 @@ def _call_mistral(article_text: str) -> dict | None:
             raw2 = hf_post(url, repair_payload, token=settings.hf_token.get_secret_value(),
                            retries=1, backoff_base=0.0)
             generated2 = raw2[0].get("generated_text", "") if isinstance(raw2, list) else ""
-        except Exception:
-            return None
+        except Exception as exc:
+            return None, f"HF API repair error: {exc}"
         result = parse_event_json(generated2)
-    return result
+        if result is None:
+            return None, f"JSON parse failed. Raw output: {generated[:200]!r}"
+    return result, None
 
 
 def event_detection_node(state: dict) -> dict:
     settings = get_settings()
     events: list[Event] = []
+    error_log: list[str] = []
     ticker_sentiment = {s.ticker: s.score for s in state["sentiment_scores"]}
 
     for article in state["deduplicated_articles"]:
@@ -85,7 +89,9 @@ def event_detection_node(state: dict) -> dict:
         if not should_run_llm(sentiment_score, article.body):
             continue
 
-        parsed = _call_mistral(article.body)
+        parsed, err = _call_mistral(article.body)
+        if err:
+            error_log.append(f"event_detection [{article.id[:8]}]: {err}")
         if not parsed:
             continue
 
@@ -106,4 +112,4 @@ def event_detection_node(state: dict) -> dict:
         ))
 
     requires_interrupt = any(e.severity >= settings.high_severity_threshold for e in events)
-    return {"events": events, "requires_interrupt": requires_interrupt}
+    return {"events": events, "requires_interrupt": requires_interrupt, "error_log": error_log}
