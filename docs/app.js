@@ -4,12 +4,9 @@
    all dashboard sections.
    ============================================================ */
 
-const GITHUB_CONTENTS_API =
-  'https://api.github.com/repos/ankkydoon/stockSentimentAnalysis/contents/outputs';
-
-// Direct raw URL fallback — no rate limit, always works
-const RAW_BASE =
-  'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/outputs';
+// Compact dashboard data written by the pipeline after each run
+const LATEST_DATA_URL =
+  'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/docs/latest.json';
 
 // Allowlisted direction values that map to CSS class suffixes.
 const DIRECTION_CLASSES = new Set(['bullish', 'bearish', 'neutral']);
@@ -264,42 +261,9 @@ function showError(message) {
 // ── Fetch pipeline output ─────────────────────────────────────────────────────
 
 async function fetchLatestOutput() {
-  // Ordered list of URLs to try — most recent first
-  const candidates = [];
-
-  // Last 14 days via raw.githubusercontent.com
-  for (let i = 0; i < 14; i++) {
-    const d = new Date();
-    d.setUTCDate(d.getUTCDate() - i);
-    const y  = d.getUTCFullYear();
-    const mo = String(d.getUTCMonth() + 1).padStart(2, '0');
-    const dy = String(d.getUTCDate()).padStart(2, '0');
-    candidates.push(`${RAW_BASE}/${y}-${mo}-${dy}.json`);
-  }
-
-  for (const url of candidates) {
-    try {
-      const res = await fetch(url);
-      if (res.ok) {
-        const data = await res.json();
-        return data;
-      }
-    } catch (_) {}
-  }
-
-  // Hard-coded known-good URL as last resort
-  try {
-    const res = await fetch(
-      'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/outputs/2026-06-10.json'
-    );
-    if (res.ok) return res.json();
-  } catch (_) {}
-
-  throw new Error(
-    'Could not load pipeline data. ' +
-    'Tried last 14 days — no output file found. ' +
-    'Please run the pipeline first.'
-  );
+  const res = await fetch(LATEST_DATA_URL);
+  if (!res.ok) throw new Error(`Failed to load dashboard data (HTTP ${res.status})`);
+  return res.json();
 }
 
 /* ── Embedded fallback data (last known pipeline run) ────────────────────── */
@@ -313,12 +277,10 @@ async function init() {
   hide(elError);
   renderDashboard(EMBEDDED_DATA);
 
-  // Silently try to fetch fresher data in the background
+  // Fetch latest pipeline output and re-render if available
   try {
     const fresh = await fetchLatestOutput();
-    if (fresh && fresh.run_date !== EMBEDDED_DATA.run_date) {
-      renderDashboard(fresh);
-    }
+    if (fresh) renderDashboard(fresh);
   } catch (_) {
     // Silently ignore — embedded data is already shown
   }

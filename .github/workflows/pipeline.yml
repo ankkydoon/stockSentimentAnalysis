@@ -146,11 +146,35 @@ jobs:
           INPUT_HORIZON: ${{ inputs.horizon || '12' }}
           INPUT_TICKER: ${{ inputs.ticker || 'none' }}
 
+      - name: Generate dashboard data
+        if: always()
+        run: |
+          python3 - <<'EOF'
+import json, os
+from datetime import datetime, timezone
+run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+output_file = f"outputs/{run_date}.json"
+if os.path.exists(output_file):
+    with open(output_file) as f:
+        state = json.load(f)
+    dashboard = {
+        "run_date": state.get("run_date", run_date),
+        "signals": state.get("signals", []),
+        "events": state.get("events", []),
+        "investment_plan": state.get("investment_plan"),
+    }
+    with open("docs/latest.json", "w") as f:
+        json.dump(dashboard, f, default=str, indent=2)
+    print(f"Dashboard data written: {len(dashboard['signals'])} signals, {len(dashboard['events'])} events")
+else:
+    print(f"Output file {output_file} not found, skipping dashboard data update")
+EOF
+
       - name: Commit and push outputs
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add outputs/
+          git add outputs/ docs/latest.json
           git diff --staged --quiet || git commit -m "chore: pipeline output $(date +%Y-%m-%d)"
           git push
