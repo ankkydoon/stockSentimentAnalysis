@@ -36,6 +36,7 @@ def sentiment_analysis_node(state: dict) -> dict:
             ticker_sentences.setdefault(ticker, []).extend(sentences)
 
     sentiment_scores: list[SentimentScore] = []
+    errors: list[str] = []
     for ticker, sentences in ticker_sentences.items():
         if not sentences:
             continue
@@ -45,8 +46,7 @@ def sentiment_analysis_node(state: dict) -> dict:
                               retries=settings.hf_api_retries,
                               backoff_base=settings.hf_api_backoff_base)
         except Exception as exc:
-            state.setdefault("error_log", [])
-            state["error_log"] = state.get("error_log", []) + [f"FinBERT API error for {ticker}: {exc}"]
+            errors.append(f"FinBERT API error for {ticker}: {type(exc).__name__}: {str(exc)[:100]}")
             continue
         if isinstance(outputs, list) and outputs:
             flat = outputs if isinstance(outputs[0], dict) else [i for sub in outputs for i in sub]
@@ -68,4 +68,4 @@ def sentiment_analysis_node(state: dict) -> dict:
             ticker=ticker, score=score, label=label,
             n_sentences=len(sentences), window_ewma=ewma,
         ))
-    return {"sentiment_scores": sentiment_scores}
+    return {"sentiment_scores": sentiment_scores, "error_log": errors}
