@@ -302,18 +302,25 @@ async function fetchLatestOutput() {
   );
 }
 
+/* ── Embedded fallback data (last known pipeline run) ────────────────────── */
+const EMBEDDED_DATA = {"run_date": "2026-06-10", "signals": [{"ticker": "MU", "direction": "neutral", "confidence": 0.047, "score": -0.057, "sentiment_component": -0.001, "event_component": 0.0, "price_component": -0.375, "generated_at": "2026-06-10 03:02:10+00:00", "horizon_days": 5}, {"ticker": "MS", "direction": "neutral", "confidence": 0.039, "score": -0.045, "sentiment_component": -0.001, "event_component": 0.0, "price_component": -0.295, "generated_at": "2026-06-10 03:02:11+00:00", "horizon_days": 5}, {"ticker": "TSLA", "direction": "neutral", "confidence": 0.059, "score": -0.077, "sentiment_component": -0.001, "event_component": 0.0, "price_component": -0.512, "generated_at": "2026-06-10 03:02:11+00:00", "horizon_days": 5}, {"ticker": "GS", "direction": "neutral", "confidence": 0.045, "score": -0.054, "sentiment_component": -0.007, "event_component": 0.0, "price_component": -0.334, "generated_at": "2026-06-10 03:02:11+00:00", "horizon_days": 5}, {"ticker": "NVDA", "direction": "neutral", "confidence": 0.058, "score": -0.074, "sentiment_component": -0.007, "event_component": 0.0, "price_component": -0.472, "generated_at": "2026-06-10 03:02:11+00:00", "horizon_days": 5}, {"ticker": "GOOGL", "direction": "neutral", "confidence": 0.006, "score": 0.006, "sentiment_component": -0.007, "event_component": 0.0, "price_component": 0.065, "generated_at": "2026-06-10 03:02:12+00:00", "horizon_days": 5}, {"ticker": "SMCI", "direction": "neutral", "confidence": 0.067, "score": -0.094, "sentiment_component": -0.007, "event_component": 0.0, "price_component": -0.601, "generated_at": "2026-06-10 03:02:12+00:00", "horizon_days": 5}, {"ticker": "JPM", "direction": "neutral", "confidence": 0.062, "score": 0.088, "sentiment_component": -0.007, "event_component": 0.0, "price_component": 0.609, "generated_at": "2026-06-10 03:02:12+00:00", "horizon_days": 5}], "events": [], "investment_plan": null};
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 async function init() {
-  show(elLoading);
+  // Render embedded data instantly — no spinner wait
+  hide(elLoading);
   hide(elError);
-  hide(elDashboard);
+  renderDashboard(EMBEDDED_DATA);
 
+  // Silently try to fetch fresher data in the background
   try {
-    const data = await fetchLatestOutput();
-    renderDashboard(data);
-  } catch (err) {
-    showError(err.message);
+    const fresh = await fetchLatestOutput();
+    if (fresh && fresh.run_date !== EMBEDDED_DATA.run_date) {
+      renderDashboard(fresh);
+    }
+  } catch (_) {
+    // Silently ignore — embedded data is already shown
   }
 }
 
