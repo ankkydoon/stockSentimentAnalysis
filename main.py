@@ -141,25 +141,19 @@ def _save_output(final_state: dict, run_date: str) -> str:
     output_path = os.path.join(outputs_dir, f"{run_date}.json")
 
     def _serialise(obj):
+        if isinstance(obj, list):
+            return [_serialise(i) for i in obj]
+        if isinstance(obj, dict):
+            return {k: _serialise(v) for k, v in obj.items()}
         if hasattr(obj, "model_dump"):
             return obj.model_dump()
         if hasattr(obj, "__dict__"):
             return obj.__dict__
+        if isinstance(obj, (str, int, float, bool, type(None))):
+            return obj
         return str(obj)
 
-    serialisable: dict = {}
-    for key, value in final_state.items():
-        if isinstance(value, list):
-            serialisable[key] = [_serialise(v) if not isinstance(v, (str, int, float, bool, type(None))) else v for v in value]
-        elif isinstance(value, dict):
-            serialisable[key] = {
-                k: (_serialise(v) if not isinstance(v, (str, int, float, bool, type(None))) else v)
-                for k, v in value.items()
-            }
-        elif not isinstance(value, (str, int, float, bool, type(None))):
-            serialisable[key] = _serialise(value)
-        else:
-            serialisable[key] = value
+    serialisable: dict = {k: _serialise(v) for k, v in final_state.items()}
 
     with open(output_path, "w", encoding="utf-8") as fh:
         json.dump(serialisable, fh, indent=2, default=str)
