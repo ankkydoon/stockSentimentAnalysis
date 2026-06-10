@@ -1,7 +1,7 @@
 import json
 import re
 from models.event import Event, EventCategory
-from agents.hf_client import hf_post
+from agents.hf_client import hf_chat
 from config.settings import get_settings
 
 KEYWORDS = ["merger", "acquisition", "earnings", "eps", "revenue", "guidance", "lawsuit",
@@ -50,23 +50,26 @@ def parse_event_json(raw: str) -> dict | None:
 def _call_mistral(article_text: str) -> tuple[dict | None, str | None]:
     """Returns (parsed_result, error_message). error_message is None on success."""
     settings = get_settings()
-    url = f"https://router.huggingface.co/hf-inference/models/{settings.mistral_model_id}"
     prompt = FEW_SHOT + article_text[:1000] + '\nJSON:'
-    payload = {"inputs": prompt, "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
     try:
-        raw = hf_post(url, payload, token=settings.hf_token.get_secret_value(),
-                      retries=settings.hf_api_retries, backoff_base=settings.hf_api_backoff_base)
+        generated = hf_chat(
+            settings.mistral_model_id, prompt,
+            token=settings.hf_token.get_secret_value(),
+            max_tokens=150,
+            retries=settings.hf_api_retries,
+            backoff_base=settings.hf_api_backoff_base,
+        )
     except Exception as exc:
         return None, f"HF API error: {exc}"
-    generated = raw[0].get("generated_text", "") if isinstance(raw, list) else ""
     result = parse_event_json(generated)
     if result is None:
         try:
-            repair_payload = {"inputs": prompt + "\nReturn valid JSON only:",
-                              "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
-            raw2 = hf_post(url, repair_payload, token=settings.hf_token.get_secret_value(),
-                           retries=1, backoff_base=0.0)
-            generated2 = raw2[0].get("generated_text", "") if isinstance(raw2, list) else ""
+            generated2 = hf_chat(
+                settings.mistral_model_id,
+                prompt + "\nReturn valid JSON only:",
+                token=settings.hf_token.get_secret_value(),
+                max_tokens=150, retries=1, backoff_base=0.0,
+            )
         except Exception as exc:
             return None, f"HF API repair error: {exc}"
         result = parse_event_json(generated2)
