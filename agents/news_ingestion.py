@@ -45,22 +45,40 @@ def _parse_date(entry) -> datetime:
     return datetime.now(timezone.utc)
 
 
-def _fetch_body(url: str) -> str:
+def _is_blocked(text: str) -> bool:
+    """Return True if the body looks like a CAPTCHA/JS-wall page rather than article text."""
+    if not text or len(text) < 200:
+        return True
+    lowered = text[:500].lower()
+    blocked_signals = ["enable js", "enable javascript", "captcha", "please enable", "disable any ad blocker", "geo.captcha-delivery"]
+    return any(s in lowered for s in blocked_signals)
+
+
+def _fetch_body(url: str, rss_summary: str = "") -> str:
+    body = ""
     try:
         import newspaper
         ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
         article = newspaper.Article(url, browser_user_agent=ua)
         article.download()
         article.parse()
-        return article.text or ""
+        body = article.text or ""
     except Exception:
+        pass
+
+    if _is_blocked(body):
         try:
             import cloudscraper
             scraper = cloudscraper.create_scraper()
             resp = scraper.get(url, timeout=15)
-            return resp.text[:5000]
+            body = resp.text[:5000]
         except Exception:
-            return ""
+            pass
+
+    # Fall back to RSS summary if body is still blocked or empty
+    if _is_blocked(body) and rss_summary:
+        return rss_summary
+    return body
 
 
 def fetch_articles(settings=None) -> list[Article]:
@@ -74,7 +92,8 @@ def fetch_articles(settings=None) -> list[Article]:
                 url = entry.get("link", "")
                 if not url:
                     continue
-                body = _fetch_body(url)
+                rss_summary = entry.get("summary", "") or entry.get("description", "")
+                body = _fetch_body(url, rss_summary=rss_summary)
                 articles.append(Article(
                     url=url,
                     title=entry.get("title", ""),
