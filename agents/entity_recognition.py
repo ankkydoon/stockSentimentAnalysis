@@ -10,6 +10,49 @@ FINANCIAL_CUES = ["$", "shares", "inc.", "corp.", "ltd.", "nasdaq", "nyse", "ame
 
 TICKER_PATTERN = re.compile(r'\$([A-Z]{1,5})\b|\((?:NASDAQ|NYSE|AMEX):\s*([A-Z]{1,5})\)')
 
+# Fallback name→ticker map for well-known companies (used when Supabase is not seeded)
+NAME_TO_TICKER: dict[str, tuple[str, str]] = {
+    "apple": ("AAPL", "Technology"), "microsoft": ("MSFT", "Technology"),
+    "nvidia": ("NVDA", "Technology"), "google": ("GOOGL", "Technology"),
+    "alphabet": ("GOOGL", "Technology"), "amazon": ("AMZN", "Consumer Discretionary"),
+    "meta": ("META", "Technology"), "tesla": ("TSLA", "Consumer Discretionary"),
+    "berkshire": ("BRK-B", "Financials"), "eli lilly": ("LLY", "Healthcare"),
+    "jpmorgan": ("JPM", "Financials"), "jp morgan": ("JPM", "Financials"),
+    "johnson & johnson": ("JNJ", "Healthcare"), "johnson and johnson": ("JNJ", "Healthcare"),
+    "unitedhealth": ("UNH", "Healthcare"), "exxon": ("XOM", "Energy"),
+    "visa": ("V", "Financials"), "mastercard": ("MA", "Financials"),
+    "procter & gamble": ("PG", "Consumer Staples"), "home depot": ("HD", "Consumer Discretionary"),
+    "chevron": ("CVX", "Energy"), "abbvie": ("ABBV", "Healthcare"),
+    "broadcom": ("AVGO", "Technology"), "costco": ("COST", "Consumer Staples"),
+    "walmart": ("WMT", "Consumer Staples"), "netflix": ("NFLX", "Communication Services"),
+    "adobe": ("ADBE", "Technology"), "salesforce": ("CRM", "Technology"),
+    "amd": ("AMD", "Technology"), "advanced micro devices": ("AMD", "Technology"),
+    "intel": ("INTC", "Technology"), "qualcomm": ("QCOM", "Technology"),
+    "micron": ("MU", "Technology"), "super micro": ("SMCI", "Technology"),
+    "spacex": ("SPCE", "Industrials"), "palantir": ("PLTR", "Technology"),
+    "coinbase": ("COIN", "Financials"), "paypal": ("PYPL", "Financials"),
+    "uber": ("UBER", "Consumer Discretionary"), "lyft": ("LYFT", "Consumer Discretionary"),
+    "ford": ("F", "Consumer Discretionary"), "gm": ("GM", "Consumer Discretionary"),
+    "general motors": ("GM", "Consumer Discretionary"), "boeing": ("BA", "Industrials"),
+    "at&t": ("T", "Communication Services"), "verizon": ("VZ", "Communication Services"),
+    "disney": ("DIS", "Communication Services"), "comcast": ("CMCSA", "Communication Services"),
+    "pfizer": ("PFE", "Healthcare"), "moderna": ("MRNA", "Healthcare"),
+    "goldman sachs": ("GS", "Financials"), "morgan stanley": ("MS", "Financials"),
+    "bank of america": ("BAC", "Financials"), "citigroup": ("C", "Financials"),
+    "wells fargo": ("WFC", "Financials"), "blackrock": ("BLK", "Financials"),
+}
+
+
+def _name_to_ticker_lookup(name: str) -> tuple[str, str] | None:
+    lower = name.lower().strip()
+    if lower in NAME_TO_TICKER:
+        return NAME_TO_TICKER[lower]
+    # Partial match: check if any key is contained in the name
+    for key, val in NAME_TO_TICKER.items():
+        if key in lower and len(key) > 4:
+            return val
+    return None
+
 
 def extract_ticker_patterns(text: str) -> list[str]:
     matches = TICKER_PATTERN.findall(text)
@@ -29,15 +72,23 @@ def _get_embedding_model() -> SentenceTransformer:
 def resolve_entity(raw_text: str, article_text: str, store: SupabaseStore) -> Entity:
     if not has_financial_cue(article_text):
         return Entity(raw_text=raw_text, linked=False)
-    model = _get_embedding_model()
-    embedding = model.encode(raw_text).tolist()
-    threshold = get_settings().entity_similarity_threshold
-    results = store.search_sp500(embedding, threshold=threshold)
-    if results:
-        best = results[0]
-        return Entity(raw_text=raw_text, ticker=best["ticker"],
-                      sector=best.get("sector"), similarity_score=best.get("similarity", 0.0),
-                      linked=True)
+    # Try hardcoded name→ticker fallback first (works without Supabase)
+    match = _name_to_ticker_lookup(raw_text)
+    if match:
+        ticker, sector = match
+        return Entity(raw_text=raw_text, ticker=ticker, sector=sector,
+                      similarity_score=0.95, linked=True)
+    # Fall back to Supabase vector search
+    if store._enabled:
+        model = _get_embedding_model()
+        embedding = model.encode(raw_text).tolist()
+        threshold = get_settings().entity_similarity_threshold
+        results = store.search_sp500(embedding, threshold=threshold)
+        if results:
+            best = results[0]
+            return Entity(raw_text=raw_text, ticker=best["ticker"],
+                          sector=best.get("sector"), similarity_score=best.get("similarity", 0.0),
+                          linked=True)
     return Entity(raw_text=raw_text, linked=False)
 
 
