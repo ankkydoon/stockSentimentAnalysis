@@ -81,14 +81,22 @@ def _fetch_body(url: str, rss_summary: str = "") -> str:
     return body
 
 
+def _parse_feed(feed_url: str, settings) -> list:
+    if "sec.gov" in feed_url:
+        return feedparser.parse(feed_url, request_headers={
+            "User-Agent": settings.edgar_user_agent
+        }).entries
+    return feedparser.parse(feed_url).entries
+
+
 def fetch_articles(settings=None) -> list[Article]:
     if settings is None:
         settings = get_settings()
     articles: list[Article] = []
     for feed_url in RSS_FEEDS:
         try:
-            feed = feedparser.parse(feed_url)
-            for entry in feed.entries:
+            entries = _parse_feed(feed_url, settings)
+            for entry in entries:
                 url = entry.get("link", "")
                 if not url:
                     continue
