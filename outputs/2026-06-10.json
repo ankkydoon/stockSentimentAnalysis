@@ -4,7 +4,7 @@
       "ticker": "JPM",
       "score": -0.5504793724384809,
       "label": "negative",
-      "n_sentences": 36,
+      "n_sentences": 35,
       "window_ewma": -0.16514381173154427
     },
     {
@@ -13,13 +13,6 @@
       "label": "neutral",
       "n_sentences": 33,
       "window_ewma": 0.0
-    },
-    {
-      "ticker": "MU",
-      "score": -0.004319783131777506,
-      "label": "neutral",
-      "n_sentences": 17,
-      "window_ewma": -0.0012959349395332519
     },
     {
       "ticker": "TSLA",
@@ -36,6 +29,55 @@
       "window_ewma": -0.0012959349395332519
     },
     {
+      "ticker": "MU",
+      "score": -0.004319783131777506,
+      "label": "neutral",
+      "n_sentences": 17,
+      "window_ewma": -0.0012959349395332519
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.43385514372224926,
+      "label": "negative",
+      "n_sentences": 20,
+      "window_ewma": -0.13015654311667477
+    },
+    {
+      "ticker": "GM",
+      "score": 0.7639841872725315,
+      "label": "positive",
+      "n_sentences": 8,
+      "window_ewma": 0.22919525618175943
+    },
+    {
+      "ticker": "GOOGL",
+      "score": -0.4465292534009432,
+      "label": "negative",
+      "n_sentences": 34,
+      "window_ewma": -0.13395877602028294
+    },
+    {
+      "ticker": "SMCI",
+      "score": 0.15838281058833587,
+      "label": "positive",
+      "n_sentences": 5,
+      "window_ewma": 0.04751484317650076
+    },
+    {
+      "ticker": "GS",
+      "score": 0.07805166743515768,
+      "label": "neutral",
+      "n_sentences": 56,
+      "window_ewma": 0.023415500230547302
+    },
+    {
+      "ticker": "NVDA",
+      "score": 0.15838281058833587,
+      "label": "positive",
+      "n_sentences": 5,
+      "window_ewma": 0.04751484317650076
+    },
+    {
       "ticker": "CRM",
       "score": -0.670463708836653,
       "label": "negative",
@@ -48,48 +90,6 @@
       "label": "negative",
       "n_sentences": 12,
       "window_ewma": -0.13676767792881622
-    },
-    {
-      "ticker": "GM",
-      "score": 0.7639841872725315,
-      "label": "positive",
-      "n_sentences": 8,
-      "window_ewma": 0.22919525618175943
-    },
-    {
-      "ticker": "GOOGL",
-      "score": -0.43785951885281277,
-      "label": "negative",
-      "n_sentences": 35,
-      "window_ewma": -0.13135785565584382
-    },
-    {
-      "ticker": "NVDA",
-      "score": -0.024009057080774294,
-      "label": "neutral",
-      "n_sentences": 6,
-      "window_ewma": -0.007202717124232288
-    },
-    {
-      "ticker": "SMCI",
-      "score": -0.024009057080774294,
-      "label": "neutral",
-      "n_sentences": 6,
-      "window_ewma": -0.007202717124232288
-    },
-    {
-      "ticker": "GS",
-      "score": -0.22335694492070401,
-      "label": "negative",
-      "n_sentences": 40,
-      "window_ewma": -0.0670070834762112
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.43385514372224926,
-      "label": "negative",
-      "n_sentences": 20,
-      "window_ewma": -0.13015654311667477
     },
     {
       "ticker": "AAPL",
@@ -106,277 +106,354 @@
       "window_ewma": 0.09488723674096451
     }
   ],
-  "events": [],
-  "signals": [
+  "events": [
     {
-      "id": "dd9bd657a49d9b7c21864d3377526a43920e6921ef0a9ae9a9cd746d42b3b9a7",
+      "article_id": "1f816df9d2bfa19f510dc1ee3d4e664820dd808a30df6f37ae498389bd63f1fb",
       "ticker": "JPM",
-      "direction": "neutral",
-      "confidence": 0.002,
-      "score": 0.002,
-      "sentiment_component": -0.165,
-      "event_component": 0.0,
-      "price_component": 0.566,
-      "evidence_ids": [
-        "1f816df9d2bfa19f510dc1ee3d4e664820dd808a30df6f37ae498389bd63f1fb",
-        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475",
-        "5ce610f397eaf146372b8bd772d037463359d6e456e5910ed8480775652eadfe",
-        "73ffedd50744d3563405915d2b2f4d0633b14aaa6cbe4dbdaf9c2dc221d49b8c",
-        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad"
-      ],
-      "generated_at": "2026-06-10 13:32:00.082975+00:00",
-      "horizon_days": 5
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "U.S. President Trump's comments on Iran lead to fluctuations in oil prices and stock market reactions.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"U.S. President Trump's comments on Iran lead to fluctuations in oil prices and stock market reactions.\"}"
     },
     {
-      "id": "bd7c6413546f72e6b2ba980f401e02c9fd59cd0662dd7ba32143f3d886a136cc",
+      "article_id": "987852bc08d47a47e5dddc1c827a8419ff111f593267a2c876c524d21ee51b42",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Market facing significant tests with inflation data and Oracle's earnings report",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"Market facing significant tests with inflation data and Oracle's earnings report\"}"
+    },
+    {
+      "article_id": "9bd9f0a7335546f24f3b809f7a217b09ac5c7506b04f21e158f9ce37a69e9e32",
       "ticker": "MSFT",
-      "direction": "neutral",
-      "confidence": 0.065,
-      "score": -0.09,
-      "sentiment_component": 0.0,
-      "event_component": 0.0,
-      "price_component": -0.603,
-      "evidence_ids": [
-        "9bd9f0a7335546f24f3b809f7a217b09ac5c7506b04f21e158f9ce37a69e9e32",
-        "409bde769b3d7f89e66838b7e4698b55c634d8df75ad2a7d73df5f9875802233",
-        "e32e0e2797272ff50b96328501ad5453761eebeed98f2497fb0e273f2254ab2b"
-      ],
-      "generated_at": "2026-06-10 13:32:00.415642+00:00",
-      "horizon_days": 5
+      "category": "regulatory_action",
+      "severity": 0.8,
+      "summary": "Bill Gates testifies before a House committee regarding his relationship with Jeffrey Epstein",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': 'Bill Gates testifies before a House committee regarding his relationship with Jeffrey Epstein'}"
     },
     {
-      "id": "8ba87fde552e53a264494cfae8136c59278cb00ced50c1c470d801a3a121c536",
-      "ticker": "MU",
-      "direction": "neutral",
-      "confidence": 0.059,
-      "score": -0.078,
-      "sentiment_component": -0.001,
-      "event_component": 0.0,
-      "price_component": -0.519,
-      "evidence_ids": [
-        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1"
-      ],
-      "generated_at": "2026-06-10 13:32:00.737123+00:00",
-      "horizon_days": 5
+      "article_id": "fd85ce7bc8707bc3bb695f7154a48e44afb9ddcdaf05bac564c03ad81775bd87",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Precious metals and stocks decline as market focus shifts to inflation and interest rates",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Precious metals and stocks decline as market focus shifts to inflation and interest rates'}"
     },
     {
-      "id": "92a817b845b88088c70e2e1531af1b7386cf18f64abf0289bd15ac22fad9b3ad",
+      "article_id": "2484930928d790147a2cb06417f4764de4667fa0e164c48fc8db12e4ce9aad0e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "The 2026 FIFA World Cup is expected to drive significant betting activity and impact the sports-wagering market.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'The 2026 FIFA World Cup is expected to drive significant betting activity and impact the sports-wagering market.'}"
+    },
+    {
+      "article_id": "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1",
       "ticker": "TSLA",
-      "direction": "neutral",
-      "confidence": 0.064,
-      "score": -0.088,
-      "sentiment_component": -0.001,
-      "event_component": 0.0,
-      "price_component": -0.582,
-      "evidence_ids": [
-        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1",
-        "ab89d78d4f4da58df022644f2e96dfb5d6c1e0b0fdb1b759a1683f1d8802c1ab"
-      ],
-      "generated_at": "2026-06-10 13:32:00.874983+00:00",
-      "horizon_days": 5
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "SpaceX is set to conduct an initial public offering with a record-raising sum and a unique pricing mechanism.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'SpaceX is set to conduct an initial public offering with a record-raising sum and a unique pricing mechanism.'}"
     },
     {
-      "id": "91321964be91595361284b384e6f6da61c857ad2d5d8ac968c9f3a5914779b2c",
-      "ticker": "MS",
-      "direction": "neutral",
-      "confidence": 0.007,
-      "score": -0.007,
-      "sentiment_component": -0.001,
-      "event_component": 0.0,
-      "price_component": -0.043,
-      "evidence_ids": [
-        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1",
-        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad"
-      ],
-      "generated_at": "2026-06-10 13:32:01.180252+00:00",
-      "horizon_days": 5
+      "article_id": "20f3d8b3bf6ea5b3f2c6ba9884c6909c0153e9d16573a71c0a2e9e1aa24b73c5",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Market updates and company news including geopolitical tensions, stock market movements, and new product launches",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Market updates and company news including geopolitical tensions, stock market movements, and new product launches'}"
     },
     {
-      "id": "380fccf241aaf28223a0b1b4b4152ca60b53bee48d73002cc0f569f7058a2802",
-      "ticker": "CRM",
-      "direction": "neutral",
-      "confidence": 0.142,
-      "score": -0.188,
-      "sentiment_component": -0.201,
-      "event_component": 0.0,
-      "price_component": -0.58,
-      "evidence_ids": [
-        "409bde769b3d7f89e66838b7e4698b55c634d8df75ad2a7d73df5f9875802233"
-      ],
-      "generated_at": "2026-06-10 13:32:01.370828+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1141137e94d6ab5ef16cee485d306ad5234a66301ac4a648452e7fcf537b0b57",
-      "ticker": "META",
-      "direction": "neutral",
-      "confidence": 0.115,
-      "score": -0.148,
-      "sentiment_component": -0.137,
-      "event_component": 0.0,
-      "price_component": -0.529,
-      "evidence_ids": [
-        "409bde769b3d7f89e66838b7e4698b55c634d8df75ad2a7d73df5f9875802233",
-        "687370e62d311dd4c6b3ba2723400b3514a731576ec83f56947e15fa61c00f42"
-      ],
-      "generated_at": "2026-06-10 13:32:01.605307+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "19bcb5766b9f7c0c8ce123d3a4b3bb654264cb1d6cedb85683b8d812572e5855",
-      "ticker": "GM",
-      "direction": "neutral",
-      "confidence": 0.131,
-      "score": 0.147,
-      "sentiment_component": 0.229,
-      "event_component": 0.0,
-      "price_component": 0.213,
-      "evidence_ids": [
-        "ab89d78d4f4da58df022644f2e96dfb5d6c1e0b0fdb1b759a1683f1d8802c1ab"
-      ],
-      "generated_at": "2026-06-10 13:32:01.755135+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "38ffbd43821f3c5ce5b435851b3bb1ec57afc48827e0f421a83ff757c1f1298a",
-      "ticker": "GOOGL",
-      "direction": "neutral",
-      "confidence": 0.04,
-      "score": -0.045,
-      "sentiment_component": -0.131,
-      "event_component": 0.0,
-      "price_component": 0.139,
-      "evidence_ids": [
-        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475",
-        "e32e0e2797272ff50b96328501ad5453761eebeed98f2497fb0e273f2254ab2b",
-        "5ce610f397eaf146372b8bd772d037463359d6e456e5910ed8480775652eadfe",
-        "7624b5fdd45a36c74c7f3329ad970f832cc84116201ad41fa4ccbe12ece10569"
-      ],
-      "generated_at": "2026-06-10 13:32:01.965049+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "7928764aa75b2fc03e68846481fc69f27d61d12d37a272d65b122203b3f3c949",
-      "ticker": "NVDA",
-      "direction": "neutral",
-      "confidence": 0.038,
-      "score": -0.043,
-      "sentiment_component": -0.007,
-      "event_component": 0.0,
-      "price_component": -0.265,
-      "evidence_ids": [
-        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
-      ],
-      "generated_at": "2026-06-10 13:32:02.229183+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "3ca8746af029262f18004ac77e3c75f1f732ea54ca7666bc2c4fe6693f386ada",
-      "ticker": "SMCI",
-      "direction": "neutral",
-      "confidence": 0.078,
-      "score": -0.127,
-      "sentiment_component": -0.007,
-      "event_component": 0.0,
-      "price_component": -0.825,
-      "evidence_ids": [
-        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
-      ],
-      "generated_at": "2026-06-10 13:32:02.464260+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "4e94f32e891c40697266d7285f29f8b1a459e21e3b8f48b7c4b63d0d0d1778a4",
-      "ticker": "GS",
-      "direction": "neutral",
-      "confidence": 0.055,
-      "score": -0.059,
-      "sentiment_component": -0.067,
-      "event_component": 0.0,
-      "price_component": -0.167,
-      "evidence_ids": [
-        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475",
-        "5ce610f397eaf146372b8bd772d037463359d6e456e5910ed8480775652eadfe",
-        "ee11cb758b95d61ce9e927f178f846800e304ffac9d0a7c001f89e3048756968",
-        "7940fff5580016f5baacfaa24f1f9d0e5bd668efdc89847f4fed7beef856ea35",
-        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad",
-        "7624b5fdd45a36c74c7f3329ad970f832cc84116201ad41fa4ccbe12ece10569"
-      ],
-      "generated_at": "2026-06-10 13:32:02.766871+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "21461aaa8f2beff2baa1c9edadd65287df22a0337d8c5fa47b42808689b55fae",
+      "article_id": "edc853930245eb4c085eb77becf0f98f45919da4e3d09d00c5ed0f0edb998054",
       "ticker": "INTC",
-      "direction": "neutral",
-      "confidence": 0.075,
-      "score": -0.079,
-      "sentiment_component": -0.13,
-      "event_component": 0.0,
-      "price_component": -0.093,
-      "evidence_ids": [
-        "edc853930245eb4c085eb77becf0f98f45919da4e3d09d00c5ed0f0edb998054"
-      ],
-      "generated_at": "2026-06-10 13:32:02.982168+00:00",
-      "horizon_days": 5
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "U.S. House approves $70 billion funding package for immigration enforcement, facing opposition from Democrats",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'U.S. House approves $70 billion funding package for immigration enforcement, facing opposition from Democrats'}"
     },
     {
-      "id": "2fa571a020e1dba4097343e711f19bbf5d536ad1fd959bf114d1cbe5bf7d9a25",
+      "article_id": "ab89d78d4f4da58df022644f2e96dfb5d6c1e0b0fdb1b759a1683f1d8802c1ab",
+      "ticker": "GM",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "General Motors expands efforts in energy storage and EV support to address rising energy costs and AI infrastructure demands",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'General Motors expands efforts in energy storage and EV support to address rising energy costs and AI infrastructure demands'}"
+    },
+    {
+      "article_id": "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475",
+      "ticker": "SMCI",
+      "category": "regulatory_action",
+      "severity": 0.5,
+      "summary": "Super Micro announces $7 billion in equity-related financing deals, causing a 13% drop in share price",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.5, 'summary': 'Super Micro announces $7 billion in equity-related financing deals, causing a 13% drop in share price'}"
+    },
+    {
+      "article_id": "409bde769b3d7f89e66838b7e4698b55c634d8df75ad2a7d73df5f9875802233",
+      "ticker": "CRM",
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Thoma Bravo's founder discusses how AI is transforming junior workers' roles within the company",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': \"Thoma Bravo's founder discusses how AI is transforming junior workers' roles within the company\"}"
+    },
+    {
+      "article_id": "4eefe98f4868c7ed8b29f6302041aef8c7814bc37ac84385bc63a9d801d7301e",
+      "ticker": "GS",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Portfolio adjustments in anticipation of market volatility ahead of SpaceX IPO",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Portfolio adjustments in anticipation of market volatility ahead of SpaceX IPO'}"
+    },
+    {
+      "article_id": "5ded53fae9c3f0c1f1c8872fd55a8a03057a6dda0b8e32d612f208c90b532437",
+      "ticker": null,
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "Anthropic launches Claude Fable 5, an advanced AI model with enhanced safety features for enterprise customers and paid subscribers",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Anthropic launches Claude Fable 5, an advanced AI model with enhanced safety features for enterprise customers and paid subscribers'}"
+    },
+    {
+      "article_id": "fedf12c80582c0aadf17ee4a6cec82880896f8afd9283ccf613f7ee7bfd6fd20",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.5,
+      "summary": "LIV Golf faces uncertainty as Saudi Arabia's Public Investment Fund may pull funding earlier than planned",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.5, 'summary': \"LIV Golf faces uncertainty as Saudi Arabia's Public Investment Fund may pull funding earlier than planned\"}"
+    },
+    {
+      "article_id": "687370e62d311dd4c6b3ba2723400b3514a731576ec83f56947e15fa61c00f42",
+      "ticker": "META",
+      "category": "mergers_acquisitions",
+      "severity": 0.5,
+      "summary": "Meta to lease a new AI data center in India from Reliance Industries",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.5, 'summary': 'Meta to lease a new AI data center in India from Reliance Industries'}"
+    },
+    {
+      "article_id": "8189aee9242be4dc7e663ae2f5d0e29678a1ffdfdbe351c1a7858b026931d747",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "CrowdStrike warns of increasing cyberattacks from China-based entities targeting AI assets of tech companies",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'CrowdStrike warns of increasing cyberattacks from China-based entities targeting AI assets of tech companies'}"
+    },
+    {
+      "article_id": "3fd9fd6b201c92aeb26b63a540f8f0b19eb8293d4e8d6b541fa636cf6dff1009",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.3,
+      "summary": "Entergy CEO Drew Marsh discusses the company's approach to data center power demand and cost sharing.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.3, 'summary': \"Entergy CEO Drew Marsh discusses the company's approach to data center power demand and cost sharing.\"}"
+    },
+    {
+      "article_id": "1aabfeb928a9454ada0255dd99a25b4cb206c2a8c149b524b3deec7a03e38fea",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.5,
+      "summary": "Kalshi implements measures to prevent insider trading, including employment detail requirements and whistleblower services.",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.5, 'summary': 'Kalshi implements measures to prevent insider trading, including employment detail requirements and whistleblower services.'}"
+    },
+    {
+      "article_id": "a8b61385a9acdeb584944b9fbe251b39c82ebdb6c459077e6b9a7344ce060dec",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.8,
+      "summary": "BP experiences third CEO and third chairman change in under three years, raising concerns about board governance and oversight.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.8, 'summary': 'BP experiences third CEO and third chairman change in under three years, raising concerns about board governance and oversight.'}"
+    },
+    {
+      "article_id": "e32e0e2797272ff50b96328501ad5453761eebeed98f2497fb0e273f2254ab2b",
       "ticker": "AAPL",
-      "direction": "bearish",
-      "confidence": 0.145,
-      "score": -0.26,
-      "sentiment_component": -0.213,
-      "event_component": 0.0,
-      "price_component": -1.0,
-      "evidence_ids": [
-        "e32e0e2797272ff50b96328501ad5453761eebeed98f2497fb0e273f2254ab2b",
-        "5ce610f397eaf146372b8bd772d037463359d6e456e5910ed8480775652eadfe"
-      ],
-      "generated_at": "2026-06-10 13:32:03.526061+00:00",
-      "horizon_days": 5
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Semiconductor and technology stocks decline amid concerns over AI valuations and funding challenges for Softbank",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Semiconductor and technology stocks decline amid concerns over AI valuations and funding challenges for Softbank'}"
     },
     {
-      "id": "a7fe4c42c13736e2326bdca0770e6902084b99b1b23f4a5be9be41b491066c89",
+      "article_id": "906168c1013e3c389e1c185b22827174c18532721f9ee9769604ef18219c3088",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "China's wholesale prices rise sharply, driven by raw material costs and the Iran war.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"China's wholesale prices rise sharply, driven by raw material costs and the Iran war.\"}"
+    },
+    {
+      "article_id": "4f8dbe937b722d49b812e3a0182cebd1a2365ff78cd438f4e86a9ed773ef467e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "European Central Bank expected to hike interest rates amid inflation concerns",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'European Central Bank expected to hike interest rates amid inflation concerns'}"
+    },
+    {
+      "article_id": "b6242b6c498d3df6ed0166815f224b352d2b2d3be0d35ee6a3b5d368badcc30b",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.5,
+      "summary": "Alt5 Sigma faces potential delisting from Nasdaq due to plummeting share price and lack of investor interest.",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.5, 'summary': 'Alt5 Sigma faces potential delisting from Nasdaq due to plummeting share price and lack of investor interest.'}"
+    },
+    {
+      "article_id": "7425d945ad32cf5057174c40abec8bb6409d88834677dca2667467cd78c5e08e",
       "ticker": "BAC",
-      "direction": "neutral",
-      "confidence": 0.105,
-      "score": 0.149,
-      "sentiment_component": 0.095,
-      "event_component": 0.0,
-      "price_component": 0.68,
-      "evidence_ids": [
-        "7425d945ad32cf5057174c40abec8bb6409d88834677dca2667467cd78c5e08e"
-      ],
-      "generated_at": "2026-06-10 13:32:03.845703+00:00",
-      "horizon_days": 5
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "Kalshi launches trading on crypto perpetual futures with significant initial trading volume",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Kalshi launches trading on crypto perpetual futures with significant initial trading volume'}"
+    },
+    {
+      "article_id": "638d10a6570c5cb766aac371598fa70005f436dde1520f327909ef91e9423f5e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "White House border czar discusses ICE resource allocation to New York City",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'White House border czar discusses ICE resource allocation to New York City'}"
+    },
+    {
+      "article_id": "5ce610f397eaf146372b8bd772d037463359d6e456e5910ed8480775652eadfe",
+      "ticker": "AAPL",
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "Apple launches new AI software and Siri improvements at Worldwide Developers Conference",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Apple launches new AI software and Siri improvements at Worldwide Developers Conference'}"
+    },
+    {
+      "article_id": "73ffedd50744d3563405915d2b2f4d0633b14aaa6cbe4dbdaf9c2dc221d49b8c",
+      "ticker": "JPM",
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "JPMorgan Chase plans to deploy long-running autonomous AI agents this year.",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'JPMorgan Chase plans to deploy long-running autonomous AI agents this year.'}"
+    },
+    {
+      "article_id": "af3e868b02b6c575c7d2dc3437de04cb621ee7934627595553c9a8176459ffe7",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "BYD expects China's EV market penetration to reach 80%, contrasting with Nio's view on the industry's future.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"BYD expects China's EV market penetration to reach 80%, contrasting with Nio's view on the industry's future.\"}"
+    },
+    {
+      "article_id": "b74e21d8d73a0cf40dc2816ebb71ad973d4f274c35d9e73c5c96b3fc8a1c6e5c",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Startup EDGE Markets raises $29.2 million and launches products for prediction markets and gambling",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Startup EDGE Markets raises $29.2 million and launches products for prediction markets and gambling'}"
+    },
+    {
+      "article_id": "ee11cb758b95d61ce9e927f178f846800e304ffac9d0a7c001f89e3048756968",
+      "ticker": "GS",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Hong Kong IPOs underperforming despite strong fundraising and listing activity",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Hong Kong IPOs underperforming despite strong fundraising and listing activity'}"
+    },
+    {
+      "article_id": "a6e7aeb6f3da5f4cb94ec2d14dbf664dd9df7a4b627bea77b819dbfb4fc76729",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Investors are rushing into HYPE exchange-traded funds despite the broader crypto market downturn",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Investors are rushing into HYPE exchange-traded funds despite the broader crypto market downturn'}"
+    },
+    {
+      "article_id": "5289eb440e80fbad99a5e7a4f812e5c79b741b60d5e847e83e441a56feb5c08f",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Strong May jobs report reinforces no interest rate cuts, despite inflation concerns",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Strong May jobs report reinforces no interest rate cuts, despite inflation concerns'}"
+    },
+    {
+      "article_id": "f95863792248b6cf1d73b152ec76f3a5d8a27a36cb75b45b8ff257a2a1ebc27a",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Tencent hires a former OpenAI researcher as chief AI scientist to focus on AGI development",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Tencent hires a former OpenAI researcher as chief AI scientist to focus on AGI development'}"
+    },
+    {
+      "article_id": "0681d70389842f556b67f619d9b90ddee151229785e02c8cb7101ba1f0bcf6a7",
+      "ticker": null,
+      "category": "product_launch",
+      "severity": 0.4,
+      "summary": "Kalshi is developing a new interface for its prediction markets platform, likened to the Bloomberg Terminal.",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.4, 'summary': 'Kalshi is developing a new interface for its prediction markets platform, likened to the Bloomberg Terminal.'}"
+    },
+    {
+      "article_id": "764c369c9edea6522f65c8b4f9488c6d53427957d0b3cbba28b6ec78212e6578",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Bitcoin prices fall to multi-month lows, traders expect further declines",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Bitcoin prices fall to multi-month lows, traders expect further declines'}"
+    },
+    {
+      "article_id": "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad",
+      "ticker": "MS",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Morgan Stanley plans to integrate AI tools for corporate clients' wealth management, potentially changing user interaction with financial platforms.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Morgan Stanley plans to integrate AI tools for corporate clients' wealth management, potentially changing user interaction with financial platforms.\"}"
+    },
+    {
+      "article_id": "500563d184fbb948ea6b08e5cbaaf2316710c4b821db10c5ba00273f016675a5",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Federal Reserve Chair Kevin Warsh hires two conservative economic policy researchers as temporary contractors",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Federal Reserve Chair Kevin Warsh hires two conservative economic policy researchers as temporary contractors'}"
+    },
+    {
+      "article_id": "9b4c8e0142a90d0536cf403be3f25e76c11f3d289863f68bbbd4309340cd76dc",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Los Angeles mayoral election with potential impact on local market sentiment",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Los Angeles mayoral election with potential impact on local market sentiment'}"
+    },
+    {
+      "article_id": "7624b5fdd45a36c74c7f3329ad970f832cc84116201ad41fa4ccbe12ece10569",
+      "ticker": "GS",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Goldman Sachs CEO discusses market optimism and potential for large AI firm IPOs",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Goldman Sachs CEO discusses market optimism and potential for large AI firm IPOs'}"
+    },
+    {
+      "article_id": "42629215e67c4651faeae1384a635407d1d3e41b536fb13701cb6715c9ed5e86",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Polymarket completes first block trade on AI compute infrastructure contract",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Polymarket completes first block trade on AI compute infrastructure contract'}"
+    },
+    {
+      "article_id": "7b8135315cf0e188690d4ded3ea07a449a615bc2856ca232ee7b6f9622bd05a3",
+      "ticker": null,
+      "category": "mergers_acquisitions",
+      "severity": 0.8,
+      "summary": "Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion'}"
+    },
+    {
+      "article_id": "2795f65f72ecf3fec1512507b923b414fb12a1a512436bb28ab050edd45b28c8",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Kalshi sees growth in institutional adoption driven by hedging opportunities",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Kalshi sees growth in institutional adoption driven by hedging opportunities'}"
+    },
+    {
+      "article_id": "30a255e5f1542f3bc4e116fdac69595e350d6d3702789c727167a9e259420930",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Political speculation on potential GOP nominees for 2028 presidential election",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Political speculation on potential GOP nominees for 2028 presidential election'}"
     }
   ],
-  "investment_plan": {
-    "total_amount": 10000.0,
-    "allocations": [
-      {
-        "ticker": "SPY",
-        "amount": 7000.0,
-        "percentage": 70.0,
-        "rationale": "SPY: broad market ETF (S&P 500) for diversified exposure"
-      },
-      {
-        "ticker": "BND",
-        "amount": 3000.0,
-        "percentage": 30.0,
-        "rationale": "BND: bond ETF for capital preservation and income"
-      }
-    ],
-    "risk_summary": "No qualifying signals found; defaulting to diversified ETF allocation.",
-    "expected_return_range": [
-      0.049,
-      0.091
-    ],
-    "time_horizon_months": 12,
-    "rebalance_trigger": "on_new_signal",
-    "disclaimer": "Educational use only. Not investment advice."
-  },
+  "signals": [],
+  "investment_plan": null,
   "user_profile": {
     "investment_amount": 10000.0,
     "risk_appetite": "moderate",
@@ -385,53 +462,11 @@
     "exclude_tickers": []
   },
   "backtest_results": null,
-  "requires_interrupt": false,
+  "requires_interrupt": true,
   "human_review_decision": null,
-  "error_log": [
-    "event_detection [1f816df9]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [987852bc]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [9bd9f0a7]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [fd85ce7b]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [24849309]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [20f3d8b3]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [214b8b55]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [409bde76]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [ab89d78d]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [7c386ab7]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [edc85393]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [5ded53fa]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [fedf12c8]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [687370e6]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [8189aee9]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [3fd9fd6b]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [1aabfeb9]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [a8b61385]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [e32e0e27]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [906168c1]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [4f8dbe93]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [b6242b6c]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [7425d945]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [638d10a6]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [5ce610f3]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [817913f2]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [73ffedd5]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [af3e868b]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [b74e21d8]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [ee11cb75]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [a6e7aeb6]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [5289eb44]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [7940fff5]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [f9586379]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [0681d703]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [764c369c]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [80490ec6]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [500563d1]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [9b4c8e01]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [7624b5fd]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [42629215]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [7b813531]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [2795f65f]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}",
-    "event_detection [30a255e5]: HF API error: HF API failed after 3 attempts: 400 {\"error\":\"Model not supported by provider novita\"}"
-  ],
-  "run_date": "2026-06-10"
+  "error_log": [],
+  "run_date": "2026-06-10",
+  "__interrupt__": [
+    "Interrupt(value={'message': 'High-severity event detected. Approve signal generation? (y/n)', 'events': [{'ticker': 'JPM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'INTC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'GM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'SMCI', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': 'CRM', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': 'META', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.8}, {'ticker': 'AAPL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}]}, id='058328b4441a6f3d2ab223b379a8829f')"
+  ]
 }
