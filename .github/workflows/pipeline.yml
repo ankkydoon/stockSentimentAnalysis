@@ -109,11 +109,11 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
           EDGAR_USER_AGENT: 'stockSentimentAnalysis/1.0 github-actions@users.noreply.github.com'
           # choice inputs are safe to interpolate; string inputs use env: instead
-          INPUT_MODE: ${{ github.event.inputs.mode || 'full' }}
-          INPUT_RISK: ${{ github.event.inputs.risk || 'moderate' }}
-          INPUT_AMOUNT: ${{ github.event.inputs.amount || '10000' }}
-          INPUT_HORIZON: ${{ github.event.inputs.horizon || '12' }}
-          INPUT_TICKER: ${{ github.event.inputs.ticker || '' }}
+          INPUT_MODE: ${{ inputs.mode || 'full' }}
+          INPUT_RISK: ${{ inputs.risk || 'moderate' }}
+          INPUT_AMOUNT: ${{ inputs.amount || '10000' }}
+          INPUT_HORIZON: ${{ inputs.horizon || '12' }}
+          INPUT_TICKER: ${{ inputs.ticker || '' }}
         run: |
           # Resolve effective values — shell variables only, no further ${{ }} expansion
           MODE="${INPUT_MODE}"
