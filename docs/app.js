@@ -264,51 +264,47 @@ function showError(message) {
 // ── Fetch pipeline output ─────────────────────────────────────────────────────
 
 async function fetchLatestOutput() {
-  // Try last 7 days of raw URLs first (no rate limit)
-  for (let i = 0; i < 7; i++) {
+  // Try last 14 days of raw URLs directly (no rate limit, no auth)
+  const errors = [];
+  for (let i = 0; i < 14; i++) {
     const d = new Date();
     d.setDate(d.getDate() - i);
-    const dateStr = d.toISOString().split('T')[0];
+    const year  = d.getUTCFullYear();
+    const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const day   = String(d.getUTCDate()).padStart(2, '0');
+    const dateStr = `${year}-${month}-${day}`;
     const url = `${RAW_BASE}/${dateStr}.json`;
     try {
       const res = await fetch(url);
       if (res.ok) return res.json();
-    } catch (_) {}
+      errors.push(`${dateStr}: HTTP ${res.status}`);
+    } catch (e) {
+      errors.push(`${dateStr}: ${e.message}`);
+    }
   }
 
   // Fall back to GitHub Contents API
-  let dirListing;
   try {
     const dirRes = await fetch(GITHUB_CONTENTS_API, {
       headers: { Accept: 'application/vnd.github.v3+json' },
     });
-    if (!dirRes.ok) {
-      if (dirRes.status === 404) {
-        throw new Error('No pipeline output found. Run the pipeline first.');
+    if (dirRes.ok) {
+      const dirListing = await dirRes.json();
+      const jsonFiles = (Array.isArray(dirListing) ? dirListing : [])
+        .filter(f => f.type === 'file' && f.name.endsWith('.json'))
+        .sort((a, b) => b.name.localeCompare(a.name));
+      if (jsonFiles.length > 0) {
+        const dataRes = await fetch(jsonFiles[0].download_url);
+        if (dataRes.ok) return dataRes.json();
       }
-      throw new Error(`GitHub API returned ${dirRes.status} ${dirRes.statusText}.`);
     }
-    dirListing = await dirRes.json();
-  } catch (err) {
-    if (err.name === 'TypeError') {
-      throw new Error('Could not reach GitHub. Check your internet connection.');
-    }
-    throw err;
-  }
+  } catch (_) {}
 
-  const jsonFiles = (Array.isArray(dirListing) ? dirListing : [])
-    .filter(f => f.type === 'file' && f.name.endsWith('.json'))
-    .sort((a, b) => b.name.localeCompare(a.name));
-
-  if (jsonFiles.length === 0) {
-    throw new Error('No pipeline output files found. Run the pipeline first.');
-  }
-
-  const dataRes = await fetch(jsonFiles[0].download_url);
-  if (!dataRes.ok) {
-    throw new Error(`Failed to download ${jsonFiles[0].name}: ${dataRes.status}`);
-  }
-  return dataRes.json();
+  throw new Error(
+    `Could not load pipeline data. Tried last 14 days via raw URL.\n` +
+    `Latest attempt errors: ${errors.slice(0, 3).join(', ')}\n` +
+    `Direct URL: ${RAW_BASE}/2026-06-10.json`
+  );
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
