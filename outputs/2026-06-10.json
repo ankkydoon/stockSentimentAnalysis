@@ -925,22 +925,191 @@
       }
     ]
   },
-  "sentiment_scores": [],
+  "sentiment_scores": [
+    {
+      "ticker": "MU",
+      "score": -0.004319783131777506,
+      "label": "neutral",
+      "n_sentences": 17,
+      "window_ewma": -0.0012959349395332519
+    },
+    {
+      "ticker": "MS",
+      "score": -0.004319783131777506,
+      "label": "neutral",
+      "n_sentences": 17,
+      "window_ewma": -0.0012959349395332519
+    },
+    {
+      "ticker": "TSLA",
+      "score": -0.004319783131777506,
+      "label": "neutral",
+      "n_sentences": 17,
+      "window_ewma": -0.0012959349395332519
+    },
+    {
+      "ticker": "GS",
+      "score": -0.024009057080774294,
+      "label": "neutral",
+      "n_sentences": 6,
+      "window_ewma": -0.007202717124232288
+    },
+    {
+      "ticker": "NVDA",
+      "score": -0.024009057080774294,
+      "label": "neutral",
+      "n_sentences": 6,
+      "window_ewma": -0.007202717124232288
+    },
+    {
+      "ticker": "GOOGL",
+      "score": -0.024009057080774294,
+      "label": "neutral",
+      "n_sentences": 6,
+      "window_ewma": -0.007202717124232288
+    },
+    {
+      "ticker": "SMCI",
+      "score": -0.024009057080774294,
+      "label": "neutral",
+      "n_sentences": 6,
+      "window_ewma": -0.007202717124232288
+    },
+    {
+      "ticker": "JPM",
+      "score": -0.024009057080774294,
+      "label": "neutral",
+      "n_sentences": 6,
+      "window_ewma": -0.007202717124232288
+    }
+  ],
   "events": [],
-  "signals": [],
+  "signals": [
+    {
+      "id": "ae70de3c80bd5d250cfd90f7c37e8181ae2042d16b5acb9e7ab1ed229b379119",
+      "ticker": "MU",
+      "direction": "neutral",
+      "confidence": 0.047,
+      "score": -0.057,
+      "sentiment_component": -0.001,
+      "event_component": 0.0,
+      "price_component": -0.375,
+      "evidence_ids": [
+        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1"
+      ],
+      "generated_at": "2026-06-10 03:02:10.926180+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "cf3e240d852bcafb53dcbb111eaa79da3cf72d8c5a8908af942ce17ad87df10d",
+      "ticker": "MS",
+      "direction": "neutral",
+      "confidence": 0.039,
+      "score": -0.045,
+      "sentiment_component": -0.001,
+      "event_component": 0.0,
+      "price_component": -0.295,
+      "evidence_ids": [
+        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1"
+      ],
+      "generated_at": "2026-06-10 03:02:11.092134+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "e25d70fbd4ceeda45c1057b49b68b7e032a35e1de24e8a1a41262475d94f08a0",
+      "ticker": "TSLA",
+      "direction": "neutral",
+      "confidence": 0.059,
+      "score": -0.077,
+      "sentiment_component": -0.001,
+      "event_component": 0.0,
+      "price_component": -0.512,
+      "evidence_ids": [
+        "214b8b558eefa9cb31cfaf27da78787445686aad8066480c4db4f0eafce02da1"
+      ],
+      "generated_at": "2026-06-10 03:02:11.289896+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "3912121b0d7ccc42baf44abd79ce545626b2bcbed0232d6b7a79a11aeed06905",
+      "ticker": "GS",
+      "direction": "neutral",
+      "confidence": 0.045,
+      "score": -0.054,
+      "sentiment_component": -0.007,
+      "event_component": 0.0,
+      "price_component": -0.334,
+      "evidence_ids": [
+        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
+      ],
+      "generated_at": "2026-06-10 03:02:11.595775+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0ac8e13b183f6afe021948e0f6fd3ee2099c594efa25790e3d1d6b84ea628ec2",
+      "ticker": "NVDA",
+      "direction": "neutral",
+      "confidence": 0.058,
+      "score": -0.074,
+      "sentiment_component": -0.007,
+      "event_component": 0.0,
+      "price_component": -0.472,
+      "evidence_ids": [
+        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
+      ],
+      "generated_at": "2026-06-10 03:02:11.755109+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "43c9ebcd25344e3ad88bd0631dd55004939fb279ae7d9e7f6489925df8144b86",
+      "ticker": "GOOGL",
+      "direction": "neutral",
+      "confidence": 0.006,
+      "score": 0.006,
+      "sentiment_component": -0.007,
+      "event_component": 0.0,
+      "price_component": 0.065,
+      "evidence_ids": [
+        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
+      ],
+      "generated_at": "2026-06-10 03:02:12.014922+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "601e49c80c810804273110961fcd835c08ac3d26851ff8aa82f8698fe48a2497",
+      "ticker": "SMCI",
+      "direction": "neutral",
+      "confidence": 0.067,
+      "score": -0.094,
+      "sentiment_component": -0.007,
+      "event_component": 0.0,
+      "price_component": -0.601,
+      "evidence_ids": [
+        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
+      ],
+      "generated_at": "2026-06-10 03:02:12.216391+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "585eab1fb338e902bd670fc43ecca26e17efac50e37dc8f6a565078246130a81",
+      "ticker": "JPM",
+      "direction": "neutral",
+      "confidence": 0.062,
+      "score": 0.088,
+      "sentiment_component": -0.007,
+      "event_component": 0.0,
+      "price_component": 0.609,
+      "evidence_ids": [
+        "7c386ab7054d8d660b84d108aa7086fa998f89cf33a5a3aa634975de0dcbe475"
+      ],
+      "generated_at": "2026-06-10 03:02:12.397432+00:00",
+      "horizon_days": 5
+    }
+  ],
   "investment_plan": null,
   "backtest_results": null,
   "requires_interrupt": false,
   "human_review_decision": null,
-  "error_log": [
-    "FinBERT API error for MU: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for MS: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for TSLA: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for GS: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for NVDA: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for GOOGL: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for JPM: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /",
-    "FinBERT API error for SMCI: ConnectionError: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Max retries exceeded with url: /"
-  ],
+  "error_log": [],
   "run_date": "2026-06-10"
 }
