@@ -4,16 +4,16 @@ from storage.supabase_store import SupabaseStore
 
 
 def test_store_init_requires_url_and_key():
-    with pytest.raises(ValueError):
-        SupabaseStore(url="", key="")
+    store = SupabaseStore(url="", key="")
+    assert store._enabled is False
 
 def test_store_init_requires_url():
-    with pytest.raises(ValueError):
-        SupabaseStore(url="", key="somekey")
+    store = SupabaseStore(url="", key="somekey")
+    assert store._enabled is False
 
 def test_store_init_requires_key():
-    with pytest.raises(ValueError):
-        SupabaseStore(url="https://x.supabase.co", key="")
+    store = SupabaseStore(url="https://x.supabase.co", key="")
+    assert store._enabled is False
 
 def test_upsert_article_calls_supabase():
     mock_client = MagicMock()

@@ -6,11 +6,12 @@ from models.signal import InvestmentSignal
 
 class SupabaseStore:
     def __init__(self, url: str, key: str):
-        if not url or not key:
-            raise ValueError("Supabase URL and key are required")
-        self.client: Client = create_client(url, key)
+        self._enabled = bool(url and key)
+        self.client: Client | None = create_client(url, key) if self._enabled else None
 
     def upsert_article(self, article: Article) -> None:
+        if not self._enabled:
+            return
         self.client.table("articles").upsert({
             "id": article.id,
             "url": article.url,
@@ -21,10 +22,14 @@ class SupabaseStore:
         }).execute()
 
     def article_exists(self, article_id: str) -> bool:
+        if not self._enabled:
+            return False
         result = self.client.table("articles").select("id").eq("id", article_id).execute()
         return len(result.data) > 0
 
     def upsert_signal(self, signal: InvestmentSignal) -> None:
+        if not self._enabled:
+            return
         self.client.table("signals").upsert({
             "id": signal.id,
             "ticker": signal.ticker,
@@ -42,6 +47,8 @@ class SupabaseStore:
         }).execute()
 
     def upsert_sentiment_ts(self, ticker: str, date: str, ewma_score: float, n_articles: int) -> None:
+        if not self._enabled:
+            return
         self.client.table("entity_sentiment_ts").upsert({
             "ticker": ticker,
             "date": date,
@@ -50,6 +57,8 @@ class SupabaseStore:
         }).execute()
 
     def get_sentiment_ewma(self, ticker: str) -> float:
+        if not self._enabled:
+            return 0.0
         result = (self.client.table("entity_sentiment_ts")
                   .select("ewma_score")
                   .eq("ticker", ticker)
@@ -61,6 +70,8 @@ class SupabaseStore:
         return 0.0
 
     def upsert_sp500_embedding(self, ticker: str, name: str, sector: str, summary: str, embedding: list[float]) -> None:
+        if not self._enabled:
+            return
         self.client.table("sp500_embeddings").upsert({
             "ticker": ticker,
             "name": name,
@@ -70,6 +81,8 @@ class SupabaseStore:
         }).execute()
 
     def search_sp500(self, embedding: list[float], threshold: float = 0.72, limit: int = 1) -> list[dict]:
+        if not self._enabled:
+            return []
         result = self.client.rpc("match_sp500", {
             "query_embedding": embedding,
             "match_threshold": threshold,
