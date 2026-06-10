@@ -1,0 +1,470 @@
+/* ============================================================
+   Stock Sentiment Dashboard — style.css
+   Dark navy theme, responsive layout
+   ============================================================ */
+
+/* ── Reset & base ────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:          #0d1117;
+  --surface:     #161b22;
+  --surface-alt: #1c2230;
+  --border:      #30363d;
+  --text:        #e6edf3;
+  --text-muted:  #8b949e;
+  --accent:      #58a6ff;
+
+  --green:       #3fb950;
+  --green-dim:   #1a3a22;
+  --red:         #f85149;
+  --red-dim:     #3a1a1a;
+  --yellow:      #d29922;
+  --yellow-dim:  #3a2e10;
+  --orange:      #e3904a;
+  --blue:        #58a6ff;
+  --blue-dim:    #112240;
+  --gray:        #8b949e;
+
+  --radius:      8px;
+  --radius-sm:   4px;
+  --font:        'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono:        'SFMono-Regular', 'Consolas', monospace;
+}
+
+html { font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.header-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.run-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--mono);
+}
+
+/* ── Run Pipeline button ─────────────────────────────────── */
+
+.btn-run-pipeline {
+  display: inline-block;
+  background: var(--accent);
+  color: #0d1117;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.btn-run-pipeline:hover { opacity: 0.85; }
+
+/* ── Main layout ─────────────────────────────────────────── */
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+/* ── Loading state ───────────────────────────────────────── */
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Error state ─────────────────────────────────────────── */
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 2.5rem;
+  color: var(--yellow);
+}
+
+.error-state h2 {
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.error-state p {
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-icon { font-style: normal; }
+
+/* ── Tables ──────────────────────────────────────────────── */
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th {
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+  background: var(--surface-alt);
+}
+
+.ticker-cell {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.score-cell {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+.rationale-cell {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  max-width: 320px;
+}
+
+.empty-cell {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ── Direction chips ─────────────────────────────────────── */
+
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chip-bullish  { background: var(--green-dim);  color: var(--green); }
+.chip-bearish  { background: var(--red-dim);    color: var(--red); }
+.chip-neutral  { background: var(--surface-alt); color: var(--gray); }
+
+/* ── Confidence bar ──────────────────────────────────────── */
+
+.conf-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.conf-bar {
+  flex: 1;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--border);
+  /* width set inline */
+  transition: width 0.4s ease;
+}
+
+.bar-high { background: var(--green); }
+.bar-mid  { background: var(--yellow); }
+.bar-low  { background: var(--red); }
+
+/* Override: the bar element itself IS the fill */
+.conf-bar-wrap .conf-bar {
+  /* flex:1 gives available space; actual fill width is set inline */
+  flex: none;
+}
+
+.conf-label {
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  color: var(--text-muted);
+  min-width: 2.8rem;
+  text-align: right;
+}
+
+/* ── Severity badges ─────────────────────────────────────── */
+
+.badge {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-high   { background: var(--red-dim);    color: var(--red); }
+.badge-medium { background: var(--yellow-dim); color: var(--orange); }
+.badge-low    { background: var(--blue-dim);   color: var(--blue); }
+
+/* ── Events list ─────────────────────────────────────────── */
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.event-item {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.event-ticker {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.event-category {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.event-summary {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Investment Plan ─────────────────────────────────────── */
+
+.plan-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.plan-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.meta-value {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--text);
+}
+
+.risk-summary {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface-alt);
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.risk-summary strong {
+  color: var(--yellow);
+}
+
+.plan-disclaimer {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Empty messages ──────────────────────────────────────── */
+
+.empty-msg {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.footer-disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.last-updated {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  margin-top: 0.25rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .site-title { font-size: 1.1rem; }
+  .header-content { flex-direction: column; align-items: flex-start; }
+  .card { padding: 1rem; }
+  .data-table th,
+  .data-table td { padding: 0.5rem 0.6rem; }
+  .rationale-cell { max-width: 200px; }
+  .plan-meta { grid-template-columns: 1fr 1fr; }
+}
