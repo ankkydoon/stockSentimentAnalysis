@@ -97,7 +97,7 @@ def signal_generation_node(state: dict) -> dict:
             score=round(score, 3),
             sentiment_component=round(sentiment.window_ewma, 3),
             event_component=round(event_weight, 3),
-            price_component=round(price_zscore, 3),
+            price_component=round(max(-1.0, min(1.0, price_zscore)), 3),
             evidence_ids=evidence_ids,
             generated_at=datetime.now(timezone.utc),
         )
