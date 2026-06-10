@@ -264,46 +264,41 @@ function showError(message) {
 // ── Fetch pipeline output ─────────────────────────────────────────────────────
 
 async function fetchLatestOutput() {
-  // Try last 14 days of raw URLs directly (no rate limit, no auth)
-  const errors = [];
+  // Ordered list of URLs to try — most recent first
+  const candidates = [];
+
+  // Last 14 days via raw.githubusercontent.com
   for (let i = 0; i < 14; i++) {
     const d = new Date();
-    d.setDate(d.getDate() - i);
-    const year  = d.getUTCFullYear();
-    const month = String(d.getUTCMonth() + 1).padStart(2, '0');
-    const day   = String(d.getUTCDate()).padStart(2, '0');
-    const dateStr = `${year}-${month}-${day}`;
-    const url = `${RAW_BASE}/${dateStr}.json`;
-    try {
-      const res = await fetch(url);
-      if (res.ok) return res.json();
-      errors.push(`${dateStr}: HTTP ${res.status}`);
-    } catch (e) {
-      errors.push(`${dateStr}: ${e.message}`);
-    }
+    d.setUTCDate(d.getUTCDate() - i);
+    const y  = d.getUTCFullYear();
+    const mo = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const dy = String(d.getUTCDate()).padStart(2, '0');
+    candidates.push(`${RAW_BASE}/${y}-${mo}-${dy}.json`);
   }
 
-  // Fall back to GitHub Contents API
-  try {
-    const dirRes = await fetch(GITHUB_CONTENTS_API, {
-      headers: { Accept: 'application/vnd.github.v3+json' },
-    });
-    if (dirRes.ok) {
-      const dirListing = await dirRes.json();
-      const jsonFiles = (Array.isArray(dirListing) ? dirListing : [])
-        .filter(f => f.type === 'file' && f.name.endsWith('.json'))
-        .sort((a, b) => b.name.localeCompare(a.name));
-      if (jsonFiles.length > 0) {
-        const dataRes = await fetch(jsonFiles[0].download_url);
-        if (dataRes.ok) return dataRes.json();
+  for (const url of candidates) {
+    try {
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        return data;
       }
-    }
+    } catch (_) {}
+  }
+
+  // Hard-coded known-good URL as last resort
+  try {
+    const res = await fetch(
+      'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/outputs/2026-06-10.json'
+    );
+    if (res.ok) return res.json();
   } catch (_) {}
 
   throw new Error(
-    `Could not load pipeline data. Tried last 14 days via raw URL.\n` +
-    `Latest attempt errors: ${errors.slice(0, 3).join(', ')}\n` +
-    `Direct URL: ${RAW_BASE}/2026-06-10.json`
+    'Could not load pipeline data. ' +
+    'Tried last 14 days — no output file found. ' +
+    'Please run the pipeline first.'
   );
 }
 
