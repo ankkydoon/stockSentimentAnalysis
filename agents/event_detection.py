@@ -49,7 +49,7 @@ def parse_event_json(raw: str) -> dict | None:
 
 def _call_mistral(article_text: str) -> dict | None:
     settings = get_settings()
-    url = f"https://api-inference.huggingface.co/models/{settings.mistral_model_id}"
+    url = f"https://router.huggingface.co/hf-inference/models/{settings.mistral_model_id}"
     prompt = FEW_SHOT + article_text[:1000] + '\nJSON:'
     payload = {"inputs": prompt, "parameters": {"max_new_tokens": 150, "temperature": 0.0}}
     try:

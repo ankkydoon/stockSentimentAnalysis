@@ -24,7 +24,7 @@ def sentiment_analysis_node(state: dict) -> dict:
     settings = get_settings()
     store = SupabaseStore(url=settings.supabase_url,
                           key=settings.supabase_key.get_secret_value())
-    api_url = f"https://api-inference.huggingface.co/models/{settings.finbert_model_id}"
+    api_url = f"https://router.huggingface.co/hf-inference/models/{settings.finbert_model_id}"
     run_date = state.get("run_date", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
 
     ticker_sentences: dict[str, list[str]] = {}
