@@ -100,28 +100,12 @@ jobs:
         run: mkdir -p outputs
 
       - name: Run pipeline
-        # All workflow_dispatch inputs are passed via env: so they are never
-        # interpolated directly into the shell command string, preventing
-        # command injection from user-supplied string inputs.
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          EDGAR_USER_AGENT: 'stockSentimentAnalysis/1.0 github-actions@users.noreply.github.com'
-          # choice inputs are safe to interpolate; string inputs use env: instead
-          INPUT_MODE: ${{ inputs.mode || 'full' }}
-          INPUT_RISK: ${{ inputs.risk || 'moderate' }}
-          INPUT_AMOUNT: ${{ inputs.amount || '10000' }}
-          INPUT_HORIZON: ${{ inputs.horizon || '12' }}
-          INPUT_TICKER: ${{ inputs.ticker || 'none' }}
         run: |
-          # Resolve effective values — shell variables only, no further ${{ }} expansion
           MODE="${INPUT_MODE}"
           AMOUNT="${INPUT_AMOUNT}"
           RISK="${INPUT_RISK}"
           HORIZON="${INPUT_HORIZON}"
 
-          # Validate numeric/alphanumeric inputs to reduce injection surface
           if ! [[ "$AMOUNT" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
             echo "ERROR: 'amount' must be a number, got: $AMOUNT"
             exit 1
@@ -147,6 +131,16 @@ jobs:
               --risk "$RISK" \
               --horizon "$HORIZON"
           fi
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          EDGAR_USER_AGENT: "stockSentimentAnalysis/1.0 github-actions@users.noreply.github.com"
+          INPUT_MODE: ${{ inputs.mode || 'full' }}
+          INPUT_RISK: ${{ inputs.risk || 'moderate' }}
+          INPUT_AMOUNT: ${{ inputs.amount || '10000' }}
+          INPUT_HORIZON: ${{ inputs.horizon || '12' }}
+          INPUT_TICKER: ${{ inputs.ticker || 'none' }}
 
       - name: Commit and push outputs
         if: always()
