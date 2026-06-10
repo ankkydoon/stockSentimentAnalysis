@@ -149,26 +149,15 @@ jobs:
       - name: Generate dashboard data
         if: always()
         run: |
-          python3 - <<'EOF'
-import json, os
-from datetime import datetime, timezone
-run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-output_file = f"outputs/{run_date}.json"
-if os.path.exists(output_file):
-    with open(output_file) as f:
-        state = json.load(f)
-    dashboard = {
-        "run_date": state.get("run_date", run_date),
-        "signals": state.get("signals", []),
-        "events": state.get("events", []),
-        "investment_plan": state.get("investment_plan"),
-    }
-    with open("docs/latest.json", "w") as f:
-        json.dump(dashboard, f, default=str, indent=2)
-    print(f"Dashboard data written: {len(dashboard['signals'])} signals, {len(dashboard['events'])} events")
-else:
-    print(f"Output file {output_file} not found, skipping dashboard data update")
-EOF
+          RUN_DATE=$(date -u +%Y-%m-%d)
+          OUTPUT_FILE="outputs/${RUN_DATE}.json"
+          if [ -f "$OUTPUT_FILE" ]; then
+            jq '{run_date: .run_date, signals: .signals, events: .events, investment_plan: .investment_plan}' \
+              "$OUTPUT_FILE" > docs/latest.json
+            echo "Dashboard data written: $(jq '.signals | length' docs/latest.json) signals"
+          else
+            echo "Output file $OUTPUT_FILE not found, skipping"
+          fi
 
       - name: Commit and push outputs
         if: always()
