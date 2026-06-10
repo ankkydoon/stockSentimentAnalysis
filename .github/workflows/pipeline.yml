@@ -113,7 +113,7 @@ jobs:
           INPUT_RISK: ${{ inputs.risk || 'moderate' }}
           INPUT_AMOUNT: ${{ inputs.amount || '10000' }}
           INPUT_HORIZON: ${{ inputs.horizon || '12' }}
-          INPUT_TICKER: ${{ inputs.ticker || '' }}
+          INPUT_TICKER: ${{ inputs.ticker || 'none' }}
         run: |
           # Resolve effective values — shell variables only, no further ${{ }} expansion
           MODE="${INPUT_MODE}"
