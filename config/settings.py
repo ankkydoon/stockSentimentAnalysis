@@ -17,8 +17,8 @@ class Settings(BaseSettings):
     high_severity_threshold: float = 0.7
 
     finbert_model_id: str = "ProsusAI/finbert"
-    mistral_model_id: str = "meta-llama/Llama-3.1-8B-Instruct"
-    mistral_provider: str = "novita"
+    mistral_model_id: str = "Qwen/Qwen2.5-7B-Instruct-Turbo"
+    mistral_provider: str = "together"
     embedding_model_id: str = "sentence-transformers/all-MiniLM-L6-v2"
 
     hf_api_retries: int = 3
