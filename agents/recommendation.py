@@ -40,13 +40,17 @@ def _filter_signals(
     profile: UserProfile,
     ticker_sector: dict[str, str],
 ) -> list[InvestmentSignal]:
+    # Filter to S&P 500 only, exclude user-excluded tickers, prefer non-neutral
     candidates = [
         s for s in signals
-        if s.direction == "bullish"
-        and s.confidence >= 0.6
-        and s.ticker not in profile.exclude_tickers
-        and (not ticker_sector or s.ticker in ticker_sector)  # must be in S&P 500
+        if s.ticker not in profile.exclude_tickers
+        and (not ticker_sector or s.ticker in ticker_sector)
     ]
+
+    # Prefer bullish, fall back to any non-neutral, fall back to all
+    bullish = [s for s in candidates if s.direction == "bullish"]
+    non_neutral = [s for s in candidates if s.direction != "neutral"]
+    candidates = bullish or non_neutral or candidates
 
     if profile.preferred_sectors:
         preferred_upper = {sec.lower() for sec in profile.preferred_sectors}
@@ -56,11 +60,9 @@ def _filter_signals(
         ]
         candidates = sector_filtered if sector_filtered else candidates
 
-    return candidates
+    # Always return top 3 by confidence
+    return sorted(candidates, key=lambda s: s.confidence, reverse=True)[:3]
 
-
-def _top_n_by_confidence(signals: list[InvestmentSignal], n: int) -> list[InvestmentSignal]:
-    return sorted(signals, key=lambda s: s.confidence, reverse=True)[:n]
 
 
 def _weighted_stock_allocations(
@@ -98,8 +100,8 @@ def _build_allocations(
     signals: list[InvestmentSignal],
     total_amount: float,
 ) -> list[Allocation]:
+    # signals is already top-3 sorted by confidence from _filter_signals
     if risk_appetite == "conservative":
-        top = _top_n_by_confidence(signals, 3)
         etf_amount = round(total_amount * 0.60, 2)
         stock_amount = total_amount - etf_amount
 
@@ -120,10 +122,9 @@ def _build_allocations(
                 rationale=_etf_rationale(_ETF_BND),
             ),
         ]
-        stock_allocations = _weighted_stock_allocations(top, stock_amount)
+        stock_allocations = _weighted_stock_allocations(signals, stock_amount)
 
     elif risk_appetite == "moderate":
-        top = _top_n_by_confidence(signals, 5)
         etf_amount = round(total_amount * 0.40, 2)
         stock_amount = total_amount - etf_amount
 
@@ -135,12 +136,11 @@ def _build_allocations(
                 rationale=_etf_rationale(_ETF_SPY),
             )
         ]
-        stock_allocations = _weighted_stock_allocations(top, stock_amount)
+        stock_allocations = _weighted_stock_allocations(signals, stock_amount)
 
     else:  # aggressive
-        top = _top_n_by_confidence(signals, 7)
         etf_allocations = []
-        stock_allocations = _weighted_stock_allocations(top, total_amount)
+        stock_allocations = _weighted_stock_allocations(signals, total_amount)
 
     all_allocations = etf_allocations + stock_allocations
 
