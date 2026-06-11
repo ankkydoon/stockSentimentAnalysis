@@ -37,8 +37,8 @@ const elPlanDisclaimer = document.getElementById('plan-disclaimer');
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-function show(el) { el.hidden = false; }
-function hide(el) { el.hidden = true; }
+function show(el) { if (el) el.hidden = false; }
+function hide(el) { if (el) el.hidden = true; }
 
 /** Create an element, optionally setting className and textContent. */
 function el(tag, { className, text, title } = {}) {
@@ -272,17 +272,23 @@ const EMBEDDED_DATA = {"run_date": "2026-06-10", "signals": [{"ticker": "COIN", 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 async function init() {
-  // Render embedded data instantly — no spinner wait
-  hide(elLoading);
-  hide(elError);
-  renderDashboard(EMBEDDED_DATA);
-
-  // Fetch latest pipeline output and re-render if available
   try {
-    const fresh = await fetchLatestOutput();
-    if (fresh) renderDashboard(fresh);
-  } catch (_) {
-    // Silently ignore — embedded data is already shown
+    // Render embedded data instantly — never show spinner or error on load
+    if (elLoading) elLoading.hidden = true;
+    if (elError) elError.hidden = true;
+    if (elDashboard) elDashboard.hidden = false;
+
+    renderDashboard(EMBEDDED_DATA);
+
+    // Silently fetch fresher data in the background; never show error if it fails
+    try {
+      const fresh = await fetchLatestOutput();
+      if (fresh) renderDashboard(fresh);
+    } catch (_) {}
+  } catch (err) {
+    // Last-resort: at minimum hide spinner so user sees something
+    if (elLoading) elLoading.hidden = true;
+    if (elDashboard) elDashboard.hidden = false;
   }
 }
 
