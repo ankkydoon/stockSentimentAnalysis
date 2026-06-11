@@ -1,0 +1,449 @@
+{
+  "sentiment_scores": [
+    {
+      "ticker": "INTC",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 29,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "TSLA",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 9,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "GOOGL",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 60,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "C",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 11,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "JPM",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 42,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "COIN",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 9,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "AAPL",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 12,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "WMT",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 5,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "AMZN",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 40,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "DIS",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "BAC",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "AVGO",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "MSFT",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "UBER",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 9,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "GS",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.0
+    },
+    {
+      "ticker": "MS",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 5,
+      "window_ewma": 0.0
+    }
+  ],
+  "events": [],
+  "signals": [
+    {
+      "id": "e8293867ff753bc46acedc0b2b4df2b33de540665e2ef812db21bbf0290b6518",
+      "ticker": "INTC",
+      "direction": "neutral",
+      "confidence": 0.019,
+      "score": 0.02,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.135,
+      "evidence_ids": [
+        "589dd5659981f215ca785f092dcaee3d3c4bedf5257c68ee70ceaaf31896706a",
+        "8089b15df6e0f5d8653e21a922c2630d230744e145587aacb58505c23d7a26eb"
+      ],
+      "generated_at": "2026-06-11 17:44:52.932542+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0cb6a2390f0cdc4a015a2ba2c5c0a160e0c785f8a5bdfc8fa9e23d3286483562",
+      "ticker": "TSLA",
+      "direction": "neutral",
+      "confidence": 0.055,
+      "score": -0.071,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.476,
+      "evidence_ids": [
+        "589dd5659981f215ca785f092dcaee3d3c4bedf5257c68ee70ceaaf31896706a"
+      ],
+      "generated_at": "2026-06-11 17:44:53.022501+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "a7b044593500843ec6e20a7aaced8482a1a997650c1e04461f86170566aabe89",
+      "ticker": "GOOGL",
+      "direction": "neutral",
+      "confidence": 0.048,
+      "score": -0.059,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.395,
+      "evidence_ids": [
+        "589dd5659981f215ca785f092dcaee3d3c4bedf5257c68ee70ceaaf31896706a",
+        "716446e14e228a5075954eb7897d455df5dc9cc71e9a0ed1e1e5b167ba267ee5",
+        "a0757f87b811504520ae6467f8db52eaa703e69df886ba2fbabc8abfd978472b",
+        "8089b15df6e0f5d8653e21a922c2630d230744e145587aacb58505c23d7a26eb"
+      ],
+      "generated_at": "2026-06-11 17:44:53.153201+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "ccb631bc985eae19b87243dbc8145e1bd428a83870c24211f0d0b6b4aeab165a",
+      "ticker": "C",
+      "direction": "neutral",
+      "confidence": 0.028,
+      "score": 0.031,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.204,
+      "evidence_ids": [
+        "cbe6895b983ca23259a733856c5600a99a473cbdde5c609c2319fd2efa18283a"
+      ],
+      "generated_at": "2026-06-11 17:44:53.380250+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "a10d2cb8c71d2f9ba865103ed4dd28249303f941535f9f76b5d4c793021eafb5",
+      "ticker": "JPM",
+      "direction": "neutral",
+      "confidence": 0.02,
+      "score": 0.022,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.146,
+      "evidence_ids": [
+        "cbe6895b983ca23259a733856c5600a99a473cbdde5c609c2319fd2efa18283a",
+        "716446e14e228a5075954eb7897d455df5dc9cc71e9a0ed1e1e5b167ba267ee5",
+        "73ffedd50744d3563405915d2b2f4d0633b14aaa6cbe4dbdaf9c2dc221d49b8c",
+        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad"
+      ],
+      "generated_at": "2026-06-11 17:44:53.601743+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "86a5ce7ab36a6f973c8d99266a98764297c199e50ef7ebaef0659eba28eb7f58",
+      "ticker": "COIN",
+      "direction": "neutral",
+      "confidence": 0.02,
+      "score": -0.022,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.145,
+      "evidence_ids": [
+        "badc2ccfc24dc7f3a135ad94b421c4847866731c87729c8f92dbe8e2fb6ec53a"
+      ],
+      "generated_at": "2026-06-11 17:44:53.687526+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0ecb1ba9c42e597346ea4244c90645031cb0529c89a195f2bd736a6de9089803",
+      "ticker": "AAPL",
+      "direction": "neutral",
+      "confidence": 0.072,
+      "score": -0.111,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.743,
+      "evidence_ids": [
+        "9f13fcf1e3bf34086ebbf9ab82fd39f3f52902d8412d67e42c76de25e3dfc122",
+        "4d628399d727bc7f68213dba05f151e70c25e2f78fc6adebdf2966a9afc0b5f5"
+      ],
+      "generated_at": "2026-06-11 17:44:53.929780+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "65e03baa2537f266af84639d37539ba656bf715b395312df7fdfd8d3a7cdf9e8",
+      "ticker": "WMT",
+      "direction": "neutral",
+      "confidence": 0.039,
+      "score": 0.046,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.308,
+      "evidence_ids": [
+        "bfcc0a3e0b14120a7e91562b566475a6be130a4f9fd13c367f8864d635163e17"
+      ],
+      "generated_at": "2026-06-11 17:44:54.203212+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "93b66aabfe0ecfb14a7313d22455b518e628981b1695b48fef33be0fdadf7c25",
+      "ticker": "AMZN",
+      "direction": "neutral",
+      "confidence": 0.07,
+      "score": -0.103,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.685,
+      "evidence_ids": [
+        "716446e14e228a5075954eb7897d455df5dc9cc71e9a0ed1e1e5b167ba267ee5",
+        "8089b15df6e0f5d8653e21a922c2630d230744e145587aacb58505c23d7a26eb"
+      ],
+      "generated_at": "2026-06-11 17:44:54.293951+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "d7c8d62e18adb56f844b856fcd8bd808c2ea0704b93252276fafc004a0b28a22",
+      "ticker": "DIS",
+      "direction": "neutral",
+      "confidence": 0.011,
+      "score": 0.012,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.077,
+      "evidence_ids": [
+        "eb044b699bd1ec4bc1d03b2172d79f953a3a0e20e1a4924998b001fd90ddca83"
+      ],
+      "generated_at": "2026-06-11 17:44:54.561378+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "5f191596f0d82fa95f3737ab58d7c7d8a0da554c3b0486502b854071782b5c47",
+      "ticker": "BAC",
+      "direction": "neutral",
+      "confidence": 0.043,
+      "score": 0.052,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": 0.345,
+      "evidence_ids": [
+        "0961a46d23311a2ed23c8bf24a6d8582a9c7597dd9d7314394fbb838312069b6",
+        "7425d945ad32cf5057174c40abec8bb6409d88834677dca2667467cd78c5e08e"
+      ],
+      "generated_at": "2026-06-11 17:44:54.791567+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "d353dc3594f398de93944196f29be65cf3bac75bb8ad70e84aeb9b1e53a7e1eb",
+      "ticker": "AVGO",
+      "direction": "neutral",
+      "confidence": 0.055,
+      "score": -0.071,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.476,
+      "evidence_ids": [
+        "8089b15df6e0f5d8653e21a922c2630d230744e145587aacb58505c23d7a26eb"
+      ],
+      "generated_at": "2026-06-11 17:44:54.925129+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "e1a1f6954aa5f64b4bb3b04fa940901239428a0608c303ef5ebd9df13c079499",
+      "ticker": "MSFT",
+      "direction": "neutral",
+      "confidence": 0.078,
+      "score": -0.135,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.901,
+      "evidence_ids": [
+        "8089b15df6e0f5d8653e21a922c2630d230744e145587aacb58505c23d7a26eb"
+      ],
+      "generated_at": "2026-06-11 17:44:55.101739+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "1615a6d3183a48bde82edf63101ca017a95f02bd3cfbb8b4a0271a7fa97e23c3",
+      "ticker": "UBER",
+      "direction": "neutral",
+      "confidence": 0.047,
+      "score": -0.057,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.379,
+      "evidence_ids": [
+        "2723bd4adf9817cdf4c76751f0c45b4366441d53bb692cef8f2a286e3bd16568"
+      ],
+      "generated_at": "2026-06-11 17:44:55.237449+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "b97e4b0b0076a6cd2062334ed5e369cd835b5b55d30e66910bba2e30a1d64575",
+      "ticker": "GS",
+      "direction": "neutral",
+      "confidence": 0.067,
+      "score": -0.096,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.638,
+      "evidence_ids": [
+        "ee11cb758b95d61ce9e927f178f846800e304ffac9d0a7c001f89e3048756968",
+        "7940fff5580016f5baacfaa24f1f9d0e5bd668efdc89847f4fed7beef856ea35",
+        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad"
+      ],
+      "generated_at": "2026-06-11 17:44:55.401904+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "7a76aaf2db832a76effd825ad551b09fe13264b2cbd26d00ccf9937b639d0f32",
+      "ticker": "MS",
+      "direction": "neutral",
+      "confidence": 0.046,
+      "score": -0.056,
+      "sentiment_component": 0.0,
+      "event_component": 0.0,
+      "price_component": -0.376,
+      "evidence_ids": [
+        "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad"
+      ],
+      "generated_at": "2026-06-11 17:44:55.612906+00:00",
+      "horizon_days": 5
+    }
+  ],
+  "investment_plan": {
+    "total_amount": 10000.0,
+    "allocations": [
+      {
+        "ticker": "SPY",
+        "amount": 7000.0,
+        "percentage": 70.0,
+        "rationale": "SPY: broad market ETF (S&P 500) for diversified exposure"
+      },
+      {
+        "ticker": "BND",
+        "amount": 3000.0,
+        "percentage": 30.0,
+        "rationale": "BND: bond ETF for capital preservation and income"
+      }
+    ],
+    "risk_summary": "No qualifying signals found; defaulting to diversified ETF allocation.",
+    "expected_return_range": [
+      0.049,
+      0.091
+    ],
+    "time_horizon_months": 12,
+    "rebalance_trigger": "on_new_signal",
+    "disclaimer": "Educational use only. Not investment advice."
+  },
+  "user_profile": {
+    "investment_amount": 10000.0,
+    "risk_appetite": "moderate",
+    "time_horizon_months": 12,
+    "preferred_sectors": [],
+    "exclude_tickers": []
+  },
+  "backtest_results": null,
+  "requires_interrupt": false,
+  "human_review_decision": null,
+  "error_log": [
+    "FinBERT API error for INTC: RuntimeError: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial",
+    "FinBERT unavailable \u2014 sentiment scores defaulted to 0.0; signals driven by price z-score only.",
+    "event_detection [493864ff]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [589dd565]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [cbe6895b]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [badc2ccf]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [9f13fcf1]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [716446e1]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [eb044b69]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [0961a46d]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [9295be8e]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [a0757f87]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [281cca1a]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [8089b15d]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [2723bd4a]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [4d628399]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [f0d47773]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [28f1fd4e]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [3ec84f59]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [a30af45f]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [c4cb17ee]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [f994e094]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [ebc6d6c2]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [b045b8d8]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [b55aea9a]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [0349532f]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [a342dd36]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [8189aee9]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [7425d945]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [73ffedd5]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [af3e868b]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [b74e21d8]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [ee11cb75]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [a6e7aeb6]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [5289eb44]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [f9586379]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [0681d703]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [764c369c]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [80490ec6]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />",
+    "event_detection [500563d1]: HF API error: HF API failed after 3 attempts: 429 <!DOCTYPE html>\n<html class=\"\" lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\n            name=\"viewport\"\n            content=\"width=device-width, initial-scale=1.0, user-scalable=no\"\n    />"
+  ],
+  "run_date": "2026-06-11"
+}
