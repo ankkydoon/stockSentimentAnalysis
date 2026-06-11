@@ -26,8 +26,8 @@ const elLastUpdated   = document.getElementById('last-updated');
 const elSignalsBody   = document.getElementById('signals-body');
 const elSignalsEmpty  = document.getElementById('signals-empty');
 
+const elEventsSection = document.getElementById('events-section');
 const elEventsList    = document.getElementById('events-list');
-const elEventsEmpty   = document.getElementById('events-empty');
 
 const elPlanEmpty     = document.getElementById('plan-empty');
 const elPlanDetails   = document.getElementById('plan-details');
@@ -152,10 +152,10 @@ function renderSignals(signals) {
 function renderEvents(events) {
   elEventsList.textContent = '';
   if (!Array.isArray(events) || events.length === 0) {
-    show(elEventsEmpty);
+    hide(elEventsSection);
     return;
   }
-  hide(elEventsEmpty);
+  show(elEventsSection);
 
   events.forEach(ev => {
     const item = el('div', { className: 'event-item' });
