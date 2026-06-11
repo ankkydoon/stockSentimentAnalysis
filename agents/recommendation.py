@@ -20,8 +20,6 @@ def _load_sp500_universe(store: SupabaseStore) -> dict[str, str]:
     except Exception:
         return {}
 
-_ETF_SPY = "SPY"
-_ETF_BND = "BND"
 _FALLBACK_RETURN = 0.07  # 7% annual fallback
 
 
@@ -87,62 +85,14 @@ def _weighted_stock_allocations(
     return allocations
 
 
-def _etf_rationale(ticker: str) -> str:
-    if ticker == _ETF_SPY:
-        return f"{ticker}: broad market ETF (S&P 500) for diversified exposure"
-    if ticker == _ETF_BND:
-        return f"{ticker}: bond ETF for capital preservation and income"
-    return f"{ticker}: ETF allocation"
-
 
 def _build_allocations(
     risk_appetite: Literal["conservative", "moderate", "aggressive"],
     signals: list[InvestmentSignal],
     total_amount: float,
 ) -> list[Allocation]:
-    # signals is already top-3 sorted by confidence from _filter_signals
-    if risk_appetite == "conservative":
-        etf_amount = round(total_amount * 0.60, 2)
-        stock_amount = total_amount - etf_amount
-
-        spy_amount = round(etf_amount * 0.50, 2)
-        bnd_amount = round(etf_amount - spy_amount, 2)
-
-        etf_allocations = [
-            Allocation(
-                ticker=_ETF_SPY,
-                amount=spy_amount,
-                percentage=round(spy_amount / total_amount * 100, 4),
-                rationale=_etf_rationale(_ETF_SPY),
-            ),
-            Allocation(
-                ticker=_ETF_BND,
-                amount=bnd_amount,
-                percentage=round(bnd_amount / total_amount * 100, 4),
-                rationale=_etf_rationale(_ETF_BND),
-            ),
-        ]
-        stock_allocations = _weighted_stock_allocations(signals, stock_amount)
-
-    elif risk_appetite == "moderate":
-        etf_amount = round(total_amount * 0.40, 2)
-        stock_amount = total_amount - etf_amount
-
-        etf_allocations = [
-            Allocation(
-                ticker=_ETF_SPY,
-                amount=etf_amount,
-                percentage=round(etf_amount / total_amount * 100, 4),
-                rationale=_etf_rationale(_ETF_SPY),
-            )
-        ]
-        stock_allocations = _weighted_stock_allocations(signals, stock_amount)
-
-    else:  # aggressive
-        etf_allocations = []
-        stock_allocations = _weighted_stock_allocations(signals, total_amount)
-
-    all_allocations = etf_allocations + stock_allocations
+    # signals is already top-3 sorted by confidence — allocate 100% across them
+    all_allocations = _weighted_stock_allocations(signals, total_amount)
 
     # Fix floating-point rounding: adjust last allocation so amounts sum exactly
     if all_allocations:
@@ -200,39 +150,7 @@ def recommendation_node(state: dict) -> dict:
     filtered = _filter_signals(signals, profile, ticker_sector)
 
     if not filtered:
-        # No qualifying signals — build a safe all-ETF fallback for conservative/moderate,
-        # or return None for aggressive (no eligible trades).
-        if profile.risk_appetite == "aggressive":
-            return {"investment_plan": None}
-        spy_amount = round(profile.investment_amount * 0.70, 2)
-        bnd_amount = round(profile.investment_amount - spy_amount, 2)
-        allocations = [
-            Allocation(
-                ticker=_ETF_SPY,
-                amount=spy_amount,
-                percentage=round(spy_amount / profile.investment_amount * 100, 4),
-                rationale=_etf_rationale(_ETF_SPY),
-            ),
-            Allocation(
-                ticker=_ETF_BND,
-                amount=bnd_amount,
-                percentage=round(bnd_amount / profile.investment_amount * 100, 4),
-                rationale=_etf_rationale(_ETF_BND),
-            ),
-        ]
-        plan = InvestmentPlan(
-            total_amount=profile.investment_amount,
-            allocations=allocations,
-            risk_summary="No qualifying signals found; defaulting to diversified ETF allocation.",
-            expected_return_range=(
-                round(_FALLBACK_RETURN * 0.7, 4),
-                round(_FALLBACK_RETURN * 1.3, 4),
-            ),
-            time_horizon_months=profile.time_horizon_months,
-            rebalance_trigger="on_new_signal",
-        )
-        _try_persist(plan)
-        return {"investment_plan": plan}
+        return {"investment_plan": None}
 
     allocations = _build_allocations(
         profile.risk_appetite, filtered, profile.investment_amount
