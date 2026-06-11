@@ -264,10 +264,16 @@ function showError(message) {
 // ── Fetch pipeline output ─────────────────────────────────────────────────────
 
 async function fetchLatestOutput() {
-  // Ordered list of URLs to try — most recent first
-  const candidates = [];
+  // 1. Try docs/latest.json first — updated by CI on every run
+  try {
+    const res = await fetch(
+      'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/docs/latest.json'
+    );
+    if (res.ok) return res.json();
+  } catch (_) {}
 
-  // Last 14 days via raw.githubusercontent.com
+  // 2. Scan last 14 days of dated output files
+  const candidates = [];
   for (let i = 0; i < 14; i++) {
     const d = new Date();
     d.setUTCDate(d.getUTCDate() - i);
@@ -287,17 +293,9 @@ async function fetchLatestOutput() {
     } catch (_) {}
   }
 
-  // Hard-coded known-good URL as last resort
-  try {
-    const res = await fetch(
-      'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/outputs/2026-06-10.json'
-    );
-    if (res.ok) return res.json();
-  } catch (_) {}
-
   throw new Error(
     'Could not load pipeline data. ' +
-    'Tried last 14 days — no output file found. ' +
+    'Tried docs/latest.json and last 14 days — no output file found. ' +
     'Please run the pipeline first.'
   );
 }
@@ -313,10 +311,11 @@ async function init() {
   hide(elError);
   renderDashboard(EMBEDDED_DATA);
 
-  // Silently try to fetch fresher data in the background
+  // Silently try to fetch fresher data in the background; always replace embedded
+  // data if a real file is found, even for the same run_date.
   try {
     const fresh = await fetchLatestOutput();
-    if (fresh && fresh.run_date !== EMBEDDED_DATA.run_date) {
+    if (fresh) {
       renderDashboard(fresh);
     }
   } catch (_) {

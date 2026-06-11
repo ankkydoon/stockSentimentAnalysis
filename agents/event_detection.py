@@ -75,11 +75,14 @@ def _call_mistral(article_text: str) -> dict | None:
 def event_detection_node(state: dict) -> dict:
     settings = get_settings()
     events: list[Event] = []
+    # Use sentiment scores only for the LLM-run filter; ticker comes directly from
+    # article_entities so events are never silently dropped when FinBERT is unavailable.
     ticker_sentiment = {s.ticker: s.score for s in state["sentiment_scores"]}
 
     for article in state["deduplicated_articles"]:
         entities = state["article_entities"].get(article.id, [])
         ticker = next((e.ticker for e in entities if e.linked and e.ticker), None)
+        # Fall back to keyword-only filter when no sentiment score is available
         sentiment_score = ticker_sentiment.get(ticker, 0.0) if ticker else 0.0
 
         if not should_run_llm(sentiment_score, article.body):
@@ -105,5 +108,14 @@ def event_detection_node(state: dict) -> dict:
             raw_llm_output=str(parsed),
         ))
 
-    requires_interrupt = any(e.severity >= settings.high_severity_threshold for e in events)
+    # Only request human review when running in interactive mode (user_profile present).
+    # In non-interactive CI runs there is no human to approve, so skip the interrupt to
+    # prevent the graph from halting and producing empty signals.
+    interactive = bool(state.get("user_profile"))
+    high_severity = any(e.severity >= settings.high_severity_threshold for e in events)
+    requires_interrupt = interactive and high_severity
+    print(
+        f"[events] detected {len(events)} events, high_severity={high_severity}, "
+        f"interactive={interactive}, requires_interrupt={requires_interrupt}"
+    )
     return {"events": events, "requires_interrupt": requires_interrupt}
