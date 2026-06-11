@@ -103,5 +103,7 @@ def signal_generation_node(state: dict) -> dict:
         )
         store.upsert_signal(sig)
         signals.append(sig)
+        print(f"[signals] {ticker}: direction={direction} score={score:.3f} confidence={round(confidence, 3):.3f}")
 
+    print(f"[signals] generated {len(signals)} signals from {len(ticker_sentiment)} tickers")
     return {"signals": signals}

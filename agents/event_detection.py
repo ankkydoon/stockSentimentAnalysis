@@ -89,6 +89,7 @@ def event_detection_node(state: dict) -> dict:
     for article in state["deduplicated_articles"]:
         entities = state["article_entities"].get(article.id, [])
         ticker = next((e.ticker for e in entities if e.linked and e.ticker), None)
+        # Fall back to keyword-only filter when no sentiment score is available
         sentiment_score = ticker_sentiment.get(ticker, 0.0) if ticker else 0.0
 
         if not should_run_llm(sentiment_score, article.body):

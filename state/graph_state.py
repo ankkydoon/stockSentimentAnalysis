@@ -23,3 +23,4 @@ class GraphState(TypedDict):
     human_review_decision: str | None
     error_log: Annotated[list[str], operator.add]
     run_date: str
+    user_profile: UserProfile | None
