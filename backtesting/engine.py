@@ -85,6 +85,11 @@ class BacktestEngine:
     def __init__(self, store: SupabaseStore, forward_days: int = 14) -> None:
         self.store = store
         self.forward_days = forward_days
+        try:
+            result = store.client.table("sp500_embeddings").select("ticker, sector").execute()
+            self._ticker_sector = {row["ticker"]: row["sector"] for row in (result.data or [])}
+        except Exception:
+            self._ticker_sector = {}
 
     def run(self, start_date: str, end_date: str) -> dict[str, Any]:
         """Run a backtest over signals generated between start_date and end_date.
@@ -216,9 +221,58 @@ class BacktestEngine:
             "mean_return": bm.mean_return(results),
             "sharpe_ratio": bm.sharpe_ratio(results),
             "max_drawdown": bm.max_drawdown(returns_list),
-            "hit_rate_by_sector": bm.hit_rate_by_sector(results, {}),
+            "hit_rate_by_sector": bm.hit_rate_by_sector(results, self._ticker_sector),
             "hit_rate_by_event_type": bm.hit_rate_by_event_type(results),
         }
+
+
+    def _fetch_signals_for_optimization(self, start_date: str, end_date: str) -> list[dict]:
+        """Return raw evaluated signal rows including components, for weight optimization."""
+        raw_signals = _fetch_signals_by_date_range(self.store, start_date, end_date)
+        actionable = [s for s in raw_signals if s.get("signal", "neutral") != "neutral"]
+        if not actionable:
+            return []
+
+        all_tickers = list({s["ticker"] for s in actionable})
+        parsed_dates = [
+            datetime.fromisoformat(s["generated_at"].replace("Z", "+00:00"))
+            for s in actionable
+        ]
+        price_start = _next_trading_day(min(parsed_dates))
+        price_end = _date_str(max(parsed_dates), offset_days=self.forward_days + 5)
+        price_data = _batch_close_prices(all_tickers, price_start, price_end)
+
+        results = []
+        for sig in actionable:
+            ticker = sig["ticker"]
+            direction = sig["signal"]
+            generated_at = datetime.fromisoformat(sig["generated_at"].replace("Z", "+00:00"))
+
+            if price_data.empty or ticker not in price_data.columns:
+                continue
+
+            ticker_prices = price_data[ticker].dropna()
+            entry_date = _next_trading_day(generated_at)
+            exit_date = _date_str(generated_at, offset_days=self.forward_days)
+            price_start_val = _get_price_on_or_after(ticker_prices, entry_date)
+            price_end_val = _get_price_on_or_after(ticker_prices, exit_date)
+
+            if not price_start_val or not price_end_val or price_start_val == 0:
+                continue
+
+            actual_return = (price_end_val - price_start_val) / price_start_val
+            correct = (
+                (direction == "bullish" and actual_return > 0)
+                or (direction == "bearish" and actual_return < 0)
+            )
+            results.append({
+                "ticker": ticker,
+                "direction": direction,
+                "correct": correct,
+                "actual_return": actual_return,
+                "components": sig.get("components") or {},
+            })
+        return results
 
 
 def _empty_metrics(start_date: str, end_date: str, total_signals: int) -> dict[str, Any]:

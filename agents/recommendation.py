@@ -10,29 +10,15 @@ from models.recommendation import Allocation, InvestmentPlan, UserProfile
 from models.signal import InvestmentSignal
 from storage.supabase_store import SupabaseStore
 
-# Top-20 S&P 500 tickers mapped to their GICS sector
-_TICKER_SECTOR: dict[str, str] = {
-    "AAPL": "Technology",
-    "MSFT": "Technology",
-    "NVDA": "Technology",
-    "GOOGL": "Communication Services",
-    "GOOG": "Communication Services",
-    "AMZN": "Consumer Discretionary",
-    "META": "Communication Services",
-    "TSLA": "Consumer Discretionary",
-    "BRK.B": "Financials",
-    "UNH": "Health Care",
-    "XOM": "Energy",
-    "JNJ": "Health Care",
-    "JPM": "Financials",
-    "V": "Financials",
-    "PG": "Consumer Staples",
-    "MA": "Financials",
-    "HD": "Consumer Discretionary",
-    "CVX": "Energy",
-    "LLY": "Health Care",
-    "ABBV": "Health Care",
-}
+def _load_sp500_universe(store: SupabaseStore) -> dict[str, str]:
+    """Return {ticker: sector} for all rows in sp500_embeddings. Falls back to empty dict."""
+    if not store._enabled:
+        return {}
+    try:
+        result = store.client.table("sp500_embeddings").select("ticker, sector").execute()
+        return {row["ticker"]: row["sector"] for row in (result.data or [])}
+    except Exception:
+        return {}
 
 _ETF_SPY = "SPY"
 _ETF_BND = "BND"
@@ -52,21 +38,22 @@ def _get_annual_return(ticker: str) -> float:
 def _filter_signals(
     signals: list[InvestmentSignal],
     profile: UserProfile,
+    ticker_sector: dict[str, str],
 ) -> list[InvestmentSignal]:
     candidates = [
         s for s in signals
         if s.direction == "bullish"
         and s.confidence >= 0.6
         and s.ticker not in profile.exclude_tickers
+        and (not ticker_sector or s.ticker in ticker_sector)  # must be in S&P 500
     ]
 
     if profile.preferred_sectors:
         preferred_upper = {sec.lower() for sec in profile.preferred_sectors}
         sector_filtered = [
             s for s in candidates
-            if _TICKER_SECTOR.get(s.ticker, "").lower() in preferred_upper
+            if ticker_sector.get(s.ticker, "").lower() in preferred_upper
         ]
-        # Fall back to all candidates if sector map yields nothing
         candidates = sector_filtered if sector_filtered else candidates
 
     return candidates
@@ -205,8 +192,12 @@ def recommendation_node(state: dict) -> dict:
         raw_profile if isinstance(raw_profile, UserProfile) else UserProfile(**raw_profile)
     )
 
+    settings = get_settings()
+    store = SupabaseStore(url=settings.supabase_url, key=settings.supabase_key.get_secret_value())
+    ticker_sector = _load_sp500_universe(store)
+
     signals: list[InvestmentSignal] = state.get("signals", [])
-    filtered = _filter_signals(signals, profile)
+    filtered = _filter_signals(signals, profile, ticker_sector)
 
     if not filtered:
         # No qualifying signals — build a safe all-ETF fallback for conservative/moderate,

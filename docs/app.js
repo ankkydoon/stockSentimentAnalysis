@@ -5,8 +5,7 @@
    ============================================================ */
 
 // Compact dashboard data written by the pipeline after each run
-const LATEST_DATA_URL =
-  'https://raw.githubusercontent.com/ankkydoon/stockSentimentAnalysis/main/docs/latest.json';
+const LATEST_DATA_URL = './latest.json';
 
 // Allowlisted direction values that map to CSS class suffixes.
 const DIRECTION_CLASSES = new Set(['bullish', 'bearish', 'neutral']);

@@ -9,8 +9,12 @@ name: Financial News Sentiment Pipeline
 
 on:
   schedule:
-    # Weekdays at 9am ET (14:00 UTC)
-    - cron: '0 14 * * 1-5'
+    # Every 3 hours during US market hours, weekdays (9am–4pm ET = 13:00–21:00 UTC)
+    - cron: '0 13 * * 1-5'
+    - cron: '0 16 * * 1-5'
+    - cron: '0 19 * * 1-5'
+    # Weekly weight optimization — Monday 8am ET (13:00 UTC) — runs before first pipeline of the week
+    - cron: '0 12 * * 1'
   workflow_dispatch:
     inputs:
       mode:
@@ -169,3 +173,54 @@ jobs:
           git add outputs/ docs/latest.json
           git diff --staged --quiet || git commit -m "chore: pipeline output $(date +%Y-%m-%d)"
           git push
+
+  optimize-weights:
+    # Runs only on the Monday 8am cron (12:00 UTC) — not triggered by workflow_dispatch or other schedules
+    if: github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1'
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          pip install -e ".[dev]"
+          python -m spacy download en_core_web_sm
+
+      - name: Run weight optimization
+        run: |
+          python -c "
+import logging
+from datetime import datetime, timedelta, timezone
+logging.basicConfig(level=logging.INFO)
+from config.settings import get_settings
+from storage.supabase_store import SupabaseStore
+from backtesting.optimizer import run_optimization
+today = datetime.now(timezone.utc)
+start = (today - timedelta(days=30)).strftime('%Y-%m-%d')
+end = today.strftime('%Y-%m-%d')
+settings = get_settings()
+store = SupabaseStore(url=settings.supabase_url, key=settings.supabase_key.get_secret_value())
+weights = run_optimization(store, start, end)
+print('New weights:', weights)
+          "
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}

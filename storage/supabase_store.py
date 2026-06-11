@@ -98,3 +98,32 @@ class SupabaseStore:
             "match_count": limit,
         }).execute()
         return result.data or []
+
+    _DEFAULT_WEIGHTS = {"w_sentiment": 0.50, "w_event": 0.35, "w_price": 0.15}
+
+    def get_weights(self) -> dict:
+        if not self._enabled:
+            return dict(self._DEFAULT_WEIGHTS)
+        result = (
+            self.client.table("signal_weights")
+            .select("w_sentiment, w_event, w_price")
+            .order("updated_at", desc=True)
+            .limit(1)
+            .execute()
+        )
+        if result.data:
+            return result.data[0]
+        return dict(self._DEFAULT_WEIGHTS)
+
+    def save_weights(self, w_sentiment: float, w_event: float, w_price: float,
+                     signals_evaluated: int, directional_accuracy: float, notes: str = "") -> None:
+        if not self._enabled:
+            return
+        self.client.table("signal_weights").insert({
+            "w_sentiment": round(w_sentiment, 4),
+            "w_event": round(w_event, 4),
+            "w_price": round(w_price, 4),
+            "signals_evaluated": signals_evaluated,
+            "directional_accuracy": round(directional_accuracy, 4),
+            "notes": notes,
+        }).execute()

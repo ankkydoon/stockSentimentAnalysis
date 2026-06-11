@@ -35,8 +35,9 @@ def _get_price_zscore(ticker: str) -> float:
         return 0.0
 
 
-def compute_signal_score(sentiment_ewma: float, event_severity_weight: float, price_zscore: float) -> float:
-    return 0.50 * sentiment_ewma + 0.35 * event_severity_weight + 0.15 * price_zscore
+def compute_signal_score(sentiment_ewma: float, event_severity_weight: float, price_zscore: float,
+                         w_sentiment: float = 0.50, w_event: float = 0.35, w_price: float = 0.15) -> float:
+    return w_sentiment * sentiment_ewma + w_event * event_severity_weight + w_price * price_zscore
 
 
 def score_to_direction(score: float) -> str:
@@ -63,6 +64,12 @@ def signal_generation_node(state: dict) -> dict:
                           key=settings.supabase_key.get_secret_value())
     run_date = state.get("run_date", datetime.now(timezone.utc).strftime("%Y-%m-%d"))
 
+    weights = store.get_weights()
+    w_sentiment = weights.get("w_sentiment", 0.50)
+    w_event = weights.get("w_event", 0.35)
+    w_price = weights.get("w_price", 0.15)
+    print(f"[signals] using weights sentiment={w_sentiment} event={w_event} price={w_price}")
+
     ticker_sentiment = {s.ticker: s for s in state["sentiment_scores"]}
     ticker_events: dict[str, list] = {}
     for event in state["events"]:
@@ -81,7 +88,8 @@ def signal_generation_node(state: dict) -> dict:
             event_weight /= len(events)
 
         price_zscore = _get_price_zscore(ticker)
-        score = compute_signal_score(sentiment.window_ewma, event_weight, price_zscore)
+        score = compute_signal_score(sentiment.window_ewma, event_weight, price_zscore,
+                                     w_sentiment=w_sentiment, w_event=w_event, w_price=w_price)
         # clamp score to model bounds [-1, 1]
         score = max(-1.0, min(1.0, score))
         direction = score_to_direction(score)

@@ -30,7 +30,7 @@
   <main class="main-content">
     <div id="loading" class="loading-state" aria-live="polite">
       <div class="spinner"></div>
-      <p>Loading latest pipeline output&hellip;</p>
+      <p>Loading dashboard data&hellip;</p>
     </div>
 
     <div id="error" class="error-state" aria-live="assertive" hidden>
@@ -68,11 +68,6 @@
           </table>
           <p class="empty-msg" id="signals-empty" hidden>No signal data available.</p>
         </div>
-        <div class="pagination" id="signals-pagination" hidden>
-          <button id="signals-prev" class="page-btn">&lsaquo; Prev</button>
-          <span id="signals-page-info" class="page-info"></span>
-          <button id="signals-next" class="page-btn">Next &rsaquo;</button>
-        </div>
       </section>
 
       <!-- Events section -->
@@ -82,11 +77,6 @@
         </h2>
         <div id="events-list" class="events-list"></div>
         <p class="empty-msg" id="events-empty" hidden>No event data available.</p>
-        <div class="pagination" id="events-pagination" hidden>
-          <button id="events-prev" class="page-btn">&lsaquo; Prev</button>
-          <span id="events-page-info" class="page-info"></span>
-          <button id="events-next" class="page-btn">Next &rsaquo;</button>
-        </div>
       </section>
 
       <!-- Investment Plan section -->
@@ -142,6 +132,7 @@
     <p class="last-updated" id="last-updated"></p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
