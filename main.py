@@ -140,6 +140,9 @@ def _save_output(final_state: dict, run_date: str) -> str:
     os.makedirs(outputs_dir, exist_ok=True)
     output_path = os.path.join(outputs_dir, f"{run_date}.json")
 
+    # Keys that are large / not needed downstream (raw article bodies bloat the file)
+    _SKIP_KEYS = {"raw_articles", "deduplicated_articles", "article_entities"}
+
     def _serialise(obj):
         if isinstance(obj, list):
             return [_serialise(i) for i in obj]
@@ -153,7 +156,9 @@ def _save_output(final_state: dict, run_date: str) -> str:
             return obj
         return str(obj)
 
-    serialisable: dict = {k: _serialise(v) for k, v in final_state.items()}
+    serialisable: dict = {
+        k: _serialise(v) for k, v in final_state.items() if k not in _SKIP_KEYS
+    }
 
     with open(output_path, "w", encoding="utf-8") as fh:
         json.dump(serialisable, fh, indent=2, default=str)

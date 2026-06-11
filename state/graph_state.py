@@ -17,6 +17,7 @@ class GraphState(TypedDict):
     events: list[Event]
     signals: list[InvestmentSignal]
     investment_plan: InvestmentPlan | None
+    user_profile: UserProfile | None
     backtest_results: dict[str, Any] | None
     requires_interrupt: bool
     human_review_decision: str | None

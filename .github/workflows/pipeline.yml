@@ -52,6 +52,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -146,22 +148,17 @@ jobs:
           INPUT_HORIZON: ${{ inputs.horizon || '12' }}
           INPUT_TICKER: ${{ inputs.ticker || 'none' }}
 
-      - name: Publish output to docs/latest.json
+      - name: Generate dashboard data
         if: always()
         run: |
-          TODAY=$(date -u +%Y-%m-%d)
-          if [ -f "outputs/${TODAY}.json" ]; then
-            cp "outputs/${TODAY}.json" docs/latest.json
-            echo "Copied outputs/${TODAY}.json to docs/latest.json"
+          RUN_DATE=$(date -u +%Y-%m-%d)
+          OUTPUT_FILE="outputs/${RUN_DATE}.json"
+          if [ -f "$OUTPUT_FILE" ]; then
+            jq '{run_date: .run_date, signals: .signals, events: .events, investment_plan: .investment_plan}' \
+              "$OUTPUT_FILE" > docs/latest.json
+            echo "Dashboard data written: $(jq '.signals | length' docs/latest.json) signals"
           else
-            # Fall back to the most recent output file if today's isn't present
-            LATEST=$(ls -t outputs/*.json 2>/dev/null | head -1)
-            if [ -n "$LATEST" ]; then
-              cp "$LATEST" docs/latest.json
-              echo "Copied $LATEST to docs/latest.json (fallback)"
-            else
-              echo "No output file found — skipping docs/latest.json update"
-            fi
+            echo "Output file $OUTPUT_FILE not found, skipping"
           fi
 
       - name: Commit and push outputs
