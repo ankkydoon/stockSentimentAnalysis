@@ -128,7 +128,7 @@ function td(content, className) {
 
 // ── Render: Signals ───────────────────────────────────────────────────────────
 
-const PAGE_SIZE = 15;
+const PAGE_SIZE = 10;
 
 // ── Paginated state ───────────────────────────────────────────────────────────
 

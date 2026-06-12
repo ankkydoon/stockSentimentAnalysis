@@ -16,11 +16,23 @@ const elDashboard     = document.getElementById('dashboard');
 const elRunDate       = document.getElementById('run-date');
 const elLastUpdated   = document.getElementById('last-updated');
 
-const elSignalsBody   = document.getElementById('signals-body');
-const elSignalsEmpty  = document.getElementById('signals-empty');
+const elSignalsBody       = document.getElementById('signals-body');
+const elSignalsEmpty      = document.getElementById('signals-empty');
+const elSignalsPagination = document.getElementById('signals-pagination');
+const elSignalsPrev       = document.getElementById('signals-prev');
+const elSignalsNext       = document.getElementById('signals-next');
+const elSignalsPageInfo   = document.getElementById('signals-page-info');
 
-const elEventsList    = document.getElementById('events-list');
-const elEventsEmpty   = document.getElementById('events-empty');
+const elEventsList        = document.getElementById('events-list');
+const elEventsEmpty       = document.getElementById('events-empty');
+const elEventsPagination  = document.getElementById('events-pagination');
+const elEventsPrev        = document.getElementById('events-prev');
+const elEventsNext        = document.getElementById('events-next');
+const elEventsPageInfo    = document.getElementById('events-page-info');
+
+const PAGE_SIZE = 10;
+let _signalRows = [], _signalPage = 0;
+let _eventRows  = [], _eventPage  = 0;
 
 const elPlanEmpty     = document.getElementById('plan-empty');
 const elPlanDetails   = document.getElementById('plan-details');
@@ -117,23 +129,12 @@ function td(content, className) {
 
 // ── Render: Signals ───────────────────────────────────────────────────────────
 
-function renderSignals(signals) {
-  elSignalsBody.textContent = ''; // clears children without innerHTML
-  if (!Array.isArray(signals) || signals.length === 0) {
-    show(elSignalsEmpty);
-    return;
-  }
-  hide(elSignalsEmpty);
-
-  const rows = signals
-    .slice()
-    .sort((a, b) => (parseFloat(b.score) || 0) - (parseFloat(a.score) || 0));
-
-  rows.forEach(sig => {
+function renderSignalPage() {
+  elSignalsBody.textContent = '';
+  const slice = _signalRows.slice(_signalPage * PAGE_SIZE, (_signalPage + 1) * PAGE_SIZE);
+  slice.forEach(sig => {
     const score = sig.score != null ? parseFloat(sig.score).toFixed(3) : '—';
     const tr = document.createElement('tr');
-
-    // Clickable ticker link
     const tickerCell = document.createElement('td');
     tickerCell.className = 'ticker-cell';
     const link = document.createElement('a');
@@ -141,26 +142,37 @@ function renderSignals(signals) {
     link.className = 'ticker-link';
     link.textContent = sig.ticker;
     tickerCell.appendChild(link);
-
     tr.appendChild(tickerCell);
     tr.appendChild(td(directionChip(sig.direction)));
     tr.appendChild(td(confidenceBar(sig.confidence)));
     tr.appendChild(td(score, 'score-cell'));
     elSignalsBody.appendChild(tr);
   });
+  const total = Math.ceil(_signalRows.length / PAGE_SIZE);
+  if (elSignalsPageInfo) elSignalsPageInfo.textContent = `Page ${_signalPage + 1} of ${total}`;
+  if (elSignalsPrev)     elSignalsPrev.disabled = _signalPage === 0;
+  if (elSignalsNext)     elSignalsNext.disabled = _signalPage >= total - 1;
+}
+
+function renderSignals(signals) {
+  if (!Array.isArray(signals) || signals.length === 0) {
+    show(elSignalsEmpty);
+    hide(elSignalsPagination);
+    return;
+  }
+  hide(elSignalsEmpty);
+  _signalRows = signals.slice().sort((a, b) => (parseFloat(b.score) || 0) - (parseFloat(a.score) || 0));
+  _signalPage = 0;
+  renderSignalPage();
+  if (_signalRows.length > PAGE_SIZE) show(elSignalsPagination);
 }
 
 // ── Render: Events ────────────────────────────────────────────────────────────
 
-function renderEvents(events) {
+function renderEventPage() {
   elEventsList.textContent = '';
-  if (!Array.isArray(events) || events.length === 0) {
-    show(elEventsEmpty);
-    return;
-  }
-  hide(elEventsEmpty);
-
-  events.forEach(ev => {
+  const slice = _eventRows.slice(_eventPage * PAGE_SIZE, (_eventPage + 1) * PAGE_SIZE);
+  slice.forEach(ev => {
     const item = el('div', { className: 'event-item' });
 
     const header = el('div', { className: 'event-header' });
@@ -175,6 +187,23 @@ function renderEvents(events) {
     item.appendChild(summary);
     elEventsList.appendChild(item);
   });
+  const total = Math.ceil(_eventRows.length / PAGE_SIZE);
+  if (elEventsPageInfo) elEventsPageInfo.textContent = `Page ${_eventPage + 1} of ${total}`;
+  if (elEventsPrev)     elEventsPrev.disabled = _eventPage === 0;
+  if (elEventsNext)     elEventsNext.disabled = _eventPage >= total - 1;
+}
+
+function renderEvents(events) {
+  if (!Array.isArray(events) || events.length === 0) {
+    show(elEventsEmpty);
+    hide(elEventsPagination);
+    return;
+  }
+  hide(elEventsEmpty);
+  _eventRows = events;
+  _eventPage = 0;
+  renderEventPage();
+  if (_eventRows.length > PAGE_SIZE) show(elEventsPagination);
 }
 
 // ── Render: Investment Plan ───────────────────────────────────────────────────
@@ -292,4 +321,10 @@ async function init() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+  if (elSignalsPrev) elSignalsPrev.addEventListener('click', () => { if (_signalPage > 0) { _signalPage--; renderSignalPage(); } });
+  if (elSignalsNext) elSignalsNext.addEventListener('click', () => { if (_signalPage < Math.ceil(_signalRows.length / PAGE_SIZE) - 1) { _signalPage++; renderSignalPage(); } });
+  if (elEventsPrev)  elEventsPrev.addEventListener('click',  () => { if (_eventPage > 0)  { _eventPage--;  renderEventPage();  } });
+  if (elEventsNext)  elEventsNext.addEventListener('click',  () => { if (_eventPage < Math.ceil(_eventRows.length / PAGE_SIZE) - 1)  { _eventPage++;  renderEventPage();  } });
+  init();
+});
