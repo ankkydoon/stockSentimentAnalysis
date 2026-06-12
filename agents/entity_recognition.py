@@ -45,13 +45,8 @@ NAME_TO_TICKER: dict[str, tuple[str, str]] = {
 
 def _name_to_ticker_lookup(name: str) -> tuple[str, str] | None:
     lower = name.lower().strip()
-    if lower in NAME_TO_TICKER:
-        return NAME_TO_TICKER[lower]
-    # Partial match: check if any key is contained in the name
-    for key, val in NAME_TO_TICKER.items():
-        if key in lower and len(key) > 4:
-            return val
-    return None
+    # Exact match only — no partial matching to avoid false positives
+    return NAME_TO_TICKER.get(lower)
 
 
 def extract_ticker_patterns(text: str) -> list[str]:

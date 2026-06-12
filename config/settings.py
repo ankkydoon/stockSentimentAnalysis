@@ -23,7 +23,7 @@ class Settings(BaseSettings):
 
     hf_api_retries: int = 3
     hf_api_backoff_base: float = 2.0
-    entity_similarity_threshold: float = 0.72
+    entity_similarity_threshold: float = 0.82
 
 
 @lru_cache(maxsize=1)
