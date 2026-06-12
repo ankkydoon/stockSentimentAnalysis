@@ -67,16 +67,18 @@ def _get_embedding_model() -> SentenceTransformer:
 def resolve_entity(raw_text: str, article_text: str, store: SupabaseStore) -> Entity:
     if not has_financial_cue(article_text):
         return Entity(raw_text=raw_text, linked=False)
-    # Try hardcoded name→ticker fallback first (works without Supabase)
+    # Exact match in hardcoded map (high confidence, no ambiguity)
     match = _name_to_ticker_lookup(raw_text)
     if match:
         ticker, sector = match
         return Entity(raw_text=raw_text, ticker=ticker, sector=sector,
                       similarity_score=0.95, linked=True)
-    # Fall back to Supabase vector search
+    # Semantic search using entity name + article context for richer signal
     if store._enabled:
         model = _get_embedding_model()
-        embedding = model.encode(raw_text).tolist()
+        # Combine entity name with surrounding article context (first 300 chars)
+        context = f"{raw_text}. {article_text[:300]}"
+        embedding = model.encode(context, normalize_embeddings=True).tolist()
         threshold = get_settings().entity_similarity_threshold
         results = store.search_sp500(embedding, threshold=threshold)
         if results:
