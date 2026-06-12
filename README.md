@@ -313,4 +313,52 @@ Shows: investment signals, detected events, and top 3 S&P 500 investment recomme
 
 ---
 
+## Prototype vs Production — Honest Assessment
+
+This system is a **strong prototype** built with production-grade architectural patterns. Here's an honest comparison against what institutional fintech systems look like at scale.
+
+### What's genuinely solid
+
+| Area | What's solid |
+|---|---|
+| **Architecture** | LangGraph multi-agent pattern mirrors how quant desks decompose signal pipelines |
+| **Signal formula** | 3-component weighted score (sentiment + event + price) is standard alpha signal construction |
+| **Feedback loop** | Adaptive weight optimization via backtesting is real ML — most retail tools don't have this |
+| **Data dedup** | MinHash LSH for article deduplication is production-grade |
+| **FinBERT** | Finance-specific BERT model is the right call vs general sentiment models |
+| **SEC EDGAR** | Ingesting 8-K filings is what institutional systems do |
+| **Backtesting** | Sharpe ratio, directional accuracy, max drawdown — proper quant metrics |
+| **Vector search** | pgvector entity resolution for ticker linking is the right architecture |
+
+### Where it's still prototype-grade
+
+| Layer | This system | Production fintech |
+|---|---|---|
+| **Data sources** | 4 RSS feeds + Yahoo Finance per-ticker | 50-200 licensed feeds (Bloomberg, Refinitiv, Twitter firehose, earnings call transcripts) |
+| **Latency** | 3-hour cron | Milliseconds to minutes (Kafka event-driven) |
+| **Instruments** | ~40-100 tickers/run | 5,000–50,000 instruments |
+| **Signal accuracy** | Backtesting just started | Validated over years with walk-forward testing |
+| **Infrastructure** | GitHub Actions + Supabase | Kafka + Kubernetes + TimescaleDB + read replicas |
+| **Price data** | yfinance (unofficial Yahoo API) | Bloomberg B-PIPE or Refinitiv Elektron |
+| **NER quality** | spaCy + vector search | Fine-tuned NER trained on financial text + coreference resolution |
+| **Compliance** | Disclaimer only | Full audit trail, model explainability, regulatory sign-off |
+| **Cost** | ~$0 | $50k–$500k/year in data licensing alone |
+
+### What it would take to go production grade
+
+1. **Licensed data feeds** — Bloomberg B-PIPE or Refinitiv Elektron for reliable, low-latency news
+2. **Real-time processing** — Replace GHA cron with Kafka + streaming pipeline
+3. **Better NER** — Fine-tune a model on financial text with coreference resolution
+4. **More signal inputs** — Technical indicators, options flow, insider trading data, analyst revisions
+5. **Risk management** — Position limits, volatility-adjusted sizing, drawdown controls
+6. **Compliance layer** — Audit logs, explainability reports, model cards for regulators
+
+### Bottom line
+
+For a **personal tool, research project, or fintech interview demo** — the architecture decisions are sound and more sophisticated than most open-source sentiment tools. The feedback loop, pgvector entity resolution, and backtesting engine are patterns you'd find in real quant systems.
+
+For **managing real money or selling as a regulated product** — the data quality, infrastructure reliability, and compliance work above would be required first.
+
+---
+
 *Educational use only. Not investment advice. Always do your own research.*
