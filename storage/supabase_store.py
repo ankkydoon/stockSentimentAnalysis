@@ -71,7 +71,7 @@ class SupabaseStore:
             "date": date,
             "ewma_score": ewma_score,
             "n_articles": n_articles,
-        }).execute()
+        }, on_conflict="ticker,date").execute()
 
     def get_sentiment_ewma(self, ticker: str) -> float:
         if not self._enabled:
