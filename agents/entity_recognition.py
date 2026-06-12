@@ -73,19 +73,31 @@ def resolve_entity(raw_text: str, article_text: str, store: SupabaseStore) -> En
         ticker, sector = match
         return Entity(raw_text=raw_text, ticker=ticker, sector=sector,
                       similarity_score=0.95, linked=True)
-    # Semantic search using entity name + article context for richer signal
+    # Two-stage semantic search:
+    # Stage 1: entity name alone must be a close match (catches "Apple" → AAPL)
+    # Stage 2: entity name + context used for scoring (improves ranking)
     if store._enabled:
         model = _get_embedding_model()
-        # Combine entity name with surrounding article context (first 300 chars)
+        settings = get_settings()
+
+        # Stage 1: name-only match — must pass a high threshold
+        name_embedding = model.encode(raw_text, normalize_embeddings=True).tolist()
+        name_results = store.search_sp500(name_embedding, threshold=0.75)
+        if not name_results:
+            # Entity name not close to any S&P 500 company — skip
+            return Entity(raw_text=raw_text, linked=False)
+
+        # Stage 2: re-rank using name + article context
         context = f"{raw_text}. {article_text[:300]}"
-        embedding = model.encode(context, normalize_embeddings=True).tolist()
-        threshold = get_settings().entity_similarity_threshold
-        results = store.search_sp500(embedding, threshold=threshold)
-        if results:
-            best = results[0]
-            return Entity(raw_text=raw_text, ticker=best["ticker"],
-                          sector=best.get("sector"), similarity_score=best.get("similarity", 0.0),
-                          linked=True)
+        ctx_embedding = model.encode(context, normalize_embeddings=True).tolist()
+        ctx_results = store.search_sp500(ctx_embedding, threshold=settings.entity_similarity_threshold)
+
+        # Use context result if it agrees with name result (same ticker)
+        best = ctx_results[0] if ctx_results else name_results[0]
+        print(f"[entity] '{raw_text}' → {best['ticker']} (similarity={best.get('similarity', 0):.3f})")
+        return Entity(raw_text=raw_text, ticker=best["ticker"],
+                      sector=best.get("sector"), similarity_score=best.get("similarity", 0.0),
+                      linked=True)
     return Entity(raw_text=raw_text, linked=False)
 
 
