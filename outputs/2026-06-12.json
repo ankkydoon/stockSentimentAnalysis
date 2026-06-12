@@ -4,7 +4,7 @@
       "ticker": "GOOGL",
       "score": 0.49447810290239874,
       "label": "positive",
-      "n_sentences": 337,
+      "n_sentences": 370,
       "window_ewma": 0.1483434308707196
     },
     {
@@ -29,10 +29,10 @@
       "window_ewma": 0.009217523074276859
     },
     {
-      "ticker": "JPM",
+      "ticker": "BAC",
       "score": 0.0307250769142562,
       "label": "neutral",
-      "n_sentences": 127,
+      "n_sentences": 117,
       "window_ewma": 0.009217523074276859
     },
     {
@@ -43,25 +43,18 @@
       "window_ewma": 0.009217523074276859
     },
     {
-      "ticker": "BAC",
+      "ticker": "JPM",
       "score": 0.0307250769142562,
       "label": "neutral",
-      "n_sentences": 92,
+      "n_sentences": 127,
       "window_ewma": 0.009217523074276859
     },
     {
       "ticker": "AAPL",
       "score": 0.013145431725614836,
       "label": "neutral",
-      "n_sentences": 186,
+      "n_sentences": 223,
       "window_ewma": 0.003943629517684451
-    },
-    {
-      "ticker": "CRM",
-      "score": 0.37766694255025895,
-      "label": "positive",
-      "n_sentences": 52,
-      "window_ewma": 0.11330008276507768
     },
     {
       "ticker": "META",
@@ -71,10 +64,17 @@
       "window_ewma": 0.11330008276507768
     },
     {
+      "ticker": "CRM",
+      "score": 0.37766694255025895,
+      "label": "positive",
+      "n_sentences": 52,
+      "window_ewma": 0.11330008276507768
+    },
+    {
       "ticker": "AMZN",
       "score": 0.4384031323770292,
       "label": "positive",
-      "n_sentences": 212,
+      "n_sentences": 233,
       "window_ewma": 0.13152093971310877
     },
     {
@@ -100,16 +100,16 @@
     },
     {
       "ticker": "AVGO",
-      "score": -0.05894733821859242,
-      "label": "neutral",
-      "n_sentences": 38,
-      "window_ewma": -0.017684201465577726
+      "score": 0.3057030001443068,
+      "label": "positive",
+      "n_sentences": 27,
+      "window_ewma": 0.09171090004329203
     },
     {
       "ticker": "COIN",
       "score": 0.034164563803793555,
       "label": "neutral",
-      "n_sentences": 143,
+      "n_sentences": 222,
       "window_ewma": 0.010249369141138066
     },
     {
@@ -130,7 +130,7 @@
       "ticker": "MU",
       "score": 0.829676696085317,
       "label": "positive",
-      "n_sentences": 54,
+      "n_sentences": 56,
       "window_ewma": 0.2489030088255951
     },
     {
@@ -144,14 +144,7 @@
       "ticker": "NVDA",
       "score": -0.31232422262142717,
       "label": "negative",
-      "n_sentences": 77,
-      "window_ewma": -0.09369726678642815
-    },
-    {
-      "ticker": "F",
-      "score": -0.31232422262142717,
-      "label": "negative",
-      "n_sentences": 20,
+      "n_sentences": 115,
       "window_ewma": -0.09369726678642815
     },
     {
@@ -162,67 +155,11 @@
       "window_ewma": -0.09369726678642815
     },
     {
-      "ticker": "ADBE",
-      "score": -1.0,
+      "ticker": "F",
+      "score": -0.31232422262142717,
       "label": "negative",
-      "n_sentences": 1,
-      "window_ewma": -0.3
-    },
-    {
-      "ticker": "QCOM",
-      "score": -0.5402353817625304,
-      "label": "negative",
-      "n_sentences": 11,
-      "window_ewma": -0.16207061452875912
-    },
-    {
-      "ticker": "SOXX",
-      "score": -0.5402353817625304,
-      "label": "negative",
-      "n_sentences": 11,
-      "window_ewma": -0.16207061452875912
-    },
-    {
-      "ticker": "ARM",
-      "score": -0.5402353817625304,
-      "label": "negative",
-      "n_sentences": 11,
-      "window_ewma": -0.16207061452875912
-    },
-    {
-      "ticker": "NRXP",
-      "score": 0.35427298906624793,
-      "label": "positive",
-      "n_sentences": 12,
-      "window_ewma": 0.10628189671987438
-    },
-    {
-      "ticker": "HOOD",
-      "score": 0.3556772459100851,
-      "label": "positive",
-      "n_sentences": 6,
-      "window_ewma": 0.10670317377302553
-    },
-    {
-      "ticker": "IFRX",
-      "score": 0.7312925380295823,
-      "label": "positive",
-      "n_sentences": 11,
-      "window_ewma": 0.21938776140887467
-    },
-    {
-      "ticker": "QQQ",
-      "score": 0.05135150243861705,
-      "label": "neutral",
-      "n_sentences": 11,
-      "window_ewma": 0.015405450731585115
-    },
-    {
-      "ticker": "QQQM",
-      "score": 0.05135150243861705,
-      "label": "neutral",
-      "n_sentences": 11,
-      "window_ewma": 0.015405450731585115
+      "n_sentences": 20,
+      "window_ewma": -0.09369726678642815
     },
     {
       "ticker": "SPX",
@@ -232,6 +169,41 @@
       "window_ewma": 0.15378149747117162
     },
     {
+      "ticker": "THC",
+      "score": -0.2196808757991681,
+      "label": "negative",
+      "n_sentences": 19,
+      "window_ewma": -0.06590426273975042
+    },
+    {
+      "ticker": "SMCI",
+      "score": -0.35607120155912103,
+      "label": "negative",
+      "n_sentences": 33,
+      "window_ewma": -0.10682136046773631
+    },
+    {
+      "ticker": "AMD",
+      "score": -0.35607120155912103,
+      "label": "negative",
+      "n_sentences": 18,
+      "window_ewma": -0.10682136046773631
+    },
+    {
+      "ticker": "SPCX",
+      "score": 0.16477568981355134,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.0494327069440654
+    },
+    {
+      "ticker": "GOOG",
+      "score": 0.16477568981355134,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.0494327069440654
+    },
+    {
       "ticker": "BLK",
       "score": 0.07136507842603006,
       "label": "neutral",
@@ -239,25 +211,11 @@
       "window_ewma": 0.021409523527809015
     },
     {
-      "ticker": "NBIS",
-      "score": -0.3539184555486146,
+      "ticker": "DELL",
+      "score": -0.10314923747018745,
       "label": "negative",
-      "n_sentences": 12,
-      "window_ewma": -0.10617553666458439
-    },
-    {
-      "ticker": "ONDS",
-      "score": -0.3539184555486146,
-      "label": "negative",
-      "n_sentences": 12,
-      "window_ewma": -0.10617553666458439
-    },
-    {
-      "ticker": "AMD",
-      "score": 1.0,
-      "label": "positive",
-      "n_sentences": 2,
-      "window_ewma": 0.3
+      "n_sentences": 17,
+      "window_ewma": -0.030944771241056233
     },
     {
       "ticker": "DOWI",
@@ -281,14 +239,14 @@
       "window_ewma": -0.029505252758026405
     },
     {
-      "ticker": "D",
+      "ticker": "KLAC",
       "score": 0.06657216574662296,
       "label": "neutral",
       "n_sentences": 20,
       "window_ewma": 0.01997164972398689
     },
     {
-      "ticker": "KLAC",
+      "ticker": "D",
       "score": 0.06657216574662296,
       "label": "neutral",
       "n_sentences": 20,
@@ -500,8 +458,8 @@
       "ticker": "BAC",
       "category": "guidance_update",
       "severity": 0.8,
-      "summary": "Oracle issues guidance update with a planned $40 billion capital raise, including a $20 billion share sale.",
-      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.8, 'summary': 'Oracle issues guidance update with a planned $40 billion capital raise, including a $20 billion share sale.'}"
+      "summary": "Oracle updates guidance with a forecast of an additional $20 billion capital raise, following strong Q4 results but amid concerns over AI spending.",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.8, 'summary': 'Oracle updates guidance with a forecast of an additional $20 billion capital raise, following strong Q4 results but amid concerns over AI spending.'}"
     },
     {
       "article_id": "a342dd365885a28b67e8b06992dc59f529815f853fcfdd7e9a343f13d8ac1730",
@@ -610,10 +568,10 @@
     {
       "article_id": "80490ec65eef1cd6501d4f56c6eacda5af00ccf4f4d64823ddb054fa41a137ad",
       "ticker": "MS",
-      "category": "macro_other",
+      "category": "management_change",
       "severity": 0.4,
-      "summary": "Morgan Stanley plans to integrate AI tools for corporate clients' wealth management, potentially changing user interaction with financial platforms.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Morgan Stanley plans to integrate AI tools for corporate clients' wealth management, potentially changing user interaction with financial platforms.\"}"
+      "summary": "Morgan Stanley to integrate AI tools for client wealth management, changing user interaction methods",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Morgan Stanley to integrate AI tools for client wealth management, changing user interaction methods'}"
     },
     {
       "article_id": "500563d184fbb948ea6b08e5cbaaf2316710c4b821db10c5ba00273f016675a5",
@@ -652,8 +610,8 @@
       "ticker": null,
       "category": "mergers_acquisitions",
       "severity": 0.8,
-      "summary": "Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion, expanding its housing business.",
-      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion, expanding its housing business.'}"
+      "summary": "Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Berkshire Hathaway acquires Taylor Morrison Home for $6.8 billion'}"
     },
     {
       "article_id": "2795f65f72ecf3fec1512507b923b414fb12a1a512436bb28ab050edd45b28c8",
@@ -716,8 +674,8 @@
       "ticker": null,
       "category": "macro_other",
       "severity": 0.4,
-      "summary": "Crypto traders expect strong demand for SpaceX's upcoming IPO, with the company set to become the seventh-largest public company in the US.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Crypto traders expect strong demand for SpaceX's upcoming IPO, with the company set to become the seventh-largest public company in the US.\"}"
+      "summary": "Crypto traders expect strong demand for SpaceX's upcoming IPO based on perpetual futures trading.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Crypto traders expect strong demand for SpaceX's upcoming IPO based on perpetual futures trading.\"}"
     },
     {
       "article_id": "1aabfeb928a9454ada0255dd99a25b4cb206c2a8c149b524b3deec7a03e38fea",
@@ -772,8 +730,8 @@
       "ticker": null,
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "Market reaction to potential impact of New World screwworm on livestock companies Zoetis and Elanco",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Market reaction to potential impact of New World screwworm on livestock companies Zoetis and Elanco'}"
+      "summary": "Market reaction to potential winners in livestock health stocks due to New World screwworm discovery",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Market reaction to potential winners in livestock health stocks due to New World screwworm discovery'}"
     },
     {
       "article_id": "8eac8f8e877e9a72af503416c6e7e6657c1456f83867f9604bbda9e8a122a4ea",
@@ -804,8 +762,8 @@
       "ticker": "GOOGL",
       "category": "macro_other",
       "severity": 0.4,
-      "summary": "Investor appetite for AI-themed leveraged ETFs has surged, doubling in two months.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Investor appetite for AI-themed leveraged ETFs has surged, doubling in two months.'}"
+      "summary": "Investor appetite for AI-themed leveraged ETFs surges, raising concerns about market sentiment and risk.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Investor appetite for AI-themed leveraged ETFs surges, raising concerns about market sentiment and risk.'}"
     },
     {
       "article_id": "8130500cfc32e664f664de958dd62f197588af9741af4f1e4ce36235f4e55d89",
@@ -835,9 +793,9 @@
       "article_id": "28cacdd661ade8a052672dbb69ddb98449728027953ee81b32bc4491bd25a8e6",
       "ticker": null,
       "category": "guidance_update",
-      "severity": 0.3,
+      "severity": 0.4,
       "summary": "Investor guidance on Ralph Lauren stock performance and trading strategy",
-      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.3, 'summary': 'Investor guidance on Ralph Lauren stock performance and trading strategy'}"
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.4, 'summary': 'Investor guidance on Ralph Lauren stock performance and trading strategy'}"
     },
     {
       "article_id": "4aa4f756d0e0df2c629d73a7e4b2e7892a0f000592ea9b99966d0d8587395e81",
@@ -964,8 +922,8 @@
       "ticker": null,
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "High-end Manhattan real estate sales remain strong despite proposed tax, with concerns about potential market impact if the tax is imposed.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'High-end Manhattan real estate sales remain strong despite proposed tax, with concerns about potential market impact if the tax is imposed.'}"
+      "summary": "High-end Manhattan real estate sales remain strong despite proposed tax, with concerns about potential market impact.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'High-end Manhattan real estate sales remain strong despite proposed tax, with concerns about potential market impact.'}"
     },
     {
       "article_id": "7b6962dd7116ce369337635781d35f785686268a0843edeec49d6f86f6b1cf24",
@@ -1044,8 +1002,8 @@
       "ticker": "GS",
       "category": "macro_other",
       "severity": 0.7,
-      "summary": "Rising energy costs due to the Iran war have significantly impacted American households, potentially threatening the economy.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.7, 'summary': 'Rising energy costs due to the Iran war have significantly impacted American households, potentially threatening the economy.'}"
+      "summary": "Rising energy costs due to the Iran war have significantly impacted American households.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.7, 'summary': 'Rising energy costs due to the Iran war have significantly impacted American households.'}"
     },
     {
       "article_id": "bc532059c4b8ab27cc0d68e21084a7b58ac3d9e0b41f1966921f131bddf1fed7",
@@ -1128,100 +1086,84 @@
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Economists project inflation to rise to 6% in the second quarter, up from previous estimates.'}"
     },
     {
-      "article_id": "2b7df8636d5491717f816d9bb8f9d1d605a2b4767f46d33e65d52377560c1ca0",
+      "article_id": "700a9f46fcceaf037bfa0b03ba9661ccd46c24873ca28164bbe717c1293bcada",
       "ticker": null,
-      "category": "macro_other",
-      "severity": 0.2,
-      "summary": "Article discusses personal finance experience but does not contain market-moving financial event details",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.2, 'summary': 'Article discusses personal finance experience but does not contain market-moving financial event details'}"
+      "category": "management_change",
+      "severity": 0.5,
+      "summary": "Adobe is losing another top executive, which investors are not favoring",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Adobe is losing another top executive, which investors are not favoring'}"
     },
     {
-      "article_id": "700a9f46fcceaf037bfa0b03ba9661ccd46c24873ca28164bbe717c1293bcada",
-      "ticker": "ADBE",
+      "article_id": "682f897427539e16bb279307fcd8ac8eb0714e2097ac3ba4ccf5f0c158da8d15",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Article discusses foster children receiving their own version of \u2018Trump accounts\u2019",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Article discusses foster children receiving their own version of \u2018Trump accounts\u2019'}"
+    },
+    {
+      "article_id": "1daf322b1105ad8d23deb14a68357c122d1325dd24a4fc5e7548640614ff8ffe",
+      "ticker": null,
       "category": "macro_other",
       "severity": 0.4,
-      "summary": "Adobe's stock price declines to a seven-year low",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Adobe's stock price declines to a seven-year low\"}"
+      "summary": "Jobless claims fall to lowest level since mid-May",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Jobless claims fall to lowest level since mid-May'}"
     },
     {
-      "article_id": "261e6421fd5e74cd2ea3d0caa7a81d81436dd7791fd48cffc1c11512b0dd45e9",
+      "article_id": "f8701e9debdfed6a2520925ca77f039b9793cf900b00ec6341008147ddf67fd1",
       "ticker": null,
-      "category": "product_launch",
-      "severity": 0.5,
-      "summary": "Beyond to buy rights to the Buy Buy Baby brand and reunite it with Bed Bath & Beyond",
-      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Beyond to buy rights to the Buy Buy Baby brand and reunite it with Bed Bath & Beyond'}"
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Jobless claims remain low in the latest week",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Jobless claims remain low in the latest week'}"
     },
     {
-      "article_id": "bb5e1e0b63de6eebb1533468841c8c46603711c86c75a26b7d0a5bcc96f5f6fa",
+      "article_id": "d57eae2ec65d88bb9faea273fccfb9844422b5ae42218b66ba580f879e1cc268",
+      "ticker": "AMZN",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Amazon reports record sales during Thanksgiving Holiday week",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Amazon reports record sales during Thanksgiving Holiday week'}"
+    },
+    {
+      "article_id": "b7f2654c1232e4d0f0ceb71a9edff12b86eaf15f4cb986fa3fe5cf642847ece5",
       "ticker": null,
-      "category": "earnings_report",
-      "severity": 0.5,
-      "summary": "Plus500 expects to meet expectations following a 11% increase in quarterly revenue",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': 'Plus500 expects to meet expectations following a 11% increase in quarterly revenue'}"
+      "category": "mergers_acquisitions",
+      "severity": 0.8,
+      "summary": "Burberry shares rise on report Moncler could bid for it",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Burberry shares rise on report Moncler could bid for it'}"
     },
     {
-      "article_id": "b35c7f89542ced0aa8963ab9e3446e244f6b21278c0a7959b97752bdce5c8ef8",
+      "article_id": "756279fcf04350226e8a32a5d8644b79bc88ad1e29b742480a3c05e8bd259558",
       "ticker": null,
       "category": "guidance_update",
       "severity": 0.5,
-      "summary": "Trainline boosts guidance for the second time this year",
-      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': 'Trainline boosts guidance for the second time this year'}"
+      "summary": "Novartis hikes sales and profit guidance for the year",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': 'Novartis hikes sales and profit guidance for the year'}"
     },
     {
-      "article_id": "bc0c96237486c7c4b976378ab9fb0da882df87bb0655255dfb652df769e5be29",
-      "ticker": "SOXX",
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Mobile and edge-compute chip stocks experience a broad selloff due to risk-off sentiment and weak guidance.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Mobile and edge-compute chip stocks experience a broad selloff due to risk-off sentiment and weak guidance.'}"
-    },
-    {
-      "article_id": "807c2df8cb095ed725634947814e4f2dd4b8d693be62a0f65f7459d68a30a383",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Sugar prices supported by supply disruptions from the Strait of Hormuz, with India's sugar production and exports forecast to impact global markets.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"Sugar prices supported by supply disruptions from the Strait of Hormuz, with India's sugar production and exports forecast to impact global markets.\"}"
-    },
-    {
-      "article_id": "1692c6ec42121065c34f0ea587761ba1ecc44f1d6ab9fc3dc503690cac551683",
+      "article_id": "36e245f9be684845b1c16b70bc5b6aa2ac903a1b16ce1b15ea27fab42f3bc85c",
       "ticker": null,
       "category": "macro_other",
       "severity": 0.1,
-      "summary": "Trading disclosure and affiliate link information",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Trading disclosure and affiliate link information'}"
+      "summary": "Adaptive content message for JavaScript and ad blocker settings",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Adaptive content message for JavaScript and ad blocker settings'}"
     },
     {
-      "article_id": "78fbaa616967b3e54ca1bf8777d1e294bd64f982c00a7f2936426b68565049b2",
-      "ticker": "NRXP",
-      "category": "macro_other",
-      "severity": 0.4,
-      "summary": "NRx Pharmaceuticals closes an underwritten public offering raising approximately $22.3 million",
-      "raw_llm_output": "{'category': 'capital_raising', 'severity': 0.4, 'summary': 'NRx Pharmaceuticals closes an underwritten public offering raising approximately $22.3 million'}"
-    },
-    {
-      "article_id": "a24d3e31a9daba93052313f824d0f8cd513adfde67483e3563bbcadd8e0845a2",
-      "ticker": "HOOD",
-      "category": "regulatory_action",
-      "severity": 0.7,
-      "summary": "Robinhood director purchases shares following regulatory milestone and strong trading data",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.7, 'summary': 'Robinhood director purchases shares following regulatory milestone and strong trading data'}"
-    },
-    {
-      "article_id": "182954e0184cdcfc625727b62061a3c92889317ab9254a3123cd4f9c579ea7af",
-      "ticker": "IFRX",
-      "category": "earnings_report",
-      "severity": 0.5,
-      "summary": "InflaRx N.V. received analyst upgrades and target price raises following positive first-quarter results and corporate update.",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': 'InflaRx N.V. received analyst upgrades and target price raises following positive first-quarter results and corporate update.'}"
-    },
-    {
-      "article_id": "f37eb5a695440bcd1b9ac5795db9339b0a0540c38c055fe3eae5155a7c0ae114",
-      "ticker": "GOOGL",
+      "article_id": "d50a14c918a0c144c4d8edb9aed6bcb927d73d274d0a7ae08895364d5c02958d",
+      "ticker": null,
       "category": "macro_other",
       "severity": 0.1,
-      "summary": "Access denied page, likely not related to financial events",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Access denied page, likely not related to financial events'}"
+      "summary": "Adaptive message for enabling JavaScript and disabling ad blockers",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Adaptive message for enabling JavaScript and disabling ad blockers'}"
+    },
+    {
+      "article_id": "a5272abf0197899a3457a9819474dd640d0c64f414da36570b47ffc661b753c2",
+      "ticker": null,
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "Barclays backs CommonAI, a collaborative engineering platform for AI solutions",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Barclays backs CommonAI, a collaborative engineering platform for AI solutions'}"
     },
     {
       "article_id": "89920b9e5e4b51eec9b47089439c7eb5d568768f1cd435e251ede88c03a275e4",
@@ -1243,17 +1185,9 @@
       "article_id": "902c3100b16b938ddd1d3d45689cc98299aeb4586b02dfdc15a89e66f83b75a4",
       "ticker": null,
       "category": "macro_other",
-      "severity": 0.5,
-      "summary": "U.S. consumer inflation rose to its highest level in three years, affecting the dollar index",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'U.S. consumer inflation rose to its highest level in three years, affecting the dollar index'}"
-    },
-    {
-      "article_id": "715d65192dbaa64d3b6a83412e0ca3a42e491d6ce8d7d381859467f23abbabc9",
-      "ticker": "QQQ",
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Comparison of fee structures and investment options for Invesco QQQ Trust and Invesco NASDAQ 100 ETF",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Comparison of fee structures and investment options for Invesco QQQ Trust and Invesco NASDAQ 100 ETF'}"
+      "severity": 0.1,
+      "summary": "Article excerpt appears to be a webpage structure with no specific financial event mentioned",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Article excerpt appears to be a webpage structure with no specific financial event mentioned'}"
     },
     {
       "article_id": "c7398fa5eb193d20d7ef62ffe22c6f1c5411be01bc1d6632b7b33169dd88a1ea",
@@ -1264,12 +1198,20 @@
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.8, 'summary': 'U.S. consumer inflation increases at its fastest pace in three years, putting pressure on households and economic growth.'}"
     },
     {
-      "article_id": "0b038b3fceba3709adcd4b1da0e3c86bda6a0191dd91dae22efdf587f3cf0417",
+      "article_id": "d6250c1d09a07b7928b0c9cc034c1fa7a2c0ec33a50fb26c16dccbac265bc2f1",
       "ticker": null,
-      "category": "product_launch",
-      "severity": 0.5,
-      "summary": "DraftKings announces significant growth in its prediction markets platform, driving stock surge",
-      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'DraftKings announces significant growth in its prediction markets platform, driving stock surge'}"
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Trading disclosure and affiliate link information",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Trading disclosure and affiliate link information'}"
+    },
+    {
+      "article_id": "317f684cd5c7d476a634d2474b975639a1167473413d34a696e9644781da0d24",
+      "ticker": "AAPL",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Comparison of performance between SPY and RSP ETFs over a long-term period",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Comparison of performance between SPY and RSP ETFs over a long-term period'}"
     },
     {
       "article_id": "ef0043db50f5d471b76ad7be77a4e535819b1c18d3a5e9be79b11b4e6b052542",
@@ -1284,16 +1226,24 @@
       "ticker": "COIN",
       "category": "macro_other",
       "severity": 0.3,
-      "summary": "Article provides a comparison of popular U.S. crypto exchanges based on various factors",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Article provides a comparison of popular U.S. crypto exchanges based on various factors'}"
+      "summary": "Article discusses comparison of popular U.S. crypto exchanges without market-moving news",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Article discusses comparison of popular U.S. crypto exchanges without market-moving news'}"
     },
     {
       "article_id": "e1c3fe3cefbd2d8b83afa33f8dd365f3565277e968a63e3c1ca33669ab2d2ca3",
       "ticker": null,
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "Japanese yen and gold prices fluctuate due to producer price index results and inflationary pressures from US-Iran tensions.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Japanese yen and gold prices fluctuate due to producer price index results and inflationary pressures from US-Iran tensions.'}"
+      "summary": "Japanese yen and Asian markets react to stronger-than-expected producer price data and inflationary pressures.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Japanese yen and Asian markets react to stronger-than-expected producer price data and inflationary pressures.'}"
+    },
+    {
+      "article_id": "512e5c12e93818e72bfa5fa19d9dd4be6d17a70bca4b6db8c54d1125fcf99ce0",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Comparison of Vanguard S&P 500 ETF and Vanguard Total Stock Market ETF investment options",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Comparison of Vanguard S&P 500 ETF and Vanguard Total Stock Market ETF investment options'}"
     },
     {
       "article_id": "105de6770e6447a5d1c3fc8a2e39dffee0dbcb5981b7211af2e4e52049331d4b",
@@ -1320,12 +1270,92 @@
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Cerebras stock experienced significant volatility post-IPO, with initial surge followed by pullback and recent improvement in sentiment'}"
     },
     {
+      "article_id": "8bb92ca91f798669ecd111f71d20c39ad3f0e7879242bc923a73daaed03cb216",
+      "ticker": "GOOGL",
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Access denied page, likely not related to financial events",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Access denied page, likely not related to financial events'}"
+    },
+    {
+      "article_id": "38d146b7266e9bc7de405d5e58f562c070e74daf053bb2ea1e5c6047ae2a2acd",
+      "ticker": "THC",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Company discusses financial metrics and regulatory risks without specific market-moving events",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Company discusses financial metrics and regulatory risks without specific market-moving events'}"
+    },
+    {
+      "article_id": "7204dc27f157d4db6b4a28eec7cf8efb74f4a9f841f1d953950943c250ddca07",
+      "ticker": "COIN",
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Nvidia has secured DRAM and HBM supply for future years, suggesting strong demand in AI systems.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Nvidia has secured DRAM and HBM supply for future years, suggesting strong demand in AI systems.'}"
+    },
+    {
+      "article_id": "0bb5121a1c7977b7e6a230e4f867a53c7eb082004c6366fa4dadc96f2a1982f6",
+      "ticker": "SMCI",
+      "category": "regulatory_action",
+      "severity": 0.7,
+      "summary": "Super Micro Computer faces regulatory issues and market reaction due to auditor resignation and potential dilution from fundraising.",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.7, 'summary': 'Super Micro Computer faces regulatory issues and market reaction due to auditor resignation and potential dilution from fundraising.'}"
+    },
+    {
+      "article_id": "dac6dc520490312549893c898651eff9a73bcc5baac685fc1fb4bfb3f00c35bc",
+      "ticker": "GOOG",
+      "category": "product_launch",
+      "severity": 0.8,
+      "summary": "SpaceX is set to go public in what promises to be the largest initial public offering in stock market history.",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.8, 'summary': 'SpaceX is set to go public in what promises to be the largest initial public offering in stock market history.'}"
+    },
+    {
+      "article_id": "dd298adaa20ffe776d0576e99b7737305278cdb4a3e1ddc27b53ee83088e802f",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Technical script for monitoring and does not indicate a financial event",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Technical script for monitoring and does not indicate a financial event'}"
+    },
+    {
+      "article_id": "6cdd99535e97dd4345f55c16dafa006b7b81c42799a0803ecc00280f647cda2c",
+      "ticker": "COIN",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "AI boom reshapes tech investment focus, Seagate stock gains significant traction",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'AI boom reshapes tech investment focus, Seagate stock gains significant traction'}"
+    },
+    {
+      "article_id": "4c2be9d473b9ee5a43574ec563448207578c6f258c395154c31897111c138d6e",
+      "ticker": "COIN",
+      "category": "product_launch",
+      "severity": 0.5,
+      "summary": "Apple showcased next-generation AI capabilities at its WWDC, potentially impacting investor sentiment.",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Apple showcased next-generation AI capabilities at its WWDC, potentially impacting investor sentiment.'}"
+    },
+    {
+      "article_id": "3937c4d71f7741f645428409e5b8f649396c17f3924c122b062d8664c3e09e66",
+      "ticker": "COIN",
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Coinbase does not currently pay a dividend",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Coinbase does not currently pay a dividend'}"
+    },
+    {
       "article_id": "81b9eca258e5d4242ff96b8835ae862916b2e3673c15fb1a28f898d52c8b80e8",
       "ticker": "BLK",
       "category": "macro_other",
       "severity": 0.4,
       "summary": "Article discusses factors driving silver prices and its potential future performance",
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Article discusses factors driving silver prices and its potential future performance'}"
+    },
+    {
+      "article_id": "fe5348a94f0bf9e19171a17adc5bec6baf6f529533272819ed6c041c1077d92b",
+      "ticker": "SMCI",
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "Dell exceeded Q1 expectations with strong AI-optimized server growth, while Supermicro missed estimates and faces board review.",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Dell exceeded Q1 expectations with strong AI-optimized server growth, while Supermicro missed estimates and faces board review.'}"
     },
     {
       "article_id": "88f3637bfdd62e679cb598bff6a29911a63bc2f59fd05acf681b6e4223109d98",
@@ -1352,14 +1382,6 @@
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Discussion on mortgage rate volatility and future predictions'}"
     },
     {
-      "article_id": "20a6244c69ac0b36d79c469817a177e6d9c9ed507a314e4d2ffb6d83391fe99c",
-      "ticker": "MU",
-      "category": "macro_other",
-      "severity": 0.4,
-      "summary": "Market uncertainty due to inflation and IPO concerns affecting Micron's stock",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Market uncertainty due to inflation and IPO concerns affecting Micron's stock\"}"
-    },
-    {
       "article_id": "2ee0447ed111e80eb4e697b40886c538bc6dd233a63ffb150b60a4ba6de0797d",
       "ticker": null,
       "category": "product_launch",
@@ -1374,30 +1396,6 @@
       "severity": 0.5,
       "summary": "Discussion on inflation and alternative savings options",
       "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Discussion on inflation and alternative savings options'}"
-    },
-    {
-      "article_id": "fdf063fe8626a232d995ce42ee9434a7c67cea16df8c8654a76736581ecb4090",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.4,
-      "summary": "Discussion on managing savings in inflationary times with alternatives to traditional savings accounts",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Discussion on managing savings in inflationary times with alternatives to traditional savings accounts'}"
-    },
-    {
-      "article_id": "1756dc84cfe7510ea4283039445a9043b508f9d28cc06d51056cc54651bd947a",
-      "ticker": "NBIS",
-      "category": "regulatory_action",
-      "severity": 0.3,
-      "summary": "Cramer warns against Ondas Holdings, calling it a meme stock",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.3, 'summary': 'Cramer warns against Ondas Holdings, calling it a meme stock'}"
-    },
-    {
-      "article_id": "06673fbdd41ee0a36fd76cc32250bfbe42f422b2620595ffe831cf93aca9725d",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Discussion on inflation and its impact on purchasing power, along with strategies to hedge against it",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Discussion on inflation and its impact on purchasing power, along with strategies to hedge against it'}"
     },
     {
       "article_id": "da48be10bc6dc44accfef8ef6df487969d8eab7f3de4779337cd7513ef3818c1",
@@ -1440,6 +1438,14 @@
       "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Affirm Holdings, Inc. is repositioning itself as a scaled payments and commerce infrastructure platform'}"
     },
     {
+      "article_id": "2f21f14a721a03854f98273ad2d8c6233bd23a2d06961c5a77ba2b0a9cc1bbd3",
+      "ticker": "BAC",
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Article excerpt appears to be a generic news template without specific financial event details",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Article excerpt appears to be a generic news template without specific financial event details'}"
+    },
+    {
       "article_id": "2171a05c6bc9e655318258d68d0cea1133031397642cd9c84f6dda121637d2a6",
       "ticker": "AMZN",
       "category": "guidance_update",
@@ -1475,9 +1481,9 @@
       "article_id": "a8a338730f1220bd1448c11eac3cc934c4071aa4acf7be8cd918698401819e11",
       "ticker": "GOOGL",
       "category": "mergers_acquisitions",
-      "severity": 0.5,
+      "severity": 0.8,
       "summary": "Waymo acquires a 5,500-acre autonomous vehicle testing facility in Arizona for $220 million",
-      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.5, 'summary': 'Waymo acquires a 5,500-acre autonomous vehicle testing facility in Arizona for $220 million'}"
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Waymo acquires a 5,500-acre autonomous vehicle testing facility in Arizona for $220 million'}"
     },
     {
       "article_id": "ac16d90df9d87c27940948a4f34638663b3bb41a497e78f5a5a0b08afa5fc1f3",
@@ -1556,8 +1562,8 @@
       "ticker": "MSFT",
       "category": "management_change",
       "severity": 0.5,
-      "summary": "Discussion of management changes and strategic initiatives at GE",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Discussion of management changes and strategic initiatives at GE'}"
+      "summary": "Discussion of management expertise and its impact on GE's strategic narrative and complexity",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': \"Discussion of management expertise and its impact on GE's strategic narrative and complexity\"}"
     },
     {
       "article_id": "f2e080689cf6d9a27a4b27ff8f3dbe2972be145658f83f0297fe3c9da937f935",
@@ -1572,8 +1578,8 @@
       "ticker": "MSFT",
       "category": "macro_other",
       "severity": 0.3,
-      "summary": "Microsoft's stock closed down, influenced by sector-wide AI spending concerns and Xbox restructuring headlines.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"Microsoft's stock closed down, influenced by sector-wide AI spending concerns and Xbox restructuring headlines.\"}"
+      "summary": "Microsoft's stock closed down 1.77% as Xbox restructuring and AI spending concerns weighed on sentiment",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"Microsoft's stock closed down 1.77% as Xbox restructuring and AI spending concerns weighed on sentiment\"}"
     },
     {
       "article_id": "c7d84f61da0091792ce93249d241e09532f6b97e134d8b0d19098c363c8d8f83",
@@ -1588,8 +1594,16 @@
       "ticker": "DOWI",
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "Stock indexes rose sharply on easing geopolitical tensions and positive developments in oil and chipmaker sectors.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Stock indexes rose sharply on easing geopolitical tensions and positive developments in oil and chipmaker sectors.'}"
+      "summary": "Stock indexes rose sharply on easing geopolitical tensions and rallies in chipmakers and AI-related stocks.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Stock indexes rose sharply on easing geopolitical tensions and rallies in chipmakers and AI-related stocks.'}"
+    },
+    {
+      "article_id": "107ace2497bbe82ddba9eb53c41703af878ae66292ab594558d62cb99f374416",
+      "ticker": "COIN",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "AI stocks may be affected if OpenAI changes pricing strategy",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'AI stocks may be affected if OpenAI changes pricing strategy'}"
     },
     {
       "article_id": "e61ab75abefece084411407bb24574cc8f071cebb252ca6f98c83caef9ab6627",
@@ -1612,8 +1626,8 @@
       "ticker": null,
       "category": "macro_other",
       "severity": 0.1,
-      "summary": "Article excerpt appears to be metadata and tracking scripts, no financial event mentioned",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Article excerpt appears to be metadata and tracking scripts, no financial event mentioned'}"
+      "summary": "Article excerpt appears to be metadata and tracking code, no financial event detected",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Article excerpt appears to be metadata and tracking code, no financial event detected'}"
     },
     {
       "article_id": "ef18bd8ac9fe59b370d1fae6f65f25785ed3e1a4a863c5664792e7ee7dd27cd0",
@@ -1636,8 +1650,8 @@
       "ticker": null,
       "category": "macro_other",
       "severity": 0.4,
-      "summary": "Discussion on Nokia's valuation, risks, and earnings forecast",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Discussion on Nokia's valuation, risks, and earnings forecast\"}"
+      "summary": "Discussion on Nokia's valuation and risks, with mentions of earnings growth and AI-related projects",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Discussion on Nokia's valuation and risks, with mentions of earnings growth and AI-related projects\"}"
     },
     {
       "article_id": "9c639105a35d0905f244309a0199da1dd96cfd5c705c7cbd1d6f0acb87819794",
@@ -1681,7 +1695,7 @@
     },
     {
       "article_id": "3a93eac1039054509adb0cac4f12a313a0b41c2b686fd4a0fd0a92a755543190",
-      "ticker": "D",
+      "ticker": "KLAC",
       "category": "macro_other",
       "severity": 0.4,
       "summary": "Jeff Bezos discusses the role of invention in driving societal wealth and prosperity",
@@ -1700,8 +1714,8 @@
       "ticker": "TSLA",
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "SpaceX plans a record-breaking IPO, raising $75 billion at a $1.77 trillion valuation.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'SpaceX plans a record-breaking IPO, raising $75 billion at a $1.77 trillion valuation.'}"
+      "summary": "SpaceX plans a record-breaking IPO, raising $75 billion with a $1.77 trillion valuation.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'SpaceX plans a record-breaking IPO, raising $75 billion with a $1.77 trillion valuation.'}"
     },
     {
       "article_id": "a9b72b6ccbae5b0317a5e782aa2c4d1635542a5aee232c6d4439a8b53b7df749",
@@ -1722,10 +1736,10 @@
     {
       "article_id": "dd78850d773247a066f78fecf1ce6db51d7ca49fdbb9240ca27280b278a127c0",
       "ticker": "GOOGL",
-      "category": "macro_other",
-      "severity": 0.4,
+      "category": "regulatory_action",
+      "severity": 0.3,
       "summary": "Alphabet announces a $80 billion funding round, with $10 billion from Berkshire Hathaway",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Alphabet announces a $80 billion funding round, with $10 billion from Berkshire Hathaway'}"
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.3, 'summary': 'Alphabet announces a $80 billion funding round, with $10 billion from Berkshire Hathaway'}"
     },
     {
       "article_id": "1a9fc890b83d56c4f3a6ec5b3b789efd5ff34ddbbea0d620d9406e7c678a4779",
@@ -1791,6 +1805,6 @@
   "error_log": [],
   "run_date": "2026-06-12",
   "__interrupt__": [
-    "Interrupt(value={'message': 'High-severity event detected. Approve signal generation? (y/n)', 'events': [{'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'AAPL', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'DIS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'C', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': 'TSLA', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AAPL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'C', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'CRM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': 'CVX', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.2}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.3}, {'ticker': 'BAC', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'WFC', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'WFC', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': 'WFC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'T', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.2}, {'ticker': 'ADBE', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'SOXX', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'NRXP', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'HOOD', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.7}, {'ticker': 'IFRX', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'QQQ', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'SPX', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'BLK', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'COST', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'JPM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'MU', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'NBIS', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AMZN', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'AMZN', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'INTC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.8}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'INTC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.8}, {'ticker': 'GOOGL', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'MSFT', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.LITIGATION: 'litigation'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'SPX', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'MSFT', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': 'DOWI', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'PLTR', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'MSFT', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'MSFT', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MU', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': 'AVGO', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': 'D', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'CRM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'NVDA', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'SPCE', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': 'AMZN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AMZN', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}]}, id='d9a675fa61459db98802ef91970eef44')"
+    "Interrupt(value={'message': 'High-severity event detected. Approve signal generation? (y/n)', 'events': [{'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'AAPL', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'DIS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'C', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': 'TSLA', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AAPL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'C', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MS', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'CRM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': 'CVX', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.2}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.4}, {'ticker': 'BAC', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'WFC', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'WFC', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': 'WFC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.7}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'T', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AMZN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'AAPL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'COIN', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'SPX', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'THC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'SMCI', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.7}, {'ticker': 'GOOG', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'BLK', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'SMCI', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': 'COST', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'JPM', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AMZN', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'BAC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'AMZN', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'INTC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.8}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': 'COIN', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'INTC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.8}, {'ticker': 'GOOGL', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'AAPL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'MSFT', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.LITIGATION: 'litigation'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'SPX', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'MSFT', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'MSFT', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': 'DOWI', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'COIN', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'PLTR', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': 'MSFT', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.1}, {'ticker': 'MSFT', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'MU', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.3}, {'ticker': 'AVGO', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': 'KLAC', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'CRM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'NVDA', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.6}, {'ticker': 'GOOGL', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.3}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'SPCE', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.EARNINGS_REPORT: 'earnings_report'>, 'severity': 0.5}, {'ticker': 'AMZN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'AMZN', 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}]}, id='89abcabd1151fb6824f4335bdbad54ce')"
   ]
 }
