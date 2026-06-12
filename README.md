@@ -1,6 +1,6 @@
 # Stock Sentiment Analyzer
 
-A LangGraph multi-agent system that scans financial news in real-time, detects sentiment and key events, generates investment signals, and produces personalized investment plans — giving retail investors institutional-grade market intelligence for free.
+A LangGraph multi-agent system that scans financial news in real-time, detects sentiment and key events, generates investment signals, and produces personalized investment plans — with a self-improving feedback loop that adjusts signal weights based on historical accuracy.
 
 > **Educational use only. Not investment advice.**
 
@@ -9,7 +9,7 @@ A LangGraph multi-agent system that scans financial news in real-time, detects s
 ## High-Level Architecture
 
 ```
-RSS Feeds (Yahoo Finance, MarketWatch, SEC EDGAR)
+RSS Feeds (CNBC, MarketWatch, SEC EDGAR 8-K)
         │
         ▼
 ┌─────────────────┐
@@ -20,7 +20,7 @@ RSS Feeds (Yahoo Finance, MarketWatch, SEC EDGAR)
          ▼
 ┌─────────────────┐
 │  Agent 2        │  Entity Recognition
-│  entity_recog.  │  spaCy NER + ChromaDB/Supabase pgvector → S&P 500 ticker resolution
+│  entity_recog.  │  spaCy NER + Supabase pgvector → S&P 500 ticker resolution
 └────────┬────────┘
          │
          ▼
@@ -49,7 +49,8 @@ RSS Feeds (Yahoo Finance, MarketWatch, SEC EDGAR)
             ▼
 ┌─────────────────┐
 │  Agent 5        │  Signal Generation (deterministic, no LLM)
-│  signal_gen.    │  score = 0.50×sentiment + 0.35×event + 0.15×price momentum
+│  signal_gen.    │  score = w_s×sentiment + w_e×event + w_p×price
+│                 │  ← weights read live from Supabase signal_weights table
 └────────┬────────┘
          │
          ▼
@@ -61,11 +62,28 @@ RSS Feeds (Yahoo Finance, MarketWatch, SEC EDGAR)
          ▼
 ┌─────────────────┐
 │  Agent 7        │  Investment Recommendation
-│  recommend.     │  Risk-tiered allocation plan from signals + user profile
+│  recommend.     │  Top 3 S&P 500 signals by confidence, weighted by conviction
 └────────┬────────┘
          │
          ▼
-    outputs/YYYY-MM-DD.json
+    outputs/YYYY-MM-DD.json → docs/latest.json → Dashboard
+         │
+         ▼
+┌─────────────────────────────────────────────────┐
+│  Feedback Loop (weekly, every Monday 8am ET)    │
+│                                                 │
+│  backtesting/engine.py                          │
+│    → fetch last 30 days of signals from DB      │
+│    → compare against actual yfinance returns    │
+│    → compute accuracy per component             │
+│                                                 │
+│  backtesting/optimizer.py                       │
+│    → if ≥ 20 signals: derive new weights        │
+│    → if < 20 signals: retain defaults           │
+│    → save to signal_weights table in Supabase   │
+│                                                 │
+│  Next pipeline run picks up updated weights ←──┘
+└─────────────────────────────────────────────────┘
 ```
 
 ---
@@ -74,23 +92,25 @@ RSS Feeds (Yahoo Finance, MarketWatch, SEC EDGAR)
 
 | # | Agent | File | What it does |
 |---|-------|------|-------------|
-| 1 | News Ingestion | `agents/news_ingestion.py` | Scrapes RSS feeds, deduplicates via SHA-256 + MinHash LSH, caps at `MAX_ARTICLES_PER_RUN` |
+| 1 | News Ingestion | `agents/news_ingestion.py` | Scrapes 4 RSS feeds, deduplicates via SHA-256 + MinHash LSH, caps at `MAX_ARTICLES_PER_RUN` |
 | 2 | Entity Recognition | `agents/entity_recognition.py` | spaCy NER extracts ORG entities, Supabase pgvector resolves them to S&P 500 tickers/sectors |
 | 3 | Sentiment Analysis | `agents/sentiment_analysis.py` | FinBERT sentence-level scoring, attention-weighted aggregation, 7-day EWMA per ticker |
 | 4 | Event Detection | `agents/event_detection.py` | Mistral-7B classifies events into 8 categories with severity score; triggers interrupt or earnings sub-agent |
 | 4b | Earnings Sub-Agent | `agents/earnings_subagent.py` | Extracts EPS/revenue figures, computes beat/miss vs analyst consensus |
-| 5 | Signal Generation | `agents/signal_generation.py` | Deterministic composite score → bullish/bearish/neutral + confidence |
+| 5 | Signal Generation | `agents/signal_generation.py` | Reads live weights from Supabase, computes composite score → bullish/bearish/neutral + confidence |
 | 6 | Briefing Report | `agents/briefing_report.py` | Jinja2 daily Markdown briefing with signals, events, heatmap commentary |
-| 7 | Investment Rec. | `agents/recommendation.py` | Risk-tiered portfolio allocation (conservative/moderate/aggressive) from signals |
+| 7 | Investment Rec. | `agents/recommendation.py` | Top 3 S&P 500 stocks by confidence, allocated proportionally by conviction |
 
 ---
 
 ## Signal Scoring Formula
 
+Weights are dynamic — read from Supabase `signal_weights` table on every run and updated weekly by the optimizer.
+
 ```
-score = 0.50 × sentiment_ewma
-      + 0.35 × event_severity_weight   (signed by event polarity)
-      + 0.15 × price_zscore            (5-day return vs 30-day σ)
+score = w_sentiment × sentiment_ewma        (default: 0.50)
+      + w_event     × event_severity_weight  (default: 0.35, signed by event polarity)
+      + w_price     × price_zscore           (default: 0.15, 5-day return vs 30-day σ)
 
 bullish  if score >  0.25
 bearish  if score < -0.25
@@ -98,6 +118,20 @@ neutral  otherwise
 
 confidence = min(1.0, |score| × agreement_factor)
 ```
+
+---
+
+## Feedback Loop
+
+The optimizer runs every **Monday 8am ET** via GitHub Actions:
+
+1. Fetches all signals generated in the last 30 days from Supabase
+2. Downloads actual forward prices from Yahoo Finance (14-day horizon)
+3. Checks whether each component (sentiment/event/price) agreed with the actual price move
+4. Derives new component weights proportional to their individual accuracy
+5. Saves updated weights to `signal_weights` table — pipeline picks them up on next run
+
+**Minimum data requirement:** 20 signals needed before weights are adjusted. Below that threshold, defaults (0.50/0.35/0.15) are retained and logged as "sparse data".
 
 ---
 
@@ -116,6 +150,7 @@ sentiment_analysis → event_detection
                           │ otherwise ────────────────────────────┤
                                                                    ▼
                                                           signal_generation
+                                                          (reads weights from DB)
                                                                    │
                                                           briefing_report
                                                                    │
@@ -131,14 +166,15 @@ sentiment_analysis → event_detection
 | Orchestration | LangGraph `StateGraph` + `MemorySaver` |
 | Sentiment LLM | ProsusAI/FinBERT via HuggingFace Inference API |
 | Event LLM | Mistral-7B-Instruct-v0.2 via HuggingFace Inference API |
-| Embeddings | `all-MiniLM-L6-v2` via HuggingFace |
-| NER | spaCy |
-| Vector DB | Supabase pgvector |
-| Relational DB | Supabase (Postgres) |
-| News scraping | feedparser + newspaper4k |
+| NER | spaCy `en_core_web_sm` |
+| Vector DB | Supabase pgvector (503 S&P 500 company embeddings) |
+| Relational DB | Supabase Postgres (`signals`, `articles`, `entity_sentiment_ts`, `signal_weights`) |
+| News sources | CNBC, MarketWatch, SEC EDGAR 8-K (feedparser + newspaper4k) |
 | Price data | yfinance |
-| Dashboard | GitHub Pages (vanilla HTML/JS) |
-| CI/CD | GitHub Actions |
+| Backtesting | Custom engine — directional accuracy, Sharpe ratio, max drawdown |
+| Weight optimizer | `backtesting/optimizer.py` — weekly adaptive reweighting |
+| Dashboard | GitHub Pages (vanilla HTML/JS), reads `docs/latest.json` |
+| CI/CD | GitHub Actions — every 3 hours market hours (9am/12pm/3pm ET weekdays) |
 
 ---
 
@@ -159,30 +195,41 @@ stockSentimentAnalysis/
 │   ├── builder.py           # LangGraph StateGraph wiring
 │   └── router.py            # Conditional edge routing functions
 ├── models/                  # Pydantic data models
-├── state/
-│   └── graph_state.py       # GraphState TypedDict
 ├── storage/
-│   └── supabase_store.py    # Supabase client (graceful no-op if unconfigured)
-├── backtesting/             # Signal accuracy vs yfinance forward returns
-│   ├── engine.py
-│   ├── metrics.py
+│   └── supabase_store.py    # Supabase client — signals, weights, embeddings
+├── backtesting/
+│   ├── engine.py            # Backtest signals vs yfinance forward returns
+│   ├── metrics.py           # Directional accuracy, Sharpe, drawdown
+│   ├── optimizer.py         # Weekly weight optimizer (feedback loop)
 │   └── report.py
-├── training/                # FinBERT fine-tuning pipeline
+├── scripts/
+│   └── run_optimizer.py     # Entrypoint for GHA weight optimization job
 ├── config/
 │   ├── settings.py          # pydantic-settings, all env vars
 │   └── feeds.py             # RSS feed URLs
-├── dashboard/               # GitHub Pages frontend
+├── docs/                    # GitHub Pages dashboard
 │   ├── index.html
 │   ├── app.js
-│   └── style.css
-├── reports/                 # Generated briefing Markdown files
-├── outputs/                 # Pipeline output JSON (committed by GHA)
-├── scripts/
-│   └── seed_sp500_profiles.py
+│   ├── style.css
+│   ├── latest.json          # Written by pipeline after every run
+│   └── dashboard/           # Alternate dashboard view
+├── outputs/                 # Full pipeline output JSON (committed by GHA)
 ├── .github/workflows/
-│   └── pipeline.yml         # Scheduled + manual GHA pipeline
+│   └── pipeline.yml         # Scheduled (3h market hours) + manual + weekly optimizer
 └── main.py                  # CLI entry point
 ```
+
+---
+
+## Supabase Schema
+
+| Table | Purpose |
+|---|---|
+| `articles` | Deduplicated news articles across runs |
+| `signals` | Generated investment signals with components |
+| `entity_sentiment_ts` | Per-ticker EWMA sentiment history |
+| `sp500_embeddings` | 503 S&P 500 companies (ticker, name, sector, embedding) |
+| `signal_weights` | Historical weight snapshots — pipeline always reads latest row |
 
 ---
 
@@ -193,6 +240,7 @@ stockSentimentAnalysis/
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
+python -m spacy download en_core_web_sm
 ```
 
 ### 2. Configure environment
@@ -202,19 +250,9 @@ cp .env.example .env
 # Fill in: HF_TOKEN, SUPABASE_URL, SUPABASE_KEY, EDGAR_USER_AGENT
 ```
 
-### 3. Initialize Supabase (run once)
+### 3. Supabase is pre-configured
 
-In Supabase SQL Editor:
-```sql
-CREATE EXTENSION IF NOT EXISTS vector;
-
-CREATE TABLE articles (id TEXT PRIMARY KEY, url TEXT, title TEXT, source TEXT, published_at TIMESTAMPTZ, is_duplicate BOOL);
-CREATE TABLE signals (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), ticker TEXT, signal TEXT, confidence FLOAT, score FLOAT, components JSONB, evidence_ids TEXT[], generated_at TIMESTAMPTZ, horizon_days INT DEFAULT 5);
-CREATE TABLE sp500_embeddings (ticker TEXT PRIMARY KEY, name TEXT, sector TEXT, summary TEXT, embedding vector(384));
-
-CREATE INDEX ON sp500_embeddings USING ivfflat (embedding vector_cosine_ops);
-CREATE INDEX ON signals (ticker, generated_at DESC);
-```
+All tables and the full S&P 500 universe (503 companies) are already seeded. No manual SQL setup required.
 
 ---
 
@@ -238,9 +276,12 @@ python main.py --thread-id my-session
 
 ## GitHub Actions Pipeline
 
-Runs automatically on weekdays at 9am ET. Trigger manually via:
+| Job | Schedule | What it does |
+|---|---|---|
+| `run-pipeline` | Weekdays 9am, 12pm, 3pm ET | Full news → signals → plan → commits `latest.json` |
+| `optimize-weights` | Every Monday 8am ET | Backtests last 30 days, updates signal weights in Supabase |
 
-**Actions tab → Financial News Sentiment Pipeline → Run workflow**
+Trigger manually: **Actions → Financial News Sentiment Pipeline → Run workflow**
 
 Required secrets: `HF_TOKEN`, `SUPABASE_URL`, `SUPABASE_KEY`
 
@@ -248,19 +289,9 @@ Required secrets: `HF_TOKEN`, `SUPABASE_URL`, `SUPABASE_KEY`
 
 ## Dashboard
 
-Enable GitHub Pages: **Settings → Pages → Source: main branch, `/dashboard` folder**
+Live at GitHub Pages. Reads `docs/latest.json` — updated automatically after every pipeline run.
 
-The dashboard reads the latest `outputs/` JSON via GitHub Contents API and renders signals, events, and investment plan in real-time.
-
----
-
-## Backtesting
-
-```bash
-python main.py --backtest --start 2024-01-01 --end 2025-01-01
-```
-
-Metrics reported: directional accuracy, precision (bullish/bearish), mean return, Sharpe ratio, max drawdown, hit rate by sector and event type.
+Shows: investment signals, detected events, and top 3 S&P 500 investment recommendations.
 
 ---
 
