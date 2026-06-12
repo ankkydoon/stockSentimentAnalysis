@@ -156,15 +156,8 @@ def recommendation_node(state: dict) -> dict:
         profile.risk_appetite, filtered, profile.investment_amount
     )
 
-    # Determine which tickers are in the plan (excluding ETFs for return calc)
-    individual_tickers = [
-        a.ticker for a in allocations
-        if a.ticker not in (_ETF_SPY, _ETF_BND)
-    ]
-    etf_tickers = [a.ticker for a in allocations if a.ticker in (_ETF_SPY, _ETF_BND)]
-    all_tickers = individual_tickers + etf_tickers
-    if not all_tickers:
-        all_tickers = [_ETF_SPY]
+    all_tickers = [a.ticker for a in allocations] or ["SPY"]
+    individual_tickers = all_tickers
 
     returns = [_get_annual_return(t) for t in all_tickers]
     min_r = min(returns)
@@ -172,8 +165,7 @@ def recommendation_node(state: dict) -> dict:
     expected_return_range = (round(min_r * 0.7, 4), round(max_r * 1.3, 4))
 
     n_stocks = len(individual_tickers)
-    has_etfs = len(etf_tickers) > 0
-    risk_summary = _risk_summary(profile.risk_appetite, n_stocks, has_etfs)
+    risk_summary = _risk_summary(profile.risk_appetite, n_stocks, False)
 
     rebalance_trigger: Literal["monthly", "on_new_signal"] = (
         "monthly" if profile.time_horizon_months >= 6 else "on_new_signal"
