@@ -6,19 +6,27 @@ EPS_EST_PATTERN = re.compile(r'estimate[sd]?\s+of\s+\$?([\d.]+)', re.IGNORECASE)
 REVENUE_PATTERN = re.compile(r'[Rr]evenue.*?\$?([\d.]+)\s*(billion|million|B|M)\b', re.IGNORECASE)
 
 
+def _to_float(s: str) -> float | None:
+    try:
+        return float(s.strip().rstrip('.,'))
+    except (ValueError, AttributeError):
+        return None
+
+
 def extract_earnings_figures(text: str) -> dict:
     result: dict = {"reported_eps": None, "estimated_eps": None,
                     "reported_revenue": None, "beat_miss": None}
     eps_match = EPS_PATTERN.search(text)
     if eps_match:
-        result["reported_eps"] = float(eps_match.group(1))
+        result["reported_eps"] = _to_float(eps_match.group(1))
     est_match = EPS_EST_PATTERN.search(text)
     if est_match:
-        result["estimated_eps"] = float(est_match.group(1))
+        result["estimated_eps"] = _to_float(est_match.group(1))
     rev_match = REVENUE_PATTERN.search(text)
     if rev_match:
         multiplier = 1e9 if rev_match.group(2).lower() in ("billion", "b") else 1e6
-        result["reported_revenue"] = float(rev_match.group(1)) * multiplier
+        val = _to_float(rev_match.group(1))
+        result["reported_revenue"] = val * multiplier if val is not None else None
     if result["reported_eps"] and result["estimated_eps"]:
         result["beat_miss"] = "beat" if result["reported_eps"] > result["estimated_eps"] else "miss"
     return result
