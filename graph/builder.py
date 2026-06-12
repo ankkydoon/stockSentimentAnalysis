@@ -15,7 +15,6 @@ from graph.router import (
     route_after_ner,
     route_after_event_detection,
     route_after_earnings,
-    human_review_node,
 )
 
 
@@ -27,7 +26,6 @@ def build_graph():
     builder.add_node("sentiment_analysis", sentiment_analysis_node)
     builder.add_node("event_detection", event_detection_node)
     builder.add_node("earnings_subagent", earnings_subagent_node)
-    builder.add_node("human_review", human_review_node)
     builder.add_node("signal_generation", signal_generation_node)
     builder.add_node("briefing_report", briefing_report_node)
     builder.add_node("recommendation", recommendation_node)
@@ -59,7 +57,6 @@ def build_graph():
         route_after_event_detection,
         {
             "earnings_subagent": "earnings_subagent",
-            "human_review": "human_review",
             "signal_generation": "signal_generation",
         },
     )
@@ -68,12 +65,9 @@ def build_graph():
         "earnings_subagent",
         route_after_earnings,
         {
-            "human_review": "human_review",
             "signal_generation": "signal_generation",
         },
     )
-
-    builder.add_edge("human_review", "signal_generation")
     builder.add_edge("signal_generation", "briefing_report")
     builder.add_edge("briefing_report", "recommendation")
     builder.add_edge("recommendation", END)
