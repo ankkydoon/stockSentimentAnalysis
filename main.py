@@ -184,11 +184,15 @@ def main() -> None:
 
     if args.backtest:
         from backtesting.engine import BacktestEngine
+        from config.settings import get_settings
+        from storage.supabase_store import SupabaseStore
         start_date = args.start or "2024-01-01"
         end_date = args.end or datetime.now(timezone.utc).strftime("%Y-%m-%d")
         print(f"\n[BACKTEST] Running from {start_date} to {end_date} ...")
-        engine = BacktestEngine(start_date=start_date, end_date=end_date)
-        backtest_results = engine.run(signals=signals)
+        _settings = get_settings()
+        _store = SupabaseStore(url=_settings.supabase_url, key=_settings.supabase_key.get_secret_value())
+        engine = BacktestEngine(store=_store)
+        backtest_results = engine.run(start_date=start_date, end_date=end_date)
         final_state["backtest_results"] = backtest_results
         print(f"[BACKTEST] Results: {backtest_results}")
 
