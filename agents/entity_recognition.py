@@ -132,9 +132,12 @@ def entity_recognition_node(state: dict) -> dict:
             entities.append(Entity(raw_text=ticker, ticker=ticker, linked=True,
                                    similarity_score=1.0))
         if nlp:
-            doc = nlp(article.body[:5000])
+            # Use title + first 500 chars of body — focused on the main subject,
+            # avoids extracting companies merely mentioned as context in the article
+            ner_text = f"{article.title}. {article.body[:500]}"
+            doc = nlp(ner_text)
             for ent in doc.ents:
-                if ent.label_ == "ORG":  # PER excluded — person names don't match sp500
+                if ent.label_ == "ORG":
                     resolved = resolve_entity(ent.text, article.body, store)
                     entities.append(resolved)
         article_entities[article.id] = entities
