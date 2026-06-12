@@ -189,13 +189,18 @@ def main() -> None:
             else:
                 print(f"  {payload}")
 
-        while True:
-            raw = input("\nApprove signal generation? [y/n]: ").strip().lower()
-            if raw in ("y", "n", "yes", "no"):
-                break
-            print("  Please enter y or n.")
+        if args.interactive:
+            while True:
+                raw = input("\nApprove signal generation? [y/n]: ").strip().lower()
+                if raw in ("y", "n", "yes", "no"):
+                    break
+                print("  Please enter y or n.")
+            decision = "approved" if raw in ("y", "yes") else "rejected"
+        else:
+            # Non-interactive (CI) — auto-approve so signals are always generated
+            print("[INTERRUPT] Non-interactive mode — auto-approving signal generation.")
+            decision = "approved"
 
-        decision = "approved" if raw in ("y", "yes") else "rejected"
         final_state = graph.invoke(Command(resume=decision), config=run_config)
 
     signals = final_state.get("signals") or []
