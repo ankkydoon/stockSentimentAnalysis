@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     supabase_key: SecretStr = SecretStr("")
     edgar_user_agent: str = "stockSentimentAnalysis/1.0 user@example.com"
 
-    max_articles_per_run: int = 50
+    max_articles_per_run: int = 300
     minhash_threshold: float = 0.72
     high_severity_threshold: float = 0.7
 
