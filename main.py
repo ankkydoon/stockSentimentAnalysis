@@ -173,8 +173,7 @@ def main() -> None:
 
     final_state: dict = {}
 
-    try:
-        final_state = graph.invoke(initial_state, config=run_config)
+    final_state = graph.invoke(initial_state, config=run_config)
 
     signals = final_state.get("signals") or []
     _print_signal_table(signals)
