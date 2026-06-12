@@ -1,0 +1,37 @@
+# One-time workflow to generate and store embeddings for all S&P 500 companies.
+# Run manually once via: Actions → Seed S&P 500 Embeddings → Run workflow
+
+name: Seed S&P 500 Embeddings
+
+on:
+  workflow_dispatch:
+
+jobs:
+  seed-embeddings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Generate and store embeddings
+        run: python scripts/seed_embeddings.py
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
