@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Detail — Sentiment Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="stock.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="header-left">
+        <a href="index.html" class="back-link">← Dashboard</a>
+        <h1 class="site-title" id="page-title">Stock Detail</h1>
+        <p class="header-disclaimer">Educational use only. Not investment advice.</p>
+      </div>
+      <div class="header-right">
+        <span class="run-date" id="last-updated"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div id="loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading stock data…</p>
+    </div>
+
+    <div id="error" class="error-state" hidden>
+      <div class="error-icon">⚠</div>
+      <h2>Unable to load data</h2>
+      <p id="error-message">Ticker not found.</p>
+      <a href="index.html" class="btn-run-pipeline">← Back to Dashboard</a>
+    </div>
+
+    <div id="stock-detail" hidden>
+
+      <!-- Hero -->
+      <section class="stock-hero card">
+        <div class="hero-left">
+          <div class="hero-ticker" id="hero-ticker"></div>
+          <div class="hero-name" id="hero-name"></div>
+          <div class="hero-sector" id="hero-sector"></div>
+        </div>
+        <div class="hero-right">
+          <div id="hero-signal-wrap"></div>
+        </div>
+      </section>
+
+      <!-- Latest Signal -->
+      <section class="card" id="signal-section">
+        <h2 class="section-title"><span class="section-icon">📈</span> Latest Signal</h2>
+        <div id="signal-detail" class="signal-detail"></div>
+      </section>
+
+      <!-- Sentiment History -->
+      <section class="card">
+        <h2 class="section-title"><span class="section-icon">📊</span> Sentiment History</h2>
+        <div id="sentiment-chart" class="sentiment-chart"></div>
+        <p id="sentiment-empty" class="empty-msg" hidden>No sentiment history available.</p>
+      </section>
+
+      <!-- Signal History -->
+      <section class="card">
+        <h2 class="section-title"><span class="section-icon">🕐</span> Signal History</h2>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Direction</th>
+                <th>Score</th>
+                <th>Confidence</th>
+                <th>Sentiment</th>
+                <th>Event</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="signal-history-body"></tbody>
+          </table>
+          <p id="signal-history-empty" class="empty-msg" hidden>No signal history available.</p>
+        </div>
+      </section>
+
+      <!-- Current Weights -->
+      <section class="card">
+        <h2 class="section-title"><span class="section-icon">⚖️</span> Signal Weights</h2>
+        <p class="weights-note">Weights are updated weekly by the feedback optimizer based on signal accuracy.</p>
+        <div id="weights-bars" class="weights-bars"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-disclaimer">Educational use only. Not investment advice.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="stock.js"></script>
+</body>
+</html>
