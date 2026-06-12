@@ -1,6 +1,125 @@
 {
-  "run_date": "2026-06-12",
-  "signals": [],
+  "sentiment_scores": [
+    {
+      "ticker": "C",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 36,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "TSLA",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 33,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "MS",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 27,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "BAC",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 47,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "GS",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 42,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "JPM",
+      "score": 0.0307250769142562,
+      "label": "neutral",
+      "n_sentences": 62,
+      "window_ewma": 0.009217523074276859
+    },
+    {
+      "ticker": "AAPL",
+      "score": 0.013145431725614836,
+      "label": "neutral",
+      "n_sentences": 31,
+      "window_ewma": 0.003943629517684451
+    },
+    {
+      "ticker": "META",
+      "score": 0.37766694255025895,
+      "label": "positive",
+      "n_sentences": 14,
+      "window_ewma": 0.11330008276507768
+    },
+    {
+      "ticker": "CRM",
+      "score": 0.37766694255025895,
+      "label": "positive",
+      "n_sentences": 14,
+      "window_ewma": 0.11330008276507768
+    },
+    {
+      "ticker": "GOOGL",
+      "score": 0.37766694255025895,
+      "label": "positive",
+      "n_sentences": 69,
+      "window_ewma": 0.11330008276507768
+    },
+    {
+      "ticker": "AMZN",
+      "score": 0.4384031323770292,
+      "label": "positive",
+      "n_sentences": 27,
+      "window_ewma": 0.13152093971310877
+    },
+    {
+      "ticker": "DIS",
+      "score": 0.19842410255747064,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.05952723076724119
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.0481272029922214,
+      "label": "neutral",
+      "n_sentences": 9,
+      "window_ewma": -0.01443816089766642
+    },
+    {
+      "ticker": "MSFT",
+      "score": -0.2649369598598357,
+      "label": "negative",
+      "n_sentences": 19,
+      "window_ewma": -0.0794810879579507
+    },
+    {
+      "ticker": "AVGO",
+      "score": 0.4563680321406175,
+      "label": "positive",
+      "n_sentences": 7,
+      "window_ewma": 0.13691040964218523
+    },
+    {
+      "ticker": "COIN",
+      "score": 0.17948679287749872,
+      "label": "positive",
+      "n_sentences": 9,
+      "window_ewma": 0.05384603786324962
+    },
+    {
+      "ticker": "WFC",
+      "score": -0.09291058691694255,
+      "label": "neutral",
+      "n_sentences": 10,
+      "window_ewma": -0.027873176075082766
+    }
+  ],
   "events": [
     {
       "article_id": "0349532f469a6b451dbfd36272437a9487cda5d51963d80027863fddf56655d5",
@@ -299,5 +418,21 @@
       "raw_llm_output": "{'category': 'product_launch', 'severity': 0.4, 'summary': 'Kalshi is developing a new interface for its prediction markets platform, likened to the Bloomberg Terminal.'}"
     }
   ],
-  "investment_plan": null
+  "signals": [],
+  "investment_plan": null,
+  "user_profile": {
+    "investment_amount": 10000.0,
+    "risk_appetite": "moderate",
+    "time_horizon_months": 12,
+    "preferred_sectors": [],
+    "exclude_tickers": []
+  },
+  "backtest_results": null,
+  "requires_interrupt": true,
+  "human_review_decision": null,
+  "error_log": [],
+  "run_date": "2026-06-12",
+  "__interrupt__": [
+    "Interrupt(value={'message': 'High-severity event detected. Approve signal generation? (y/n)', 'events': [{'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': 'TSLA', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'AAPL', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GOOGL', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'DIS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'C', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.9}, {'ticker': 'TSLA', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.3}, {'ticker': 'AAPL', 'category': <EventCategory.MERGERS_ACQUISITIONS: 'mergers_acquisitions'>, 'severity': 0.8}, {'ticker': 'COIN', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'GOOGL', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.GUIDANCE_UPDATE: 'guidance_update'>, 'severity': 0.8}, {'ticker': None, 'category': <EventCategory.REGULATORY_ACTION: 'regulatory_action'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'C', 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': 'BAC', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': 'JPM', 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': 'GS', 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.MACRO_OTHER: 'macro_other'>, 'severity': 0.5}, {'ticker': None, 'category': <EventCategory.MANAGEMENT_CHANGE: 'management_change'>, 'severity': 0.4}, {'ticker': None, 'category': <EventCategory.PRODUCT_LAUNCH: 'product_launch'>, 'severity': 0.4}]}, id='474f0f413bfd9d4a26dac4d41a4854e5')"
+  ]
 }
