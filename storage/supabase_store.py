@@ -15,8 +15,11 @@ class SupabaseStore:
             try:
                 self.client = create_client(url, key)
                 self._enabled = True
-            except Exception:
-                pass  # invalid URL or key — run in no-op mode
+                print(f"[store] Supabase connected: {url[:40]}...")
+            except Exception as e:
+                print(f"[store] ERROR connecting to Supabase: {e}")
+        else:
+            print("[store] WARNING: SUPABASE_URL or SUPABASE_KEY not set — running in no-op mode")
 
     def upsert_article(self, article: Article) -> None:
         if not self._enabled:
@@ -38,22 +41,27 @@ class SupabaseStore:
 
     def upsert_signal(self, signal: InvestmentSignal) -> None:
         if not self._enabled:
+            print(f"[store] WARNING: Supabase not enabled, skipping upsert_signal for {signal.ticker}")
             return
-        self.client.table("signals").upsert({
-            "id": signal.id,
-            "ticker": signal.ticker,
-            "signal": signal.direction,
-            "confidence": signal.confidence,
-            "score": signal.score,
-            "components": {
-                "sentiment": signal.sentiment_component,
-                "event": signal.event_component,
-                "price": signal.price_component,
-            },
-            "evidence_ids": list(signal.evidence_ids),
-            "generated_at": signal.generated_at.isoformat(),
-            "horizon_days": signal.horizon_days,
-        }).execute()
+        try:
+            self.client.table("signals").upsert({
+                "id": signal.id,
+                "ticker": signal.ticker,
+                "signal": signal.direction,
+                "confidence": signal.confidence,
+                "score": signal.score,
+                "components": {
+                    "sentiment": signal.sentiment_component,
+                    "event": signal.event_component,
+                    "price": signal.price_component,
+                },
+                "evidence_ids": list(signal.evidence_ids),
+                "generated_at": signal.generated_at.isoformat(),
+                "horizon_days": signal.horizon_days,
+            }).execute()
+            print(f"[store] upserted signal {signal.ticker} to Supabase")
+        except Exception as e:
+            print(f"[store] ERROR upserting signal {signal.ticker}: {e}")
 
     def upsert_sentiment_ts(self, ticker: str, date: str, ewma_score: float, n_articles: int) -> None:
         if not self._enabled:
