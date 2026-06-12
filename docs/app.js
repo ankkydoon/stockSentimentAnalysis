@@ -144,7 +144,16 @@ function renderSignalPage() {
   slice.forEach(sig => {
     const score = sig.score != null ? parseFloat(sig.score).toFixed(3) : '—';
     const tr = document.createElement('tr');
-    tr.appendChild(td(sig.ticker, 'ticker-cell'));
+
+    const tickerCell = document.createElement('td');
+    tickerCell.className = 'ticker-cell';
+    const link = document.createElement('a');
+    link.href = `dashboard/stock.html?ticker=${encodeURIComponent(sig.ticker)}`;
+    link.className = 'ticker-link';
+    link.textContent = sig.ticker;
+    tickerCell.appendChild(link);
+
+    tr.appendChild(tickerCell);
     tr.appendChild(td(directionChip(sig.direction)));
     tr.appendChild(td(confidenceBar(sig.confidence)));
     tr.appendChild(td(score, 'score-cell'));
