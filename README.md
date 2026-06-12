@@ -221,6 +221,24 @@ stockSentimentAnalysis/
 
 ---
 
+## Guardrails & Evals
+
+No separate eval framework — guardrails are built directly into the pipeline:
+
+| Layer | What | Where |
+|---|---|---|
+| **Pydantic bounds** | All signal fields validated at model creation — score `[-1,1]`, confidence `[0,1]`, severity `[0,1]`, allocation `[0,100]` | `models/signal.py`, `models/event.py`, `models/recommendation.py` |
+| **Score clamping** | Signal score and price z-score hard-clamped to `[-1, 1]` before storage | `agents/signal_generation.py` |
+| **Sentiment clamping** | EWMA sentiment score forced to `[-1, 1]` | `models/sentiment.py` |
+| **LLM output repair** | Mistral bad JSON triggers a second repair attempt before the event is dropped | `agents/event_detection.py` |
+| **CAPTCHA / JS-wall detection** | Blocked article pages detected by keyword scan and skipped — falls back to RSS summary | `agents/news_ingestion.py` |
+| **Human-in-the-loop** | Events with severity ≥ `high_severity_threshold` pause the pipeline and require manual approval before signal generation | `graph/router.py`, `agents/event_detection.py` |
+| **Sparse data guard** | Optimizer skips weight update and retains defaults when fewer than 20 signals available in the backtest window | `backtesting/optimizer.py` |
+| **Secret validation** | CI fails immediately if `HF_TOKEN`, `SUPABASE_URL`, or `SUPABASE_KEY` are missing | `.github/workflows/pipeline.yml` |
+| **S&P 500 universe filter** | Investment plan only suggests tickers present in `sp500_embeddings` — non-index stocks are excluded | `agents/recommendation.py` |
+
+---
+
 ## Supabase Schema
 
 | Table | Purpose |
