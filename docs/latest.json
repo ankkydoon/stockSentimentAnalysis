@@ -2369,5 +2369,35 @@
       "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': 'Arm reports Q4 FY2026 revenue of $1.49 billion, driving stock price increase'}"
     }
   ],
-  "investment_plan": null
+  "investment_plan": {
+    "total_amount": 10000.0,
+    "allocations": [
+      {
+        "ticker": "NDAQ",
+        "amount": 3745.06,
+        "percentage": 37.45,
+        "rationale": "NDAQ: bullish signal, confidence 38%, 5-day horizon"
+      },
+      {
+        "ticker": "GS",
+        "amount": 3666.01,
+        "percentage": 36.66,
+        "rationale": "GS: bullish signal, confidence 37%, 5-day horizon"
+      },
+      {
+        "ticker": "GOOGL",
+        "amount": 2588.93,
+        "percentage": 25.89,
+        "rationale": "GOOGL: bullish signal, confidence 26%, 5-day horizon"
+      }
+    ],
+    "risk_summary": "Top 3 S&P 500 signals by confidence (moderate, 12-month horizon).",
+    "expected_return_range": [
+      0.049,
+      0.091
+    ],
+    "time_horizon_months": 12,
+    "rebalance_trigger": "on_new_signal",
+    "disclaimer": "Educational use only. Not investment advice."
+  }
 }

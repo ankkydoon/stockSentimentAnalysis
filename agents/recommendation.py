@@ -135,12 +135,12 @@ def _risk_summary(
 
 def recommendation_node(state: dict) -> dict:
     raw_profile = state.get("user_profile")
-    if raw_profile is None:
-        return {"investment_plan": None}
 
-    profile: UserProfile = (
-        raw_profile if isinstance(raw_profile, UserProfile) else UserProfile(**raw_profile)
-    )
+    # Use defaults when no user profile provided (e.g. scheduled pipeline runs)
+    if raw_profile is None:
+        profile = UserProfile(investment_amount=10000.0, risk_appetite="moderate", time_horizon_months=12)
+    else:
+        profile = raw_profile if isinstance(raw_profile, UserProfile) else UserProfile(**raw_profile)
 
     settings = get_settings()
     store = SupabaseStore(url=settings.supabase_url, key=settings.supabase_key.get_secret_value())
