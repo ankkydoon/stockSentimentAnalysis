@@ -79,6 +79,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: ${{ runner.os }}-hf-models-v1
+          restore-keys: |
+            ${{ runner.os }}-hf-models-
+
       - name: Install dependencies
         run: |
           pip install -e ".[dev]"
@@ -198,6 +206,14 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: ${{ runner.os }}-hf-models-v1
+          restore-keys: |
+            ${{ runner.os }}-hf-models-
 
       - name: Install dependencies
         run: |
