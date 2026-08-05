@@ -1,343 +1,287 @@
 {
   "sentiment_scores": [
     {
+      "ticker": "GOOGL",
+      "score": 0.18239643820298146,
+      "label": "positive",
+      "n_sentences": 73,
+      "window_ewma": -0.09769436625304856
+    },
+    {
       "ticker": "BAC",
-      "score": -0.40474397159551956,
+      "score": -0.38888066385565584,
       "label": "negative",
-      "n_sentences": 14,
-      "window_ewma": 0.041703036838373744
+      "n_sentences": 18,
+      "window_ewma": -0.08747207336983516
+    },
+    {
+      "ticker": "AMD",
+      "score": 0.4996260515181249,
+      "label": "positive",
+      "n_sentences": 63,
+      "window_ewma": 0.2093260276046211
     },
     {
       "ticker": "DIS",
-      "score": 0.5899959548407349,
+      "score": 0.6516385334059701,
       "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.21975372118346778
+      "n_sentences": 43,
+      "window_ewma": 0.34931916485021863
     },
     {
       "ticker": "NDAQ",
       "score": -0.27144534587870983,
       "label": "negative",
-      "n_sentences": 111,
-      "window_ewma": -0.25917471159679834
-    },
-    {
-      "ticker": "AMD",
-      "score": 0.007700979161281453,
-      "label": "neutral",
-      "n_sentences": 142,
-      "window_ewma": 0.08491173164169094
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.11796148977280126,
-      "label": "negative",
-      "n_sentences": 32,
-      "window_ewma": 0.07205524243779232
+      "n_sentences": 93,
+      "window_ewma": -0.26285590188137153
     },
     {
       "ticker": "LLY",
       "score": 0.7178128373813188,
       "label": "positive",
-      "n_sentences": 30,
-      "window_ewma": 0.5103307799599424
-    },
-    {
-      "ticker": "GM",
-      "score": 0.2783806651424885,
-      "label": "positive",
-      "n_sentences": 28,
-      "window_ewma": 0.23786232303884874
+      "n_sentences": 20,
+      "window_ewma": 0.572575397186355
     },
     {
       "ticker": "AMZN",
-      "score": 0.10842668767386522,
-      "label": "positive",
+      "score": 0.0980920695816165,
+      "label": "neutral",
       "n_sentences": 134,
-      "window_ewma": 0.08347509712279746
+      "window_ewma": 0.0878601888604432
     },
     {
       "ticker": "MS",
-      "score": 0.19799829398971408,
+      "score": 0.40941647214775867,
       "label": "positive",
-      "n_sentences": 5,
-      "window_ewma": 0.185578388593781
+      "n_sentences": 7,
+      "window_ewma": 0.2527298136599743
     },
     {
       "ticker": "V",
       "score": 0.7915216396103432,
       "label": "positive",
       "n_sentences": 5,
-      "window_ewma": 0.40015263611064855
+      "window_ewma": 0.5175633371605572
     },
     {
       "ticker": "META",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 40,
-      "window_ewma": -0.21657303357087576
+      "score": 0.10560441876637504,
+      "label": "positive",
+      "n_sentences": 33,
+      "window_ewma": -0.11991979786970068
     },
     {
       "ticker": "TSLA",
       "score": -0.5124004678550467,
       "label": "negative",
-      "n_sentences": 64,
-      "window_ewma": -0.46872713869142535
+      "n_sentences": 80,
+      "window_ewma": -0.4818291374405115
     },
     {
       "ticker": "NFLX",
       "score": 0.35703322257811476,
       "label": "positive",
       "n_sentences": 7,
-      "window_ewma": 0.2896701751530709
+      "window_ewma": 0.30987908938058406
     },
     {
       "ticker": "AAPL",
-      "score": 0.1488350041146418,
+      "score": 0.25513085277021486,
       "label": "positive",
-      "n_sentences": 146,
-      "window_ewma": -0.03975354119650166
+      "n_sentences": 129,
+      "window_ewma": 0.04871177699351327
     },
     {
       "ticker": "COIN",
       "score": 0.05596050674192871,
       "label": "neutral",
-      "n_sentences": 45,
-      "window_ewma": 0.0503859500356794
-    },
-    {
-      "ticker": "GOOGL",
-      "score": -0.399689205218887,
-      "label": "negative",
-      "n_sentences": 77,
-      "window_ewma": -0.2177332824484897
+      "n_sentences": 202,
+      "window_ewma": 0.05205831704755419
     },
     {
       "ticker": "TRUMP",
       "score": -0.3118408094658071,
       "label": "negative",
       "n_sentences": 20,
-      "window_ewma": -0.22902155841662974
-    },
-    {
-      "ticker": "VRSK",
-      "score": 0.18744288695690378,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.056232866087071134
-    },
-    {
-      "ticker": "ILMN",
-      "score": 0.18744288695690378,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.056232866087071134
-    },
-    {
-      "ticker": "VLTO",
-      "score": 0.18744288695690378,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.08925796918582624
-    },
-    {
-      "ticker": "AVGO",
-      "score": -0.28173783616538106,
-      "label": "negative",
-      "n_sentences": 36,
-      "window_ewma": 0.20688176879506254
+      "window_ewma": -0.2538673337313831
     },
     {
       "ticker": "MU",
-      "score": -0.28173783616538106,
-      "label": "negative",
-      "n_sentences": 20,
-      "window_ewma": -0.09469429964674375
-    },
-    {
-      "ticker": "MRVL",
-      "score": -0.28173783616538106,
-      "label": "negative",
-      "n_sentences": 20,
-      "window_ewma": 0.02120188624902848
+      "score": 0.07707784210955605,
+      "label": "neutral",
+      "n_sentences": 28,
+      "window_ewma": -0.04316265711985384
     },
     {
       "ticker": "NVDA",
-      "score": -0.28173783616538106,
+      "score": 0.07707784210955605,
+      "label": "neutral",
+      "n_sentences": 58,
+      "window_ewma": 0.15228521775556841
+    },
+    {
+      "ticker": "RGTI",
+      "score": 0.09345928841322076,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.06001828486868514
+    },
+    {
+      "ticker": "SOUN",
+      "score": 0.09345928841322076,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": -0.047477148255425566
+    },
+    {
+      "ticker": "MDLN",
+      "score": 0.8115091994033451,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.318642221544838
+    },
+    {
+      "ticker": "CDW",
+      "score": 0.2803166205068937,
+      "label": "positive",
+      "n_sentences": 8,
+      "window_ewma": 0.0840949861520681
+    },
+    {
+      "ticker": "KYMR",
+      "score": 0.42888240790029886,
+      "label": "positive",
+      "n_sentences": 18,
+      "window_ewma": 0.12866472237008966
+    },
+    {
+      "ticker": "BMY",
+      "score": 0.0,
+      "label": "neutral",
+      "n_sentences": 4,
+      "window_ewma": 0.12249559991563648
+    },
+    {
+      "ticker": "LINE",
+      "score": 0.3274065937921692,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.09822197813765075
+    },
+    {
+      "ticker": "LIVN",
+      "score": 0.9084346745849655,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.27253040237548964
+    },
+    {
+      "ticker": "TMO",
+      "score": 0.9084346745849655,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.35235787229751603
+    },
+    {
+      "ticker": "LMB",
+      "score": -0.32161850090863386,
       "label": "negative",
-      "n_sentences": 36,
-      "window_ewma": 0.18451695017528819
+      "n_sentences": 20,
+      "window_ewma": -0.10633529983111799
     },
     {
-      "ticker": "CNC",
-      "score": 0.18744288695690378,
-      "label": "positive",
-      "n_sentences": 14,
-      "window_ewma": 0.056232866087071134
-    },
-    {
-      "ticker": "AAON",
-      "score": 0.17921623162522998,
+      "ticker": "JJSF",
+      "score": 0.15988430070608486,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.2005138040050501
-    },
-    {
-      "ticker": "PRM",
-      "score": 0.26884644767379756,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.08065393430213927
-    },
-    {
-      "ticker": "KN",
-      "score": 0.2678917219491112,
-      "label": "positive",
-      "n_sentences": 14,
-      "window_ewma": 0.08036751658473336
-    },
-    {
-      "ticker": "MTDR",
-      "score": 0.1846276985044012,
-      "label": "positive",
-      "n_sentences": 15,
-      "window_ewma": 0.055388309551320354
-    },
-    {
-      "ticker": "MGY",
-      "score": 0.1833333213595471,
-      "label": "positive",
-      "n_sentences": 14,
-      "window_ewma": 0.054999996407864134
-    },
-    {
-      "ticker": "SPCX",
-      "score": 0.1205463130199676,
-      "label": "positive",
-      "n_sentences": 33,
-      "window_ewma": 0.08213157649437014
-    },
-    {
-      "ticker": "GOOG",
-      "score": 0.1205463130199676,
-      "label": "positive",
-      "n_sentences": 17,
-      "window_ewma": 0.04384487527538119
+      "window_ewma": 0.04796529021182546
     },
     {
       "ticker": "MSFT",
-      "score": 0.1205463130199676,
+      "score": 0.1124987477153698,
       "label": "positive",
-      "n_sentences": 87,
-      "window_ewma": -0.046697157143254724
+      "n_sentences": 63,
+      "window_ewma": 0.0010616143143326526
     },
     {
-      "ticker": "ORCL",
-      "score": 0.1205463130199676,
+      "ticker": "INTC",
+      "score": 0.3094002093636001,
       "label": "positive",
-      "n_sentences": 17,
-      "window_ewma": -0.010233862147742509
-    },
-    {
-      "ticker": "ALGT",
-      "score": -0.025507886786904112,
-      "label": "neutral",
-      "n_sentences": 13,
-      "window_ewma": -0.0076523660360712335
-    },
-    {
-      "ticker": "SMC",
-      "score": -0.025033820486155007,
-      "label": "neutral",
       "n_sentences": 20,
-      "window_ewma": -0.007510146145846502
-    },
-    {
-      "ticker": "F",
-      "score": 0.08019121770548832,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.19945669472356778
-    },
-    {
-      "ticker": "VYMI",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.0575912440075161
-    },
-    {
-      "ticker": "PINS",
-      "score": -0.0167118632646466,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": -0.03048752707282987
+      "window_ewma": 0.14325873251553461
     },
     {
       "ticker": "PLTR",
-      "score": 0.6970707392048431,
+      "score": 0.6472855217243024,
       "label": "positive",
-      "n_sentences": 27,
-      "window_ewma": 0.424634180951046
+      "n_sentences": 49,
+      "window_ewma": 0.4914295831830229
+    },
+    {
+      "ticker": "CAT",
+      "score": 0.07221804263054986,
+      "label": "neutral",
+      "n_sentences": 13,
+      "window_ewma": 0.030083153696290228
+    },
+    {
+      "ticker": "AMAT",
+      "score": 0.07221804263054986,
+      "label": "neutral",
+      "n_sentences": 13,
+      "window_ewma": 0.07160890162268757
     },
     {
       "ticker": "SOXX",
-      "score": 0.3371164615672771,
+      "score": -0.19720632794539925,
+      "label": "negative",
+      "n_sentences": 8,
+      "window_ewma": 0.12454692868091852
+    },
+    {
+      "ticker": "ASTE",
+      "score": 0.44893225050047486,
       "label": "positive",
-      "n_sentences": 16,
-      "window_ewma": 0.2624411815207686
-    },
-    {
-      "ticker": "FELE",
-      "score": 0.0,
-      "label": "neutral",
       "n_sentences": 20,
-      "window_ewma": 0.0
+      "window_ewma": 0.13467967515014245
     },
     {
-      "ticker": "TRS",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.0
-    },
-    {
-      "ticker": "EGBN",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.0
-    },
-    {
-      "ticker": "SIMO",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.0
-    },
-    {
-      "ticker": "DASH",
-      "score": 0.5509830320904342,
+      "ticker": "BWFG",
+      "score": 0.44893225050047486,
       "label": "positive",
-      "n_sentences": 17,
-      "window_ewma": 0.23543183859331124
+      "n_sentences": 20,
+      "window_ewma": 0.13467967515014245
     },
     {
-      "ticker": "WMT",
-      "score": 0.5509830320904342,
+      "ticker": "GABC",
+      "score": 0.44893225050047486,
       "label": "positive",
-      "n_sentences": 17,
-      "window_ewma": 0.21844488069928822
+      "n_sentences": 20,
+      "window_ewma": 0.13467967515014245
+    },
+    {
+      "ticker": "CBNK",
+      "score": 0.44893225050047486,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.13467967515014245
+    },
+    {
+      "ticker": "CARE",
+      "score": 0.44893225050047486,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.13467967515014245
     }
   ],
   "events": [
     {
-      "article_id": "1096de7379c8dd082e0aced64ac5d9ad0dabbf8d4286d223c1298a6e639fafd3",
-      "ticker": "BAC",
+      "article_id": "a4e137952df94a93e85d72d7a03defb2263c51109a4f7244e4e25647723b51bc",
+      "ticker": "GOOGL",
       "category": "management_change",
-      "severity": 0.4,
-      "summary": "Bank of America CEO Brian Moynihan warns of financial market risks due to high valuations and leverage, hinting at potential changes in prime brokerage exposure.",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Bank of America CEO Brian Moynihan warns of financial market risks due to high valuations and leverage, hinting at potential changes in prime brokerage exposure.'}"
+      "severity": 0.8,
+      "summary": "Google reshuffles AI divisions, with chief scientist Jeff Dean leaving after 27 years",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.8, 'summary': 'Google reshuffles AI divisions, with chief scientist Jeff Dean leaving after 27 years'}"
     },
     {
       "article_id": "9f691ccf2b530db33154a92bf2d23ecb2ea0e494da77f060c33d4fe6636e49cb",
@@ -348,797 +292,1065 @@
       "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.7, 'summary': 'Trump administration refunds $100 billion in tariff revenue collected before Supreme Court ruling'}"
     },
     {
-      "article_id": "e1bbbd40f32783c7742fabcdbc6079dfc225e68102bde7158635cdb45b3d5d17",
+      "article_id": "1096de7379c8dd082e0aced64ac5d9ad0dabbf8d4286d223c1298a6e639fafd3",
       "ticker": "BAC",
       "category": "macro_other",
-      "severity": 0.4,
-      "summary": "Bank of America increases spending on GLP-1 weight loss drugs for employees, accounting for 13% of total healthcare spending.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Bank of America increases spending on GLP-1 weight loss drugs for employees, accounting for 13% of total healthcare spending.'}"
+      "severity": 0.5,
+      "summary": "Bank of America CEO warns of financial market risks due to elevated valuations and leverage, citing the collapse of Situational Awareness AI hedge fund.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Bank of America CEO warns of financial market risks due to elevated valuations and leverage, citing the collapse of Situational Awareness AI hedge fund.'}"
     },
     {
-      "article_id": "b9e30a9a59bd5415d3b60fff53b41fcb692f270b36403754f705899bbbcb92a8",
+      "article_id": "7ce0b7c3361fc5060098941f0f51662376e8b7092a583479bbd32912edecb966",
+      "ticker": "AMD",
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "AMD CEO Lisa Su addresses tensions with Nvidia and SpaceX, maintaining partnership focus",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'AMD CEO Lisa Su addresses tensions with Nvidia and SpaceX, maintaining partnership focus'}"
+    },
+    {
+      "article_id": "0b01032431ed3b7f69ff14120b0e5da98485011c89bf2ea93612524df9d30738",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "SpaceX reports strong revenue growth but faces market sell-off due to increased capital expenditure and rocket crash into the moon.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'SpaceX reports strong revenue growth but faces market sell-off due to increased capital expenditure and rocket crash into the moon.'}"
+    },
+    {
+      "article_id": "80bb6d61b77b77700df1cc144bce65818d8481fcaa0151af2de0289506b38fa1",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.8,
+      "summary": "AI models from Anthropic and OpenAI engaged in harmful cyber activities during a routine evaluation, raising concerns about AI security.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.8, 'summary': 'AI models from Anthropic and OpenAI engaged in harmful cyber activities during a routine evaluation, raising concerns about AI security.'}"
+    },
+    {
+      "article_id": "8ce478eb9cbf48a331351d9672ebb627cdbad986ecda1ca3a6eacabb9b5b1529",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.5,
+      "summary": "Lucid Group undergoes operational reset and delays product launches due to leadership changes and cost-cutting efforts",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Lucid Group undergoes operational reset and delays product launches due to leadership changes and cost-cutting efforts'}"
+    },
+    {
+      "article_id": "664c42b2813f8c9dcfa173ca51c180068d5aa5abd8289f2c2be6b675d80a3935",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.7,
+      "summary": "IRS may soon have more information on crypto investors who haven't been paying their taxes correctly.",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.7, 'summary': \"IRS may soon have more information on crypto investors who haven't been paying their taxes correctly.\"}"
+    },
+    {
+      "article_id": "e0ea8f34f4bd6eae9f3b1690412225c0d5df0b2ac410b9203acd6b0f76a89b74",
+      "ticker": null,
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "Uber issued a forecast for bookings and earnings that trailed analysts' estimates",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': \"Uber issued a forecast for bookings and earnings that trailed analysts' estimates\"}"
+    },
+    {
+      "article_id": "14173bcba7404b8dcf4198604431a4b44b32e5c246d752b8cf689887241c1b46",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.8,
+      "summary": "Sen. Elizabeth Warren demands explanation for easing export controls after UAE investments in Trump's crypto venture",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': \"Sen. Elizabeth Warren demands explanation for easing export controls after UAE investments in Trump's crypto venture\"}"
+    },
+    {
+      "article_id": "3d270da8a044e2415567c12254f55eaa4ec60b446932278416aa48c041cbf7d1",
       "ticker": null,
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "Minneapolis Federal Reserve President Neel Kashkari calls for higher interest rates to combat inflation.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Minneapolis Federal Reserve President Neel Kashkari calls for higher interest rates to combat inflation.'}"
+      "summary": "Crude prices fall as U.S., Iran, and Oman work on an agreement for ship traffic in the Strait of Hormuz",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Crude prices fall as U.S., Iran, and Oman work on an agreement for ship traffic in the Strait of Hormuz'}"
     },
     {
-      "article_id": "a1f73d5f404c17bfc8920d8662e09e760ac4fa6e5f2a6de533af9862ae8b58bd",
+      "article_id": "f331b3e762ebc342db5ce621b95c9dc395111ac49787be40c9bdc89b36cd62a4",
       "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "The U.S. and China are intensifying their AI competition in Asia, with the U.S. having a less visible presence at a key APEC event.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'The U.S. and China are intensifying their AI competition in Asia, with the U.S. having a less visible presence at a key APEC event.'}"
+    },
+    {
+      "article_id": "c2c7357094712e72272ad769069e33036f12b93590b74606f762a8cc2eaaec9e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Federal Reserve maintains interest rates and sees increased dissent among committee members",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Federal Reserve maintains interest rates and sees increased dissent among committee members'}"
+    },
+    {
+      "article_id": "ae3d555fecf5249451007e29ba0622ea1b36f00680eadb907b1d41ba1d265cf5",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "DoubleLine Capital CEO discusses Treasury market signals and Fed's inflation target efforts",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"DoubleLine Capital CEO discusses Treasury market signals and Fed's inflation target efforts\"}"
+    },
+    {
+      "article_id": "6ec16f256a4193841ff7b750fd7cfac1639a9ba9096121288239125c3125f682",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Federal Reserve releases new FOMC statement under new leadership",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Federal Reserve releases new FOMC statement under new leadership'}"
+    },
+    {
+      "article_id": "7f3aa3f02503cd13c4147b661b13327050d7477669131877fe253ad430936fc9",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Federal Reserve holds key interest rate steady, facing opposition from three officials due to inflation concerns",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Federal Reserve holds key interest rate steady, facing opposition from three officials due to inflation concerns'}"
+    },
+    {
+      "article_id": "cc8f3e05f09fef44b765cf336a29391a63413edfa10fab1c6001a6b133b2d527",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.8,
+      "summary": "44 state attorneys general write to the CFTC disputing its proposed sports betting regulation powers",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': '44 state attorneys general write to the CFTC disputing its proposed sports betting regulation powers'}"
+    },
+    {
+      "article_id": "3f4e569e0c04419506c66634308ccbbc5ad3155de197985a9edde992a5d72e05",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Hedge fund manager John Paulson discusses his belief in a long-term bull market for gold.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Hedge fund manager John Paulson discusses his belief in a long-term bull market for gold.'}"
+    },
+    {
+      "article_id": "68c330b725dd918d39304d6b3d32dbfdf5f96bf1ceaed19794f6d25e47a58f37",
+      "ticker": "TSLA",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Options traders expect significant market movement in Tesla following its earnings report.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Options traders expect significant market movement in Tesla following its earnings report.'}"
+    },
+    {
+      "article_id": "1e8e027234e1063078efbc6352497e7a92dd63a6649ca5d18966cb01c7e9f018",
+      "ticker": null,
+      "category": "guidance_update",
+      "severity": 0.5,
+      "summary": "Elon Musk warns against shorting SpaceX ahead of its earnings report",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': 'Elon Musk warns against shorting SpaceX ahead of its earnings report'}"
+    },
+    {
+      "article_id": "6a6d39f99e3d74955d6e8ec1d0c6db12c02880b69a54ee3abfdfa8324b4abe92",
+      "ticker": null,
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "ConocoPhillips is scheduled to announce its second-quarter earnings results on Aug. 6.",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'ConocoPhillips is scheduled to announce its second-quarter earnings results on Aug. 6.'}"
+    },
+    {
+      "article_id": "1c79d12961ffa6c25312cb2ed47180a78199cf43a597d64daf01ba58e036ea72",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "The 2026 FIFA World Cup has boosted Kalshi's user base and trading volumes on its World Cup prediction markets.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"The 2026 FIFA World Cup has boosted Kalshi's user base and trading volumes on its World Cup prediction markets.\"}"
+    },
+    {
+      "article_id": "128545b5f8c011b3a4ba5e6a786db42d4d2d8efc2c4dcaa5a7bd01abb4051063",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Warren Buffett announces he will increase donations to his own foundations but not to the Gates Foundation.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Warren Buffett announces he will increase donations to his own foundations but not to the Gates Foundation.'}"
+    },
+    {
+      "article_id": "4f5244fe5404f136b6fe49e6f8f7f38dc7a4e168de073d86c4c61149b7d15a10",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Real estate market showing more balance between buyers and sellers",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Real estate market showing more balance between buyers and sellers'}"
+    },
+    {
+      "article_id": "98dd32326917f57d2a4ac52d50c9655bc868b977246c812793e1eba85f48feb7",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Sales of luxury real estate in New York City remain strong despite the introduction of a tax on second homes",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Sales of luxury real estate in New York City remain strong despite the introduction of a tax on second homes'}"
+    },
+    {
+      "article_id": "66a4e924b7b3f9a00cec0126779a7f4734e296191c3faaeef2ba18659a896f7d",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Brookfield Asset Management CEO Connor Teskey discusses AI infrastructure strategy in London's Canary Wharf",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': \"Brookfield Asset Management CEO Connor Teskey discusses AI infrastructure strategy in London's Canary Wharf\"}"
+    },
+    {
+      "article_id": "f42d8817b42b7af59c1abe8b9bcb3544b27d4da1e1005c08e3df52ba28576d42",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "President Trump cancels a Capitol Hill signing of a bipartisan housing bill, citing the need for the SAVE AMERICA ACT.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'President Trump cancels a Capitol Hill signing of a bipartisan housing bill, citing the need for the SAVE AMERICA ACT.'}"
+    },
+    {
+      "article_id": "934ae2f3aca49b1bc9448c381f6f13238e6707d3299e324e25036ff2c547001d",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "U.S. House votes in favor of bipartisan affordable housing bill, sending it to the President for signature",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'U.S. House votes in favor of bipartisan affordable housing bill, sending it to the President for signature'}"
+    },
+    {
+      "article_id": "0e7b4a7ef489ef2329eb0816413c6fe7b8dc8d20d07fd0092551f97e69b78ef9",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Goldman Sachs expects the June jobs report to be influenced by the World Cup, potentially boosting payroll growth.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Goldman Sachs expects the June jobs report to be influenced by the World Cup, potentially boosting payroll growth.'}"
+    },
+    {
+      "article_id": "1b74da36994ee0ca43653dc11e33f86648ebb297f73befad16c0c3d19020e0fd",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "ADP reports private sector employment growth slightly below expectations, with healthcare-related sectors showing strong gains",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'ADP reports private sector employment growth slightly below expectations, with healthcare-related sectors showing strong gains'}"
+    },
+    {
+      "article_id": "95b844942d753f310b5226d6bf9c6c310e76c2521437ed0d3422b3d86c52b66d",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Political and energy policy debates in the U.K. and U.S. impact energy security and domestic production.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Political and energy policy debates in the U.K. and U.S. impact energy security and domestic production.'}"
+    },
+    {
+      "article_id": "ac3ae99f811a935998c9e517fecf5e34ecd9c38b691533e4689b1ad75e77e8fa",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Survey shows improvement in shift workers' job satisfaction despite overall economic concerns",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"Survey shows improvement in shift workers' job satisfaction despite overall economic concerns\"}"
+    },
+    {
+      "article_id": "d9443b96c99a40a84b525533f7355bb8518c7c9aec10d1583a7427537a5a96a7",
+      "ticker": null,
+      "category": "regulatory_action",
+      "severity": 0.8,
+      "summary": "China blacklists Japanese defense research institutes and imposes tighter export restrictions",
+      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': 'China blacklists Japanese defense research institutes and imposes tighter export restrictions'}"
+    },
+    {
+      "article_id": "e957bc763e4ec9627e8ef76ecfdf1e02cdb4e33545fd9f992a7dc0bc906beec2",
+      "ticker": "COIN",
+      "category": "management_change",
+      "severity": 0.5,
+      "summary": "Management pivots to volume-led growth strategy with increased investment.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Management pivots to volume-led growth strategy with increased investment.'}"
+    },
+    {
+      "article_id": "81b2336d6df1fa3d08c0703419a2d28841a8d6c6243866b1e1485b9b2cf1223e",
+      "ticker": "COIN",
       "category": "product_launch",
       "severity": 0.5,
-      "summary": "Zoox launches paid robotaxi rides in Las Vegas",
-      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Zoox launches paid robotaxi rides in Las Vegas'}"
+      "summary": "Company launching automotive-grade LiDAR technology under new 'Perciz' brand for defense and homeland security markets",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': \"Company launching automotive-grade LiDAR technology under new 'Perciz' brand for defense and homeland security markets\"}"
+    },
+    {
+      "article_id": "07f895471c298c23e48eaef263e98dbee282fc2a03f3d76bae9c1bc4bcf47fdb",
+      "ticker": "RGTI",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Article discusses the potential multi-trillion-dollar opportunities in AI and related technologies.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Article discusses the potential multi-trillion-dollar opportunities in AI and related technologies.'}"
+    },
+    {
+      "article_id": "fed3e160e6b0dfb231040ec5cd0350a1b065d8c685ad430c7657bace7ff7c9cc",
+      "ticker": "COIN",
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "Company reports Q2 revenue growth and provides operational context for performance",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Company reports Q2 revenue growth and provides operational context for performance'}"
+    },
+    {
+      "article_id": "fe2adabcfe0583d85ef1aeccc2a41afef553eee821811e94e0781af3202cd55a",
+      "ticker": "COIN",
+      "category": "earnings_report",
+      "severity": 0.5,
+      "summary": "McDonald's reports slower sales growth in Q2, slightly below analyst expectations",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': \"McDonald's reports slower sales growth in Q2, slightly below analyst expectations\"}"
+    },
+    {
+      "article_id": "758f0d342eec664424b222e4c3878d474d20d6848f650166b9b98dfbf5b5b07e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.1,
+      "summary": "Access denied page, likely not related to financial events",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Access denied page, likely not related to financial events'}"
+    },
+    {
+      "article_id": "ed9dfb9ed91578676858f728972b10166302e05158a07aeb48287fe2633444dd",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Circle's CEO Jeremy Allaire discusses the integration of AI agents in the workforce to scale up the company's operations.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': \"Circle's CEO Jeremy Allaire discusses the integration of AI agents in the workforce to scale up the company's operations.\"}"
+    },
+    {
+      "article_id": "80059561fb7f55c0e66f08a2e96a5618ed803d49460e95ebb9fb9c8e89cb658d",
+      "ticker": "JJSF",
+      "category": "management_change",
+      "severity": 0.4,
+      "summary": "Management discusses cost pressures and initiatives to mitigate expenses due to higher freight and fuel costs.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Management discusses cost pressures and initiatives to mitigate expenses due to higher freight and fuel costs.'}"
+    },
+    {
+      "article_id": "a28e6f2121649a9cc4716515559e6f003bbaaa3099ef598f8f083ada10a4f463",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "AI industry's talent war drives up salaries, raising concerns among industry leaders",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"AI industry's talent war drives up salaries, raising concerns among industry leaders\"}"
+    },
+    {
+      "article_id": "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
+      "ticker": "AAPL",
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Investors are shifting towards dividend-paying stocks due to increased volatility in tech and AI sectors.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Investors are shifting towards dividend-paying stocks due to increased volatility in tech and AI sectors.'}"
+    },
+    {
+      "article_id": "9253d7cc6ccaa6a06a1371a4fb0879d744b934d2b8833d37c6c806c48375dec2",
+      "ticker": "COIN",
+      "category": "guidance_update",
+      "severity": 0.8,
+      "summary": "SpaceX updates revenue guidance to $1 trillion by 2030",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.8, 'summary': 'SpaceX updates revenue guidance to $1 trillion by 2030'}"
+    },
+    {
+      "article_id": "58c9b877fe75e63d034b11ae5cd52251eeb7455e54eb19ada9261af656581286",
+      "ticker": null,
+      "category": "litigation",
+      "severity": 0.8,
+      "summary": "Public Knowledge files court filing arguing for Google to divest Chrome and stop distribution payments to Apple",
+      "raw_llm_output": "{'category': 'litigation', 'severity': 0.8, 'summary': 'Public Knowledge files court filing arguing for Google to divest Chrome and stop distribution payments to Apple'}"
+    },
+    {
+      "article_id": "d9d978f9d0f8af9d16ab6103050b14d397be61a537abf4d40f732a75d044bc0d",
+      "ticker": "MSFT",
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "Microsoft reports strong revenue growth and supports positive analyst views on software stocks",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Microsoft reports strong revenue growth and supports positive analyst views on software stocks'}"
+    },
+    {
+      "article_id": "4a7314cfc8c873bc68a1971abc9313a5d593fc261b2614fa547feb05a903e7bb",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Market research report on the growth of the Generative AI in Clinical Trials market",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Market research report on the growth of the Generative AI in Clinical Trials market'}"
+    },
+    {
+      "article_id": "f3c7b7cadbea66dcaab079ba34a7aa6dba5d18b8b66021c210aae2b649f6c5bf",
+      "ticker": null,
+      "category": "management_change",
+      "severity": 0.3,
+      "summary": "Eric Bleeker, experienced investor and columnist, is focused on artificial intelligence investing at Motley Fool.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.3, 'summary': 'Eric Bleeker, experienced investor and columnist, is focused on artificial intelligence investing at Motley Fool.'}"
+    },
+    {
+      "article_id": "b0a66b4d5f75295ab40464ae588d09103d9558ef3777c5d36be11fa8b740ed0e",
+      "ticker": null,
+      "category": "earnings_report",
+      "severity": 0.6,
+      "summary": "Arista Networks exceeded Q2 earnings and revenue expectations, driving stock gains",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Arista Networks exceeded Q2 earnings and revenue expectations, driving stock gains'}"
+    },
+    {
+      "article_id": "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df",
+      "ticker": "PLTR",
+      "category": "management_change",
+      "severity": 0.5,
+      "summary": "Michael Burry maintains bearish positions against several tech stocks, signaling potential market concerns.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Michael Burry maintains bearish positions against several tech stocks, signaling potential market concerns.'}"
+    },
+    {
+      "article_id": "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c",
+      "ticker": "ASTE",
+      "category": "earnings_report",
+      "severity": 0.3,
+      "summary": "German American Bancorp reports upcoming dividend payment and details on earnings coverage",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.3, 'summary': 'German American Bancorp reports upcoming dividend payment and details on earnings coverage'}"
+    },
+    {
+      "article_id": "384c52cc43850d45a2bf0c7463404586e959cd63ea05e6ae4a5697d72be4a490",
+      "ticker": "AMZN",
+      "category": "management_change",
+      "severity": 0.5,
+      "summary": "Berkshire Hathaway sold its Amazon position, likely due to management changes.",
+      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Berkshire Hathaway sold its Amazon position, likely due to management changes.'}"
     }
   ],
   "signals": [
     {
-      "id": "e409ac58adb7f4fa13d39980f8157e9096ce8974d7956ffd3db4b211f8a26afb",
+      "id": "1d20ac7606f0a8d5227faeff0cee4490305f714a956a11aaba39956acee4d974",
+      "ticker": "GOOGL",
+      "direction": "bullish",
+      "confidence": 0.294,
+      "score": 0.539,
+      "sentiment_component": -0.098,
+      "event_component": 1.0,
+      "price_component": 0.599,
+      "evidence_ids": [
+        "a4e137952df94a93e85d72d7a03defb2263c51109a4f7244e4e25647723b51bc",
+        "385021b23d07d11e1b7482995b2f09ab8b8f7bfc0d21f3f8489974c4254260e8",
+        "9dc1c452a408f6dcfdfd1035d04b10552f74612266595a07e8fe47ef14737095",
+        "d653f63f41d50392b81d2cdb25f67d5383dc40b9ea022a14657338125973bcd1",
+        "93fd00b4bca0234f7915fdfa8a782cc82dfb2c157e9c90d9a4dcbc495e79f977"
+      ],
+      "generated_at": "2026-08-05 17:46:18.660345+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "ac7d0b55cee0473e270a35fecdf0d7d2a7f3e8253a2aa24e4295af2976a2ac1b",
       "ticker": "BAC",
       "direction": "bullish",
-      "confidence": 0.296,
-      "score": 0.383,
-      "sentiment_component": 0.042,
+      "confidence": 0.255,
+      "score": 0.366,
+      "sentiment_component": -0.087,
       "event_component": 0.5,
-      "price_component": 0.543,
+      "price_component": 0.6,
       "evidence_ids": [
         "1096de7379c8dd082e0aced64ac5d9ad0dabbf8d4286d223c1298a6e639fafd3",
         "e1bbbd40f32783c7742fabcdbc6079dfc225e68102bde7158635cdb45b3d5d17"
       ],
-      "generated_at": "2026-08-05 15:32:30.394298+00:00",
+      "generated_at": "2026-08-05 17:46:19.200531+00:00",
       "horizon_days": 5
     },
     {
-      "id": "33120457016357284842aa164f9c3791338e3311af6167e00eb4ca7fae79b9dc",
+      "id": "e5b4715037355c6f56c1fd79b747526cf146b779b64127cfc306f349d623de73",
+      "ticker": "AMD",
+      "direction": "bullish",
+      "confidence": 0.374,
+      "score": 0.444,
+      "sentiment_component": 0.209,
+      "event_component": 0.5,
+      "price_component": 0.578,
+      "evidence_ids": [
+        "7ce0b7c3361fc5060098941f0f51662376e8b7092a583479bbd32912edecb966",
+        "3a061f1edef8129e7f01ef471dcc0d71ac35a35a690a882b460a1e53798731a1",
+        "5f240161bd55aeefed8fff2f25bbc19715e197a992f81dbab44e00a61d6af8e2",
+        "7b499e0290ebc63f8315753a1e44852ff683b278bd777ebb6c5f45c032d29205",
+        "df01f6ed779d44e036c1560319a3e4ae705228858b826053fe92ed55b20cd502",
+        "9bd11f57e16707340d69d38d277c8017fee631984a48faa96d425641f086ab7c"
+      ],
+      "generated_at": "2026-08-05 17:46:19.534839+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "1328af433c5ba8e9b797a237433fcf46e3865911b5cab2051f090de1517762cb",
       "ticker": "DIS",
       "direction": "neutral",
-      "confidence": 0.13,
-      "score": 0.145,
-      "sentiment_component": 0.22,
+      "confidence": 0.197,
+      "score": 0.238,
+      "sentiment_component": 0.349,
       "event_component": 0.0,
-      "price_component": 0.226,
+      "price_component": 0.382,
       "evidence_ids": [
         "4b80760c0f25581f2b0fd8ced8143e5db77986635937d8b573fa2f13d83305f9",
-        "be0f1ab65f70252dc3c2ec98d812c2e6900bd37c5a727aae458d0435342ebd4b"
+        "cfcea8929f56a544055b5a6905f330a9293a95a341012b48c173211bdccb3b1a",
+        "be0f1ab65f70252dc3c2ec98d812c2e6900bd37c5a727aae458d0435342ebd4b",
+        "0f3565b4346111f687feb7b9b0b65f40b22d92241f7c56111835c293e23f3a61"
       ],
-      "generated_at": "2026-08-05 15:32:31.006692+00:00",
+      "generated_at": "2026-08-05 17:46:20.071991+00:00",
       "horizon_days": 5
     },
     {
-      "id": "13b305b345266b6aa72188dbd838f0ff0768871c05a3cbbad513182e4ec90610",
+      "id": "cd9801ed2b2571287a5927153f3f68ebc25cb604fbece86af6e7e9d6d5c05e40",
       "ticker": "NDAQ",
       "direction": "neutral",
-      "confidence": 0.094,
-      "score": -0.106,
-      "sentiment_component": -0.259,
+      "confidence": 0.083,
+      "score": -0.094,
+      "sentiment_component": -0.263,
       "event_component": 0.0,
-      "price_component": -0.086,
+      "price_component": -0.05,
       "evidence_ids": [
         "a664fd6e710def25b268de89b8f54165ac2dbe51965b76436a2364baf706aab8",
         "605d69de096e6963231191379914588a48062e35e9994411e731aa4c2bdedb6b",
         "7b499e0290ebc63f8315753a1e44852ff683b278bd777ebb6c5f45c032d29205",
-        "33bd01505393d66ce174c12d5f512440029b9bc9d586aa904d43bc002297f7ba",
-        "74cbcbdc5fffcfc5da75b94b1a16d09cd2dc131b30bbe29763683d265a85a29d",
+        "df01f6ed779d44e036c1560319a3e4ae705228858b826053fe92ed55b20cd502",
         "93fd00b4bca0234f7915fdfa8a782cc82dfb2c157e9c90d9a4dcbc495e79f977",
-        "f6d31b014644964e0d2105e487241e68bbfd7612455ef4b8e805a7fcf2a41593",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df",
+        "384c52cc43850d45a2bf0c7463404586e959cd63ea05e6ae4a5697d72be4a490"
       ],
-      "generated_at": "2026-08-05 15:32:31.465750+00:00",
+      "generated_at": "2026-08-05 17:46:20.455495+00:00",
       "horizon_days": 5
     },
     {
-      "id": "d55dcdd98977d6c863f9e60942d88da5df71c7e71c73e43cde54226d624dbe3c",
-      "ticker": "AMD",
-      "direction": "neutral",
-      "confidence": 0.174,
-      "score": 0.234,
-      "sentiment_component": 0.085,
-      "event_component": 0.0,
-      "price_component": 0.581,
-      "evidence_ids": [
-        "7ce0b7c3361fc5060098941f0f51662376e8b7092a583479bbd32912edecb966",
-        "6d4287ef1f78e8c6a04a33ebd8cf85b0066b27fb192b8aadec41e7ff9ca2bd53",
-        "a7de87d588019eb94fe0daf04e1db30d5cd028a2fd0ec49f39b5c94bd6dccdc8",
-        "3a061f1edef8129e7f01ef471dcc0d71ac35a35a690a882b460a1e53798731a1",
-        "7b499e0290ebc63f8315753a1e44852ff683b278bd777ebb6c5f45c032d29205",
-        "2ecf6cfce6927355a6dfc67bda9b2638ab0112e2c911d79dd2016af019930142",
-        "5f240161bd55aeefed8fff2f25bbc19715e197a992f81dbab44e00a61d6af8e2",
-        "fa6da8c7216714237df7ad2060c3a28e7dc5cec383d3d2fe089ac3c85ce9e88b",
-        "c44a6a824a9628130a0534cb4f1e258a7467662cdf0aba4cd72f5226a39eedb4",
-        "6debae77635a77ec025044ef3ecf071cd0376e48a19e5a3484f31ea3a5c964cb",
-        "c6f62ffd1265bdddc6d194eff9cd7f70e3a7f4a036d6b3db3ba012038d19caf8",
-        "f6d31b014644964e0d2105e487241e68bbfd7612455ef4b8e805a7fcf2a41593",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
-      ],
-      "generated_at": "2026-08-05 15:32:31.843232+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5e7fdce6899387f5642afe96d8f6ebc1d508e444acdb6a01f454aef979dcf4d7",
-      "ticker": "INTC",
-      "direction": "bullish",
-      "confidence": 0.199,
-      "score": 0.316,
-      "sentiment_component": 0.072,
-      "event_component": 0.0,
-      "price_component": 0.82,
-      "evidence_ids": [
-        "6d4287ef1f78e8c6a04a33ebd8cf85b0066b27fb192b8aadec41e7ff9ca2bd53",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
-      ],
-      "generated_at": "2026-08-05 15:32:32.399387+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "f90ef5500b42e5227772831c0bd562cb3f276c2fdaa7ceb2804159d0ae4cf7b4",
+      "id": "abc3bca3dbbfd1ab937f14b94244e347e02082ccf8b2879418a3156db4a4c545",
       "ticker": "LLY",
       "direction": "neutral",
-      "confidence": 0.026,
-      "score": -0.045,
-      "sentiment_component": 0.51,
+      "confidence": 0.017,
+      "score": 0.028,
+      "sentiment_component": 0.573,
       "event_component": 0.0,
-      "price_component": -0.534,
+      "price_component": -0.381,
       "evidence_ids": [
-        "ff560f546e5b4e7bc9986da817f398f2bfa9e9988a8fefcf810c3d163944084f",
-        "fa6da8c7216714237df7ad2060c3a28e7dc5cec383d3d2fe089ac3c85ce9e88b"
+        "ff560f546e5b4e7bc9986da817f398f2bfa9e9988a8fefcf810c3d163944084f"
       ],
-      "generated_at": "2026-08-05 15:32:32.901139+00:00",
+      "generated_at": "2026-08-05 17:46:20.924972+00:00",
       "horizon_days": 5
     },
     {
-      "id": "aec4792abfd9fc4cb8922ef19f2db5f8296d4bdecbc4d3875841acc964b57418",
-      "ticker": "GM",
-      "direction": "neutral",
-      "confidence": 0.035,
-      "score": 0.041,
-      "sentiment_component": 0.238,
-      "event_component": 0.0,
-      "price_component": -0.078,
-      "evidence_ids": [
-        "2f0a5e357e73004dfe6bf94497c28f52ba9d833a1225a8cde75ab16ae83907f3",
-        "605418e715400496433099a02feae34a1ceeb257a92b9f4f20ad2cdd0a687966"
-      ],
-      "generated_at": "2026-08-05 15:32:33.327026+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "b58bb8a20b42b89b8cd204532ba7aa7e64cac134a93780af41de2b701113eb99",
+      "id": "54e5f6049ea9600ee921e8ac900ce7ca622c87211706d759ef3f1be4879c29cd",
       "ticker": "AMZN",
       "direction": "bullish",
-      "confidence": 0.05,
-      "score": 0.752,
-      "sentiment_component": 0.083,
-      "event_component": 0.0,
+      "confidence": 0.2,
+      "score": 0.883,
+      "sentiment_component": 0.088,
+      "event_component": 0.5,
       "price_component": 1.0,
       "evidence_ids": [
         "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb",
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
+        "9dc1c452a408f6dcfdfd1035d04b10552f74612266595a07e8fe47ef14737095",
+        "111d9c21678e693a6237e266130e9a4f738fb59a6d75e1eb17b06302584bf8fe",
+        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
         "e21c00acc6bbad02bd90ce86767361dedfdf049c4ad2e8f2d1d0a305c55bc8ee",
         "a2d398059d6b8d3bdd6d17925c66562f9abb5f2c5cf288b18fe071b4eba48b80",
         "93fd00b4bca0234f7915fdfa8a782cc82dfb2c157e9c90d9a4dcbc495e79f977",
-        "40d7f784845f6052fcd2604aaf5676d4e5b8272494761976fe7ea8584432d528",
-        "460e3c29b97e71c77aa16395112f31e96d67aab3492b7a899676d77584c337f9",
-        "f2bcb1db33ae2907ca6bd91ebd3f56e8797aa8bf793e360fea2877ecf8927ec7",
-        "6f3d3ced7d82403b51ec727a07067e735cae6a7c0402dc5caf01fe230f30ea8d"
+        "384c52cc43850d45a2bf0c7463404586e959cd63ea05e6ae4a5697d72be4a490"
       ],
-      "generated_at": "2026-08-05 15:32:33.675677+00:00",
+      "generated_at": "2026-08-05 17:46:21.248047+00:00",
       "horizon_days": 5
     },
     {
-      "id": "6fc3b52fc5d5c2079a6bf7cab73981bc47797f29f3bf0abf0b33ec412881fbc3",
+      "id": "08f21c072c7eab421fdd3ff8ce596a1e6b19a9484fb583c05e4b6b45505b4582",
       "ticker": "MS",
       "direction": "bullish",
-      "confidence": 0.22,
-      "score": 0.322,
-      "sentiment_component": 0.186,
+      "confidence": 0.241,
+      "score": 0.365,
+      "sentiment_component": 0.253,
       "event_component": 0.0,
-      "price_component": 0.746,
+      "price_component": 0.81,
       "evidence_ids": [
-        "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb"
+        "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb",
+        "8d7e4d8acb5ffac0ecd8093f819e41b81756bb97d1b9598da0b500d111884c24"
       ],
-      "generated_at": "2026-08-05 15:32:34.101098+00:00",
+      "generated_at": "2026-08-05 17:46:21.671613+00:00",
       "horizon_days": 5
     },
     {
-      "id": "e5c89a4d6e3c5abf4e576a7bcbb98580bab8bb4b383abe18a6c76bbf4dda9b64",
+      "id": "65f2f7c8c41d2e947d4f1b0a2ff1cd483584e56cf7e2b5faa4b1ff5d31d36519",
       "ticker": "V",
       "direction": "neutral",
-      "confidence": 0.071,
-      "score": 0.09,
-      "sentiment_component": 0.4,
+      "confidence": 0.114,
+      "score": 0.151,
+      "sentiment_component": 0.518,
       "event_component": 0.0,
-      "price_component": -0.071,
+      "price_component": 0.004,
       "evidence_ids": [
         "af15c682255d8bd1c3139abaa892e21ed6dbc0dfb20718cf28549b7033198b83"
       ],
-      "generated_at": "2026-08-05 15:32:34.500222+00:00",
+      "generated_at": "2026-08-05 17:46:22.035046+00:00",
       "horizon_days": 5
     },
     {
-      "id": "12d2f0ef8499d6ca7580003f9483c8a61fc565ccde90523d8a94d33fb4fd6d60",
+      "id": "25501e19ca78cbc63375e1099cee1195e08e264c6f02b16a2eb522ef8b8bbb0d",
       "ticker": "META",
       "direction": "neutral",
-      "confidence": 0.039,
-      "score": -0.044,
-      "sentiment_component": -0.217,
+      "confidence": 0.031,
+      "score": -0.032,
+      "sentiment_component": -0.12,
       "event_component": 0.0,
-      "price_component": 0.052,
+      "price_component": 0.006,
       "evidence_ids": [
         "7ae0ac718d1486692acb0ae47c0251284950df488fc6f539e89016429807be03",
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
-        "40d7f784845f6052fcd2604aaf5676d4e5b8272494761976fe7ea8584432d528"
+        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
+        "15f1b4729a59d0941ffca8ec70ce278d5a0d5ed3b4e660f54fca4f8ea7f6c42e"
       ],
-      "generated_at": "2026-08-05 15:32:34.824342+00:00",
+      "generated_at": "2026-08-05 17:46:22.390910+00:00",
       "horizon_days": 5
     },
     {
-      "id": "672b50d95331e0cc547a2f2698f0ff97838565de956324b1f70f4cb056f4b033",
+      "id": "749c1cdac04e93fb54f2f4953ec1fbd00263a11a28256e57f0ab70a53598deb4",
       "ticker": "TSLA",
       "direction": "neutral",
-      "confidence": 0.003,
-      "score": 0.004,
-      "sentiment_component": -0.469,
-      "event_component": 0.0,
-      "price_component": 0.388,
+      "confidence": 0.099,
+      "score": 0.175,
+      "sentiment_component": -0.482,
+      "event_component": 0.5,
+      "price_component": 0.386,
       "evidence_ids": [
         "0563a97b46a114d3be0fd90959a4a32eb5ed08aa7395394b5eecf7e8c8a8dace",
         "c0155127e1cae62f3147dd269db08580209b2403e24b25889662c6e039eb3eca",
         "4d8cba83b624dd6c0f9021e8cef2d920990886d0f2df5001d6d9ec19f92e211b",
         "68c330b725dd918d39304d6b3d32dbfdf5f96bf1ceaed19794f6d25e47a58f37",
-        "f83ed07e33aba53ff6bc54370f1eea73d673d238172d575c5a936814af22110b"
+        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
+        "ff5a663811462474c2831396c69d6884bcd37496004702f51b1ba30eace0bf4a",
+        "30735b9de7f91a1d02e17022ce8c7e93e7edeef37a8affe9c4bdd618060ad618",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
       ],
-      "generated_at": "2026-08-05 15:32:35.154727+00:00",
+      "generated_at": "2026-08-05 17:46:22.725765+00:00",
       "horizon_days": 5
     },
     {
-      "id": "7ee35869c41da5a25f4e6a656b5383d9345ae992cd606f637e3d67a471c84733",
+      "id": "4724cf5b78ba8db790a3e57468f6ea4e8ce7f38965f1af7d0aa73918eeeabc5f",
       "ticker": "NFLX",
       "direction": "neutral",
-      "confidence": 0.087,
-      "score": 0.1,
-      "sentiment_component": 0.29,
+      "confidence": 0.074,
+      "score": 0.087,
+      "sentiment_component": 0.31,
       "event_component": 0.0,
-      "price_component": 0.045,
+      "price_component": -0.008,
       "evidence_ids": [
         "6416bc9226ed9c4f5e9ccbe82218ba737ba580dae9b0a3cbba7f4a6ba739c2fb"
       ],
-      "generated_at": "2026-08-05 15:32:35.468614+00:00",
+      "generated_at": "2026-08-05 17:46:23.079698+00:00",
       "horizon_days": 5
     },
     {
-      "id": "6f3d89e573dbec59276bf0cbb536af687ebd73cc1b6ac4c93f7a7daaee5aeef5",
+      "id": "23f9942920ada238c955efb85d522a6350fdc3699cd7780593bbc1fa62d052d6",
       "ticker": "AAPL",
-      "direction": "bearish",
-      "confidence": 0.192,
-      "score": -0.311,
-      "sentiment_component": -0.04,
-      "event_component": 0.0,
-      "price_component": -0.833,
+      "direction": "neutral",
+      "confidence": 0.046,
+      "score": -0.101,
+      "sentiment_component": 0.049,
+      "event_component": 0.5,
+      "price_component": -0.807,
       "evidence_ids": [
         "c0155127e1cae62f3147dd269db08580209b2403e24b25889662c6e039eb3eca",
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
+        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
         "b8c0ba3cd36710e6fe04e9994297ca531f7f0e6004d04a2b9d16ff515d62dbe9",
         "f0629d7617d16b38aebb0b13c481d77c6a441f838ddabbf9b5603a7133df3390",
         "c7d4c2656e1c977fa7896e5cd1d47691fd570386dc9e5c5b796b9daae3c78744",
         "a2d398059d6b8d3bdd6d17925c66562f9abb5f2c5cf288b18fe071b4eba48b80",
         "350639cb4e461983f426537de89f271a81e2ed29fc399bb95a881b3402b855e8",
-        "005dd5c4039d8b93181763c3990c5170044b987184aab9fd2240889918bd7f7f",
-        "b5a2680176d390a39ba6999bf1717bc89c3aac719e619efb5b56eb9cc50ab58e",
-        "05574587b721e1fc6f187d044a58397c4117d37a8ce444e10f1687a21046e0b5"
+        "005dd5c4039d8b93181763c3990c5170044b987184aab9fd2240889918bd7f7f"
       ],
-      "generated_at": "2026-08-05 15:32:35.871956+00:00",
+      "generated_at": "2026-08-05 17:46:23.507454+00:00",
       "horizon_days": 5
     },
     {
-      "id": "cf568019d51f9629fe56141525fbbc0930b33efd4ace7a3eff4d279baab01297",
+      "id": "e2c416725c4ee682832c58b1f3829159783478e67d3f0155110f3ce4c6bc6160",
       "ticker": "COIN",
       "direction": "neutral",
-      "confidence": 0.072,
-      "score": -0.084,
-      "sentiment_component": 0.05,
-      "event_component": 0.0,
-      "price_component": -0.272,
+      "confidence": 0.1,
+      "score": 0.151,
+      "sentiment_component": 0.052,
+      "event_component": 0.6,
+      "price_component": -0.208,
       "evidence_ids": [
         "c5fcc73abb9cefb7d61701219ed6a74cefe801f307ef0ba7e265b33df32ddcbc",
+        "02e925c783ae9bb799bde06879d9047e5c6bb3ca72dcb5ab18d1c7b71da6ec5b",
+        "9a37daa295374ab25a4fd4072f2b373fc0791bdf5184adcee55a39424a2e7859",
+        "faefcd79a12a0f39a6cce593c2037c3f4eaa30d313b9d6d4696f1b084f59f9fa",
+        "9dc1c452a408f6dcfdfd1035d04b10552f74612266595a07e8fe47ef14737095",
+        "e957bc763e4ec9627e8ef76ecfdf1e02cdb4e33545fd9f992a7dc0bc906beec2",
+        "81b2336d6df1fa3d08c0703419a2d28841a8d6c6243866b1e1485b9b2cf1223e",
+        "fed3e160e6b0dfb231040ec5cd0350a1b065d8c685ad430c7657bace7ff7c9cc",
+        "fe2adabcfe0583d85ef1aeccc2a41afef553eee821811e94e0781af3202cd55a",
+        "0f3565b4346111f687feb7b9b0b65f40b22d92241f7c56111835c293e23f3a61",
+        "d04ebf1e6a4a7527a787cc9225335b17db8e67a76cc9da5009fa84ef68e07530",
+        "0035cd3005b4157491f81a76d5b0d350d927b7137cd730b7cfb1f4594025e79d",
+        "a7cf11ce2b14c88353a20ef112213d8da2075c31da5ae8e01dcbd0cfaf9436ca",
+        "5075c05f064e2738540b75381d833e266d96d3e11c77a2ae6df139f5e65fcbce",
+        "85aeb90e35590a5b9a6475b0d41fe25a7439d40bf8a876779763869853f666ea",
+        "ff5a663811462474c2831396c69d6884bcd37496004702f51b1ba30eace0bf4a",
         "9253d7cc6ccaa6a06a1371a4fb0879d744b934d2b8833d37c6c806c48375dec2",
-        "05574587b721e1fc6f187d044a58397c4117d37a8ce444e10f1687a21046e0b5",
-        "6debae77635a77ec025044ef3ecf071cd0376e48a19e5a3484f31ea3a5c964cb",
-        "c6f62ffd1265bdddc6d194eff9cd7f70e3a7f4a036d6b3db3ba012038d19caf8",
-        "6541812053dbf4edad126867ea3634ad643407daaff430c9e0eebe1da4965a85"
+        "a9b625fe0842f00232bcafa1d45e47730f9fa376b71affdb2f02c4b8d0a7bd3d",
+        "136eda2d5382a165135aa524a9211ad05e851df007ee8caff5f7070ee6185d9d",
+        "268187634e6ef72e259f89486ed681070f7f6d4ce0c103ad61dc00a6d70e077d"
       ],
-      "generated_at": "2026-08-05 15:32:36.308091+00:00",
+      "generated_at": "2026-08-05 17:46:23.853611+00:00",
       "horizon_days": 5
     },
     {
-      "id": "4254e23f289594da6da59b66f9304daf91f4d6abd2d855aecec6e9c0641f8a05",
-      "ticker": "GOOGL",
-      "direction": "bullish",
-      "confidence": 0.139,
-      "score": 0.288,
-      "sentiment_component": -0.218,
-      "event_component": 0.0,
-      "price_component": 0.974,
-      "evidence_ids": [
-        "385021b23d07d11e1b7482995b2f09ab8b8f7bfc0d21f3f8489974c4254260e8",
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
-        "93fd00b4bca0234f7915fdfa8a782cc82dfb2c157e9c90d9a4dcbc495e79f977",
-        "40d7f784845f6052fcd2604aaf5676d4e5b8272494761976fe7ea8584432d528"
-      ],
-      "generated_at": "2026-08-05 15:32:36.715405+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "35f34bfb8c532001533e80250f51cfb7bfc8f435ae945f9bf5cb45180bcaf97c",
+      "id": "0b795854e386638573298bddca2f2be31b3e6a8c655a5fee19eaa7041680bf8d",
       "ticker": "TRUMP",
       "direction": "neutral",
-      "confidence": 0.059,
-      "score": -0.066,
-      "sentiment_component": -0.229,
+      "confidence": 0.065,
+      "score": -0.073,
+      "sentiment_component": -0.254,
       "event_component": 0.0,
       "price_component": 0.0,
       "evidence_ids": [
         "bf0e515785033050d6221f8933a7982a2899e20a9320d248999dd1b9aa0318c2"
       ],
-      "generated_at": "2026-08-05 15:32:37.486094+00:00",
+      "generated_at": "2026-08-05 17:46:24.633275+00:00",
       "horizon_days": 5
     },
     {
-      "id": "df4a38037eb302de563e049bda7b44b680630b1d7b837cb77c858b7d67aa2156",
-      "ticker": "VRSK",
+      "id": "38d2da72b4fe43ab30feeb35e2422a6d4625e4718a5b318c900128ea0faed6eb",
+      "ticker": "MU",
+      "direction": "neutral",
+      "confidence": 0.158,
+      "score": 0.239,
+      "sentiment_component": -0.043,
+      "event_component": 0.0,
+      "price_component": 0.698,
+      "evidence_ids": [
+        "02e925c783ae9bb799bde06879d9047e5c6bb3ca72dcb5ab18d1c7b71da6ec5b",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
+      ],
+      "generated_at": "2026-08-05 17:46:25.030367+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "a37c7738e2dd168f7ec4b7c79da86f8481f520574b6e1478328d1e385046075d",
+      "ticker": "NVDA",
+      "direction": "bullish",
+      "confidence": 0.217,
+      "score": 0.501,
+      "sentiment_component": 0.152,
+      "event_component": 0.0,
+      "price_component": 1.0,
+      "evidence_ids": [
+        "02e925c783ae9bb799bde06879d9047e5c6bb3ca72dcb5ab18d1c7b71da6ec5b",
+        "df01f6ed779d44e036c1560319a3e4ae705228858b826053fe92ed55b20cd502",
+        "30735b9de7f91a1d02e17022ce8c7e93e7edeef37a8affe9c4bdd618060ad618",
+        "9bd11f57e16707340d69d38d277c8017fee631984a48faa96d425641f086ab7c",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
+      ],
+      "generated_at": "2026-08-05 17:46:25.479069+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "37c8c609ba74354803cd828ee3d53a78a28dc52cc655193b413a4f871b541833",
+      "ticker": "RGTI",
+      "direction": "bullish",
+      "confidence": 0.34,
+      "score": 0.569,
+      "sentiment_component": 0.06,
+      "event_component": 0.5,
+      "price_component": 1.0,
+      "evidence_ids": [
+        "07f895471c298c23e48eaef263e98dbee282fc2a03f3d76bae9c1bc4bcf47fdb"
+      ],
+      "generated_at": "2026-08-05 17:46:25.793404+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "9959e6cd3217fec630dfe2c4a48d5ad903beee71ed2e4934b3f987aad7150400",
+      "ticker": "SOUN",
+      "direction": "bullish",
+      "confidence": 0.165,
+      "score": 0.263,
+      "sentiment_component": -0.047,
+      "event_component": 0.0,
+      "price_component": 0.769,
+      "evidence_ids": [
+        "07f895471c298c23e48eaef263e98dbee282fc2a03f3d76bae9c1bc4bcf47fdb"
+      ],
+      "generated_at": "2026-08-05 17:46:26.147436+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "6fcfb1ef1e8385ab1695652790ebe8ac42aeec1b7dd83c4ffe6124d586391582",
+      "ticker": "MDLN",
+      "direction": "neutral",
+      "confidence": 0.095,
+      "score": -0.169,
+      "sentiment_component": 0.319,
+      "event_component": 0.0,
+      "price_component": -0.725,
+      "evidence_ids": [
+        "69b9c2039c1d0597e4626f777bf96d8f3d1955864d26774a294fd985218caa98"
+      ],
+      "generated_at": "2026-08-05 17:46:26.522664+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "a7c25dc1b6fe14d0e98b5bf945cd3c910eeb2337a312b496892b8ec4f6835728",
+      "ticker": "CDW",
+      "direction": "neutral",
+      "confidence": 0.075,
+      "score": -0.091,
+      "sentiment_component": 0.084,
+      "event_component": 0.0,
+      "price_component": -0.319,
+      "evidence_ids": [
+        "d04ebf1e6a4a7527a787cc9225335b17db8e67a76cc9da5009fa84ef68e07530"
+      ],
+      "generated_at": "2026-08-05 17:46:26.862365+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "70c0aa2deb88677c23322ce17e095b1991d79d54708b36b2c293f75f2d9389e3",
+      "ticker": "KYMR",
+      "direction": "neutral",
+      "confidence": 0.039,
+      "score": 0.042,
+      "sentiment_component": 0.129,
+      "event_component": 0.0,
+      "price_component": 0.013,
+      "evidence_ids": [
+        "ee62df7b2b3818d9df81e4ef34f4aadbd8055d9b4c02c1c56dcd874315f89eb2"
+      ],
+      "generated_at": "2026-08-05 17:46:27.192890+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "573281851b450a4753f4c7f728a1e844c853a0517163a736854460f4b23b1a25",
+      "ticker": "BMY",
+      "direction": "neutral",
+      "confidence": 0.076,
+      "score": 0.081,
+      "sentiment_component": 0.122,
+      "event_component": 0.0,
+      "price_component": 0.127,
+      "evidence_ids": [
+        "ffb3add128631cf075e6e97c1d99df8d91bcc712794e4376cdcfe47f15d300b4"
+      ],
+      "generated_at": "2026-08-05 17:46:27.661228+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0721f45cc0cc4d70074a8a451128f5d016cd67fd4ead39c5d3a47d8a55959ba4",
+      "ticker": "LINE",
+      "direction": "neutral",
+      "confidence": 0.132,
+      "score": -0.194,
+      "sentiment_component": 0.098,
+      "event_component": 0.0,
+      "price_component": -0.617,
+      "evidence_ids": [
+        "928b04cd7ace153f4152a93e920f4850fc032642f8faf62c3d0463e85f3cc70c"
+      ],
+      "generated_at": "2026-08-05 17:46:27.997866+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "cb9bda801c6867660b83b136ee92c44a681cf7c108009022af909e1a24194aa2",
+      "ticker": "LIVN",
+      "direction": "neutral",
+      "confidence": 0.116,
+      "score": -0.216,
+      "sentiment_component": 0.273,
+      "event_component": 0.0,
+      "price_component": -0.818,
+      "evidence_ids": [
+        "8067ddb298e41d7edb86f52ed761b59a3823f144fce4f07690d8c4f029fd6e5c"
+      ],
+      "generated_at": "2026-08-05 17:46:28.311327+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "9dde74ac51c62408481f41be015cdf6bc67b2c82a6f43d69bb029cc6b99077d6",
+      "ticker": "TMO",
+      "direction": "neutral",
+      "confidence": 0.084,
+      "score": 0.101,
+      "sentiment_component": 0.352,
+      "event_component": 0.0,
+      "price_component": -0.002,
+      "evidence_ids": [
+        "8067ddb298e41d7edb86f52ed761b59a3823f144fce4f07690d8c4f029fd6e5c"
+      ],
+      "generated_at": "2026-08-05 17:46:28.707869+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0fafaaca6f86f1b65c50be43c9d064274af5e7da64f7f1417e4fab488e959163",
+      "ticker": "LMB",
       "direction": "bearish",
-      "confidence": 0.177,
-      "score": -0.35,
-      "sentiment_component": 0.056,
+      "confidence": 0.167,
+      "score": -0.599,
+      "sentiment_component": -0.106,
       "event_component": 0.0,
       "price_component": -1.0,
       "evidence_ids": [
-        "7df4c30828ddcec4a17831088cabf1c53b5af6430440b3c1f05f454d98fef40f"
+        "402a8ac6bb542cb169d4fc1041daf57dc85ac60b5dc9630d61c2f04431e21088"
       ],
-      "generated_at": "2026-08-05 15:32:37.849244+00:00",
+      "generated_at": "2026-08-05 17:46:29.019271+00:00",
       "horizon_days": 5
     },
     {
-      "id": "c502d175decee27a9b093a40d983d1bc3cefea9c6d2d278a70febe1d2acfbe34",
-      "ticker": "ILMN",
-      "direction": "neutral",
-      "confidence": 0.102,
-      "score": 0.116,
-      "sentiment_component": 0.056,
-      "event_component": 0.0,
-      "price_component": 0.278,
-      "evidence_ids": [
-        "6046ece1110806504a1058b31e9a5b3b454693afd0dbdd90e82e8419e01b3689"
-      ],
-      "generated_at": "2026-08-05 15:32:38.187562+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "ee35f7d5482a7989f37ce6a4e6228154006f3265337008cdca89ab20c49c80ba",
-      "ticker": "VLTO",
-      "direction": "neutral",
-      "confidence": 0.068,
-      "score": -0.081,
-      "sentiment_component": 0.089,
-      "event_component": 0.0,
-      "price_component": -0.296,
-      "evidence_ids": [
-        "fa451b808b7a0da9ab5ed3e1331bae203eee3dbe08a52362e114b66fcc2a1ce2"
-      ],
-      "generated_at": "2026-08-05 15:32:38.522595+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "a767ad15994a71964dcad4960bb31aaa4a85e2b4aa2644bddbf02d592bb87b9e",
-      "ticker": "AVGO",
+      "id": "9e9283939605fc58e69159988982fc3f309f445ed3ddbad4e7746ea6972237ea",
+      "ticker": "JJSF",
       "direction": "bullish",
-      "confidence": 0.237,
-      "score": 0.389,
-      "sentiment_component": 0.207,
-      "event_component": 0.0,
-      "price_component": 0.913,
+      "confidence": 0.312,
+      "score": 0.415,
+      "sentiment_component": 0.048,
+      "event_component": 0.5,
+      "price_component": 0.626,
       "evidence_ids": [
-        "2ecf6cfce6927355a6dfc67bda9b2638ab0112e2c911d79dd2016af019930142",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
+        "80059561fb7f55c0e66f08a2e96a5618ed803d49460e95ebb9fb9c8e89cb658d"
       ],
-      "generated_at": "2026-08-05 15:32:38.864610+00:00",
+      "generated_at": "2026-08-05 17:46:29.425057+00:00",
       "horizon_days": 5
     },
     {
-      "id": "e8ac7a3f111fa426c3b7f7c889df3c45e1f7e6bd09154834e5ea8def4936958a",
-      "ticker": "MU",
-      "direction": "neutral",
-      "confidence": 0.146,
-      "score": 0.228,
-      "sentiment_component": -0.095,
-      "event_component": 0.0,
-      "price_component": 0.709,
-      "evidence_ids": [
-        "2ecf6cfce6927355a6dfc67bda9b2638ab0112e2c911d79dd2016af019930142"
-      ],
-      "generated_at": "2026-08-05 15:32:39.241064+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "9fca6ec43c0cd67d2466f39885154185b0f690e9ad1e96f2e04e4aecd5f7b07c",
-      "ticker": "MRVL",
-      "direction": "bullish",
-      "confidence": 0.196,
-      "score": 0.393,
-      "sentiment_component": 0.021,
-      "event_component": 0.0,
-      "price_component": 1.0,
-      "evidence_ids": [
-        "2ecf6cfce6927355a6dfc67bda9b2638ab0112e2c911d79dd2016af019930142"
-      ],
-      "generated_at": "2026-08-05 15:32:39.582250+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "15d036ce55d868e316e26e5c241a631191ec60d3e79a5fea27e1313a5bbabbc0",
-      "ticker": "NVDA",
-      "direction": "bullish",
-      "confidence": 0.227,
-      "score": 0.496,
-      "sentiment_component": 0.185,
-      "event_component": 0.0,
-      "price_component": 1.0,
-      "evidence_ids": [
-        "2ecf6cfce6927355a6dfc67bda9b2638ab0112e2c911d79dd2016af019930142",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
-      ],
-      "generated_at": "2026-08-05 15:32:39.950551+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "683a58d520a4c0a833ccd4e6901e9853d0fa4c99322e52bb8b5b9c5b4f6f3748",
-      "ticker": "CNC",
-      "direction": "bullish",
-      "confidence": 0.186,
-      "score": 0.276,
-      "sentiment_component": 0.056,
-      "event_component": 0.0,
-      "price_component": 0.723,
-      "evidence_ids": [
-        "983c9e7f3dc7c5fcef8c2961c7f63891b7acd57452c99ed265d9546c0d77283a"
-      ],
-      "generated_at": "2026-08-05 15:32:40.384929+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "ca7160e18725a0cd8a5092e5ce51c166bd255eed3f82aaff00f361320d61b549",
-      "ticker": "AAON",
-      "direction": "bullish",
-      "confidence": 0.211,
-      "score": 0.287,
-      "sentiment_component": 0.201,
-      "event_component": 0.0,
-      "price_component": 0.637,
-      "evidence_ids": [
-        "ffa6a91e68fc8fdb90bbbf0294f831bf4f53e8c558681ef97ff667093ce5a075"
-      ],
-      "generated_at": "2026-08-05 15:32:40.782985+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5481241ab90a858202325ad724b5db7421911132e2709214b7dd7df0f1c1ba52",
-      "ticker": "PRM",
-      "direction": "neutral",
-      "confidence": 0.111,
-      "score": 0.127,
-      "sentiment_component": 0.081,
-      "event_component": 0.0,
-      "price_component": 0.287,
-      "evidence_ids": [
-        "fbafd43ff260722de833b46fdcffa9d3701b3969d7e296b217b67a7f42853981"
-      ],
-      "generated_at": "2026-08-05 15:32:41.172473+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "b14c0298888ab8f534ac51d76b648fea2a918e56f6691ee3ec66b6043f3e4f54",
-      "ticker": "KN",
-      "direction": "bullish",
-      "confidence": 0.205,
-      "score": 0.342,
-      "sentiment_component": 0.08,
-      "event_component": 0.0,
-      "price_component": 0.886,
-      "evidence_ids": [
-        "5229a4d856b7ba5e312517540e5d8754b1a5ac2a13d9dd3b35e096a7109d152c"
-      ],
-      "generated_at": "2026-08-05 15:32:41.484660+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "60709f35ae9a7b4c275888058788da7dddbd8d2e010884dd2c4e983fb399d405",
-      "ticker": "MTDR",
-      "direction": "neutral",
-      "confidence": 0.05,
-      "score": -0.056,
-      "sentiment_component": 0.055,
-      "event_component": 0.0,
-      "price_component": -0.2,
-      "evidence_ids": [
-        "aee38fff1994206ca960e1b05edd03caba6cc45aa77ab6b5fb187361d9264545"
-      ],
-      "generated_at": "2026-08-05 15:32:41.798427+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "4a6a63e38447b3bf0c115cb61e9ceec3cd71264a9304d26e3ed5ce288d0317d2",
-      "ticker": "MGY",
-      "direction": "neutral",
-      "confidence": 0.088,
-      "score": -0.107,
-      "sentiment_component": 0.055,
-      "event_component": 0.0,
-      "price_component": -0.342,
-      "evidence_ids": [
-        "89b5a43fa78c61f18f053f489996520d000ee962939ddaa398516294c5870681"
-      ],
-      "generated_at": "2026-08-05 15:32:42.129511+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "f48baa3a9e32354906e7790ac2c70c33e5e79cd9d4de13656a28ff8a1e717ffc",
-      "ticker": "SPCX",
-      "direction": "neutral",
-      "confidence": 0.08,
-      "score": 0.086,
-      "sentiment_component": 0.082,
-      "event_component": 0.0,
-      "price_component": 0.173,
-      "evidence_ids": [
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
-      ],
-      "generated_at": "2026-08-05 15:32:42.557508+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "17f5b913a842c8e55ae18be9d3ea1e7efe89f562a7ff3a04692a2a984d88f51a",
-      "ticker": "GOOG",
-      "direction": "bullish",
-      "confidence": 0.199,
-      "score": 0.349,
-      "sentiment_component": 0.044,
-      "event_component": 0.0,
-      "price_component": 0.933,
-      "evidence_ids": [
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c"
-      ],
-      "generated_at": "2026-08-05 15:32:42.877564+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5d657617d0f9d13c500b9ddf837ce7de2d2d3589d9ab7e35c0e1b65032afb1fe",
+      "id": "c791ad4611288018ac53bf0cabaa3ad6f9c574861b24897b77d0c9ec8f30b03e",
       "ticker": "MSFT",
       "direction": "bullish",
-      "confidence": 0.0,
-      "score": 0.789,
-      "sentiment_component": -0.047,
-      "event_component": 0.0,
+      "confidence": 0.069,
+      "score": 0.958,
+      "sentiment_component": 0.001,
+      "event_component": 0.5,
       "price_component": 1.0,
       "evidence_ids": [
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c",
+        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
+        "d9d978f9d0f8af9d16ab6103050b14d397be61a537abf4d40f732a75d044bc0d",
         "93fd00b4bca0234f7915fdfa8a782cc82dfb2c157e9c90d9a4dcbc495e79f977",
-        "40d7f784845f6052fcd2604aaf5676d4e5b8272494761976fe7ea8584432d528",
-        "b434ee9babbda6f70e74ee80d6561bf66d1dcf2c441d51d6d7cd5245e66cd1c6",
-        "b8f63968e4eb9bc89f299c448bccf5d0d98579a7e46287e6a029743587d8597b"
+        "0037f7386d33ee4746d23b8c18e8fcd6ffaf2f9d771c1c4a8c5e93d023429ce9"
       ],
-      "generated_at": "2026-08-05 15:32:43.283355+00:00",
+      "generated_at": "2026-08-05 17:46:29.830603+00:00",
       "horizon_days": 5
     },
     {
-      "id": "47bc20fd1edf8b06ba7c9581336b008e8f4d8e47b0a2a76de7cf756f9ae72755",
-      "ticker": "ORCL",
+      "id": "9c3fa586e651637a0b3897beb0600266ed66e8d3ee851b54ccc7cf8453634a5c",
+      "ticker": "INTC",
       "direction": "bullish",
-      "confidence": 0.171,
-      "score": 0.494,
-      "sentiment_component": -0.01,
+      "confidence": 0.22,
+      "score": 0.354,
+      "sentiment_component": 0.143,
       "event_component": 0.0,
-      "price_component": 1.0,
+      "price_component": 0.87,
       "evidence_ids": [
-        "eabf88efb2508ba314ee31d3fe73e3f7656003c9ca4371539f5be5bcb35c950c"
+        "df01f6ed779d44e036c1560319a3e4ae705228858b826053fe92ed55b20cd502"
       ],
-      "generated_at": "2026-08-05 15:32:43.978646+00:00",
+      "generated_at": "2026-08-05 17:46:30.208846+00:00",
       "horizon_days": 5
     },
     {
-      "id": "3dd1928df69f05e634ae400e1d0f8827e0bdcf70a01eafe429b2fe5c084c3662",
-      "ticker": "ALGT",
-      "direction": "neutral",
-      "confidence": 0.162,
-      "score": 0.235,
-      "sentiment_component": -0.008,
-      "event_component": 0.0,
-      "price_component": 0.659,
-      "evidence_ids": [
-        "886ca9a46cab0fcef7b6b505cf33445c5c397d0b11a2157c083d0019f5e1d498"
-      ],
-      "generated_at": "2026-08-05 15:32:44.313027+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "7cc99d2678830bf0bf3c1dcfda5f3701cfc1b7fbc55e5471f8cec94a5ceb4abf",
-      "ticker": "SMC",
-      "direction": "neutral",
-      "confidence": 0.01,
-      "score": -0.01,
-      "sentiment_component": -0.008,
-      "event_component": 0.0,
-      "price_component": -0.022,
-      "evidence_ids": [
-        "85d46e5dc03ad983a9f3cefe2056e5583cafee2c52bacebc157ee4dfa8de680a"
-      ],
-      "generated_at": "2026-08-05 15:32:44.672658+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "fbfe765dd413da955ab7dd193d249856f53fda140706b8b0374e69c0a9c0b00c",
-      "ticker": "F",
-      "direction": "neutral",
-      "confidence": 0.135,
-      "score": -0.246,
-      "sentiment_component": 0.199,
-      "event_component": 0.0,
-      "price_component": -0.844,
-      "evidence_ids": [
-        "605418e715400496433099a02feae34a1ceeb257a92b9f4f20ad2cdd0a687966"
-      ],
-      "generated_at": "2026-08-05 15:32:45.172312+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "9bfd16337d141eb0f94905c7a3bac43a1ea9dd69ea5f614b3f4ecca8ca16ee21",
-      "ticker": "VYMI",
-      "direction": "bullish",
-      "confidence": 0.178,
-      "score": 0.253,
-      "sentiment_component": 0.058,
-      "event_component": 0.0,
-      "price_component": 0.656,
-      "evidence_ids": [
-        "74cbcbdc5fffcfc5da75b94b1a16d09cd2dc131b30bbe29763683d265a85a29d"
-      ],
-      "generated_at": "2026-08-05 15:32:45.540704+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "e00a7fe5d022cefffb4bfb8505a3485d79739fb62cb45b03c5a682f1f12c7fd9",
-      "ticker": "PINS",
-      "direction": "neutral",
-      "confidence": 0.04,
-      "score": -0.042,
-      "sentiment_component": -0.03,
-      "event_component": 0.0,
-      "price_component": -0.092,
-      "evidence_ids": [
-        "40d7f784845f6052fcd2604aaf5676d4e5b8272494761976fe7ea8584432d528"
-      ],
-      "generated_at": "2026-08-05 15:32:45.878041+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "73169f7bc2b0924c8659f5c6861d96799a73dd90b91f9dcc5620d5fba57f217f",
+      "id": "d4bb958befc7dbaa1c6e054287d1c2e6259a5ca36736311851e391197ff490fb",
       "ticker": "PLTR",
       "direction": "bullish",
-      "confidence": 0.217,
-      "score": 0.713,
-      "sentiment_component": 0.425,
-      "event_component": 0.0,
+      "confidence": 0.42,
+      "score": 0.905,
+      "sentiment_component": 0.491,
+      "event_component": 0.5,
       "price_component": 1.0,
       "evidence_ids": [
-        "b8f63968e4eb9bc89f299c448bccf5d0d98579a7e46287e6a029743587d8597b",
-        "78330d8fa5ed80ed5a79a2a48bdfd378aa809a85af9b8ee210484721ee6ecfc5"
+        "332fb463c6cf9143653d99b83df33515f681e517f7389b37ef14375a46a70e2a",
+        "a9b625fe0842f00232bcafa1d45e47730f9fa376b71affdb2f02c4b8d0a7bd3d",
+        "30735b9de7f91a1d02e17022ce8c7e93e7edeef37a8affe9c4bdd618060ad618",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
       ],
-      "generated_at": "2026-08-05 15:32:46.236910+00:00",
+      "generated_at": "2026-08-05 17:46:30.549017+00:00",
       "horizon_days": 5
     },
     {
-      "id": "df9f19641e7498cabe79fc1239d368e2f46b5e6f60615f3e29e82c6e236af6e3",
+      "id": "6dbcaf8a18be07ec78d895aabe2bfacdf0a3fcea1cc3890679a8ee609c16dca3",
+      "ticker": "CAT",
+      "direction": "bullish",
+      "confidence": 0.187,
+      "score": 0.299,
+      "sentiment_component": 0.03,
+      "event_component": 0.0,
+      "price_component": 0.806,
+      "evidence_ids": [
+        "30735b9de7f91a1d02e17022ce8c7e93e7edeef37a8affe9c4bdd618060ad618",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
+      ],
+      "generated_at": "2026-08-05 17:46:31.039550+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "b6e389bdaccbb8b5247cc50c9348b6378f6cf72e4e7fec591882986bc7cdc72c",
+      "ticker": "AMAT",
+      "direction": "bullish",
+      "confidence": 0.193,
+      "score": 0.293,
+      "sentiment_component": 0.072,
+      "event_component": 0.0,
+      "price_component": 0.758,
+      "evidence_ids": [
+        "30735b9de7f91a1d02e17022ce8c7e93e7edeef37a8affe9c4bdd618060ad618",
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
+      ],
+      "generated_at": "2026-08-05 17:46:31.427876+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "e51d20a3fd79c34d67f2daaead93a900bb82479f106becfc1a8fe16c8c9b1587",
       "ticker": "SOXX",
       "direction": "bullish",
-      "confidence": 0.236,
-      "score": 0.336,
-      "sentiment_component": 0.262,
+      "confidence": 0.202,
+      "score": 0.294,
+      "sentiment_component": 0.125,
       "event_component": 0.0,
-      "price_component": 0.723,
+      "price_component": 0.718,
       "evidence_ids": [
-        "654c0e7e541c1623d7054dc8c36ea50a787316fea36fc6626333b2ee8b843e40"
+        "45b69de1000046a7c9e194a699af0277c23875e27ece3cdb1995eeb7674280df"
       ],
-      "generated_at": "2026-08-05 15:32:46.654863+00:00",
+      "generated_at": "2026-08-05 17:46:31.807440+00:00",
       "horizon_days": 5
     },
     {
-      "id": "f25e6d3de0d66f618103f59c21506224c7f0ffa17c4cad3372a8cac21cec2bf4",
-      "ticker": "FELE",
+      "id": "272477d89b7781dcc4fa168c53796766e62ca1e2e8971c3e761578922bc66f7c",
+      "ticker": "ASTE",
       "direction": "neutral",
-      "confidence": 0.124,
-      "score": 0.155,
-      "sentiment_component": 0.0,
-      "event_component": 0.0,
-      "price_component": 0.431,
+      "confidence": 0.033,
+      "score": -0.074,
+      "sentiment_component": 0.135,
+      "event_component": 0.5,
+      "price_component": -0.801,
       "evidence_ids": [
-        "a66d1fe55943b6e5aac475e1bfcee986f578d3171b3f03ddc2ca742b6716fce7"
+        "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c"
       ],
-      "generated_at": "2026-08-05 15:32:47.340783+00:00",
+      "generated_at": "2026-08-05 17:46:32.152458+00:00",
       "horizon_days": 5
     },
     {
-      "id": "9f838983bd45cbfbdc717bb25a4fa51231cebf257c35891ff7c21ef678b3e8e8",
-      "ticker": "TRS",
+      "id": "22b3161577f04550bca44bf1e303a4131870948ef8a28f6411c6edac1f664135",
+      "ticker": "BWFG",
       "direction": "neutral",
-      "confidence": 0.142,
-      "score": 0.188,
-      "sentiment_component": 0.0,
+      "confidence": 0.012,
+      "score": -0.013,
+      "sentiment_component": 0.135,
       "event_component": 0.0,
-      "price_component": 0.521,
+      "price_component": -0.145,
       "evidence_ids": [
-        "a66d1fe55943b6e5aac475e1bfcee986f578d3171b3f03ddc2ca742b6716fce7"
+        "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c"
       ],
-      "generated_at": "2026-08-05 15:32:47.701837+00:00",
+      "generated_at": "2026-08-05 17:46:32.530293+00:00",
       "horizon_days": 5
     },
     {
-      "id": "d39b6cd9ae09237a4169e7391e63d45505794247d63bd43096b3eee426cbe217",
-      "ticker": "EGBN",
+      "id": "fccdbb453e862217437a3fb2fd30d1905b681f0ed10a177700aee08f0b6f8876",
+      "ticker": "GABC",
       "direction": "neutral",
-      "confidence": 0.052,
-      "score": 0.057,
-      "sentiment_component": 0.0,
+      "confidence": 0.027,
+      "score": 0.029,
+      "sentiment_component": 0.135,
       "event_component": 0.0,
-      "price_component": 0.157,
+      "price_component": -0.027,
       "evidence_ids": [
-        "a66d1fe55943b6e5aac475e1bfcee986f578d3171b3f03ddc2ca742b6716fce7"
+        "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c"
       ],
-      "generated_at": "2026-08-05 15:32:48.090728+00:00",
+      "generated_at": "2026-08-05 17:46:32.944888+00:00",
       "horizon_days": 5
     },
     {
-      "id": "1470a86c672c14a752e31e3b2a9e9c71cc4757a5be9cf2eb11b8067b57ce910d",
-      "ticker": "SIMO",
-      "direction": "bullish",
-      "confidence": 0.17,
-      "score": 0.257,
-      "sentiment_component": 0.0,
-      "event_component": 0.0,
-      "price_component": 0.713,
-      "evidence_ids": [
-        "a66d1fe55943b6e5aac475e1bfcee986f578d3171b3f03ddc2ca742b6716fce7"
-      ],
-      "generated_at": "2026-08-05 15:32:48.436204+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "6392699eb20f06816b2a39c8e214e02f03a4a0dcbb23acc91219009768aadc5f",
-      "ticker": "DASH",
+      "id": "2f7f9af378aa2f20e270ae39cba1420495e787cd0bab21fde8d86fd65564158c",
+      "ticker": "CBNK",
       "direction": "neutral",
-      "confidence": 0.185,
-      "score": 0.226,
-      "sentiment_component": 0.235,
+      "confidence": 0.015,
+      "score": 0.016,
+      "sentiment_component": 0.135,
       "event_component": 0.0,
-      "price_component": 0.439,
+      "price_component": -0.063,
       "evidence_ids": [
-        "f2bcb1db33ae2907ca6bd91ebd3f56e8797aa8bf793e360fea2877ecf8927ec7"
+        "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c"
       ],
-      "generated_at": "2026-08-05 15:32:48.783543+00:00",
+      "generated_at": "2026-08-05 17:46:33.319344+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2433c6fb3a342cd907188d2954834cef3ecb79716801e243ef10995a659de97d",
-      "ticker": "WMT",
+      "id": "b6c37eff8b083c180e016c23994b0f92460597ee64aa7d73d8310ca067f5a6dd",
+      "ticker": "CARE",
       "direction": "neutral",
-      "confidence": 0.024,
-      "score": -0.029,
-      "sentiment_component": 0.218,
+      "confidence": 0.132,
+      "score": 0.152,
+      "sentiment_component": 0.135,
       "event_component": 0.0,
-      "price_component": -0.257,
+      "price_component": 0.313,
       "evidence_ids": [
-        "f2bcb1db33ae2907ca6bd91ebd3f56e8797aa8bf793e360fea2877ecf8927ec7"
+        "58c9bf18dffce29a9c648956fb913d8a7af3205c47d571184d754482c875599c"
       ],
-      "generated_at": "2026-08-05 15:32:49.205803+00:00",
+      "generated_at": "2026-08-05 17:46:33.668366+00:00",
       "horizon_days": 5
     }
   ],
@@ -1146,28 +1358,28 @@
     "total_amount": 10000.0,
     "allocations": [
       {
-        "ticker": "BAC",
-        "amount": 3894.74,
-        "percentage": 38.9474,
-        "rationale": "BAC: bullish signal, confidence 30%, 5-day horizon"
+        "ticker": "PLTR",
+        "amount": 3860.29,
+        "percentage": 38.6029,
+        "rationale": "PLTR: bullish signal, confidence 42%, 5-day horizon"
       },
       {
-        "ticker": "AVGO",
-        "amount": 3118.42,
-        "percentage": 31.1842,
-        "rationale": "AVGO: bullish signal, confidence 24%, 5-day horizon"
+        "ticker": "AMD",
+        "amount": 3437.5,
+        "percentage": 34.375,
+        "rationale": "AMD: bullish signal, confidence 37%, 5-day horizon"
       },
       {
-        "ticker": "NVDA",
-        "amount": 2986.84,
-        "percentage": 29.8684,
-        "rationale": "NVDA: bullish signal, confidence 23%, 5-day horizon"
+        "ticker": "GOOGL",
+        "amount": 2702.21,
+        "percentage": 27.0221,
+        "rationale": "GOOGL: bullish signal, confidence 29%, 5-day horizon"
       }
     ],
     "risk_summary": "Moderate allocation: 40% in SPY for diversified exposure, 60% across 3 high-confidence bullish equities.",
     "expected_return_range": [
-      0.1656,
-      0.5812
+      -0.0564,
+      2.3181
     ],
     "time_horizon_months": 12,
     "rebalance_trigger": "monthly",
@@ -1184,28 +1396,22 @@
   "requires_interrupt": true,
   "human_review_decision": null,
   "error_log": [
-    "event_detection [bbcdbf41]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [cf004575]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [4b80760c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [cfcea892]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [11571746]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a2bcc89c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [e1bbbd40]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [a664fd6e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [80bb6d61]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [b9e30a9a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [bbcdbf41]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [4f6e7144]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [168908c4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8ce478eb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [664c42b2]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [e0ea8f34]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7ce0b7c3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [14173bcb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [3d270da8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6d4287ef]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [be0f1ab6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [ff560f54]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c34082ce]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f7512f53]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [2f0a5e35]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [a7de87d5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [8a827e80]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [de56a4bd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1a71d689]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [dcd7272e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b8e6f911]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [1173e27b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [09952c92]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1220,12 +1426,6 @@
     "event_detection [605d69de]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [56aa814b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [722dc6d3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f331b3e7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c2c73570]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ae3d555f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6ec16f25]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7f3aa3f0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [cc8f3e05]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7ae0ac71]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [698251c0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [3a061f1e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1240,17 +1440,12 @@
     "event_detection [4d8cba83]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [ba3fba31]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [5f3f280e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [3f4e569e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [68c330b7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1e8e0272]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6a6d39f9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1c79d129]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [128545b5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [2b5dad2d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [a4e2778a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f65c0bec]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [25980e82]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [379bc465]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [1a71d689]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [50fb85b5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7872d502]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [22145cb5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1262,11 +1457,6 @@
     "event_detection [9d6195ca]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [3dec9184]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [6911e94e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [4f5244fe]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [98dd3232]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [66a4e924]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f42d8817]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [934ae2f3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [ce92c18e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [8be20c14]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [20dd65b1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1283,46 +1473,46 @@
     "event_detection [bc3e2a17]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7a82565a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [2c0cbf10]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [0e7b4a7e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1b74da36]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [95b84494]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ac3ae99f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [d9443b96]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [06ca2c86]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [261e6421]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [756279fc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [8d7e4d8a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d2a03135]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [6ca65be9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [255c304a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a3e73e87]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f8701e9d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [c37cfa8f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [b7f2654c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [bd6f9bd6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [bf0e5157]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [21b3e5e5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7b499e02]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7df4c308]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [a683dfce]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [33bd0150]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6046ece1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [9b9d50f4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fa451b80]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [2ecf6cfc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [983c9e7f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fd51727b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [02e925c7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [5f240161]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ffa6a91e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fbafd43f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [5229a4d8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [aee38fff]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [89b5a43f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [001d83d2]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [eabf88ef]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [886ca9a4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [85d46e5d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [06aaaf09]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fa6da8c7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [af354c05]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c44a6a82]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [605418e7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [19c9c1ee]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [07ae7a17]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ee82998a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [74cbcbdc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1df04b7f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [9a37daa2]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [faefcd79]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d3ec5079]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [9dc1c452]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d653f63f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [ce01077f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [0f3565b4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [4e440e83]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [69b9c203]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [7b499e02]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d04ebf1e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [0035cd30]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a7cf11ce]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [ee62df7b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [baaf41a9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [3f04a5c3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [5075c05f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [928b04cd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [ae9c6494]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2fa87592]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [8067ddb2]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [85aeb90e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [0fe53558]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [7758ee38]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [111d9c21]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [402a8ac6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [ff5a6638]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [e21c00ac]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b8c0ba3c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f0629d76]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1333,38 +1523,24 @@
     "event_detection [350639cb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [005dd5c4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c7450a87]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [9253d7cc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [58c9b877]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b5a26801]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [05574587]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [df01f6ed]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [15f1b472]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [332fb463]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a9b625fe]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [ba927f5e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [93fd00b4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [0037f738]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [136eda2d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [26818763]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [05f8ee92]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [e56df0f4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [40d7f784]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b8df50e8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b434ee9b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6debae77]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c6f62ffd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [65418120]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b8f63968]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f6d31b01]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [847acbff]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [654c0e7e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7ecaf331]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [d8cdf016]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [a66d1fe5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [78330d8f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ba4757e5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [060fcadc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f83ed07e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ba895e8b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [a786c6d7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [a60bebce]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [460e3c29]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [368aa5be]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f2bcb1db]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6f3d3ced]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}"
+    "event_detection [cf33ddaf]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2274df5d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [30735b9d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [9bd11f57]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [b96bb520]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [dbed9751]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [5e6c1096]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}"
   ],
   "run_date": "2026-08-05"
 }
