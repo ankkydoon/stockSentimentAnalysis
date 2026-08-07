@@ -1,1047 +1,853 @@
 {
-  "run_date": "2026-08-06",
+  "run_date": "2026-08-07",
   "signals": [
     {
-      "id": "ddecca6c89440b38f00ca6b567a35266f04a6f04a971511229dd23910d20dfc4",
+      "id": "c1b1c8fb687be0b67d24760b594594fccae5826bcfbf17f2f4a9bdffa5205ba0",
+      "ticker": "META",
+      "direction": "neutral",
+      "confidence": 0.085,
+      "score": -0.231,
+      "sentiment_component": -0.272,
+      "event_component": -1.0,
+      "price_component": 0.551,
+      "evidence_ids": [
+        "db7b6d791f5a413283810d59b7aa3d196d7fa4f4d944d1bde7a8366e129ccd9b",
+        "d875e4afe7119e2d02d73c4457a1216880f923e1d6cf49a0e0dbd58c04cb4f47",
+        "7ae0ac718d1486692acb0ae47c0251284950df488fc6f539e89016429807be03",
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
+        "2b1141b5a9731e96b02c8aa605407650f3c796ac296c202181cd34747d9bb6cb",
+        "31ea9bb3f9d072f7f97e50dc6e9d17f790a7326bd833d1b6045b75ae5d46daf2"
+      ],
+      "generated_at": "2026-08-07 01:01:48.114663+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0f810d1f7cb364230351c55f9b148b8fe8eda2742c65a9c20806619f868c7c68",
+      "ticker": "ABNB",
+      "direction": "neutral",
+      "confidence": 0.053,
+      "score": 0.061,
+      "sentiment_component": 0.24,
+      "event_component": 0.0,
+      "price_component": -0.025,
+      "evidence_ids": [
+        "58f14d31eac3f224f88a61ce451b9b108c07d67fe51800c7f6b7e48abcf23cc0"
+      ],
+      "generated_at": "2026-08-07 01:01:48.838185+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "e5b8dfb23a0a9b9798880e6808109cd11fdd035b2f0882cf000ecdb0be9be3b9",
+      "ticker": "DIS",
+      "direction": "bullish",
+      "confidence": 0.289,
+      "score": 0.466,
+      "sentiment_component": 0.452,
+      "event_component": 0.0,
+      "price_component": 0.932,
+      "evidence_ids": [
+        "63e13adc77c4df75fa42836122ab0cf4d766bacac1d7f7c41e9a3638466745a0"
+      ],
+      "generated_at": "2026-08-07 01:01:49.268820+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "69f3f1b581306681b1a72a1af9520282d5f17f579d7dba14901528e993044fa0",
+      "ticker": "AMZN",
+      "direction": "bullish",
+      "confidence": 0.148,
+      "score": 0.527,
+      "sentiment_component": -0.047,
+      "event_component": 0.0,
+      "price_component": 1.0,
+      "evidence_ids": [
+        "d875e4afe7119e2d02d73c4457a1216880f923e1d6cf49a0e0dbd58c04cb4f47",
+        "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb",
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
+        "e7094b75e40aeb35def2f461b210ff4a5dae8d50c4eed5b87350cbc8d0366f95",
+        "086d724b2def61ae994382cbbdf56fcabf0cab199b0bc1494f5c55da3a267be8",
+        "31ea9bb3f9d072f7f97e50dc6e9d17f790a7326bd833d1b6045b75ae5d46daf2"
+      ],
+      "generated_at": "2026-08-07 01:01:50.441527+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0ede3571a010fc7a828d19856ea8197b8d3c1c32f3b9e7251c4f6897ead2d03b",
+      "ticker": "GOOGL",
+      "direction": "bullish",
+      "confidence": 0.266,
+      "score": 0.375,
+      "sentiment_component": -0.06,
+      "event_component": 0.5,
+      "price_component": 0.602,
+      "evidence_ids": [
+        "d875e4afe7119e2d02d73c4457a1216880f923e1d6cf49a0e0dbd58c04cb4f47",
+        "385021b23d07d11e1b7482995b2f09ab8b8f7bfc0d21f3f8489974c4254260e8",
+        "28248ced91a82be5f074c66d68f971c08d894b262350f1b4688f11a2497f32ee",
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
+        "2aad2618c23a89ff38c57cc33e0629e529b220a87b57f5dd1da8306e238cc1b0",
+        "bfc44a380de601052e5ba05e0037e3e5bafe6c49889798df9b474946de3671fa",
+        "3496b2e2427d3f52996e16d71c90e821a8f5a85aa81753f4f9a87d72bdbf3f82",
+        "e7094b75e40aeb35def2f461b210ff4a5dae8d50c4eed5b87350cbc8d0366f95",
+        "086d724b2def61ae994382cbbdf56fcabf0cab199b0bc1494f5c55da3a267be8",
+        "dd5c660b8dd2b7ca35cc56385b8ef5b4110345f796586f5b9a96b31bb7361825"
+      ],
+      "generated_at": "2026-08-07 01:01:51.155427+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "7a08338f39da2248b6e2f15b303c7f5dbe32ece92ff371bed0072a090d1ccd12",
+      "ticker": "MSFT",
+      "direction": "neutral",
+      "confidence": 0.117,
+      "score": 0.172,
+      "sentiment_component": -0.147,
+      "event_component": 0.0,
+      "price_component": 0.595,
+      "evidence_ids": [
+        "d875e4afe7119e2d02d73c4457a1216880f923e1d6cf49a0e0dbd58c04cb4f47",
+        "2fb4010d7445ed038354ad5aa4e5e19d7f707a63b8025f064c9f49e83700791c",
+        "02966a8b50c0676979a3cb6a5cc718f4cebb736ddfdc941f84691a24140bd402",
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
+        "bfc44a380de601052e5ba05e0037e3e5bafe6c49889798df9b474946de3671fa",
+        "4b87dda2e4779861d03646c8f4a7fb5f44e10affbb3c58c1ace60ac633835ebd",
+        "3496b2e2427d3f52996e16d71c90e821a8f5a85aa81753f4f9a87d72bdbf3f82",
+        "04a05617dc633f6a2e094b4672b2026f5ca09004effee7d4a3dec622b7b290e3",
+        "e7094b75e40aeb35def2f461b210ff4a5dae8d50c4eed5b87350cbc8d0366f95",
+        "086d724b2def61ae994382cbbdf56fcabf0cab199b0bc1494f5c55da3a267be8",
+        "4037cccefd38553e4ad859a039ff0bc5a4d9b64c62bed1616c250378087fd4ef",
+        "31ea9bb3f9d072f7f97e50dc6e9d17f790a7326bd833d1b6045b75ae5d46daf2"
+      ],
+      "generated_at": "2026-08-07 01:01:51.946321+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "d5431e98560e6901631dba26af61cf22b397820bfe2fb6f51e8db0302377799b",
+      "ticker": "AMD",
+      "direction": "bullish",
+      "confidence": 0.255,
+      "score": 0.434,
+      "sentiment_component": 0.223,
+      "event_component": 1.0,
+      "price_component": 0.051,
+      "evidence_ids": [
+        "a281009f77b7423e76b7165e8258e0963f667b02bf358a29f7230166e49d7437",
+        "3a061f1edef8129e7f01ef471dcc0d71ac35a35a690a882b460a1e53798731a1",
+        "0b294c82e55726892d54aff10f53b225de71d9c68c14d665b6ff1d55b897d0b6",
+        "fe899b9ed7856e43718b5eb00f534f6209f8071a8915f6d525164ea18d4813ae",
+        "66ac9189f7e348b710aec50f552f6377428112e214f3be2be14639d23b85c8ad"
+      ],
+      "generated_at": "2026-08-07 01:01:52.630450+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "aefe72d4e24b4b6a9df0fa2e5756562bcf9552440ded55c91b78d871eed6860a",
       "ticker": "F",
       "direction": "neutral",
-      "confidence": 0.006,
-      "score": 0.013,
-      "sentiment_component": 0.305,
-      "event_component": 0.5,
-      "price_component": -0.696,
+      "confidence": 0.099,
+      "score": -0.21,
+      "sentiment_component": 0.378,
+      "event_component": 0.0,
+      "price_component": -0.887,
       "evidence_ids": [
         "2f7240dd18499d4beec7b12cf650e00e449b99a4d1a2f8d6c47f1a20417e3827"
       ],
-      "generated_at": "2026-08-06 15:34:20.317990+00:00",
+      "generated_at": "2026-08-07 01:01:53.492347+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2eed019d9fed9f8364e61fe2f1901d8f5debe761832542ce4c0f14e67ebe5b21",
-      "ticker": "CMCSA",
-      "direction": "neutral",
-      "confidence": 0.19,
-      "score": 0.231,
-      "sentiment_component": 0.263,
-      "event_component": 0.0,
-      "price_component": 0.43,
-      "evidence_ids": [
-        "218744383bbc1167ca0486004cafdbae19e069abe80a3f6254f51fccebeab95a"
-      ],
-      "generated_at": "2026-08-06 15:34:21.031117+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "7945ca522771e7c7cbd542154850da34e219791b358acca34ee56fecd89011ea",
-      "ticker": "LLY",
-      "direction": "bullish",
-      "confidence": 0.2,
-      "score": 0.281,
-      "sentiment_component": 0.695,
-      "event_component": 0.0,
-      "price_component": 0.223,
-      "evidence_ids": [
-        "2b23b434c61426ece7bf29e71bc7ae1493122c098e04f005fb11f10c189cff52"
-      ],
-      "generated_at": "2026-08-06 15:34:21.524105+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "a73274bfd635372c3b32a10f761f1898a4b041d551331e670a776974bd2fe56e",
-      "ticker": "JPM",
-      "direction": "neutral",
-      "confidence": 0.001,
-      "score": -0.001,
-      "sentiment_component": -0.255,
-      "event_component": 0.0,
-      "price_component": 0.201,
-      "evidence_ids": [
-        "edd271eb091e615d1d2cb8958c12857c6c72e1d0c4432ae20708d4a038e2164b",
-        "ac31f7c21e605f0dd78d2b2ae09bb797a3250d5d478dd522b904ff45422d75dc"
-      ],
-      "generated_at": "2026-08-06 15:34:21.994890+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1c77ce5aa2caa600436506ecb88c6e2b9d8ca86abfe9bac2db6f84308e7562e3",
-      "ticker": "GOOGL",
-      "direction": "bullish",
-      "confidence": 0.28,
-      "score": 0.4,
-      "sentiment_component": -0.041,
-      "event_component": 0.5,
-      "price_component": 0.655,
-      "evidence_ids": [
-        "94da3b6c2ac4c8a5f018fc614d6cbe98fdbdec397258c07c8d102a139690eea6",
-        "4c18cdf6057029eb1cdedef124f363cb995318023da248bd37e1a117e28c3298",
-        "385021b23d07d11e1b7482995b2f09ab8b8f7bfc0d21f3f8489974c4254260e8",
-        "b1d7e7253b5fa956c4888562d15a598493fcfc5f81548d98cc2805899a1bdb2a",
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "40baca81f961388e57b418be21b432a3945d56b4c7ba5b851a42cd7c6989d47e",
-        "ad8f6dc8daa919313325ef1bee4058344bc20e7ffe8f51009cf6de453332f73f"
-      ],
-      "generated_at": "2026-08-06 15:34:22.376326+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "0f4a942e60efacd417e064e6d0b2b1245c49bba18964337dc6f2ca8934bdebe4",
-      "ticker": "GE",
-      "direction": "neutral",
-      "confidence": 0.149,
-      "score": 0.222,
-      "sentiment_component": -0.063,
-      "event_component": 0.0,
-      "price_component": 0.666,
-      "evidence_ids": [
-        "a4657072df2a9698e42853d87647d3b57974b71c583ec1319e2e62b0c0b1ae7b"
-      ],
-      "generated_at": "2026-08-06 15:34:23.012423+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "a2d9c0fa3c8c29308feff465129276eb5b34ec02a0b430a801e15687ad247b37",
+      "id": "edb5f3143580a7bf73a1c2bedaa97c4e80a04f4df65e113f513d491957ab82b8",
       "ticker": "TSLA",
       "direction": "neutral",
-      "confidence": 0.075,
-      "score": 0.121,
-      "sentiment_component": -0.42,
-      "event_component": 0.5,
-      "price_component": 0.186,
+      "confidence": 0.037,
+      "score": -0.048,
+      "sentiment_component": -0.371,
+      "event_component": 0.0,
+      "price_component": 0.164,
       "evidence_ids": [
         "05087e8ff2b7a77588d126278fc539b4bd8e135705ceffb7f76414ead7917764",
         "0563a97b46a114d3be0fd90959a4a32eb5ed08aa7395394b5eecf7e8c8a8dace",
         "c0155127e1cae62f3147dd269db08580209b2403e24b25889662c6e039eb3eca",
         "4d8cba83b624dd6c0f9021e8cef2d920990886d0f2df5001d6d9ec19f92e211b",
         "68c330b725dd918d39304d6b3d32dbfdf5f96bf1ceaed19794f6d25e47a58f37",
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "ff5a663811462474c2831396c69d6884bcd37496004702f51b1ba30eace0bf4a",
-        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
-        "5068a24202b6aeb76cd4da129c6ddd8a7ed739729f4b88a780cfb63957e2a295"
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e"
       ],
-      "generated_at": "2026-08-06 15:34:23.405955+00:00",
+      "generated_at": "2026-08-07 01:01:53.799889+00:00",
       "horizon_days": 5
     },
     {
-      "id": "62f63e6d906bf702670143ec4265d4b80e853e5c8b45bca85e215951db84476e",
+      "id": "40842837f7507306376e09da36a314c2a1fb9fd8a5cf2f844149ca768084573a",
       "ticker": "BAC",
       "direction": "neutral",
-      "confidence": 0.075,
-      "score": 0.088,
-      "sentiment_component": -0.06,
+      "confidence": 0.103,
+      "score": 0.121,
+      "sentiment_component": 0.023,
       "event_component": 0.0,
-      "price_component": 0.293,
+      "price_component": 0.317,
       "evidence_ids": [
         "e1bbbd40f32783c7742fabcdbc6079dfc225e68102bde7158635cdb45b3d5d17",
         "1096de7379c8dd082e0aced64ac5d9ad0dabbf8d4286d223c1298a6e639fafd3"
       ],
-      "generated_at": "2026-08-06 15:34:23.908238+00:00",
+      "generated_at": "2026-08-07 01:01:54.197491+00:00",
       "horizon_days": 5
     },
     {
-      "id": "5377cb80ae78eb42792039329e596c1a4305786ec0f8db5f415c17d494b0f658",
+      "id": "e1a77613f3320a84ce75e4ca58b17aec0d65fbb3b5ea8fd2d6dd52cf49c080bd",
       "ticker": "MS",
       "direction": "neutral",
-      "confidence": 0.159,
-      "score": 0.184,
-      "sentiment_component": 0.225,
+      "confidence": 0.127,
+      "score": 0.142,
+      "sentiment_component": 0.217,
       "event_component": 0.0,
-      "price_component": 0.332,
+      "price_component": 0.221,
       "evidence_ids": [
         "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb"
       ],
-      "generated_at": "2026-08-06 15:34:24.392562+00:00",
+      "generated_at": "2026-08-07 01:01:54.961770+00:00",
       "horizon_days": 5
     },
     {
-      "id": "918a5d04ca9b1a7aaaccdee0c2d749fb85c9e1bfdd101b42106d785c8ff2fd35",
-      "ticker": "AMZN",
-      "direction": "bullish",
-      "confidence": 0.247,
-      "score": 0.736,
-      "sentiment_component": -0.023,
-      "event_component": 0.5,
-      "price_component": 1.0,
-      "evidence_ids": [
-        "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb",
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "1fa2183b44eee84a6e2aaa1ca088275a069a48eb1762d0901886896fe8112952",
-        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
-        "8c222b0452efce11c6f77e0e970ea626e1ca88959fec0b7c35235204c8ab9c02",
-        "e21c00acc6bbad02bd90ce86767361dedfdf049c4ad2e8f2d1d0a305c55bc8ee",
-        "d42c4495943a93d6362c5da1dbdcb651a225055f7d55f4b7cc3ebeff6c1f2284",
-        "40baca81f961388e57b418be21b432a3945d56b4c7ba5b851a42cd7c6989d47e",
-        "ad8f6dc8daa919313325ef1bee4058344bc20e7ffe8f51009cf6de453332f73f",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a",
-        "9dd023757c4424a7999fc2e744cce7f35a29c90827f4f2b5079e96d1322fc445",
-        "724f6428c74e1cc099e3aeac0ee7771fe858c27007b67bfa21a823c93883c34e"
-      ],
-      "generated_at": "2026-08-06 15:34:24.742040+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5fab245cf2aac8554340a4be7c61a14805d58dd71c92d73db3c54edb07a53a7a",
+      "id": "5144e075d98b22310ac84a2569060ec873556d33ef9ceb2635b848a31bc08358",
       "ticker": "V",
-      "direction": "neutral",
-      "confidence": 0.135,
-      "score": 0.195,
-      "sentiment_component": 0.657,
+      "direction": "bullish",
+      "confidence": 0.184,
+      "score": 0.261,
+      "sentiment_component": 0.698,
       "event_component": 0.0,
-      "price_component": 0.013,
+      "price_component": 0.166,
       "evidence_ids": [
         "af15c682255d8bd1c3139abaa892e21ed6dbc0dfb20718cf28549b7033198b83"
       ],
-      "generated_at": "2026-08-06 15:34:25.221312+00:00",
+      "generated_at": "2026-08-07 01:01:55.300677+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2fae0a4ce9b14fe96189c7686fd82be2525902e5c1c645e4e3d2fd42c403f4b4",
+      "id": "4d75b30604396ff32d96fac886ca4cf5f45df89000c074e234efa07819abffbd",
       "ticker": "NDAQ",
       "direction": "neutral",
-      "confidence": 0.026,
-      "score": 0.039,
-      "sentiment_component": -0.272,
-      "event_component": 0.5,
-      "price_component": -0.162,
+      "confidence": 0.083,
+      "score": -0.095,
+      "sentiment_component": -0.276,
+      "event_component": 0.0,
+      "price_component": -0.042,
       "evidence_ids": [
         "605d69de096e6963231191379914588a48062e35e9994411e731aa4c2bdedb6b",
-        "8cec6048bda4506c3b368ff602ae17dc8b5d6c4a7eeb4a94e6788bf0279a31ca",
-        "9b6d306db08cd45eaa6029ce5f47fe69338fb3fc1e63a62e465f56e74e5dff5f",
         "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "98e7e3fe7b9d2c47768a108c6e940c32e8b0bda3f3a60997de62e5d335aaf689",
-        "ad8f6dc8daa919313325ef1bee4058344bc20e7ffe8f51009cf6de453332f73f",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a",
-        "5068a24202b6aeb76cd4da129c6ddd8a7ed739729f4b88a780cfb63957e2a295",
-        "745395b6090ac64367e1949e49cff69f83d2c3502556e4019adfe53cddccc035",
-        "9dd023757c4424a7999fc2e744cce7f35a29c90827f4f2b5079e96d1322fc445"
+        "3496b2e2427d3f52996e16d71c90e821a8f5a85aa81753f4f9a87d72bdbf3f82"
       ],
-      "generated_at": "2026-08-06 15:34:25.631482+00:00",
+      "generated_at": "2026-08-07 01:01:55.635880+00:00",
       "horizon_days": 5
     },
     {
-      "id": "6741958c8d703e78389adc59c328a07639c356fce4988e34254cc9e86129e91d",
-      "ticker": "AMD",
-      "direction": "neutral",
-      "confidence": 0.194,
-      "score": 0.24,
-      "sentiment_component": 0.158,
-      "event_component": 0.5,
-      "price_component": 0.051,
-      "evidence_ids": [
-        "3a061f1edef8129e7f01ef471dcc0d71ac35a35a690a882b460a1e53798731a1",
-        "1b7f67d905968762fe06abb5ed353b12be96ae19f775222c482ad3e6e92ed4ac",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a"
-      ],
-      "generated_at": "2026-08-06 15:34:26.045393+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "38a2a89b36d841836c31163fbe9572a40cdaa17fc987d23fda17f216fff6dddd",
-      "ticker": "META",
-      "direction": "neutral",
-      "confidence": 0.092,
-      "score": 0.136,
-      "sentiment_component": -0.215,
-      "event_component": 0.0,
-      "price_component": 0.549,
-      "evidence_ids": [
-        "7ae0ac718d1486692acb0ae47c0251284950df488fc6f539e89016429807be03",
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
-        "5f7b4be7b45fc9f031c0260fee4b7b11727f3b58811a91683a90bef351af3077",
-        "40baca81f961388e57b418be21b432a3945d56b4c7ba5b851a42cd7c6989d47e",
-        "a6d13bc75a64a66497f3551ef3789ebdae3e29bf544aa18aa1827b83ce99f4bd",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a",
-        "5068a24202b6aeb76cd4da129c6ddd8a7ed739729f4b88a780cfb63957e2a295"
-      ],
-      "generated_at": "2026-08-06 15:34:26.800065+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "11a10d09556f86decce75e4475a6ad0432fe3c000b068d8c38d950472713f067",
+      "id": "37444581a4398471fce89762378c7c8aa8520c996d0c92048a1f9d016c60bbc5",
       "ticker": "NFLX",
-      "direction": "neutral",
-      "confidence": 0.097,
-      "score": 0.114,
-      "sentiment_component": 0.334,
-      "event_component": 0.0,
-      "price_component": 0.048,
+      "direction": "bullish",
+      "confidence": 0.241,
+      "score": 0.295,
+      "sentiment_component": 0.341,
+      "event_component": 0.5,
+      "price_component": 0.058,
       "evidence_ids": [
         "6416bc9226ed9c4f5e9ccbe82218ba737ba580dae9b0a3cbba7f4a6ba739c2fb"
       ],
-      "generated_at": "2026-08-06 15:34:27.420875+00:00",
+      "generated_at": "2026-08-07 01:01:55.935429+00:00",
       "horizon_days": 5
     },
     {
-      "id": "3de7d2506d0fceb2be7c6c8975837598c628ef2c03e79d1e642bb9797a7cd738",
+      "id": "c903f9796d9480b5da7102f742ffe6708b35c40ed5538eae5c01710dca59cdc2",
       "ticker": "AAPL",
-      "direction": "bearish",
-      "confidence": 0.277,
-      "score": -0.539,
-      "sentiment_component": 0.161,
-      "event_component": -1.0,
-      "price_component": -0.649,
+      "direction": "neutral",
+      "confidence": 0.005,
+      "score": 0.01,
+      "sentiment_component": 0.154,
+      "event_component": 0.5,
+      "price_component": -0.585,
       "evidence_ids": [
         "c0155127e1cae62f3147dd269db08580209b2403e24b25889662c6e039eb3eca",
+        "cc005f6a9c44f9ad4b780bb4c29c8c45244875b6688e9370d01775506514ce73",
+        "02966a8b50c0676979a3cb6a5cc718f4cebb736ddfdc941f84691a24140bd402",
+        "28248ced91a82be5f074c66d68f971c08d894b262350f1b4688f11a2497f32ee",
+        "e4fa2e8d38b28a0b5fac393077e3e8dfbb604d8f34a5cf10a986b9fc43639c97",
+        "9005477dabe3740f85fa12b2be5677aae0adb02db8c97fc03d98dceeae0e05b6",
         "1a1a8ddfed7cb62dd8f9555fc2d5d423051a0693f4ec745d74aeb27f5f5d568f",
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "548329e742b8bc7ecc9a3d6d402e0ce946432deb2c76c22589bbfdee72676163",
-        "dbf7d9b43da1d5f3db5ef5dda2914351cbcb1c10a2ef8e0859effd54576b8012",
-        "1fa2183b44eee84a6e2aaa1ca088275a069a48eb1762d0901886896fe8112952",
-        "76823d7345e9433949a169bfccbb3acb857c0547bbeeecc16a0d02dfe68846ca",
-        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a"
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e"
       ],
-      "generated_at": "2026-08-06 15:34:27.847268+00:00",
+      "generated_at": "2026-08-07 01:01:56.788216+00:00",
       "horizon_days": 5
     },
     {
-      "id": "50178d3b56b28ef3ee9b348c97b5c0377df8f6e6e7875aae9b116c2be3f1c340",
+      "id": "bc42def2acda90fc6703bfade0e048bcad9062f73ac6e2e4db8e4db11b1cb212",
       "ticker": "COIN",
       "direction": "neutral",
-      "confidence": 0.112,
-      "score": -0.144,
-      "sentiment_component": 0.054,
+      "confidence": 0.027,
+      "score": 0.054,
+      "sentiment_component": 0.055,
+      "event_component": 0.667,
+      "price_component": -0.545,
+      "evidence_ids": [
+        "c5fcc73abb9cefb7d61701219ed6a74cefe801f307ef0ba7e265b33df32ddcbc",
+        "2c267f9fdff9edaf6d6ae03c6396ced469e3fd516f2d79fddf00cb2fc08ffbc7",
+        "5740c9e6e1853845a849b7bdbe519d10637aa9976c231e8049a1c40ade386933",
+        "cc005f6a9c44f9ad4b780bb4c29c8c45244875b6688e9370d01775506514ce73",
+        "cdc1b4324f321457cabc2e1091564ee63aa9c113a3a0061892758ced2200400a",
+        "53741429ddc1e37302e0d69e329ec8bec5fd7d04d84f870737765fc52c99ac6e",
+        "528f29f1e24313ea27345ed68b18652eab286e1c2efddd71173ca6b438b66449",
+        "0b294c82e55726892d54aff10f53b225de71d9c68c14d665b6ff1d55b897d0b6",
+        "56c9de908b3e2a1a3aa866d0bd22cbafd0c81de84ac92f1fade9a2d449f77a7b",
+        "246a70eaa6d0ccb59fd185ed89b3fd381a49f9918cc52ec7ecb6be32b509239c",
+        "5e733d6f4c3750452daf543e7529f9821178e7e382244093b83461955926101f",
+        "1bf9a5b9bc112665b6c286bbeaa96d331657893de1eac7b1a656af03c8cfde96",
+        "90b1417bf15e9222b8ee7b5d496be5b74000f9c1202278aa98c1e13c3ab39779",
+        "59d7f966202c7134aa181f4591c74a885bfce3f6455576791b780901dc8db611",
+        "2aad2618c23a89ff38c57cc33e0629e529b220a87b57f5dd1da8306e238cc1b0",
+        "9a862c5350f6161530e27ea78643b3be51e3e4ddbafe6ac41428ccdd336bf46c",
+        "8a7edba0162541c82b2566edde1ca5cd5f40cab8accdccc1896e4d35f5e19b3b",
+        "4037cccefd38553e4ad859a039ff0bc5a4d9b64c62bed1616c250378087fd4ef",
+        "2c1cda167733ce4c2e312bfa52f74cdfcb1529ec36eb852de7854d5ac1a2caa2"
+      ],
+      "generated_at": "2026-08-07 01:01:57.500874+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "37ac1fb9678f3687e1bbca205611584908e2ef3359dafe26ec4585eca2dbbd0e",
+      "ticker": "CVX",
+      "direction": "neutral",
+      "confidence": 0.025,
+      "score": -0.029,
+      "sentiment_component": 0.139,
+      "event_component": 0.0,
+      "price_component": -0.193,
+      "evidence_ids": [
+        "6b44fb47fac91d9a3200bb14d1011b61e64d9451516b89598aa9d1ae6c74cefa"
+      ],
+      "generated_at": "2026-08-07 01:01:57.971893+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "2c557a25ad8c531df788bdf9322992006fd85f1f8ca4b72af29f8f5d6262fd7d",
+      "ticker": "XOM",
+      "direction": "bullish",
+      "confidence": 0.159,
+      "score": 0.319,
+      "sentiment_component": 0.098,
+      "event_component": 1.0,
+      "price_component": -0.169,
+      "evidence_ids": [
+        "6b44fb47fac91d9a3200bb14d1011b61e64d9451516b89598aa9d1ae6c74cefa"
+      ],
+      "generated_at": "2026-08-07 01:01:58.443406+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "24c7816ff50e6f28bb06132f44d6a2d353379ba9b4adae2e020e5b2380404126",
+      "ticker": "ICE",
+      "direction": "neutral",
+      "confidence": 0.156,
+      "score": -0.192,
+      "sentiment_component": -0.113,
       "event_component": 0.0,
       "price_component": -0.443,
       "evidence_ids": [
-        "c5fcc73abb9cefb7d61701219ed6a74cefe801f307ef0ba7e265b33df32ddcbc",
-        "fb95957a7944498a2ded296035f121d81317acc787de46dda58841fcba6a79aa",
-        "1ed2ffb2307fbdc6cda03cbb39a56026e1e5afb26cf096ff318322391de3ef1e",
-        "fa787056f174fe93fbd62f837584838819c53944fc9491f99601a7d5b69b428f",
-        "ff5a663811462474c2831396c69d6884bcd37496004702f51b1ba30eace0bf4a",
-        "c20ea565dc004f271285c1766ba13c9b941cd8f63d459b793abe94445823ac87",
-        "4da7cf87f3084b24ee5445179545a6318938101529102491db992ba450d03c99",
-        "98e7e3fe7b9d2c47768a108c6e940c32e8b0bda3f3a60997de62e5d335aaf689",
-        "a6d13bc75a64a66497f3551ef3789ebdae3e29bf544aa18aa1827b83ce99f4bd"
+        "6edd004ea6caa6e087d7690f45d555447e42a89abedc55ef785c81c3625f635b"
       ],
-      "generated_at": "2026-08-06 15:34:28.207027+00:00",
+      "generated_at": "2026-08-07 01:01:58.759928+00:00",
       "horizon_days": 5
     },
     {
-      "id": "443fa251ceb78163976df60423f6de38227368e76ad69fe8976a16c6bf9b94b5",
-      "ticker": "DDOG",
+      "id": "6b6a4fd6c87b9e17c29ed88aa7cc5357c9b8b862bb115a8e8b6c928441ed25ed",
+      "ticker": "LMT",
       "direction": "neutral",
-      "confidence": 0.111,
-      "score": -0.192,
-      "sentiment_component": 0.257,
+      "confidence": 0.003,
+      "score": 0.003,
+      "sentiment_component": -0.132,
       "event_component": 0.0,
-      "price_component": -0.738,
+      "price_component": 0.113,
       "evidence_ids": [
-        "2d46b6e398de4ce4e3883322005916f086822be6c1fd812d9b0e744bb44f9675",
-        "745395b6090ac64367e1949e49cff69f83d2c3502556e4019adfe53cddccc035"
+        "d3d77c2f45bce2ea8c7aaf9420d04705051ba195a439ed927a45ffbfa5eaf8ac"
       ],
-      "generated_at": "2026-08-06 15:34:28.559433+00:00",
+      "generated_at": "2026-08-07 01:01:59.233055+00:00",
       "horizon_days": 5
     },
     {
-      "id": "cc9ccaea7d41438cbe71293c71873cefbc0dfa1dbc6cc2ee1ca80e95c1d2bbc3",
-      "ticker": "INTC",
-      "direction": "neutral",
-      "confidence": 0.185,
-      "score": 0.222,
-      "sentiment_component": 0.282,
-      "event_component": 0.0,
-      "price_component": 0.39,
-      "evidence_ids": [
-        "880ae4e5d6d693a0fa2d7c1271dce48c2e10766083f1b692e45cb25bb30389a8"
-      ],
-      "generated_at": "2026-08-06 15:34:28.944660+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "f83822b345fab363319c66c6d4414327d2b9fc22a9a5f02e959359f96870b68a",
-      "ticker": "MU",
-      "direction": "neutral",
-      "confidence": 0.028,
-      "score": 0.03,
-      "sentiment_component": -0.021,
-      "event_component": 0.0,
-      "price_component": 0.099,
-      "evidence_ids": [
-        "6e1c43fc323f4ee6d08167121a47f7e7223f719946127585ab737a1c83ff626d",
-        "1a1a8ddfed7cb62dd8f9555fc2d5d423051a0693f4ec745d74aeb27f5f5d568f"
-      ],
-      "generated_at": "2026-08-06 15:34:29.415829+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "41b08e3b07c694ec4923aac9ffd86c1180725415b9c9de64d7c074972ef30780",
-      "ticker": "A",
-      "direction": "neutral",
-      "confidence": 0.032,
-      "score": 0.033,
-      "sentiment_component": 0.014,
-      "event_component": 0.0,
-      "price_component": 0.081,
-      "evidence_ids": [
-        "b1d7e7253b5fa956c4888562d15a598493fcfc5f81548d98cc2805899a1bdb2a"
-      ],
-      "generated_at": "2026-08-06 15:34:29.820908+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1365b30d7447dcff1a6d2c5c47e2176de066c53d3588174ddb1f2a1252829831",
-      "ticker": "ONFO",
-      "direction": "bearish",
-      "confidence": 0.207,
-      "score": -0.309,
-      "sentiment_component": -0.126,
-      "event_component": 0.0,
-      "price_component": -0.757,
-      "evidence_ids": [
-        "9b6d306db08cd45eaa6029ce5f47fe69338fb3fc1e63a62e465f56e74e5dff5f"
-      ],
-      "generated_at": "2026-08-06 15:34:30.156990+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "179e9e8b12fffe91351047a25b5228b109ff797d891ef70623943d018f6570b6",
-      "ticker": "FPS",
-      "direction": "neutral",
-      "confidence": 0.177,
-      "score": 0.244,
-      "sentiment_component": 0.073,
-      "event_component": 0.0,
-      "price_component": 0.62,
-      "evidence_ids": [
-        "e6b3584e0f61fed108948131a05f05df2349251d9b149f70c5eba7b817ba47d4"
-      ],
-      "generated_at": "2026-08-06 15:34:30.487867+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "d4b2148abfe0d3982858f76229a7ffa21de1f34fb0e636d5a1492a9ab870938f",
-      "ticker": "JKHY",
-      "direction": "neutral",
-      "confidence": 0.025,
-      "score": 0.026,
-      "sentiment_component": 0.024,
-      "event_component": 0.0,
-      "price_component": 0.053,
-      "evidence_ids": [
-        "6e89bcf8685a2a1a2e0fbc2e2e58cdb837f2ee5d091e75d0747634a18083badd"
-      ],
-      "generated_at": "2026-08-06 15:34:31.027410+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "530c75431dd6e7be491610f456f53b58af03366765ec5ad4b749b1c14c315a22",
-      "ticker": "GGG",
-      "direction": "neutral",
-      "confidence": 0.098,
-      "score": 0.123,
-      "sentiment_component": -0.058,
-      "event_component": 0.0,
-      "price_component": 0.388,
-      "evidence_ids": [
-        "dfae9268cecda7335e991e165fc82930fe4e7245b205b3c05d60e6c28fb5339a"
-      ],
-      "generated_at": "2026-08-06 15:34:31.520111+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "dd868c2e4e8df64d9a53c8c6f763334ebfe88a1fb1db1af6e7027063bd152771",
-      "ticker": "TYL",
-      "direction": "neutral",
-      "confidence": 0.122,
-      "score": -0.147,
-      "sentiment_component": -0.042,
-      "event_component": 0.0,
-      "price_component": -0.374,
-      "evidence_ids": [
-        "dcb3f5ee3ed89a62c52437404e569281f0580370253c547d7bb3e4019d84ab7d"
-      ],
-      "generated_at": "2026-08-06 15:34:31.931984+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "537a36dc585085f99327fd37c2c15210d4dcc1492e9837300443faab62e53a08",
-      "ticker": "MSFT",
-      "direction": "neutral",
-      "confidence": 0.105,
-      "score": 0.152,
-      "sentiment_component": -0.165,
-      "event_component": 0.0,
-      "price_component": 0.555,
-      "evidence_ids": [
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "dbf7d9b43da1d5f3db5ef5dda2914351cbcb1c10a2ef8e0859effd54576b8012",
-        "1fa2183b44eee84a6e2aaa1ca088275a069a48eb1762d0901886896fe8112952",
-        "8bf75ca3d5ebff2e8c83bc1234c5222053fe6714c2b4e97878842b1bf138183a",
-        "d42c4495943a93d6362c5da1dbdcb651a225055f7d55f4b7cc3ebeff6c1f2284",
-        "5f7b4be7b45fc9f031c0260fee4b7b11727f3b58811a91683a90bef351af3077",
-        "c20ea565dc004f271285c1766ba13c9b941cd8f63d459b793abe94445823ac87",
-        "40baca81f961388e57b418be21b432a3945d56b4c7ba5b851a42cd7c6989d47e",
-        "a6d13bc75a64a66497f3551ef3789ebdae3e29bf544aa18aa1827b83ce99f4bd",
-        "ad8f6dc8daa919313325ef1bee4058344bc20e7ffe8f51009cf6de453332f73f",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a",
-        "724f6428c74e1cc099e3aeac0ee7771fe858c27007b67bfa21a823c93883c34e"
-      ],
-      "generated_at": "2026-08-06 15:34:32.413166+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "d19f4663cfbb9009a1ab8e1781997a9093597a66f917e9751c1078f49e2701d4",
-      "ticker": "NVDA",
-      "direction": "bullish",
-      "confidence": 0.167,
-      "score": 0.303,
-      "sentiment_component": -0.08,
-      "event_component": 0.0,
-      "price_component": 0.905,
-      "evidence_ids": [
-        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-        "a6d13bc75a64a66497f3551ef3789ebdae3e29bf544aa18aa1827b83ce99f4bd",
-        "39ca006520a70f98cde0e00525f0ef73eb494f8205e750f0242073fd031f902a"
-      ],
-      "generated_at": "2026-08-06 15:34:32.805413+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "24acef64d3cdd365558eaed0a94e28573441e6865fca3312aa0320c43a414432",
-      "ticker": "PLTR",
-      "direction": "bullish",
-      "confidence": 0.239,
-      "score": 0.712,
-      "sentiment_component": 0.486,
-      "event_component": 0.0,
-      "price_component": 1.0,
-      "evidence_ids": [
-        "fdf5da44d31fd2bf73a894bc94c78ecb204a0a2e3b8ee7506ab885a203de6670"
-      ],
-      "generated_at": "2026-08-06 15:34:33.225027+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "f7ce5206d032e74ffd7b8c215903599ee58cedf67c3f7e9f06bbcedf855a50d1",
-      "ticker": "XOM",
+      "id": "bdf670866ecac7cdeea73ab24a3ab09f31a9dfe443cf698b727d5258ab0fca3c",
+      "ticker": "SPX",
       "direction": "neutral",
       "confidence": 0.063,
-      "score": -0.082,
-      "sentiment_component": 0.174,
+      "score": 0.072,
+      "sentiment_component": 0.248,
       "event_component": 0.0,
-      "price_component": -0.366,
+      "price_component": 0.0,
       "evidence_ids": [
-        "f7d9795a9c9bae4fa66416b51487c585ddf3f9020f179ec438ea25a6eb25363c"
+        "5e733d6f4c3750452daf543e7529f9821178e7e382244093b83461955926101f"
       ],
-      "generated_at": "2026-08-06 15:34:33.778134+00:00",
+      "generated_at": "2026-08-07 01:01:59.558063+00:00",
       "horizon_days": 5
     },
     {
-      "id": "33729416bcb63babd215dc9649bf82540e3afb1f0c5af852966c84a663223781",
-      "ticker": "COP",
+      "id": "fab4f252db8faeddbee643bbfda083b7b67781d0f25238b54c99becbdde592ee",
+      "ticker": "WFC",
       "direction": "neutral",
-      "confidence": 0.005,
-      "score": -0.006,
-      "sentiment_component": 0.263,
+      "confidence": 0.038,
+      "score": 0.049,
+      "sentiment_component": -0.213,
       "event_component": 0.0,
-      "price_component": -0.228,
+      "price_component": 0.307,
       "evidence_ids": [
-        "f7d9795a9c9bae4fa66416b51487c585ddf3f9020f179ec438ea25a6eb25363c"
+        "1bf9a5b9bc112665b6c286bbeaa96d331657893de1eac7b1a656af03c8cfde96"
       ],
-      "generated_at": "2026-08-06 15:34:34.263196+00:00",
+      "generated_at": "2026-08-07 01:02:00.016546+00:00",
       "horizon_days": 5
     },
     {
-      "id": "d0490634b41a64fb4d474cf8c990a45a3db417081fd6bf3879bac4d42ce44c21",
-      "ticker": "CVX",
+      "id": "21bab620acfef01488dccb644615108db38880d80d673787681971c6e10c36ea",
+      "ticker": "NOW",
+      "direction": "neutral",
+      "confidence": 0.115,
+      "score": 0.133,
+      "sentiment_component": 0.065,
+      "event_component": 0.0,
+      "price_component": 0.317,
+      "evidence_ids": [
+        "f66ad05514d5245b5d31d83951c607949a95ecd478eb91e37ae0f6ae7ce792c7"
+      ],
+      "generated_at": "2026-08-07 01:02:00.316454+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "b0fa3c13e3174f220d8e88a875070959b6ab84116274a13886ce387a58fa8f95",
+      "ticker": "AVGO",
+      "direction": "bullish",
+      "confidence": 0.31,
+      "score": 0.401,
+      "sentiment_component": 0.06,
+      "event_component": 0.5,
+      "price_component": 0.578,
+      "evidence_ids": [
+        "3654d45585ac1a21215ada94489bc2b02b53392d27b29c7120b03c79bcbd68f2"
+      ],
+      "generated_at": "2026-08-07 01:02:01.057493+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "5f8f40bf32951540e2b4c21b52dd309d8314350ced126f57f3e28520097a13ee",
+      "ticker": "ASML",
       "direction": "neutral",
       "confidence": 0.014,
-      "score": -0.017,
-      "sentiment_component": 0.233,
+      "score": 0.016,
+      "sentiment_component": -0.159,
       "event_component": 0.0,
-      "price_component": -0.235,
+      "price_component": 0.172,
       "evidence_ids": [
-        "f7d9795a9c9bae4fa66416b51487c585ddf3f9020f179ec438ea25a6eb25363c"
+        "78222b3e1dc25da5a437ed1dbdcc6b837db3319b3906437e5bb1a99b57da758f"
       ],
-      "generated_at": "2026-08-06 15:34:34.904054+00:00",
+      "generated_at": "2026-08-07 01:02:01.846455+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2078723853d9dddabcacbf1f33090bc489f2b30c705e13b70f902517bd5a5448",
-      "ticker": "RXT",
-      "direction": "bullish",
-      "confidence": 0.278,
-      "score": 0.337,
-      "sentiment_component": 0.081,
-      "event_component": 0.5,
-      "price_component": 0.383,
-      "evidence_ids": [
-        "98e7e3fe7b9d2c47768a108c6e940c32e8b0bda3f3a60997de62e5d335aaf689"
-      ],
-      "generated_at": "2026-08-06 15:34:35.301732+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "d62d64b32cbd2a680422ba9656c0321c96f6e568fffbefb10ef6371a5ae54df9",
-      "ticker": "STLA",
+      "id": "f496b192aba5e3f10df4fb255205c589708cc25a8a82ac92c072427da90082a6",
+      "ticker": "SHEL",
       "direction": "neutral",
-      "confidence": 0.091,
-      "score": -0.11,
-      "sentiment_component": 0.043,
+      "confidence": 0.013,
+      "score": -0.014,
+      "sentiment_component": 0.097,
       "event_component": 0.0,
-      "price_component": -0.338,
+      "price_component": -0.116,
       "evidence_ids": [
-        "745395b6090ac64367e1949e49cff69f83d2c3502556e4019adfe53cddccc035"
+        "aeae41fde7db588c5a1278c72165365589f632f5fc7e155af942e3c93c0a7c2a"
       ],
-      "generated_at": "2026-08-06 15:34:35.662707+00:00",
+      "generated_at": "2026-08-07 01:02:02.280623+00:00",
       "horizon_days": 5
     },
     {
-      "id": "3d766d7d9d7273b9577fc217830a8240e5e9b7cbc33dd2f3baeac6d9bf305620",
-      "ticker": "SOUN",
-      "direction": "bullish",
-      "confidence": 0.224,
-      "score": 0.366,
-      "sentiment_component": 0.157,
-      "event_component": 0.0,
-      "price_component": 0.892,
-      "evidence_ids": [
-        "745395b6090ac64367e1949e49cff69f83d2c3502556e4019adfe53cddccc035"
-      ],
-      "generated_at": "2026-08-06 15:34:36.087715+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1346f4d1861a9eb6030a9ac8713f8f08bed2aa00ec7c8e089f0f327b59769136",
+      "id": "2a634209d94f71c590a3b509ea2b9014ff621597df193b7c98a7b28c80e2f6f9",
       "ticker": "QQQ",
       "direction": "bullish",
-      "confidence": 0.221,
-      "score": 0.289,
-      "sentiment_component": 0.285,
+      "confidence": 0.198,
+      "score": 0.255,
+      "sentiment_component": 0.201,
       "event_component": 0.0,
-      "price_component": 0.575,
+      "price_component": 0.548,
       "evidence_ids": [
-        "745395b6090ac64367e1949e49cff69f83d2c3502556e4019adfe53cddccc035"
+        "02966a8b50c0676979a3cb6a5cc718f4cebb736ddfdc941f84691a24140bd402"
       ],
-      "generated_at": "2026-08-06 15:34:36.569723+00:00",
+      "generated_at": "2026-08-07 01:02:02.627243+00:00",
       "horizon_days": 5
     },
     {
-      "id": "5199f0f72582365e2517404b99dfa1674442cf34e9e2c26d1f6418b4ef38cc5f",
-      "ticker": "ACLS",
-      "direction": "bullish",
-      "confidence": 0.316,
-      "score": 0.373,
-      "sentiment_component": 0.145,
-      "event_component": 0.5,
-      "price_component": 0.432,
-      "evidence_ids": [
-        "cd1b6d38ab336a464b787311e70448fc383b3ab4863dac16d3b3dd6d32c1d26f"
-      ],
-      "generated_at": "2026-08-06 15:34:37.050763+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "d61c20731323c3431f7a97d6492a17e9893d8e0ed64ca68519c8299effb626e2",
-      "ticker": "VRTS",
-      "direction": "bullish",
-      "confidence": 0.206,
-      "score": 0.252,
-      "sentiment_component": 0.095,
-      "event_component": 0.5,
-      "price_component": 0.135,
-      "evidence_ids": [
-        "fca93b94128bf58cb7b81bbd559cd5b77ac88c59a551882e4f74b88aa40bbddc"
-      ],
-      "generated_at": "2026-08-06 15:34:37.484608+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "cdbf57c5451556c3ff5130edb3cd8e4338ad3ad684f5c8aa82e102a67210ddab",
-      "ticker": "HTGC",
-      "direction": "bullish",
-      "confidence": 0.21,
-      "score": 0.456,
-      "sentiment_component": 0.095,
+      "id": "854e9474f2ba4fe597ab4f27d73254504b0d76f6de21f285296e72260ef80be8",
+      "ticker": "QCOM",
+      "direction": "neutral",
+      "confidence": 0.034,
+      "score": 0.046,
+      "sentiment_component": -0.288,
       "event_component": 0.0,
-      "price_component": 1.0,
+      "price_component": 0.358,
       "evidence_ids": [
-        "fca93b94128bf58cb7b81bbd559cd5b77ac88c59a551882e4f74b88aa40bbddc"
+        "28248ced91a82be5f074c66d68f971c08d894b262350f1b4688f11a2497f32ee"
       ],
-      "generated_at": "2026-08-06 15:34:37.983413+00:00",
+      "generated_at": "2026-08-07 01:02:03.039444+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "871b49346ae89dd2de8f23945334fb4abfce3e4b1842f6134ca0956dc6442b1c",
+      "ticker": "NVDA",
+      "direction": "bullish",
+      "confidence": 0.203,
+      "score": 0.359,
+      "sentiment_component": 0.057,
+      "event_component": 0.0,
+      "price_component": 0.951,
+      "evidence_ids": [
+        "9005477dabe3740f85fa12b2be5677aae0adb02db8c97fc03d98dceeae0e05b6",
+        "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e"
+      ],
+      "generated_at": "2026-08-07 01:02:03.372684+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "8bf8cefe666e5fa69fdaafdbcd32cff8ad3a0fa6734cc8873bc30990b758af4e",
+      "ticker": "MU",
+      "direction": "neutral",
+      "confidence": 0.008,
+      "score": 0.008,
+      "sentiment_component": -0.012,
+      "event_component": 0.0,
+      "price_component": 0.032,
+      "evidence_ids": [
+        "1a1a8ddfed7cb62dd8f9555fc2d5d423051a0693f4ec745d74aeb27f5f5d568f"
+      ],
+      "generated_at": "2026-08-07 01:02:03.801085+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "1e273bd8c483cb1777d7f5c8d39a0a9e573952a1f41bd1d290559d2ff6ede7b6",
+      "ticker": "MA",
+      "direction": "neutral",
+      "confidence": 0.013,
+      "score": 0.014,
+      "sentiment_component": 0.086,
+      "event_component": 0.0,
+      "price_component": -0.031,
+      "evidence_ids": [
+        "4037cccefd38553e4ad859a039ff0bc5a4d9b64c62bed1616c250378087fd4ef"
+      ],
+      "generated_at": "2026-08-07 01:02:04.178287+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "01aa6bae16e34692f197192c3f1564840a1f239e43abcd47d7f94816b8caaba0",
+      "ticker": "COF",
+      "direction": "neutral",
+      "confidence": 0.149,
+      "score": 0.192,
+      "sentiment_component": 0.043,
+      "event_component": 0.0,
+      "price_component": 0.5,
+      "evidence_ids": [
+        "5c66aef0b612a199e20388989760aa271b9238e8c09006c96cfda05093082a28"
+      ],
+      "generated_at": "2026-08-07 01:02:04.585265+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "5a8bd535f9f715c3283299f3ef840f74b47993558273900599a2c137e8baceaf",
+      "ticker": "OXY",
+      "direction": "neutral",
+      "confidence": 0.097,
+      "score": 0.116,
+      "sentiment_component": 0.367,
+      "event_component": 0.0,
+      "price_component": 0.029,
+      "evidence_ids": [
+        "81817f05655249ed5a0d101f2e3989b6feaf23e1ebb53aeef3d64b5f39d98378"
+      ],
+      "generated_at": "2026-08-07 01:02:05.005858+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "1f6ac9cbc7d9ff8e2e477296ba8dd0bfe4063913dcaf75d1d708d8b1e747e6b6",
+      "ticker": "INTC",
+      "direction": "neutral",
+      "confidence": 0.155,
+      "score": 0.181,
+      "sentiment_component": 0.197,
+      "event_component": 0.0,
+      "price_component": 0.343,
+      "evidence_ids": [
+        "66ac9189f7e348b710aec50f552f6377428112e214f3be2be14639d23b85c8ad"
+      ],
+      "generated_at": "2026-08-07 01:02:05.443396+00:00",
       "horizon_days": 5
     }
   ],
   "events": [
     {
-      "article_id": "2f7240dd18499d4beec7b12cf650e00e449b99a4d1a2f8d6c47f1a20417e3827",
-      "ticker": "F",
-      "category": "product_launch",
-      "severity": 0.5,
-      "summary": "Ford announces pricing and details for its new midsize electric truck, the Fathom.",
-      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Ford announces pricing and details for its new midsize electric truck, the Fathom.'}"
-    },
-    {
-      "article_id": "912d97bdf8aaedbb73c1f983d750106b2e4e3f5d11f861cbece9e5ca24ed84cb",
-      "ticker": null,
-      "category": "earnings_report",
-      "severity": 0.5,
-      "summary": "SpaceX's lockup restrictions lifting may affect stock price following earnings report",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': \"SpaceX's lockup restrictions lifting may affect stock price following earnings report\"}"
-    },
-    {
-      "article_id": "cf4693655d250273dcd8389f79d972ec5c00529d777d3fd63d7b44bc5e027760",
-      "ticker": null,
-      "category": "regulatory_action",
-      "severity": 0.8,
-      "summary": "Rep. Ted Lieu emphasizes the urgency of passing the 'AI Kill Switch Act' due to recent AI model hacks.",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': \"Rep. Ted Lieu emphasizes the urgency of passing the 'AI Kill Switch Act' due to recent AI model hacks.\"}"
-    },
-    {
-      "article_id": "6bd2e1a76a89f2e9e5bd4dd22c229486e3f23d5f2d80e9b4bf9730cd0c7ff47c",
-      "ticker": null,
-      "category": "earnings_report",
-      "severity": 0.6,
-      "summary": "Fox Corp. reports significant revenue growth driven by the FIFA World Cup, with overall revenue up 28%",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Fox Corp. reports significant revenue growth driven by the FIFA World Cup, with overall revenue up 28%'}"
-    },
-    {
-      "article_id": "feb72f6aba57f898dbf70bcb878f1120b90931c02a9794119c1dd3f7c95f020a",
+      "article_id": "e8b1828c0e44907dedd92e245d99d5e73304bcc713a83981459e0d99f358659e",
       "ticker": null,
       "category": "macro_other",
       "severity": 0.5,
-      "summary": "The S&P 500's rally is recalibrating prediction market traders' outlook for future index levels.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"The S&P 500's rally is recalibrating prediction market traders' outlook for future index levels.\"}"
+      "summary": "U.S. and Iran dispute over potential restrictions on the Strait of Hormuz",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'U.S. and Iran dispute over potential restrictions on the Strait of Hormuz'}"
     },
     {
-      "article_id": "f72c60306674277238104c4e8fe3d868ad3dbf1d6a89946ce8937c52c907ed24",
-      "ticker": null,
-      "category": "mergers_acquisitions",
+      "article_id": "db7b6d791f5a413283810d59b7aa3d196d7fa4f4d944d1bde7a8366e129ccd9b",
+      "ticker": "META",
+      "category": "litigation",
       "severity": 0.8,
-      "summary": "Apollo Global Management is expected to take EasyJet private in a deal valued at around $7.7 billion",
-      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'Apollo Global Management is expected to take EasyJet private in a deal valued at around $7.7 billion'}"
+      "summary": "Meta ordered to pay $567 million into an abatement fund as part of a public nuisance case related to alleged harms caused by its social media platforms.",
+      "raw_llm_output": "{'category': 'litigation', 'severity': 0.8, 'summary': 'Meta ordered to pay $567 million into an abatement fund as part of a public nuisance case related to alleged harms caused by its social media platforms.'}"
     },
     {
-      "article_id": "29021a2701302e569859f54bee4f0a8948ae33c43c66ac0ddab3aec56418061d",
+      "article_id": "6a02fafe12547516919c3bce72e0dafb9e75bfca372d69c67aca7e9b1fe5f01c",
       "ticker": null,
       "category": "macro_other",
-      "severity": 0.8,
-      "summary": "Ukrainian military strikes Russian oil refineries, impacting energy infrastructure and war financing.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.8, 'summary': 'Ukrainian military strikes Russian oil refineries, impacting energy infrastructure and war financing.'}"
-    },
-    {
-      "article_id": "dc3ce7397e864539174c948cf1bd60ce1473a4c72d2ed8f5668fc75e7dad3a3b",
-      "ticker": null,
-      "category": "management_change",
       "severity": 0.5,
-      "summary": "Diageo unveils $1 billion savings plan to turn around struggling business",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'Diageo unveils $1 billion savings plan to turn around struggling business'}"
+      "summary": "Copper prices surge due to supply constraints and demand from AI industry expansion",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Copper prices surge due to supply constraints and demand from AI industry expansion'}"
     },
     {
-      "article_id": "b8e6f911d39b94721efe78086c90735e3d105b49f6330acb36836dde4a2b9654",
+      "article_id": "1493df460e16db23ff21c354bed7aba36bc9c51891dc0dbd19f81ee698a84ac6",
       "ticker": null,
       "category": "guidance_update",
       "severity": 0.5,
-      "summary": "Polymarket in talks for a fundraising round valued at north of $20 billion, following its previous funding round in April valued at $15 billion",
-      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': 'Polymarket in talks for a fundraising round valued at north of $20 billion, following its previous funding round in April valued at $15 billion'}"
+      "summary": "Sweetgreen updates full-year outlook due to consumer fears from cyclospora outbreak",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': 'Sweetgreen updates full-year outlook due to consumer fears from cyclospora outbreak'}"
     },
     {
-      "article_id": "1173e27bf2cc8a277119d12c8cde67356adba0dbc2641c8b0a70bcac5cf56dcb",
-      "ticker": "AMZN",
-      "category": "management_change",
-      "severity": 0.5,
-      "summary": "Jeff Bezos plans to sell 15 million Amazon shares, following the company's strong earnings report.",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': \"Jeff Bezos plans to sell 15 million Amazon shares, following the company's strong earnings report.\"}"
-    },
-    {
-      "article_id": "09952c920b7963c60561ccc0834b44b6a10d038c2e3c0807985c82d5bdb5ea05",
-      "ticker": null,
-      "category": "regulatory_action",
-      "severity": 0.5,
-      "summary": "Kalshi partners with Comply to integrate prediction markets trade data into regulatory software",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.5, 'summary': 'Kalshi partners with Comply to integrate prediction markets trade data into regulatory software'}"
-    },
-    {
-      "article_id": "3f2016af4d73d649f8f117f2e6fab8db27dc7931c09e33c6939ade5f2bde2dde",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.4,
-      "summary": "Market speculation on July employment data from the Bureau of Labor Statistics",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Market speculation on July employment data from the Bureau of Labor Statistics'}"
-    },
-    {
-      "article_id": "3a061f1edef8129e7f01ef471dcc0d71ac35a35a690a882b460a1e53798731a1",
+      "article_id": "a281009f77b7423e76b7165e8258e0963f667b02bf358a29f7230166e49d7437",
       "ticker": "AMD",
-      "category": "earnings_report",
-      "severity": 0.6,
-      "summary": "Market participants await AMD's earnings report with historical post-earnings volatility expected",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': \"Market participants await AMD's earnings report with historical post-earnings volatility expected\"}"
+      "category": "mergers_acquisitions",
+      "severity": 0.8,
+      "summary": "AMD acquires Taalas, a startup making specialized AI chips, to expand its data center offerings.",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'AMD acquires Taalas, a startup making specialized AI chips, to expand its data center offerings.'}"
     },
     {
-      "article_id": "5203cf18a6dd12bf7d2860b9c36204c43fb90eb545b3a24b042e4ad9dddf40db",
+      "article_id": "d28f687f4a3ca7b6e44e62d961fbd3d1a78ed4166bc150361c881cf40754cd2e",
       "ticker": null,
-      "category": "macro_other",
+      "category": "product_launch",
       "severity": 0.5,
-      "summary": "Market and investor caution due to potential instability in Iran's energy markets",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"Market and investor caution due to potential instability in Iran's energy markets\"}"
+      "summary": "Savers Value Village launches ThriftIQ, an AI-powered platform for optimizing product pricing.",
+      "raw_llm_output": "{'category': 'product_launch', 'severity': 0.5, 'summary': 'Savers Value Village launches ThriftIQ, an AI-powered platform for optimizing product pricing.'}"
     },
     {
-      "article_id": "c38ce8259ffcfab1351f3f25b1d9a9710c5f277bb4b53b8d329929b9b3e06ccd",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Federal Reserve holds interest rates steady but signals potential future hike due to inflation concerns",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Federal Reserve holds interest rates steady but signals potential future hike due to inflation concerns'}"
-    },
-    {
-      "article_id": "98f89a4ee43999658320adf633c475e4faae2f61a61ff4b2477612bef27cb253",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Discussion of potential Federal Reserve interest-rate hike and market reactions",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Discussion of potential Federal Reserve interest-rate hike and market reactions'}"
-    },
-    {
-      "article_id": "a4e2778a6ea81d33e6f755380f4b1415632598cd14bfe310e96ab37fa1d921ba",
-      "ticker": null,
-      "category": "litigation",
-      "severity": 0.5,
-      "summary": "Short sellers are increasing bets against SpaceX, driving bearish positioning to nearly one-third of the company's public float.",
-      "raw_llm_output": "{'category': 'litigation', 'severity': 0.5, 'summary': \"Short sellers are increasing bets against SpaceX, driving bearish positioning to nearly one-third of the company's public float.\"}"
-    },
-    {
-      "article_id": "f65c0becd9694d1311b32b3591e6c79145bcd62a67ee5bdf1d032eaae979f3d8",
+      "article_id": "38ca19c06ce37010cbb74da737ce99ce39d3ad4fed24ad36d6a8af1e2eb96002",
       "ticker": null,
       "category": "earnings_report",
-      "severity": 0.6,
-      "summary": "IBM reports Q2 revenue miss, shares drop 25%",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'IBM reports Q2 revenue miss, shares drop 25%'}"
+      "severity": 0.5,
+      "summary": "Hilton China revises revenue expectations due to weaker domestic tourism in China",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': 'Hilton China revises revenue expectations due to weaker domestic tourism in China'}"
     },
     {
-      "article_id": "25980e82d79b0b38a683f796e82e04e62012677ce3ddcb3ec353b77ccc1380b6",
+      "article_id": "d74d1002f6b545e0c072c60018ea93de289045976e6038511303434d848d3842",
       "ticker": null,
       "category": "macro_other",
       "severity": 0.4,
-      "summary": "SK Hynix options debut with lower-than-expected trading volume compared to similar semiconductor stocks",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'SK Hynix options debut with lower-than-expected trading volume compared to similar semiconductor stocks'}"
+      "summary": "Clear Street is developing a platform to allow accredited investors to access late-stage private companies, potentially increasing retail investor exposure to private market wealth creation.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Clear Street is developing a platform to allow accredited investors to access late-stage private companies, potentially increasing retail investor exposure to private market wealth creation.'}"
     },
     {
-      "article_id": "1a71d689263778d9fd9615a95a2f3b841639e9aa9d0f5e15addb0b6992803337",
+      "article_id": "a71addd02009dd9c5b53f5872466328b77c5a3ff7610aa1d20d96f734a386103",
       "ticker": null,
       "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Report links Trump's deportation policies to increased costs and economic contraction",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"Report links Trump's deportation policies to increased costs and economic contraction\"}"
+      "severity": 0.4,
+      "summary": "A high-profile AI-focused fund faces significant losses and margin calls, affecting its portfolio positions.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'A high-profile AI-focused fund faces significant losses and margin calls, affecting its portfolio positions.'}"
     },
     {
-      "article_id": "8be20c14128c5ce0a0ac49b51c0153aeaa72028d0bd5f954ba25e80c23905b36",
+      "article_id": "b41061ecab41048379bb693b45ff8f48d2bd9f8c7f4d3475225550ceb3071675",
       "ticker": null,
       "category": "macro_other",
-      "severity": 0.5,
-      "summary": "U.S. Senate passes bipartisan affordable housing bill to limit private equity's influence on housing market",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': \"U.S. Senate passes bipartisan affordable housing bill to limit private equity's influence on housing market\"}"
+      "severity": 0.4,
+      "summary": "Crypto stocks gain as broader market sells off and capital rotates away from chip and AI infrastructure names",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Crypto stocks gain as broader market sells off and capital rotates away from chip and AI infrastructure names'}"
     },
     {
-      "article_id": "168908c4f238fc1cea56a077e048acd8859119d306b069a96332f6cf2ac5e01d",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Private company hiring slowed in July, with job growth concentrated in healthcare and other services.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Private company hiring slowed in July, with job growth concentrated in healthcare and other services.'}"
-    },
-    {
-      "article_id": "20dd65b12749b9b8f331e80573bbfb348bcac37c91c625bb95436f7ef5e07f1c",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Severe drought in Europe is jeopardizing economic growth and forcing extreme measures to maintain water flow for nuclear power plants.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Severe drought in Europe is jeopardizing economic growth and forcing extreme measures to maintain water flow for nuclear power plants.'}"
-    },
-    {
-      "article_id": "cd5aaacb5247a82a13ea2aac4992ad049875345676df318d5d67c334f13e3245",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "ISM manufacturing report shows strong growth but notes underlying concerns",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'ISM manufacturing report shows strong growth but notes underlying concerns'}"
-    },
-    {
-      "article_id": "d9443b96c99a40a84b525533f7355bb8518c7c9aec10d1583a7427537a5a96a7",
-      "ticker": null,
-      "category": "regulatory_action",
-      "severity": 0.8,
-      "summary": "China blacklists Japanese defense research institutes and imposes tighter export restrictions",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.8, 'summary': 'China blacklists Japanese defense research institutes and imposes tighter export restrictions'}"
-    },
-    {
-      "article_id": "06ca2c86b1b26deef24114e0c39d7d79a9362d60796af8bbf110734ff7de0ec5",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.5,
-      "summary": "Shipping traffic in the Strait of Hormuz is recovering but faces renewed uncertainty due to a cargo ship attack.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Shipping traffic in the Strait of Hormuz is recovering but faces renewed uncertainty due to a cargo ship attack.'}"
-    },
-    {
-      "article_id": "947dd456b655b6eea3a9f16bf585f46076f0a744bd1f194029cf2b26187444fe",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.1,
-      "summary": "Article discusses travel experiences and diversity, not a financial event",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'Article discusses travel experiences and diversity, not a financial event'}"
-    },
-    {
-      "article_id": "4d70c88f3329318a5ebcded55bc976b7121b29cd0be61636c358d2d9d6f20344",
-      "ticker": null,
+      "article_id": "6416bc9226ed9c4f5e9ccbe82218ba737ba580dae9b0a3cbba7f4a6ba739c2fb",
+      "ticker": "NFLX",
       "category": "macro_other",
       "severity": 0.3,
-      "summary": "Voters in Missouri rejected a bid to ditch income tax, with other tax votes looming in Florida and California",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Voters in Missouri rejected a bid to ditch income tax, with other tax votes looming in Florida and California'}"
+      "summary": "Analysis of Netflix's valuation and growth prospects without a specific financial event",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"Analysis of Netflix's valuation and growth prospects without a specific financial event\"}"
     },
     {
-      "article_id": "0ec2832569a6f9b1e45ef2eeaf5c281217eae1270efa9e42414b9241cc5782d9",
-      "ticker": null,
-      "category": "management_change",
-      "severity": 0.5,
-      "summary": "John Eade is named President & Director of Portfolio Strategies at Argus Research Group",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.5, 'summary': 'John Eade is named President & Director of Portfolio Strategies at Argus Research Group'}"
-    },
-    {
-      "article_id": "ceebdc92dff45b5463f1a5343ac136fb7d95c10c46d03b074a33bac02138f963",
-      "ticker": null,
-      "category": "litigation",
-      "severity": 0.5,
-      "summary": "VoIP-Pal receives court approval to refine its federal antitrust claims in litigation against major wireless carriers",
-      "raw_llm_output": "{'category': 'litigation', 'severity': 0.5, 'summary': 'VoIP-Pal receives court approval to refine its federal antitrust claims in litigation against major wireless carriers'}"
-    },
-    {
-      "article_id": "1141ddcef3a569f2881af6b2d3246b116a5e2144da38c40793a0a35dba83dd4a",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Market update with mixed sector performances and earnings report from ConocoPhillips",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Market update with mixed sector performances and earnings report from ConocoPhillips'}"
-    },
-    {
-      "article_id": "8cec6048bda4506c3b368ff602ae17dc8b5d6c4a7eeb4a94e6788bf0279a31ca",
-      "ticker": "NDAQ",
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "US stocks react to earnings reports and geopolitical factors",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'US stocks react to earnings reports and geopolitical factors'}"
-    },
-    {
-      "article_id": "3f24ec9d06e07c970beda5f4e569658f40e8d85167ba513ecea1b86ff28677c7",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.1,
-      "summary": "The text appears to be a generic loading message and does not contain any financial event information.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.1, 'summary': 'The text appears to be a generic loading message and does not contain any financial event information.'}"
-    },
-    {
-      "article_id": "9238509be1554e6d822ed7b089465eccc526d263542e0b4fe194c35a8bc6daab",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Discussion on financial challenges and investment strategies for individuals nearing retirement",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Discussion on financial challenges and investment strategies for individuals nearing retirement'}"
-    },
-    {
-      "article_id": "b2d7c8602d83451c066cb27424cb4ba3a1667d545bf685f2ef0e74529979544e",
-      "ticker": "TSLA",
-      "category": "earnings_report",
-      "severity": 0.6,
-      "summary": "US tech giants report mixed quarterly earnings, leading to varied market reactions",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'US tech giants report mixed quarterly earnings, leading to varied market reactions'}"
-    },
-    {
-      "article_id": "548329e742b8bc7ecc9a3d6d402e0ce946432deb2c76c22589bbfdee72676163",
+      "article_id": "c0155127e1cae62f3147dd269db08580209b2403e24b25889662c6e039eb3eca",
       "ticker": "AAPL",
-      "category": "litigation",
-      "severity": 0.8,
-      "summary": "Apple seeks injunction and depositions in trade secrets lawsuit against former employees and OpenAI",
-      "raw_llm_output": "{'category': 'litigation', 'severity': 0.8, 'summary': 'Apple seeks injunction and depositions in trade secrets lawsuit against former employees and OpenAI'}"
-    },
-    {
-      "article_id": "40baca81f961388e57b418be21b432a3945d56b4c7ba5b851a42cd7c6989d47e",
-      "ticker": "GOOGL",
-      "category": "management_change",
-      "severity": 0.4,
-      "summary": "Discussion around potential management changes or acquisitions for Reddit",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Discussion around potential management changes or acquisitions for Reddit'}"
-    },
-    {
-      "article_id": "b92341fbdfd01f6ecd5a386ccf1d64cf23f9317462e978ec3424a3075fed796b",
-      "ticker": null,
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Analysis of tech job listings shows dominance of cloud platforms and foundational tools in hiring requirements",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Analysis of tech job listings shows dominance of cloud platforms and foundational tools in hiring requirements'}"
-    },
-    {
-      "article_id": "98e7e3fe7b9d2c47768a108c6e940c32e8b0bda3f3a60997de62e5d335aaf689",
-      "ticker": "RXT",
-      "category": "management_change",
-      "severity": 0.4,
-      "summary": "Rackspace appoints Pranav Nambiar as Senior Vice President and General Manager for AI Infrastructure",
-      "raw_llm_output": "{'category': 'management_change', 'severity': 0.4, 'summary': 'Rackspace appoints Pranav Nambiar as Senior Vice President and General Manager for AI Infrastructure'}"
-    },
-    {
-      "article_id": "a6d13bc75a64a66497f3551ef3789ebdae3e29bf544aa18aa1827b83ce99f4bd",
-      "ticker": "MSFT",
-      "category": "regulatory_action",
-      "severity": 0.4,
-      "summary": "RedCloud joins industry-wide commitment to open-weight AI models",
-      "raw_llm_output": "{'category': 'regulatory_action', 'severity': 0.4, 'summary': 'RedCloud joins industry-wide commitment to open-weight AI models'}"
-    },
-    {
-      "article_id": "cd1b6d38ab336a464b787311e70448fc383b3ab4863dac16d3b3dd6d32c1d26f",
-      "ticker": "ACLS",
       "category": "earnings_report",
       "severity": 0.6,
-      "summary": "Axcelis Technologies exceeds Q2 earnings expectations and raises full-year outlook",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Axcelis Technologies exceeds Q2 earnings expectations and raises full-year outlook'}"
+      "summary": "Apple is set to report earnings after the bell, with options traders showing bullish sentiment.",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Apple is set to report earnings after the bell, with options traders showing bullish sentiment.'}"
     },
     {
-      "article_id": "f6e467a1db9585742bc8fe346e16faee73abc827f5a8cfa624ef0e8f731a9289",
+      "article_id": "bac107140409d6c67f66e38e87e7ba471c21227b0a0eb02b586f0d812fa6202c",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Voters in 13 U.S. states will decide on 26 ballot initiatives concerning tax rates in November elections.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Voters in 13 U.S. states will decide on 26 ballot initiatives concerning tax rates in November elections.'}"
+    },
+    {
+      "article_id": "819904fd6ef0d462df02074251f3c90e70de78422d9daa98bb6fb5606b981677",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "CNBC survey finds cost of housing is top political issue among young U.S. voters",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'CNBC survey finds cost of housing is top political issue among young U.S. voters'}"
+    },
+    {
+      "article_id": "6ca3da0efd0ff53e88b192d9f62af95d5ceda0f0d43ad96fe87ebc6e0688efe0",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Homebuyer affordability has been declining for five consecutive months due to rising home prices and mortgage rates.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Homebuyer affordability has been declining for five consecutive months due to rising home prices and mortgage rates.'}"
+    },
+    {
+      "article_id": "eea35392f5a0da45f51b2c9895706b27de75929cc9dfb940435e6b683a022517",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.7,
+      "summary": "China's Q2 GDP growth slows to 4.3%, below expectations, reinforcing calls for policy stimulus",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.7, 'summary': \"China's Q2 GDP growth slows to 4.3%, below expectations, reinforcing calls for policy stimulus\"}"
+    },
+    {
+      "article_id": "385021b23d07d11e1b7482995b2f09ab8b8f7bfc0d21f3f8489974c4254260e8",
+      "ticker": "GOOGL",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Rising prices for video games and related hobbies are affecting consumer spending habits.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Rising prices for video games and related hobbies are affecting consumer spending habits.'}"
+    },
+    {
+      "article_id": "bc3e2a176c2065fe56e9ce01b0240f40ae178196a768314ab5cf46e6e3e6a3e9",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "June unemployment rate drops to 4.2% due to a decline in labor force participation, lowest since 2021.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'June unemployment rate drops to 4.2% due to a decline in labor force participation, lowest since 2021.'}"
+    },
+    {
+      "article_id": "2c267f9fdff9edaf6d6ae03c6396ced469e3fd516f2d79fddf00cb2fc08ffbc7",
+      "ticker": "COIN",
+      "category": "guidance_update",
+      "severity": 0.5,
+      "summary": "MGM's mean price target suggests a 10.2% premium, indicating positive market expectations.",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': \"MGM's mean price target suggests a 10.2% premium, indicating positive market expectations.\"}"
+    },
+    {
+      "article_id": "6b44fb47fac91d9a3200bb14d1011b61e64d9451516b89598aa9d1ae6c74cefa",
+      "ticker": "XOM",
+      "category": "macro_other",
+      "severity": 0.8,
+      "summary": "Iran conflict disrupts oil flow, sending crude prices soaring and increasing inflation pressures",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.8, 'summary': 'Iran conflict disrupts oil flow, sending crude prices soaring and increasing inflation pressures'}"
+    },
+    {
+      "article_id": "5740c9e6e1853845a849b7bdbe519d10637aa9976c231e8049a1c40ade386933",
+      "ticker": "COIN",
+      "category": "guidance_update",
+      "severity": 0.5,
+      "summary": "Analyst consensus on SNDK stock becomes more bullish, with 17 out of 22 analysts suggesting a 'Strong Buy'",
+      "raw_llm_output": "{'category': 'guidance_update', 'severity': 0.5, 'summary': \"Analyst consensus on SNDK stock becomes more bullish, with 17 out of 22 analysts suggesting a 'Strong Buy'\"}"
+    },
+    {
+      "article_id": "3654d45585ac1a21215ada94489bc2b02b53392d27b29c7120b03c79bcbd68f2",
+      "ticker": "AVGO",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Emerald Wealth Partners releases Q2 2026 investor letter discussing market performance and strategy focus.",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': 'Emerald Wealth Partners releases Q2 2026 investor letter discussing market performance and strategy focus.'}"
+    },
+    {
+      "article_id": "574509b0e0cfd63e903192da9734c4ef969104a89158c2ced4019fd13320cc58",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.5,
+      "summary": "Bank CEO warns of potential business relocation due to proposed tax increases in the UK",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.5, 'summary': 'Bank CEO warns of potential business relocation due to proposed tax increases in the UK'}"
+    },
+    {
+      "article_id": "90b1417bf15e9222b8ee7b5d496be5b74000f9c1202278aa98c1e13c3ab39779",
+      "ticker": "COIN",
+      "category": "earnings_report",
+      "severity": 0.8,
+      "summary": "Palantir beats Q4 revenue and profit guidance, guiding above consensus estimates",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.8, 'summary': 'Palantir beats Q4 revenue and profit guidance, guiding above consensus estimates'}"
+    },
+    {
+      "article_id": "2c81fe0580d36d8f63a3a8e840f66d74c548e125ae2355e5b18341c873c3c937",
+      "ticker": null,
+      "category": "litigation",
+      "severity": 0.8,
+      "summary": "OpenAI files motion to dismiss Apple's trade secrets lawsuit, arguing Apple's security practices weaken its claim.",
+      "raw_llm_output": "{'category': 'litigation', 'severity': 0.8, 'summary': \"OpenAI files motion to dismiss Apple's trade secrets lawsuit, arguing Apple's security practices weaken its claim.\"}"
+    },
+    {
+      "article_id": "5ce171a6acb343eb104c21df0757c83e462945b634ebc78141482b484332596e",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Survey of registered voters on major tech and AI companies' reputation and public perception",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': \"Survey of registered voters on major tech and AI companies' reputation and public perception\"}"
+    },
+    {
+      "article_id": "1a1a8ddfed7cb62dd8f9555fc2d5d423051a0693f4ec745d74aeb27f5f5d568f",
+      "ticker": "AAPL",
+      "category": "macro_other",
+      "severity": 0.4,
+      "summary": "Micron Technology's stock price fluctuates due to demand for memory chips",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.4, 'summary': \"Micron Technology's stock price fluctuates due to demand for memory chips\"}"
+    },
+    {
+      "article_id": "fe899b9ed7856e43718b5eb00f534f6209f8071a8915f6d525164ea18d4813ae",
+      "ticker": "AMD",
+      "category": "mergers_acquisitions",
+      "severity": 0.8,
+      "summary": "AMD acquires AI chip startup Taalas to expand its AI portfolio",
+      "raw_llm_output": "{'category': 'mergers_acquisitions', 'severity': 0.8, 'summary': 'AMD acquires AI chip startup Taalas to expand its AI portfolio'}"
+    },
+    {
+      "article_id": "90ca58e83aac51e9dff1432e863016a57c035518a58250d0094c2b8be108b469",
+      "ticker": null,
+      "category": "macro_other",
+      "severity": 0.3,
+      "summary": "Discussion on underperformance of nuclear industry stocks",
+      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Discussion on underperformance of nuclear industry stocks'}"
+    },
+    {
+      "article_id": "e36a601c151d7cb547b0cb66941733ce35c60ed070390015c0e821c1a982fcbf",
       "ticker": null,
       "category": "earnings_report",
-      "severity": 0.5,
-      "summary": "Deutsche Telekom reports strong first-half results and raises 2026 free-cash-flow guidance",
-      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.5, 'summary': 'Deutsche Telekom reports strong first-half results and raises 2026 free-cash-flow guidance'}"
-    },
-    {
-      "article_id": "724f6428c74e1cc099e3aeac0ee7771fe858c27007b67bfa21a823c93883c34e",
-      "ticker": "MSFT",
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Investors debate the sustainability of the AI trade, with some seeing potential for a downturn.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Investors debate the sustainability of the AI trade, with some seeing potential for a downturn.'}"
-    },
-    {
-      "article_id": "fca93b94128bf58cb7b81bbd559cd5b77ac88c59a551882e4f74b88aa40bbddc",
-      "ticker": "VRTS",
-      "category": "macro_other",
-      "severity": 0.3,
-      "summary": "Three finance-sector payers with high yields are highlighted for potential investment interest.",
-      "raw_llm_output": "{'category': 'macro_other', 'severity': 0.3, 'summary': 'Three finance-sector payers with high yields are highlighted for potential investment interest.'}"
+      "severity": 0.6,
+      "summary": "Dave reports strong revenue growth but misses earnings estimates, leading to a significant stock decline",
+      "raw_llm_output": "{'category': 'earnings_report', 'severity': 0.6, 'summary': 'Dave reports strong revenue growth but misses earnings estimates, leading to a significant stock decline'}"
     }
   ],
   "investment_plan": {
     "total_amount": 10000.0,
     "allocations": [
       {
+        "ticker": "AVGO",
+        "amount": 3583.82,
+        "percentage": 35.8382,
+        "rationale": "AVGO: bullish signal, confidence 31%, 5-day horizon"
+      },
+      {
+        "ticker": "DIS",
+        "amount": 3341.04,
+        "percentage": 33.4104,
+        "rationale": "DIS: bullish signal, confidence 29%, 5-day horizon"
+      },
+      {
         "ticker": "GOOGL",
-        "amount": 3655.35,
-        "percentage": 36.5535,
-        "rationale": "GOOGL: bullish signal, confidence 28%, 5-day horizon"
-      },
-      {
-        "ticker": "AMZN",
-        "amount": 3224.54,
-        "percentage": 32.2454,
-        "rationale": "AMZN: bullish signal, confidence 25%, 5-day horizon"
-      },
-      {
-        "ticker": "PLTR",
-        "amount": 3120.11,
-        "percentage": 31.2011,
-        "rationale": "PLTR: bullish signal, confidence 24%, 5-day horizon"
+        "amount": 3075.14,
+        "percentage": 30.7514,
+        "rationale": "GOOGL: bullish signal, confidence 27%, 5-day horizon"
       }
     ],
     "risk_summary": "Moderate allocation: 40% in SPY for diversified exposure, 60% across 3 high-confidence bullish equities.",
     "expected_return_range": [
-      -0.0885,
-      1.0945
+      -0.0415,
+      1.0733
     ],
     "time_horizon_months": 12,
     "rebalance_trigger": "monthly",
