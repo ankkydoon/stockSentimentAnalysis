@@ -1,1038 +1,813 @@
 {
   "sentiment_scores": [
     {
+      "ticker": "MSFT",
+      "score": -0.2165223666779817,
+      "label": "negative",
+      "n_sentences": 158,
+      "window_ewma": -0.06664235335102817
+    },
+    {
+      "ticker": "TSLA",
+      "score": -0.027112716911281424,
+      "label": "neutral",
+      "n_sentences": 25,
+      "window_ewma": -0.06738220214644339
+    },
+    {
+      "ticker": "PLTR",
+      "score": -0.027112716911281424,
+      "label": "neutral",
+      "n_sentences": 10,
+      "window_ewma": -0.032735939468443616
+    },
+    {
+      "ticker": "HOOD",
+      "score": -0.027112716911281424,
+      "label": "neutral",
+      "n_sentences": 30,
+      "window_ewma": 0.11923812782406376
+    },
+    {
       "ticker": "NVDA",
-      "score": 0.4138363046951599,
+      "score": 0.43239368264383193,
       "label": "positive",
-      "n_sentences": 54,
-      "window_ewma": 0.1202403548096832
+      "n_sentences": 44,
+      "window_ewma": 0.21388635315992766
     },
     {
       "ticker": "META",
       "score": -0.32216039749679315,
       "label": "negative",
-      "n_sentences": 56,
-      "window_ewma": -0.22411765596068584
-    },
-    {
-      "ticker": "MSFT",
-      "score": -0.6419488363006448,
-      "label": "negative",
-      "n_sentences": 147,
-      "window_ewma": -0.0024080619251909408
-    },
-    {
-      "ticker": "TSLA",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 29,
-      "window_ewma": -0.0846405529615128
+      "n_sentences": 76,
+      "window_ewma": -0.25353047842151816
     },
     {
       "ticker": "F",
       "score": -0.05352130166244343,
       "label": "neutral",
       "n_sentences": 10,
-      "window_ewma": -0.028456274429628326
+      "window_ewma": -0.03597578259947283
     },
     {
       "ticker": "GOOGL",
       "score": 0.20685103764290563,
       "label": "positive",
-      "n_sentences": 108,
-      "window_ewma": 0.014495418539881663
-    },
-    {
-      "ticker": "WFC",
-      "score": 0.41567158117302044,
-      "label": "positive",
-      "n_sentences": 58,
-      "window_ewma": 0.38144723249359846
-    },
-    {
-      "ticker": "C",
-      "score": 0.41567158117302044,
-      "label": "positive",
-      "n_sentences": 18,
-      "window_ewma": 0.3814593959140159
+      "n_sentences": 128,
+      "window_ewma": 0.07220210427078888
     },
     {
       "ticker": "BAC",
       "score": 0.41567158117302044,
       "label": "positive",
       "n_sentences": 18,
-      "window_ewma": 0.38143983892462685
+      "window_ewma": 0.39170936159914505
+    },
+    {
+      "ticker": "WFC",
+      "score": 0.41567158117302044,
+      "label": "positive",
+      "n_sentences": 18,
+      "window_ewma": 0.39171453709742476
+    },
+    {
+      "ticker": "C",
+      "score": 0.41567158117302044,
+      "label": "positive",
+      "n_sentences": 18,
+      "window_ewma": 0.39172305149171727
     },
     {
       "ticker": "JPM",
       "score": 0.0,
       "label": "neutral",
       "n_sentences": 3,
-      "window_ewma": 8.94481816849691e-06
+      "window_ewma": 6.2613727179478366e-06
     },
     {
       "ticker": "NDAQ",
       "score": 0.5896680699886765,
       "label": "positive",
-      "n_sentences": 220,
-      "window_ewma": 0.2966671006014213
+      "n_sentences": 87,
+      "window_ewma": 0.38456739141759766
     },
     {
       "ticker": "COIN",
-      "score": 0.20207302324514972,
+      "score": 0.38806578774456146,
       "label": "positive",
-      "n_sentences": 97,
-      "window_ewma": 0.013492122135052471
+      "n_sentences": 219,
+      "window_ewma": 0.1258642218179052
     },
     {
-      "ticker": "JAN",
-      "score": 0.38751276172361077,
+      "ticker": "S",
+      "score": 0.38806578774456146,
       "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.11625382851708323
+      "n_sentences": 18,
+      "window_ewma": 0.11641973632336844
     },
     {
-      "ticker": "HOOD",
-      "score": 0.38682987849613604,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.1819599184249256
-    },
-    {
-      "ticker": "NEE",
-      "score": 0.2565433041668791,
-      "label": "positive",
-      "n_sentences": 60,
-      "window_ewma": 0.3517450130865789
-    },
-    {
-      "ticker": "CEG",
-      "score": 0.2565433041668791,
+      "ticker": "CRM",
+      "score": 0.5946449714801932,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.2025727108169708
+      "window_ewma": 0.27900839721050086
     },
     {
-      "ticker": "WBI",
-      "score": 0.38889273616438563,
-      "label": "positive",
-      "n_sentences": 19,
-      "window_ewma": 0.11666782084931568
-    },
-    {
-      "ticker": "SNOW",
-      "score": 0.093331673241803,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": -0.011394878072256566
-    },
-    {
-      "ticker": "NOW",
-      "score": 0.093331673241803,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": 0.05461077104711051
-    },
-    {
-      "ticker": "PLTR",
-      "score": 0.093331673241803,
-      "label": "neutral",
-      "n_sentences": 20,
-      "window_ewma": -0.035145891992941665
-    },
-    {
-      "ticker": "USLM",
-      "score": 0.29183167084281064,
-      "label": "positive",
-      "n_sentences": 19,
-      "window_ewma": 0.08754950125284319
-    },
-    {
-      "ticker": "RHP",
-      "score": 0.3020030919391214,
+      "ticker": "ESTC",
+      "score": 0.5938498578444017,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.09060092758173642
+      "window_ewma": 0.17815495735332051
     },
     {
-      "ticker": "MGY",
-      "score": 0.1776036645034719,
+      "ticker": "MRVL",
+      "score": 0.5775384590732285,
       "label": "positive",
-      "n_sentences": 13,
-      "window_ewma": 0.09178109683654644
+      "n_sentences": 20,
+      "window_ewma": 0.35034692601931827
     },
     {
-      "ticker": "DCO",
-      "score": 0.39679200625956756,
+      "ticker": "REGN",
+      "score": 0.10472729542441658,
       "label": "positive",
-      "n_sentences": 13,
-      "window_ewma": 0.11903760187787027
-    },
-    {
-      "ticker": "ASTH",
-      "score": 0.408651538532617,
-      "label": "positive",
-      "n_sentences": 15,
-      "window_ewma": 0.1225954615597851
-    },
-    {
-      "ticker": "ANET",
-      "score": -0.40323166965934043,
-      "label": "negative",
-      "n_sentences": 19,
-      "window_ewma": -0.08046754542518172
-    },
-    {
-      "ticker": "CSCO",
-      "score": -0.40323166965934043,
-      "label": "negative",
-      "n_sentences": 19,
-      "window_ewma": -0.016446005150378237
-    },
-    {
-      "ticker": "CIEN",
-      "score": -0.40323166965934043,
-      "label": "negative",
-      "n_sentences": 19,
-      "window_ewma": -0.19622399417829733
-    },
-    {
-      "ticker": "AAPL",
-      "score": 0.05944734570295801,
-      "label": "neutral",
-      "n_sentences": 140,
-      "window_ewma": 0.1412777557106918
-    },
-    {
-      "ticker": "ADBE",
-      "score": 0.33324028567919584,
-      "label": "positive",
-      "n_sentences": 14,
-      "window_ewma": 0.09625632418811805
-    },
-    {
-      "ticker": "BRK-B",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 1,
-      "window_ewma": 0.0
-    },
-    {
-      "ticker": "MU",
-      "score": 0.0,
-      "label": "neutral",
-      "n_sentences": 4,
-      "window_ewma": -0.001100579443478739
+      "n_sentences": 17,
+      "window_ewma": 0.016817550329244174
     },
     {
       "ticker": "AMZN",
-      "score": 0.10916601663571292,
+      "score": 0.3438188542421241,
       "label": "positive",
-      "n_sentences": 175,
-      "window_ewma": 0.03832046172165332
+      "n_sentences": 122,
+      "window_ewma": 0.12996997947779454
     },
     {
-      "ticker": "BABA",
-      "score": 0.20553047792405837,
+      "ticker": "GBX",
+      "score": 0.33875692381944444,
+      "label": "positive",
+      "n_sentences": 6,
+      "window_ewma": 0.10162707714583333
+    },
+    {
+      "ticker": "MS",
+      "score": 0.5232163982300296,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.12578484639723397
+      "window_ewma": 0.0909937804758362
+    },
+    {
+      "ticker": "AAPL",
+      "score": 0.16859015509529818,
+      "label": "positive",
+      "n_sentences": 143,
+      "window_ewma": 0.14947147552607387
+    },
+    {
+      "ticker": "HALO",
+      "score": 0.5253725405263316,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.1576117621578995
+    },
+    {
+      "ticker": "ARGX",
+      "score": 0.5253725405263316,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.1576117621578995
+    },
+    {
+      "ticker": "SPGI",
+      "score": 0.5253725405263316,
+      "label": "positive",
+      "n_sentences": 20,
+      "window_ewma": 0.16191774266473938
     },
     {
       "ticker": "WMT",
       "score": 0.4015759407820526,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.16120783877233977
-    },
-    {
-      "ticker": "PLUS",
-      "score": 0.3980398933107919,
-      "label": "positive",
-      "n_sentences": 13,
-      "window_ewma": 0.11941196799323757
-    },
-    {
-      "ticker": "AFL",
-      "score": 0.39224985081886143,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.10993939501916468
-    },
-    {
-      "ticker": "CVX",
-      "score": 0.39224985081886143,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.3758603008358885
+      "window_ewma": 0.23331826937525374
     },
     {
       "ticker": "ADP",
       "score": 0.39224985081886143,
       "label": "positive",
       "n_sentences": 20,
-      "window_ewma": 0.11767495524565842
+      "window_ewma": 0.20004742391761904
     },
     {
-      "ticker": "MDT",
-      "score": 0.3880667086212864,
+      "ticker": "AFL",
+      "score": 0.39224985081886143,
       "label": "positive",
-      "n_sentences": 18,
-      "window_ewma": 0.1916143808814606
+      "n_sentences": 20,
+      "window_ewma": 0.1946325317590739
     },
     {
-      "ticker": "AVGO",
-      "score": -0.1807682803180902,
-      "label": "negative",
-      "n_sentences": 48,
-      "window_ewma": 0.16018072243229886
+      "ticker": "CVX",
+      "score": 0.39224985081886143,
+      "label": "positive",
+      "n_sentences": 31,
+      "window_ewma": 0.3807771658307807
+    },
+    {
+      "ticker": "CRWD",
+      "score": 0.04148656509631669,
+      "label": "neutral",
+      "n_sentences": 20,
+      "window_ewma": 0.12664859740199588
     },
     {
       "ticker": "AMD",
-      "score": 0.16323131934857937,
+      "score": 0.24899116799319526,
       "label": "positive",
-      "n_sentences": 39,
-      "window_ewma": 0.23060405556739094
+      "n_sentences": 20,
+      "window_ewma": 0.23612018929513226
+    },
+    {
+      "ticker": "LLY",
+      "score": 0.577379910432844,
+      "label": "positive",
+      "n_sentences": 19,
+      "window_ewma": 0.17052332453462338
     },
     {
       "ticker": "NTAP",
       "score": 0.15584808110080653,
       "label": "positive",
       "n_sentences": 7,
-      "window_ewma": 0.046754424330241955
-    },
-    {
-      "ticker": "INTC",
-      "score": 0.5149740818843259,
-      "label": "positive",
-      "n_sentences": 20,
-      "window_ewma": 0.18530902406122132
+      "window_ewma": 0.07948252136141135
     }
   ],
   "events": [],
   "signals": [
     {
-      "id": "04582a782a56cbd10ee69ac232a358029927bf7de9906d812f731834622d8150",
-      "ticker": "NVDA",
-      "direction": "neutral",
-      "confidence": 0.037,
-      "score": 0.039,
-      "sentiment_component": 0.12,
-      "event_component": 0.0,
-      "price_component": -0.012,
-      "evidence_ids": [
-        "bec25165c52bf0345982bb25fa4f0426993ab369d5b5851bb1f1411202d19593",
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8",
-        "83a1f11a644899da4dfcf19f93a9fb86c1c485cc2a803d801ee6207a3c314ea3",
-        "7293274a31fc50256efdb87882ae1584580987f7de776e13e5443842be675694"
-      ],
-      "generated_at": "2026-09-03 17:20:05.239473+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "2c6de3178f7c0e52ab34be75f6b6baa434904562e45ad5f1d4b567fd631a6544",
-      "ticker": "META",
-      "direction": "neutral",
-      "confidence": 0.12,
-      "score": 0.177,
-      "sentiment_component": -0.224,
-      "event_component": 0.0,
-      "price_component": 0.541,
-      "evidence_ids": [
-        "501e8a6704dbc14f53bd5e1fef6304c594434e7103cde19e19bd00513637115b",
-        "ad8b134f13c60b48cb3634187e89bf52e04408388ad33fe022e87fb8156eeb18",
-        "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
-        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb"
-      ],
-      "generated_at": "2026-09-03 17:20:05.763498+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5c473cf23a1e3db986d672cf4c96da1c194ed2e482b6a82f80f78934be4b6adb",
+      "id": "919c6a3f9376f1b3ca95e38a57c182c3abdd85151851e944075958d7a751471e",
       "ticker": "MSFT",
       "direction": "neutral",
-      "confidence": 0.032,
-      "score": 0.033,
-      "sentiment_component": -0.002,
+      "confidence": 0.012,
+      "score": 0.013,
+      "sentiment_component": -0.067,
       "event_component": 0.0,
-      "price_component": 0.07,
+      "price_component": 0.079,
       "evidence_ids": [
+        "82bc0aacee8c9f66d6a9b5f94892a6febda2f01c0aa998e122f0994a1a883b8f",
         "3133fd785d800eb2c29432976425af50673d73eea20baff7520a49b9c860ce82",
+        "5e9ea5951e4d0d3b9e18f4d3e49d4011f2105f039484cc19c17d2d92b32af41e",
+        "94760f896139f2dc3927d8e7c9f01cbcfaa1a040151153427366bdb701fc8fda",
         "7b2e82f4d7254e4bed4fa57be14f6d69af2ee07e7ae447e53f3b0e44a4d86fe4",
+        "41bbae64755e43a9505ab7cce676ab492a3bf7b50e1d43af69b180ad8753f345",
         "6351742d490e5c60977d6a1fc081c3be65f9618bf1f95b39b6c2345287423f4c",
-        "4da80d20b0b4a292407a6ccae44dd454508db9dd56d1a6fdd0e809f08537279c",
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8",
         "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
         "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580",
         "2356718e6c1ed1180f0d4bdb2b80bd18f0623ce891338eb3234123837efbb911",
         "3feb187c75c97f7cf950b4cb44551b36b4e50756193c34c5e0e98df46629a503"
       ],
-      "generated_at": "2026-09-03 17:20:06.293039+00:00",
+      "generated_at": "2026-09-03 19:27:24.260411+00:00",
       "horizon_days": 5
     },
     {
-      "id": "74e2df1337701eff52bcd2311e3a33fdc13b5ea670be5c8f44d3b7343a7619e2",
+      "id": "cd2117e4c84eed4b9e3aa02ef07edf8f0f81b213aae799ed504e4d5d3f60b39c",
       "ticker": "TSLA",
       "direction": "neutral",
       "confidence": 0.137,
-      "score": 0.177,
-      "sentiment_component": -0.085,
+      "score": 0.174,
+      "sentiment_component": -0.067,
       "event_component": 0.0,
-      "price_component": 0.432,
+      "price_component": 0.412,
       "evidence_ids": [
-        "732606acce58b83402282dccdb9651b8e9b73ce5926a1f559d247d11374cb4bb",
-        "cb568197538e2e5e512e9e9fc87589b305d2ad350c06d67f23706dcaec6c45ca"
+        "5d726b488273fd4d4c8726768a84c8d925af65ae80980e4f6929ba1c83130301",
+        "732606acce58b83402282dccdb9651b8e9b73ce5926a1f559d247d11374cb4bb"
       ],
-      "generated_at": "2026-09-03 17:20:06.766546+00:00",
+      "generated_at": "2026-09-03 19:27:24.701672+00:00",
       "horizon_days": 5
     },
     {
-      "id": "fc0c8ebebcea3d512d0f79c96eee8df5ed290d59935fc2a24444df2254796317",
+      "id": "a67c5d83f3e231766f0f5e95d116c409a95d297551b40741f4c0765b86c21382",
+      "ticker": "PLTR",
+      "direction": "neutral",
+      "confidence": 0.02,
+      "score": -0.021,
+      "sentiment_component": -0.033,
+      "event_component": 0.0,
+      "price_component": -0.017,
+      "evidence_ids": [
+        "5d726b488273fd4d4c8726768a84c8d925af65ae80980e4f6929ba1c83130301"
+      ],
+      "generated_at": "2026-09-03 19:27:25.100188+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "e246a86a636ca72b4c756f8a040d5feb39b0e478a883469f880774f8f78e218a",
+      "ticker": "HOOD",
+      "direction": "bullish",
+      "confidence": 0.249,
+      "score": 0.338,
+      "sentiment_component": 0.119,
+      "event_component": 0.0,
+      "price_component": 0.607,
+      "evidence_ids": [
+        "5d726b488273fd4d4c8726768a84c8d925af65ae80980e4f6929ba1c83130301",
+        "f589f7287918cae194dddc83948186c6b5040e5aa4b77d1480bcbd5860cd3d62"
+      ],
+      "generated_at": "2026-09-03 19:27:25.467179+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "3e674d5425bbe0e764630b4d9e4ac0a3dbfd26d30f006bf94125c83114176b18",
+      "ticker": "NVDA",
+      "direction": "neutral",
+      "confidence": 0.103,
+      "score": 0.113,
+      "sentiment_component": 0.214,
+      "event_component": 0.0,
+      "price_component": 0.067,
+      "evidence_ids": [
+        "bec25165c52bf0345982bb25fa4f0426993ab369d5b5851bb1f1411202d19593",
+        "5e9ea5951e4d0d3b9e18f4d3e49d4011f2105f039484cc19c17d2d92b32af41e",
+        "3a8f08d988239207ed720807f058c9c0be16ed710e4fbab7d6ac590a6c141932"
+      ],
+      "generated_at": "2026-09-03 19:27:26.262301+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "12e99b1876bea94b78b9d659b87e1f382952ffc9371c6d639d92d9cf8e3c0b10",
+      "ticker": "META",
+      "direction": "neutral",
+      "confidence": 0.113,
+      "score": 0.171,
+      "sentiment_component": -0.254,
+      "event_component": 0.0,
+      "price_component": 0.551,
+      "evidence_ids": [
+        "501e8a6704dbc14f53bd5e1fef6304c594434e7103cde19e19bd00513637115b",
+        "ad8b134f13c60b48cb3634187e89bf52e04408388ad33fe022e87fb8156eeb18",
+        "1702c37f4b581c1eff734c39c47037ed54d1451bcd42190ab98e3f929a35b94e",
+        "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
+        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb"
+      ],
+      "generated_at": "2026-09-03 19:27:26.626079+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "1440285b25d0a53650615bb7934e42c3f75bb577674c7ab73428578b92a65a0d",
       "ticker": "F",
       "direction": "neutral",
-      "confidence": 0.128,
-      "score": 0.153,
-      "sentiment_component": -0.028,
+      "confidence": 0.114,
+      "score": 0.135,
+      "sentiment_component": -0.036,
       "event_component": 0.0,
-      "price_component": 0.34,
+      "price_component": 0.307,
       "evidence_ids": [
         "12193b5641b839d83138a7b3323beef9d4e34674f7ea30866c06b77a1ff6e30d"
       ],
-      "generated_at": "2026-09-03 17:20:07.271648+00:00",
+      "generated_at": "2026-09-03 19:27:27.111110+00:00",
       "horizon_days": 5
     },
     {
-      "id": "f715da20c2a3a0c8946de205c690891a7632f5b90dd8883792759f663615a0d5",
+      "id": "36e119dbcc8128e8b26fa03c19ce42d83321469684bd3f0943747baefa9a8161",
       "ticker": "GOOGL",
       "direction": "neutral",
-      "confidence": 0.024,
-      "score": 0.025,
-      "sentiment_component": 0.014,
+      "confidence": 0.055,
+      "score": 0.056,
+      "sentiment_component": 0.072,
       "event_component": 0.0,
-      "price_component": 0.04,
+      "price_component": 0.061,
       "evidence_ids": [
         "4719513fcaf1dbcdfe8ad0de52877a8babf67b15cdb1828937b5e39fc421c13a",
+        "c15828a16cf06e9dbc94828c3fa3f74b84274ae70402d220ee56aa69f5fcc418",
+        "1702c37f4b581c1eff734c39c47037ed54d1451bcd42190ab98e3f929a35b94e",
         "f9be32d3b756144a3f749e5cc27fb209825722d23e5049fe109f04d632d90126",
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8",
         "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
         "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580",
         "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb"
       ],
-      "generated_at": "2026-09-03 17:20:07.682144+00:00",
+      "generated_at": "2026-09-03 19:27:27.500373+00:00",
       "horizon_days": 5
     },
     {
-      "id": "890f7c97dc06b6847e87620d22a78a263a98ab215bd088f330c9cd52318f2ec2",
-      "ticker": "WFC",
-      "direction": "bullish",
-      "confidence": 0.348,
-      "score": 0.495,
-      "sentiment_component": 0.381,
-      "event_component": 0.0,
-      "price_component": 0.728,
-      "evidence_ids": [
-        "a973d7eb52baf5e829f835324c50c2c627da4c594630fadc6d16e6d95272b9c8",
-        "246acab09168196398e59bfb3259aabbc070ae38a9b91b78d25357f40c38bde5",
-        "d74d19c1b9a478bba3bddbe7437c173d9297feee27f41c8f2a2062077302c121"
-      ],
-      "generated_at": "2026-09-03 17:20:08.212715+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "d836ec0b5151a7cb0ffe763d7ebe4e6a101519c0d66a9bdc1e7ca83b8e592867",
-      "ticker": "C",
-      "direction": "bullish",
-      "confidence": 0.285,
-      "score": 0.354,
-      "sentiment_component": 0.381,
-      "event_component": 0.0,
-      "price_component": 0.435,
-      "evidence_ids": [
-        "a973d7eb52baf5e829f835324c50c2c627da4c594630fadc6d16e6d95272b9c8"
-      ],
-      "generated_at": "2026-09-03 17:20:08.777231+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "32a612c3d95fe80e21decc000142ffa6464ea73071dbf10ad487aa0dc95e5056",
+      "id": "96837a29d03fd53c43f7558db7abcd23e8804b5f6cc1991367b7c608ce397184",
       "ticker": "BAC",
       "direction": "bullish",
-      "confidence": 0.314,
-      "score": 0.407,
-      "sentiment_component": 0.381,
+      "confidence": 0.331,
+      "score": 0.444,
+      "sentiment_component": 0.392,
       "event_component": 0.0,
-      "price_component": 0.547,
+      "price_component": 0.614,
       "evidence_ids": [
         "a973d7eb52baf5e829f835324c50c2c627da4c594630fadc6d16e6d95272b9c8"
       ],
-      "generated_at": "2026-09-03 17:20:09.268844+00:00",
+      "generated_at": "2026-09-03 19:27:27.931026+00:00",
       "horizon_days": 5
     },
     {
-      "id": "dac832c5ad5b2106c34e9d4697ea73f6451578a67914de86a066900112e326ef",
+      "id": "97667ee16e4d5f40bfd6177e80835bd92272fdc0cad1b24141a7f086ef25f5e9",
+      "ticker": "WFC",
+      "direction": "bullish",
+      "confidence": 0.349,
+      "score": 0.493,
+      "sentiment_component": 0.392,
+      "event_component": 0.0,
+      "price_component": 0.715,
+      "evidence_ids": [
+        "a973d7eb52baf5e829f835324c50c2c627da4c594630fadc6d16e6d95272b9c8"
+      ],
+      "generated_at": "2026-09-03 19:27:28.350415+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "7456737ce085eb8f30227b3f568917d40a62b4c27cebf0a19e350cc809157cde",
+      "ticker": "C",
+      "direction": "bullish",
+      "confidence": 0.299,
+      "score": 0.377,
+      "sentiment_component": 0.392,
+      "event_component": 0.0,
+      "price_component": 0.475,
+      "evidence_ids": [
+        "a973d7eb52baf5e829f835324c50c2c627da4c594630fadc6d16e6d95272b9c8"
+      ],
+      "generated_at": "2026-09-03 19:27:28.725338+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "8cf6696b7961ff9864c76233b0f318a69d9bec86c911957c5ccb0b2af198c22f",
       "ticker": "JPM",
       "direction": "neutral",
-      "confidence": 0.137,
-      "score": 0.162,
+      "confidence": 0.161,
+      "score": 0.201,
       "sentiment_component": 0.0,
       "event_component": 0.0,
-      "price_component": 0.336,
+      "price_component": 0.415,
       "evidence_ids": [
         "23b218dbedde5e0e5b325e2e215c28b7ab154e52035b186b7a97694cf29da110"
       ],
-      "generated_at": "2026-09-03 17:20:09.773325+00:00",
+      "generated_at": "2026-09-03 19:27:29.204014+00:00",
       "horizon_days": 5
     },
     {
-      "id": "6aeb86f30d43e894c7e641e1d175e189b8a89314cd0040a04b115b915a102b88",
+      "id": "e512018cf3ebd138468c6cf6df92a708e8d04ba2bd97ed2fecd35e076ca75cc9",
       "ticker": "NDAQ",
       "direction": "neutral",
-      "confidence": 0.032,
-      "score": -0.042,
-      "sentiment_component": 0.297,
+      "confidence": 0.024,
+      "score": 0.033,
+      "sentiment_component": 0.385,
       "event_component": 0.0,
-      "price_component": -0.318,
+      "price_component": -0.232,
       "evidence_ids": [
         "2c514850af6031984863a75f56c222e66c110ba353bc80356f54be4c5d92cf29",
-        "8ca36b9258561ce743034a7f95d5bf6859babf0e0c207fa9a8a6046879d65b3b",
-        "ec12e704afa1ac7ed7706856cee8a3b9a5ae198043ee6ee65caa473e6521f331",
-        "8cd90763cd45c620c12243a69aac8e95805a534bd0047e7bce0f42880331485e",
         "7b2e82f4d7254e4bed4fa57be14f6d69af2ee07e7ae447e53f3b0e44a4d86fe4",
-        "4da80d20b0b4a292407a6ccae44dd454508db9dd56d1a6fdd0e809f08537279c",
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8",
         "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580",
-        "83a1f11a644899da4dfcf19f93a9fb86c1c485cc2a803d801ee6207a3c314ea3",
-        "7293274a31fc50256efdb87882ae1584580987f7de776e13e5443842be675694",
-        "432190557d1f4c4dfbb7df4c8c1a19b883380cc23e46e4656a05be1ea8d54c43",
+        "e451153af17155b307812580dd94b7d2a287a6cba395c075713623e49f9a066b",
         "d0ae785051734ff754e6247c5d13e0318ab96ec77003636a1e9b3713557f1eac",
-        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb",
-        "b50f28a7547b430992b2cc621f32ae3898e1998863f5eb72df6e8a74c4a13ab8"
+        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb"
       ],
-      "generated_at": "2026-09-03 17:20:10.207751+00:00",
+      "generated_at": "2026-09-03 19:27:29.632422+00:00",
       "horizon_days": 5
     },
     {
-      "id": "a2e3d488782a8b9fa2d5640584b6311153bcd75ae2c5a7a7834789c9e086a361",
+      "id": "f7f69d02c72132f67b802122b1e9eb625ded7ac1cd4146ec46c21a6b5bb4563d",
       "ticker": "COIN",
       "direction": "neutral",
-      "confidence": 0.044,
-      "score": 0.046,
-      "sentiment_component": 0.013,
+      "confidence": 0.085,
+      "score": 0.09,
+      "sentiment_component": 0.126,
       "event_component": 0.0,
-      "price_component": 0.084,
+      "price_component": 0.089,
       "evidence_ids": [
-        "a13e421d3b9b60d76c1acb24761cc1837c7a7b8340b0490fd5ed9ade2c04aa78",
-        "1a3df1aa8792bdc4ded267c2ae17f20920db6a2df3c5ae38945fe0cb59ccafc7",
-        "fdcd7179e6cb73ab463759ff90898c3b91071435179d328d824e586413234e0a",
-        "fcdc842fbb64ee1f26ba1d3b094ba81a9d9acd3208dac1519912179bf4a8dd35",
-        "4f816fddba5b72fc9598c65bf6a55944a5349d1c6e37693f1d0c62df486c796d",
+        "b0392b6141649ca9bbda62d203160c561365fa87a3e2cb16461ffbff2f3b9366",
+        "d5ed46a32212fffbd1ae28f0176dcc6242b4dcbacacb130311e00cef67d21185",
+        "cfdfa427c0e7a05490b3c457eb901f4b0cf77484b50a1fd66a30bc1fa84b1a46",
+        "94760f896139f2dc3927d8e7c9f01cbcfaa1a040151153427366bdb701fc8fda",
+        "c15828a16cf06e9dbc94828c3fa3f74b84274ae70402d220ee56aa69f5fcc418",
+        "dfd35f4610d9581db62d5f1d976c106a5d4f04bdde459984ad5c0ecd457e68b8",
+        "1702c37f4b581c1eff734c39c47037ed54d1451bcd42190ab98e3f929a35b94e",
+        "f589f7287918cae194dddc83948186c6b5040e5aa4b77d1480bcbd5860cd3d62",
+        "cbde58b3330b040295bdf4c887484f1d79880088c8058c996a968590c35875d9",
+        "6ce4900c2f9e680f7149dae5db9acfa1e81fd23bd9597a9d47c6cbc52032bab8",
+        "41bbae64755e43a9505ab7cce676ab492a3bf7b50e1d43af69b180ad8753f345",
         "394e061618fb6039112a59353343fc64792693a40a084c380437969de055ae53",
-        "5aeecf31afe1acd0f7984a58e4495724833a5183f889824ccddf530a235eeec5"
+        "3a8f08d988239207ed720807f058c9c0be16ed710e4fbab7d6ac590a6c141932",
+        "e451153af17155b307812580dd94b7d2a287a6cba395c075713623e49f9a066b"
       ],
-      "generated_at": "2026-09-03 17:20:10.613549+00:00",
+      "generated_at": "2026-09-03 19:27:30.001867+00:00",
       "horizon_days": 5
     },
     {
-      "id": "53f63fcd613f901a5c5b333966f4e575626bb0e23d4ef64aaa4a76f04f18d27c",
-      "ticker": "JAN",
-      "direction": "neutral",
-      "confidence": 0.131,
-      "score": 0.143,
+      "id": "eb5896517477045b47772ddc192be0cf02a32a40bb2b941aaf1da9fdbda6a871",
+      "ticker": "S",
+      "direction": "bearish",
+      "confidence": 0.195,
+      "score": -0.316,
       "sentiment_component": 0.116,
       "event_component": 0.0,
-      "price_component": 0.205,
+      "price_component": -0.745,
       "evidence_ids": [
-        "cc55cbc8da1ea30080fd32ab48d354570b088f3f5b4d7415aa6a1890bc99efb6"
+        "b0392b6141649ca9bbda62d203160c561365fa87a3e2cb16461ffbff2f3b9366"
       ],
-      "generated_at": "2026-09-03 17:20:11.046230+00:00",
+      "generated_at": "2026-09-03 19:27:30.377376+00:00",
       "horizon_days": 5
     },
     {
-      "id": "534765280ab95b652fc9bad6f6ee700ed57a81a0f85966c90b87bf275079f47f",
-      "ticker": "HOOD",
-      "direction": "bullish",
-      "confidence": 0.263,
-      "score": 0.347,
-      "sentiment_component": 0.182,
-      "event_component": 0.0,
-      "price_component": 0.576,
-      "evidence_ids": [
-        "e2711f94add22c17a1202e9a20989574298dbde7ee91d1407e46f3dbea543fa2"
-      ],
-      "generated_at": "2026-09-03 17:20:11.459256+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "a3bec67bf13871202bd50595dbb6694ba9dfcae40b52067e5cde14ea45d5aabb",
-      "ticker": "NEE",
-      "direction": "bullish",
-      "confidence": 0.253,
-      "score": 0.304,
-      "sentiment_component": 0.352,
-      "event_component": 0.0,
-      "price_component": 0.356,
-      "evidence_ids": [
-        "6a9888bb0e28181b4b244b2807acdac48fef3ed3e8b7f2aacb89a055220e81f6",
-        "bcdf3c6f71ebbe8ddaf4c02bf5d56c28fb9b2cfe258e28aa0f3afeb5a1f4cf30",
-        "ec025b25c14bec9a2ecabdb4c59193fe1842bbacfdceb7a73fd38c2a074f50bc"
-      ],
-      "generated_at": "2026-09-03 17:20:11.967106+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "6b2565740fbbdc8581c6cda3716ce96b86179e6b472eac9c6b6e82154be05bd2",
-      "ticker": "CEG",
+      "id": "36c8e466e683af9acf02aae847fec75f819dbca81bddfd0c3f42086cc5a0f23e",
+      "ticker": "CRM",
       "direction": "neutral",
-      "confidence": 0.096,
-      "score": 0.104,
-      "sentiment_component": 0.203,
+      "confidence": 0.182,
+      "score": 0.207,
+      "sentiment_component": 0.279,
+      "event_component": 0.0,
+      "price_component": 0.211,
+      "evidence_ids": [
+        "d5ed46a32212fffbd1ae28f0176dcc6242b4dcbacacb130311e00cef67d21185"
+      ],
+      "generated_at": "2026-09-03 19:27:30.696769+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0c881848d8bee8f0c355b53aefda694d007fce07a031f0ee66200719abd8322b",
+      "ticker": "ESTC",
+      "direction": "bullish",
+      "confidence": 0.304,
+      "score": 0.486,
+      "sentiment_component": 0.178,
+      "event_component": 0.0,
+      "price_component": 0.867,
+      "evidence_ids": [
+        "cfdfa427c0e7a05490b3c457eb901f4b0cf77484b50a1fd66a30bc1fa84b1a46"
+      ],
+      "generated_at": "2026-09-03 19:27:31.086018+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "09942925ba7bb3d9d119edfbf3e7e3f12d029605964c8956b16d1ce5e52e6693",
+      "ticker": "MRVL",
+      "direction": "neutral",
+      "confidence": 0.06,
+      "score": -0.09,
+      "sentiment_component": 0.35,
+      "event_component": 0.0,
+      "price_component": -0.459,
+      "evidence_ids": [
+        "c15828a16cf06e9dbc94828c3fa3f74b84274ae70402d220ee56aa69f5fcc418"
+      ],
+      "generated_at": "2026-09-03 19:27:31.474896+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "41a4373147dacef10ea6d0b096b4b43349b0668ffb68d810fedc40aa8923a53a",
+      "ticker": "REGN",
+      "direction": "neutral",
+      "confidence": 0.165,
+      "score": 0.203,
+      "sentiment_component": 0.017,
+      "event_component": 0.0,
+      "price_component": 0.407,
+      "evidence_ids": [
+        "dfd35f4610d9581db62d5f1d976c106a5d4f04bdde459984ad5c0ecd457e68b8"
+      ],
+      "generated_at": "2026-09-03 19:27:31.859216+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "a7673c5c0f7649f4945ac71fe1d6a0d0617cb2fe1e642434014480c914d39deb",
+      "ticker": "AMZN",
+      "direction": "neutral",
+      "confidence": 0.073,
+      "score": 0.078,
+      "sentiment_component": 0.13,
       "event_component": 0.0,
       "price_component": 0.059,
       "evidence_ids": [
-        "6a9888bb0e28181b4b244b2807acdac48fef3ed3e8b7f2aacb89a055220e81f6"
+        "1702c37f4b581c1eff734c39c47037ed54d1451bcd42190ab98e3f929a35b94e",
+        "41bbae64755e43a9505ab7cce676ab492a3bf7b50e1d43af69b180ad8753f345",
+        "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
+        "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580",
+        "394e061618fb6039112a59353343fc64792693a40a084c380437969de055ae53",
+        "0037f0bbab4c0d8abbf19609f05633b76e210c7320c1596961e41ce470d5e426",
+        "8de098e6df7f3172bc03f94eb4c9fb37e318ab9f8def7e7088b0e9a1ee5a61f4",
+        "d0ae785051734ff754e6247c5d13e0318ab96ec77003636a1e9b3713557f1eac",
+        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb"
       ],
-      "generated_at": "2026-09-03 17:20:12.388173+00:00",
+      "generated_at": "2026-09-03 19:27:32.257550+00:00",
       "horizon_days": 5
     },
     {
-      "id": "87d2be300ff979369249fab06c8ad7c41c3f67812449f09e0e9b5c41f4ca91f5",
-      "ticker": "WBI",
-      "direction": "neutral",
-      "confidence": 0.013,
-      "score": -0.014,
-      "sentiment_component": 0.117,
-      "event_component": 0.0,
-      "price_component": -0.121,
-      "evidence_ids": [
-        "aa47b8116e3193cfb4d83f34f7c0cfd1fb11c6b0815188b84c90fd6cb3dc7ac9"
-      ],
-      "generated_at": "2026-09-03 17:20:12.803016+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "c5e6e5bc8a1de8e18e9f25817ada4af57dd563d403d50614343f21ad131c5007",
-      "ticker": "SNOW",
-      "direction": "bullish",
-      "confidence": 0.252,
-      "score": 0.538,
-      "sentiment_component": -0.011,
-      "event_component": 0.0,
-      "price_component": 1.0,
-      "evidence_ids": [
-        "ec12e704afa1ac7ed7706856cee8a3b9a5ae198043ee6ee65caa473e6521f331"
-      ],
-      "generated_at": "2026-09-03 17:20:13.222790+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "01f6ec14d481c66dd0350a18b71a777334224f326bebca4106b6a10abf184bd1",
-      "ticker": "NOW",
-      "direction": "neutral",
-      "confidence": 0.112,
-      "score": 0.123,
-      "sentiment_component": 0.055,
-      "event_component": 0.0,
-      "price_component": 0.213,
-      "evidence_ids": [
-        "ec12e704afa1ac7ed7706856cee8a3b9a5ae198043ee6ee65caa473e6521f331"
-      ],
-      "generated_at": "2026-09-03 17:20:13.658258+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1f2ea18885bf920eaf91c3e1ca958aae2276c77e7bce21d5902ccf5d9188517a",
-      "ticker": "PLTR",
-      "direction": "neutral",
-      "confidence": 0.032,
-      "score": -0.033,
-      "sentiment_component": -0.035,
-      "event_component": 0.0,
-      "price_component": -0.04,
-      "evidence_ids": [
-        "ec12e704afa1ac7ed7706856cee8a3b9a5ae198043ee6ee65caa473e6521f331"
-      ],
-      "generated_at": "2026-09-03 17:20:14.059301+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "ae9ae24cf493924ad2b9928c7495d788a1964407be494553eb2e895818c66bd6",
-      "ticker": "USLM",
-      "direction": "neutral",
-      "confidence": 0.072,
-      "score": -0.084,
-      "sentiment_component": 0.088,
-      "event_component": 0.0,
-      "price_component": -0.242,
-      "evidence_ids": [
-        "7ae807b448b6cb3d7ffd0c197fd05ec02a518f1c8a4226bff21d18bcce7e76ed"
-      ],
-      "generated_at": "2026-09-03 17:20:14.539099+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1f88fe79eedb0227585be07dabcc35995dcee1d1d86860b923ae1c29b7932082",
-      "ticker": "RHP",
+      "id": "26ba98427389d7cefd8bbea89f73436bf5b6346100e8e80829b8a86d81213bf9",
+      "ticker": "GBX",
       "direction": "bearish",
-      "confidence": 0.2,
-      "score": -0.315,
+      "confidence": 0.217,
+      "score": -0.392,
+      "sentiment_component": 0.102,
+      "event_component": 0.0,
+      "price_component": -0.891,
+      "evidence_ids": [
+        "4b612a6bdd232fefc0b193065eac9938f31104068d4c7ee65dfe354db6537a1f"
+      ],
+      "generated_at": "2026-09-03 19:27:32.677034+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "4d410cb402cff859bb0075b5301649c5d99dcb1c77a1e76d53cc9d733ae45b06",
+      "ticker": "MS",
+      "direction": "neutral",
+      "confidence": 0.092,
+      "score": 0.097,
       "sentiment_component": 0.091,
       "event_component": 0.0,
-      "price_component": -0.722,
+      "price_component": 0.131,
       "evidence_ids": [
-        "ff13e6e4f0d3b2ec80fd72512451460ed9d540e08c34f4c4e9adfe198b84248d"
+        "f589f7287918cae194dddc83948186c6b5040e5aa4b77d1480bcbd5860cd3d62"
       ],
-      "generated_at": "2026-09-03 17:20:15.061760+00:00",
+      "generated_at": "2026-09-03 19:27:33.095539+00:00",
       "horizon_days": 5
     },
     {
-      "id": "fad3893ba8542dc5e32d80f2b37c12665921832dea44930add0ecf1c7af96d7a",
-      "ticker": "MGY",
-      "direction": "neutral",
-      "confidence": 0.099,
-      "score": 0.106,
-      "sentiment_component": 0.092,
-      "event_component": 0.0,
-      "price_component": 0.148,
-      "evidence_ids": [
-        "143894e4f4ab76224be6331a772d9c17d9851599bea0ca9b7ab70ed3bf1a330f"
-      ],
-      "generated_at": "2026-09-03 17:20:15.500120+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "cf0227e07d5a004b1278c8b8d87e533ac8b8d1ab8ac1e4e7f4d58869c0505827",
-      "ticker": "DCO",
-      "direction": "bearish",
-      "confidence": 0.176,
-      "score": -0.265,
-      "sentiment_component": 0.119,
-      "event_component": 0.0,
-      "price_component": -0.641,
-      "evidence_ids": [
-        "7c6e274c69c8ca961eb7a88ac05aa01aaedf9e6aef07ddf65ed9f3bdbfbcaae5"
-      ],
-      "generated_at": "2026-09-03 17:20:15.914910+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "b98878854fb78274ad2de13aaf62ee8fa1d453fae3fcd00465098d30b632e138",
-      "ticker": "ASTH",
-      "direction": "neutral",
-      "confidence": 0.035,
-      "score": 0.037,
-      "sentiment_component": 0.123,
-      "event_component": 0.0,
-      "price_component": -0.019,
-      "evidence_ids": [
-        "82e2d9b7715322ea7c680c1c835d08c6caf17afe20af33c7d8a98c95892ec201"
-      ],
-      "generated_at": "2026-09-03 17:20:16.336957+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "5a150261267dc85367431b2cb4856dbdb7818fa79eeb79103ec412513a56ee2c",
-      "ticker": "ANET",
-      "direction": "neutral",
-      "confidence": 0.144,
-      "score": -0.163,
-      "sentiment_component": -0.08,
-      "event_component": 0.0,
-      "price_component": -0.276,
-      "evidence_ids": [
-        "993dae9d476389b40e16d26b36c668de227943d7516abc68068d3847d4b9a9be"
-      ],
-      "generated_at": "2026-09-03 17:20:16.782571+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "72b1e58404e91c1635f64f25196cf26333cd6d9c167613329b0051a37662f0fa",
-      "ticker": "CSCO",
-      "direction": "neutral",
-      "confidence": 0.115,
-      "score": -0.13,
-      "sentiment_component": -0.016,
-      "event_component": 0.0,
-      "price_component": -0.256,
-      "evidence_ids": [
-        "993dae9d476389b40e16d26b36c668de227943d7516abc68068d3847d4b9a9be"
-      ],
-      "generated_at": "2026-09-03 17:20:17.246189+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "4c825c2244a9e6ee91e9c67347b62d3f374ab8a4a03e6901a4cfbfce2ec5d983",
-      "ticker": "CIEN",
-      "direction": "bearish",
-      "confidence": 0.305,
-      "score": -0.469,
-      "sentiment_component": -0.196,
-      "event_component": 0.0,
-      "price_component": -0.819,
-      "evidence_ids": [
-        "993dae9d476389b40e16d26b36c668de227943d7516abc68068d3847d4b9a9be"
-      ],
-      "generated_at": "2026-09-03 17:20:17.651908+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "f354f6f2741044e58fa50167342f54e80f196f4fc8db6fa2a5414397e5931846",
+      "id": "93b450d5b352d102b15e1be31601ec6da5c6771548995584db94baf4d22ed9cf",
       "ticker": "AAPL",
       "direction": "bullish",
-      "confidence": 0.217,
+      "confidence": 0.218,
       "score": 0.267,
-      "sentiment_component": 0.141,
+      "sentiment_component": 0.149,
       "event_component": 0.0,
-      "price_component": 0.442,
+      "price_component": 0.436,
       "evidence_ids": [
+        "5b838bdda38bd6907e51b214c91d8abacaff2f194fd549111612178cd8137c70",
         "6aa1de8e1ca99db753f6b58dff4d6f3aaf944a4ac03ce3b141a3e5cdcbb39fe9",
         "4848419566bf0a9dfd196d2bc5757a6788675ddf386c07920e91d15d7f64ce62",
         "4511c9c4b2271e249bc2d2719bbc2a7eff1d7f8884da4581d5657118407c6323",
         "f18573ce015319da8bbe06820e7b5fe1a41d305940f87f9edd4d681bcb4c7a3d",
-        "f628e4b19d0c42e1b352c109acfeec8a892873af0b2acf442ec3b6949455ad26",
         "b8fe43af29d08016a7c823b9caf3e005888d949043153da5cf74feca2f52a4b4",
         "9dfa451aeb6f5027f2b1c3166e6ee41dde426a3e7b3023f931863bc2ed3ba50e",
         "9fc1885b9e2e82712217b2261eaf7d8b872f4096ae0b14a86362c5993e901bb2",
         "f9be32d3b756144a3f749e5cc27fb209825722d23e5049fe109f04d632d90126"
       ],
-      "generated_at": "2026-09-03 17:20:18.157199+00:00",
+      "generated_at": "2026-09-03 19:27:33.587505+00:00",
       "horizon_days": 5
     },
     {
-      "id": "0fc92d67567ecfcebb94fd1b95424b219a9b873160aa639e6ca818b0baba1ff1",
-      "ticker": "ADBE",
+      "id": "c5936737ef46b6895c605c83a86b10f39164c3a9db9fa102b0315cd967b35549",
+      "ticker": "HALO",
       "direction": "neutral",
-      "confidence": 0.01,
-      "score": -0.01,
-      "sentiment_component": 0.096,
+      "confidence": 0.122,
+      "score": 0.132,
+      "sentiment_component": 0.158,
       "event_component": 0.0,
-      "price_component": -0.096,
+      "price_component": 0.151,
       "evidence_ids": [
-        "f628e4b19d0c42e1b352c109acfeec8a892873af0b2acf442ec3b6949455ad26"
+        "60d3f4ee65a9dcfd012d04153cf147e29759e105cbacf02dea0c9c294861efb3"
       ],
-      "generated_at": "2026-09-03 17:20:18.592749+00:00",
+      "generated_at": "2026-09-03 19:27:33.928362+00:00",
       "horizon_days": 5
     },
     {
-      "id": "6feffd294c742586f60f14184b5cf90d932bbffcaa1008e5a7eea761c772a38e",
-      "ticker": "BRK-B",
+      "id": "187150a7766392457bd71950a2e361c16e61fbee74700f5364296cef396ab38e",
+      "ticker": "ARGX",
       "direction": "neutral",
-      "confidence": 0.076,
-      "score": 0.083,
-      "sentiment_component": 0.0,
+      "confidence": 0.047,
+      "score": 0.051,
+      "sentiment_component": 0.158,
       "event_component": 0.0,
-      "price_component": 0.172,
+      "price_component": -0.017,
       "evidence_ids": [
-        "60398671e5d5b869c0894373cbfe9b03e6d191fa76599dc11fe390f07cde16cd"
+        "60d3f4ee65a9dcfd012d04153cf147e29759e105cbacf02dea0c9c294861efb3"
       ],
-      "generated_at": "2026-09-03 17:20:18.999656+00:00",
+      "generated_at": "2026-09-03 19:27:34.618354+00:00",
       "horizon_days": 5
     },
     {
-      "id": "db5b946b8f5067170e4e864830b5e50e80089302c6b3ab5a47f8e28ca5070fb1",
-      "ticker": "MU",
+      "id": "e00298860c925d4c3ae980fa39c4d6b773ea3430eb5334b22e4b508fc1ad046d",
+      "ticker": "SPGI",
       "direction": "neutral",
-      "confidence": 0.013,
-      "score": 0.013,
-      "sentiment_component": -0.001,
+      "confidence": 0.205,
+      "score": 0.243,
+      "sentiment_component": 0.162,
       "event_component": 0.0,
-      "price_component": 0.028,
+      "price_component": 0.376,
       "evidence_ids": [
-        "4f816fddba5b72fc9598c65bf6a55944a5349d1c6e37693f1d0c62df486c796d"
+        "60d3f4ee65a9dcfd012d04153cf147e29759e105cbacf02dea0c9c294861efb3"
       ],
-      "generated_at": "2026-09-03 17:20:19.487890+00:00",
+      "generated_at": "2026-09-03 19:27:35.068126+00:00",
       "horizon_days": 5
     },
     {
-      "id": "c54a56da23c01ed07c293d516dba7f47d2ea9c5e29e75e72138244929ab6bbb6",
-      "ticker": "AMZN",
-      "direction": "neutral",
-      "confidence": 0.041,
-      "score": 0.042,
-      "sentiment_component": 0.038,
-      "event_component": 0.0,
-      "price_component": 0.058,
-      "evidence_ids": [
-        "4da80d20b0b4a292407a6ccae44dd454508db9dd56d1a6fdd0e809f08537279c",
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8",
-        "28d632fc74df0fbfe49796eb908d86b9f04d3ad6a7223658275fd0dfaba8d1ce",
-        "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580",
-        "394e061618fb6039112a59353343fc64792693a40a084c380437969de055ae53",
-        "e96b745979437a72f0f112d8e062cc456581563491a5c4bdbbb14a267244d783",
-        "0037f0bbab4c0d8abbf19609f05633b76e210c7320c1596961e41ce470d5e426",
-        "8de098e6df7f3172bc03f94eb4c9fb37e318ab9f8def7e7088b0e9a1ee5a61f4",
-        "d0ae785051734ff754e6247c5d13e0318ab96ec77003636a1e9b3713557f1eac",
-        "8f6522da08cfe15caf4b7aa8002a28cba35bc0475e597e1417803d1d7fc263eb",
-        "b50f28a7547b430992b2cc621f32ae3898e1998863f5eb72df6e8a74c4a13ab8"
-      ],
-      "generated_at": "2026-09-03 17:20:19.913826+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "8b76c5bb1caf310513229e00fbfb64d2db5f2a182421a1fd49489fc83a556c16",
-      "ticker": "BABA",
-      "direction": "neutral",
-      "confidence": 0.077,
-      "score": -0.093,
-      "sentiment_component": 0.126,
-      "event_component": 0.0,
-      "price_component": -0.291,
-      "evidence_ids": [
-        "cf4e69350332a3cddf95bed892efb5195aeaf430c4dfb024d1e0fe1433120fb8"
-      ],
-      "generated_at": "2026-09-03 17:20:20.327834+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "c58aac53dbd2f7c13bdae079e8893a39e27b86f783b4778b9892c7cb2ecb497b",
+      "id": "72b3b05e2a2fd3fcfede0abc6b3d2693c365662f760028c8b590f144ffa30a82",
       "ticker": "WMT",
       "direction": "bullish",
-      "confidence": 0.255,
-      "score": 0.336,
-      "sentiment_component": 0.161,
+      "confidence": 0.272,
+      "score": 0.351,
+      "sentiment_component": 0.233,
       "event_component": 0.0,
-      "price_component": 0.57,
+      "price_component": 0.544,
       "evidence_ids": [
         "0e743274516becadb4ec7bdeb0026559207e0377a50e4ccee262a3cc74547580"
       ],
-      "generated_at": "2026-09-03 17:20:20.829902+00:00",
+      "generated_at": "2026-09-03 19:27:35.443965+00:00",
       "horizon_days": 5
     },
     {
-      "id": "859aafdf091478f410544b9eb95d5afb2e296de72a73fa34580a3a2889b38694",
-      "ticker": "PLUS",
-      "direction": "neutral",
-      "confidence": 0.182,
-      "score": 0.212,
-      "sentiment_component": 0.119,
-      "event_component": 0.0,
-      "price_component": 0.347,
-      "evidence_ids": [
-        "eb8e63f39784dce1c5bee1c9cf28f27fd64256e31740363a1792cd4b6722b7ac"
-      ],
-      "generated_at": "2026-09-03 17:20:21.285760+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "fcd93cb2c07e1a75dd9eee67f27ba24d92506cf9d038cf306bfcc72d4f915e65",
-      "ticker": "AFL",
-      "direction": "neutral",
-      "confidence": 0.173,
-      "score": 0.201,
-      "sentiment_component": 0.11,
-      "event_component": 0.0,
-      "price_component": 0.33,
-      "evidence_ids": [
-        "d02f67db1f04682905b3b7e91c05f77896e4bfd78001edb7412c76772bba2eb2"
-      ],
-      "generated_at": "2026-09-03 17:20:21.789127+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "ad1afc73f374a6118d6cecc1d224462a0d6ee6904020ca9523f3fb0efbed0537",
-      "ticker": "CVX",
-      "direction": "bullish",
-      "confidence": 0.358,
-      "score": 0.542,
-      "sentiment_component": 0.376,
-      "event_component": 0.0,
-      "price_component": 0.831,
-      "evidence_ids": [
-        "d02f67db1f04682905b3b7e91c05f77896e4bfd78001edb7412c76772bba2eb2"
-      ],
-      "generated_at": "2026-09-03 17:20:22.300824+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "63f18c3a0493b3fb3191d743e414e022f661cd48c975c7010b4458603ceedd4d",
+      "id": "4053a9a54eff556f0a913003763fec19009f3538fd122bbcf7c8449eb08224e8",
       "ticker": "ADP",
       "direction": "neutral",
-      "confidence": 0.011,
-      "score": 0.012,
-      "sentiment_component": 0.118,
+      "confidence": 0.043,
+      "score": 0.048,
+      "sentiment_component": 0.2,
       "event_component": 0.0,
-      "price_component": -0.068,
+      "price_component": -0.057,
       "evidence_ids": [
         "d02f67db1f04682905b3b7e91c05f77896e4bfd78001edb7412c76772bba2eb2"
       ],
-      "generated_at": "2026-09-03 17:20:22.791595+00:00",
+      "generated_at": "2026-09-03 19:27:35.913648+00:00",
       "horizon_days": 5
     },
     {
-      "id": "11a3048e94c77f6fc61b6411ec037a12a8aff8b8a5cfe0de407d48f771cf87b7",
-      "ticker": "MDT",
+      "id": "ab96772f6a24730fc077fc0427b96613d7c7fd3ee6592e87873cc19d18bd3bde",
+      "ticker": "AFL",
       "direction": "neutral",
-      "confidence": 0.117,
-      "score": 0.127,
-      "sentiment_component": 0.192,
+      "confidence": 0.187,
+      "score": 0.212,
+      "sentiment_component": 0.195,
       "event_component": 0.0,
-      "price_component": 0.113,
+      "price_component": 0.288,
       "evidence_ids": [
-        "791008c7e2fae021d337fa64286b0f778fdca53dfc4e6e68f1162421c3775be4"
+        "d02f67db1f04682905b3b7e91c05f77896e4bfd78001edb7412c76772bba2eb2"
       ],
-      "generated_at": "2026-09-03 17:20:23.291735+00:00",
+      "generated_at": "2026-09-03 19:27:36.351844+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2eb6711d0f545f9794d7c0299d2cb899478c939705cfb83c66830c11b3727a86",
-      "ticker": "AVGO",
+      "id": "2c5281993fef161097c33e2afb38e5005d199c91c3b19b7e07816e685d81e482",
+      "ticker": "CVX",
+      "direction": "bullish",
+      "confidence": 0.353,
+      "score": 0.517,
+      "sentiment_component": 0.381,
+      "event_component": 0.0,
+      "price_component": 0.773,
+      "evidence_ids": [
+        "d02f67db1f04682905b3b7e91c05f77896e4bfd78001edb7412c76772bba2eb2",
+        "00cd2a08fed11879cab87e6675494e81f4501ab39738599a0456ee2ab52dcf69"
+      ],
+      "generated_at": "2026-09-03 19:27:36.842858+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "346cd2de8e922c98c5d96ad019c00b7dc304e5bc60ede6d9d18da1fa16292b8e",
+      "ticker": "CRWD",
       "direction": "neutral",
-      "confidence": 0.08,
-      "score": -0.101,
-      "sentiment_component": 0.16,
+      "confidence": 0.057,
+      "score": -0.068,
+      "sentiment_component": 0.127,
       "event_component": 0.0,
-      "price_component": -0.334,
+      "price_component": -0.239,
       "evidence_ids": [
-        "97484ca83bf9b1186a56fb1105460329d2f7991fecb40aa64f05ee178a1f224b",
-        "432190557d1f4c4dfbb7df4c8c1a19b883380cc23e46e4656a05be1ea8d54c43",
-        "b50f28a7547b430992b2cc621f32ae3898e1998863f5eb72df6e8a74c4a13ab8"
+        "e451153af17155b307812580dd94b7d2a287a6cba395c075713623e49f9a066b"
       ],
-      "generated_at": "2026-09-03 17:20:23.736580+00:00",
+      "generated_at": "2026-09-03 19:27:37.216601+00:00",
       "horizon_days": 5
     },
     {
-      "id": "2d644678da339851cae3d8a4c573132ceb396c117027ca906e05348954d4ff0f",
+      "id": "38b16b6829c8689f557852b3ab310286e1dc26cbeb8c4d57c06cb3bf500be217",
       "ticker": "AMD",
       "direction": "neutral",
-      "confidence": 0.003,
-      "score": 0.004,
-      "sentiment_component": 0.231,
+      "confidence": 0.002,
+      "score": 0.002,
+      "sentiment_component": 0.236,
       "event_component": 0.0,
-      "price_component": -0.172,
+      "price_component": -0.179,
       "evidence_ids": [
-        "432190557d1f4c4dfbb7df4c8c1a19b883380cc23e46e4656a05be1ea8d54c43",
-        "b50f28a7547b430992b2cc621f32ae3898e1998863f5eb72df6e8a74c4a13ab8"
+        "17b3470397779c2650298d9d39ec4645454613cd0b8436d773274a9976f8232e"
       ],
-      "generated_at": "2026-09-03 17:20:24.185198+00:00",
+      "generated_at": "2026-09-03 19:27:37.613156+00:00",
       "horizon_days": 5
     },
     {
-      "id": "4bb6bf4bed75c96e9aa689755c7bded1fdc7888e309ac1d7c21a9caff11f5dc6",
+      "id": "9e43527da28b3e5303464e5e1c150aae5ea2e61a6baa54d34cd6a89b2f09e49e",
+      "ticker": "LLY",
+      "direction": "neutral",
+      "confidence": 0.002,
+      "score": -0.003,
+      "sentiment_component": 0.171,
+      "event_component": 0.0,
+      "price_component": -0.139,
+      "evidence_ids": [
+        "8017975d2c0e92adcabfc9ea1ed59193f25168a4e62048942d69a9dbb6764430"
+      ],
+      "generated_at": "2026-09-03 19:27:38.189286+00:00",
+      "horizon_days": 5
+    },
+    {
+      "id": "0d7a03ec9368f7d12ad4b30fc3403156e7b19cd3289540172dc16af61fea5b09",
       "ticker": "NTAP",
       "direction": "neutral",
-      "confidence": 0.133,
-      "score": -0.163,
-      "sentiment_component": 0.047,
+      "confidence": 0.103,
+      "score": -0.124,
+      "sentiment_component": 0.079,
       "event_component": 0.0,
-      "price_component": -0.375,
+      "price_component": -0.319,
       "evidence_ids": [
         "d0ae785051734ff754e6247c5d13e0318ab96ec77003636a1e9b3713557f1eac"
       ],
-      "generated_at": "2026-09-03 17:20:24.653719+00:00",
-      "horizon_days": 5
-    },
-    {
-      "id": "1cba2a57270c1aa09cc7e1ffff046f4797f536bb05847a061df12df549610790",
-      "ticker": "INTC",
-      "direction": "neutral",
-      "confidence": 0.042,
-      "score": 0.046,
-      "sentiment_component": 0.185,
-      "event_component": 0.0,
-      "price_component": -0.048,
-      "evidence_ids": [
-        "b50f28a7547b430992b2cc621f32ae3898e1998863f5eb72df6e8a74c4a13ab8"
-      ],
-      "generated_at": "2026-09-03 17:20:25.149214+00:00",
+      "generated_at": "2026-09-03 19:27:38.608741+00:00",
       "horizon_days": 5
     }
   ],
@@ -1041,27 +816,27 @@
     "allocations": [
       {
         "ticker": "CVX",
-        "amount": 3509.8,
-        "percentage": 35.098,
-        "rationale": "CVX: bullish signal, confidence 36%, 5-day horizon"
+        "amount": 3417.23,
+        "percentage": 34.1723,
+        "rationale": "CVX: bullish signal, confidence 35%, 5-day horizon"
       },
       {
         "ticker": "WFC",
-        "amount": 3411.76,
-        "percentage": 34.1176,
+        "amount": 3378.51,
+        "percentage": 33.7851,
         "rationale": "WFC: bullish signal, confidence 35%, 5-day horizon"
       },
       {
         "ticker": "BAC",
-        "amount": 3078.44,
-        "percentage": 30.7844,
-        "rationale": "BAC: bullish signal, confidence 31%, 5-day horizon"
+        "amount": 3204.26,
+        "percentage": 32.0426,
+        "rationale": "BAC: bullish signal, confidence 33%, 5-day horizon"
       }
     ],
     "risk_summary": "Moderate allocation: 40% in SPY for diversified exposure, 60% across 3 high-confidence bullish equities.",
     "expected_return_range": [
-      0.0918,
-      0.5187
+      0.0912,
+      0.5107
     ],
     "time_horizon_months": 12,
     "rebalance_trigger": "monthly",
@@ -1078,33 +853,32 @@
   "requires_interrupt": false,
   "human_review_decision": null,
   "error_log": [
-    "event_detection [8397d5fe]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypfkxP-2kFHot-a3565a72bfc988ee\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [2fb297c5]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypfnGZ-2kFHot-a3565a8e5d20e2ca\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [0ac85a52]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [8397d5fe]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMBSB-2kFHot-a357163bf9b087a9\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [b0e46c0d]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMCXu-2kFHot-a35716531dbf1fd1\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [82bc0aac]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMDdN-2kFHot-a357166a0ff61fd1\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [2fb297c5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [bec25165]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [0ac85a52]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f89cccb6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [3133fd78]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7c645393]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [62173fb8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f89cccb6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [501e8a67]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b8744401]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [3133fd78]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [732606ac]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [76e0a06d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [5e9ea595]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f5a8986a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [9586ec86]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7dbfe1b6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [92277f6b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [91181adc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [2f1af867]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [01826b4d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [91181adc]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMV4Z-2kFHot-a35717ae8f2ca9d2\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [2f1af867]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMW8i-2kFHot-a35717c52a942539\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [01826b4d]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMXEJ-2kFHot-a35717dbf83fef60\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [5a2486a0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [12193b56]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [78b9a40a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [4719513f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [63b15b24]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [220ab240]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8aa9a691]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [291da870]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7002682a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [df934e4b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [23c0792f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1115,9 +889,9 @@
     "event_detection [0525d205]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [6797299a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [2c087447]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [40f97cca]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgSF5-2kFHot-a3565dac38110585\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [2f7a2717]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgTP5-2kFHot-a3565dc4ab9d25f7\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [b8d921b5]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgUYv-2kFHot-a3565ddd4b4852d5\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [40f97cca]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2f7a2717]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMoZP-2kFHot-a35719337a127b74\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [b8d921b5]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqMpeZ-2kFHot-a357194a2f609698\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [f4eded2d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [3007393c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [310ff12f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1130,11 +904,13 @@
     "event_detection [a973d7eb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c9181525]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [23b218db]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d08a2d9f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [2c514850]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [291da870]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [6cf546f0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c0430f44]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgjmg-2kFHot-a3565f1d2817b964\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [e2b3a542]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgkuu-2kFHot-a3565f3519d7b964\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [09ed82f0]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypgn7Q-2kFHot-a3565f4e69c8a616\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [c0430f44]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqN74M-2kFHot-a3571aa35a77aa75\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [e2b3a542]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqN886-2kFHot-a3571ab9b8042514\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [09ed82f0]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqN9Cw-2kFHot-a3571ad06f108121\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [f12ff712]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [053afedf]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [aacd7d2e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1150,10 +926,9 @@
     "event_detection [95e46c1e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [8ee61dc7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [8fd437d0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [9b0c9581]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyph4Qb-2kFHot-a35660a50b969a65\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [800be690]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyph5Xd-2kFHot-a35660bc89e30814\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [3629f611]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6051c567]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [9b0c9581]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqNQao-2kFHot-a3571c13da8d0fb6\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [800be690]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqNRfk-2kFHot-a3571c2abfa0d65f\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [6051c567]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqNSkJ-2kFHot-a3571c415de3430c\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [901d5d07]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [18938387]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [4ed2030c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1167,11 +942,11 @@
     "event_detection [3001d27b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f993f6c8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7a37f182]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [3fdcadd6]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphN4m-2kFHot-a356621808552430\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [05ffa405]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphPDe-2kFHot-a3566230ac96e5fe\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [3fdcadd6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [05ffa405]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [1a71d689]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [50fb85b5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7872d502]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [50fb85b5]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqNjAC-2kFHot-a3571d9a097f02dc\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [7872d502]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqNkEm-2kFHot-a3571db10c27fbc5\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [22145cb5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c2edda35]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b6cdf70b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
@@ -1184,107 +959,107 @@
     "event_detection [f4e54349]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [16f3b768]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b4cd2656]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f44604c4]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphh6J-2kFHot-a35663a828cef72b\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [aad9776f]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphiFo-2kFHot-a35663c0ef29150b\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [f44604c4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [aad9776f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [4577af92]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c7aff266]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [2be8bbe5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [10413b83]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b6244104]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2be8bbe5]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqP2cm-2kFHot-a3571f097901d6bf\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [10413b83]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqP3oX-2kFHot-a3571f203e46dfcf\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [b6244104]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqP4uS-2kFHot-a3571f398fedd698\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [fdb9acb8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [fd54716c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [e4085629]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [c7dba1ba]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [42310fff]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f67ef82a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ae425e72]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c37cfa8f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [63ba0b30]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [9776b66d]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphyYE-2kFHot-a35665022f5125bd\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [25c83b3d]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyphziD-2kFHot-a356651a4b07e611\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [90d60224]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypi1qp-2kFHot-a35665328b4ae056\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [a13e421d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ea62648c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1a3df1aa]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [c2a0d24b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [cc55cbc8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [2caac5fe]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fdcd7179]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [246acab0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [e2711f94]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [df615a9a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [6a9888bb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8ca36b92]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [aa47b811]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ec12e704]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7ae807b4]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypiHBo-2kFHot-a3566674feb9e61f\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [6f26e8b9]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypiJMX-2kFHot-a356668dbf805836\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [ff13e6e4]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypiKWY-2kFHot-a35666a5e85205b1\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [bcdf3c6f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [143894e4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7c6e274c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [82e2d9b7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [9e584a24]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [5e2b9551]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [993dae9d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f28e91d9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [02d9e428]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [15e6fabf]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [b3ea6484]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [b7f2654c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2a2a1e87]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [9153cb7f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [c7637880]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d9a2998f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [30354b82]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPLGM-2kFHot-a357207c8d220d60\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [f364d1de]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPMLt-2kFHot-a357209328977c67\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [b0392b61]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPNRf-2kFHot-a35720a9d9249c6d\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [d5ed46a3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [cfdfa427]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [94760f89]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [6527ee4c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [c15828a1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [dfd35f46]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [1702c37f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [84282100]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [2e4d2d73]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [7e0a03f9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [4b612a6b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f7f1842b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f71a6ab5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f1aa153d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [06b5183f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [f589f728]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [95f48aa0]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPeqm-2kFHot-a3572202ef7bc975\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [bfc2175e]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPfzY-2kFHot-a357221b4cdbc99d\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [48689e6b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [5b838bdd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [7c9b0726]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [95f48aa0]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [42ccd6ae]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [bff0890f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [550928de]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [d065deab]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [60d3f4ee]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b19617f6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fcdc842f]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypibF5-2kFHot-a35667f0df0fd6bf\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [bb64e0b1]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypicSZ-2kFHot-a35668094c08c707\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [bb26b08e]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypidce-2kFHot-a3566822aabec707\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [000062e8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [97d81c86]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a836dbba]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [87224095]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [7f280a21]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [e42c7c8a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [bb26b08e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [27d3dc6a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [d74d19c1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [0cb746cd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [1b3197a1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [fe25640f]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPxTc-2kFHot-a35723758ce8b0ff\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [1b3197a1]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqPyYV-2kFHot-a357238c5c346973\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [6aa1de8e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [48484195]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [4511c9c4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f18573ce]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [f628e4b1]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [cbde58b3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [6ce4900c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [b8fe43af]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [9dfa451a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [9fc1885b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [f9be32d3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [4f816fdd]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8cd90763]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypituK-2kFHot-a3566963f893e60f\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [81636198]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypiv2A-2kFHot-a356697b9cf474e2\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [7b2e82f4]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypiw9v-2kFHot-a356699388decd01\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [7b2e82f4]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [41bbae64]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [6351742d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [4da80d20]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [cf4e6935]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b402462d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [28d632fc]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [0e743274]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [2356718e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [eb8e63f3]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ac2a3e1a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [3feb187c]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [394e0616]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [ac2a3e1a]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQFxu-2kFHot-a35724e56fb4181f\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [3feb187c]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQHKe-2kFHot-a35725020d2562a0\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [394e0616]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQJPc-2kFHot-a35725189cacc97c\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
     "event_detection [d02f67db]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [e7eb108d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [463e5f96]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fda00051]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypjCU5-2kFHot-a3566ad56fb5d6dc\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [83a1f11a]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypjDbA-2kFHot-a3566aed1e9856cd\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [cb568197]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oypjEjZ-2kFHot-a3566b051af92426\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
-    "event_detection [5aeecf31]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [791008c7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7293274a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [fca3e633]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [7aea8b15]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [97484ca8]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [0a03eba6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [43219055]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [ec025b25]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [e96b7459]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [0037f0bb]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8de098e6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [878909b2]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [3a8f08d9]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [00cd2a08]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [c60ceb71]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [e451153a]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [17b34703]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [a32c690f]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [4d76ac1e]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [6291f3d7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [41295ba5]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [8017975d]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [c9d2fa3b]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [d45ce7d6]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
+    "event_detection [df61e06e]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQZhy-2kFHot-a357265a8d22d6e4\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [0037f0bb]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQan9-2kFHot-a35726711851d658\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [8de098e6]: HF API error: HF API failed after 3 attempts: 400 {\n  \"id\": \"oyqQbrf-2kFHot-a3572687cd1625f7\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2.5-7B-Instruct-Turbo. Please visit https://api.together.ai/models/Qwen/Qwen2.5",
+    "event_detection [e1ef8181]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
     "event_detection [d0ae7850]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [8f6522da]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}",
-    "event_detection [b50f28a7]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}"
+    "event_detection [8f6522da]: HF API error: HF API failed after 3 attempts: 402 {\"error\":\"You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.\"}"
   ],
   "run_date": "2026-09-03"
 }
